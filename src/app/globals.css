@@ -1,21 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.btn{
+    @apply capitalize border h-14 px-8 rounded-3xl flex items-center justify-center font-bold text-lg font-Poppins transition-colors duration-300
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.btn-violet-outline{
+    @apply border-violet-800 text-violet-800 hover:border-violet-700 hover:text-violet-700
+}
+.btn-violet{
+    @apply border-violet-800 bg-violet-800 text-violet-100 hover:border-violet-700 hover:text-violet-50 hover:bg-violet-800/90
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.fi{
+    @apply !w-10 h-[31px]
 }
