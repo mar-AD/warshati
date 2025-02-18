@@ -11,7 +11,11 @@ export default {
       center: true,
     },
     fontFamily:{
-      Poppins:["Poppins","san-serif"]
+      Poppins:["Poppins","sans-serif"],
+      Inter:["Inter","sans-serif"],
+      Vazirmatn:["Vazirmatn","sans-serif"],
+
+
     }
   },
   plugins: [],

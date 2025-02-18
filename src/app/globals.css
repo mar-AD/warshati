@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins&family=Vazirmatn:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .btn{
-    @apply capitalize border h-14 px-8 rounded-3xl flex items-center justify-center font-bold text-lg font-Poppins transition-colors duration-300
+    @apply capitalize border h-14 md:px-8 px-5 rounded-3xl flex items-center justify-center font-bold lg:text-lg text-sm font-Poppins transition-colors duration-300
 }
 
 .btn-violet-outline{

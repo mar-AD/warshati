@@ -38,7 +38,7 @@ const LanguageSelector = () => {
                 </div>
             </div>
             <div className="relative">
-                <div  className={cn("absolute right-0 mt-2 bg-white border p-4 rounded-md duration-300 transition-[visibility_filter_opacity_transform]",
+                <div  className={cn("absolute z-20 right-0 mt-2 bg-white border p-4 rounded-md duration-300 transition-[visibility_filter_opacity_transform]",
                 showMenu ? "visible blur-none opacity-100 scale-100" : " invisible blur-sm opacity-0 scale-90"
             )}>
                     {languages.map((language, i) => (

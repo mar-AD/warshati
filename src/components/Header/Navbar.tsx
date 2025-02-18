@@ -4,7 +4,7 @@ import { NavType } from "@/utils/types";
 import Link from "next/link";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({showMenu}:{showMenu:boolean}) => {
     const [data,setData] =useState<NavType[]>([
         { label: "R&I", link: "#", selected: true },
         { label: "Blog", link: "#" },
@@ -22,8 +22,10 @@ const Navbar = () => {
         setData([...data]);
     }
     return (
-        <div className="flex justify-center items-center ms-56">
-            <ul className="flex font-Poppins text-stone-500 gap-x-4 justify-center items-center">
+        <div className={"flex justify-center items-center"}>
+            <ul className={cn("flex font-Poppins text-stone-500 gap-x-4 justify-center items-center",
+            showMenu&&"max-lg:flex-col gap-y-8"
+            )}>
                 {data.map((item, index) => (
                     <li onClick={()=>selectLink(item.label)} key={index}>
                         <Link href={item.link} className={cn("px-3 py-1.5 text-xl rounded-md transition-colors duration-300",

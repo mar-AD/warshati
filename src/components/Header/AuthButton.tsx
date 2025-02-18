@@ -1,11 +1,16 @@
+import { cn } from "@/utils/cn"
 import LanguageSelector from "./LanguageSelector"
 
-const AuthButton = () => {
+const AuthButton = ({showMenu}:{showMenu:boolean}) => {
   return (
-    <div className="flex gap-x-20 items-center">
+    <div className={cn("flex xl:gap-x-20 lg:gap-x-4 items-center max-xl:hidden",
+      showMenu&&"max-lg:flex-col max-lg:flex gap-y-8"
+    )}>
       {/* Website Language Section */}
       <LanguageSelector />
-      <div className="space-x-2 flex">
+      <div className={cn("grid grid-cols-2 gap-3 md:w-fit w-44 text-nowrap items-center",
+        showMenu&&"max-lg:grid-cols-1"
+      )}>
         <button className="btn btn-violet-outline">se connecter</button>
         <button className="btn btn-violet">s&apos;inscrire</button>
       </div>
