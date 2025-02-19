@@ -5,7 +5,7 @@ import { Play } from "lucide-react"
 import HeroImage from "./HeroImage"
 const Hero = () => {
     return (
-        <div className="bg-[#F9FAFC] px-3 pb-10">
+        <div className="bg-light-gray px-3 pb-10">
             {/* Hero Section */}
             <div className="pt-56 relative">
                 <Image className="absolute left-0 max-lg:hidden" src={flight} alt="" />

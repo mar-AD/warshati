@@ -1,6 +1,7 @@
 import DigitalLab from "@/components/DigitalLab/DigitalLab"
 import Header from "@/components/Header/Header"
 import Hero from "@/components/Hero/Hero"
+import WorkShop from "@/components/WorkShop/WorkShop"
 
 const page = () => {
   return (
@@ -11,6 +12,8 @@ const page = () => {
       <Hero />
       {/* Warshati Digital Lab */}
       <DigitalLab />
+      {/* Smart Workshops Program */}
+      <WorkShop />
     </div>
   )
 }
