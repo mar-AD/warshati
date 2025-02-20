@@ -1,4 +1,6 @@
-import Pedagogy from "./Pedagogy";
+import Thematique from "./Thematique/Thematique";
+import Curricula from "./Curricula/Curricula";
+import Pedagogy from "./Pedagogy/Pedagogy";
 import WorkShopCard from "./WorkShopCard";
 
 const WorkShop = () => {
@@ -21,6 +23,8 @@ const WorkShop = () => {
                 </div>
             </div>
             <Pedagogy />
+            <Curricula />
+            <Thematique />
         </div>
     )
 }
