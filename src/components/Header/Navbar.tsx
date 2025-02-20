@@ -1,6 +1,6 @@
 "use client"
-import { cn } from "@/utils/cn";
-import { NavType } from "@/utils/types";
+import { cn } from "@/lib/utils";
+import { NavType } from "@/lib/types";
 import Link from "next/link";
 import { useState } from "react";
 

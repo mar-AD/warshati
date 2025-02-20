@@ -6,7 +6,7 @@ import Navbar from "./Navbar"
 import AuthButton from "./AuthButton"
 import { Menu, X } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
-import { cn } from "@/utils/cn"
+import { cn } from "@/lib/utils";
 
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false)

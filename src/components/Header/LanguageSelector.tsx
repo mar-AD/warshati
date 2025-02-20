@@ -1,6 +1,6 @@
 "use client"
-import { cn } from "@/utils/cn";
-import { LanguageType } from "@/utils/types";
+import { cn } from "@/lib/utils";
+import { LanguageType } from "@/lib/types";
 import "flag-icons/css/flag-icons.min.css"
 import { ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";

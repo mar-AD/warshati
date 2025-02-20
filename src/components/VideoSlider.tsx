@@ -4,7 +4,7 @@ import {
     CarouselContent,
     CarouselItem,
 } from "@/components/ui/carousel"
-import { cn } from "@/utils/cn"
+import { cn } from "@/lib/utils";
 import { Pause, Play } from "lucide-react"
 import { useRef, useState } from "react"
 
