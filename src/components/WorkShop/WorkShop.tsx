@@ -2,6 +2,8 @@ import Thematique from "./Thematique/Thematique";
 import Curricula from "./Curricula/Curricula";
 import Pedagogy from "./Pedagogy/Pedagogy";
 import WorkShopCard from "./WorkShopCard";
+import Parcours from "./Parcours/Parcours";
+import Niveaux from "./Niveaux/Niveaux";
 
 const WorkShop = () => {
     const ageGroups = [
@@ -25,6 +27,8 @@ const WorkShop = () => {
             <Pedagogy />
             <Curricula />
             <Thematique />
+            <Parcours />
+            <Niveaux />
         </div>
     )
 }

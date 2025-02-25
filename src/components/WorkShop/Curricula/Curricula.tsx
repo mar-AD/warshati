@@ -1,9 +1,5 @@
 import { Atom, BrainCircuit, Cpu, Plus, SquareCode } from "lucide-react"
 import CurriculaCard from "./CurriculaCard"
-import curricula_1 from "/public/images/curricula_1.svg"
-import curricula_2 from "/public/images/curricula_2.svg"
-import curricula_3 from "/public/images/curricula_3.svg"
-import curricula_4 from "/public/images/curricula_4.svg"
 
 const Curricula = () => {
     const CardsData = [
