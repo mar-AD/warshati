@@ -1,12 +1,13 @@
 "use client"
 
+import { FAQType } from "@/lib/types"
 import { cn } from "@/lib/utils"
 import { AnimatePresence, motion } from "framer-motion"
 import { Plus } from "lucide-react"
 import { useRef, useState } from "react"
 
-const FAQCard = ({ index, faq }) => {
-    const [opened, setOpened] = useState(false)
+const FAQCard = ({ index, faq }:{index:number,faq:FAQType}) => {
+    const [opened, setOpened] = useState<boolean>(false)
     const ref = useRef<(HTMLParagraphElement | null)[]>([])
 
     return (

@@ -1,31 +1,8 @@
-import { cn } from "@/lib/utils"
-import { GraduationCap, PenTool, PersonStanding } from "lucide-react"
 import IntScolaireCard from "./IntScolaireCard"
+import { IntScolaireData } from "@/lib/data"
 
 const IntScolaire = () => {
-    const data = [
-        {
-            title: "Accompagnement",
-            icon: <GraduationCap />,
-            description: "Formation de vos Formateurs et Accompagnement Tout  au Long de L’implèmentation",
-            bgColor:"bg-violet-600/40",
-            textColor:"text-violet-900",
-        },
-        {
-            title: "Complémentaire",
-            icon:<PersonStanding />,
-            description: "Formation de vos Formateurs et Accompagnement Tout  au Long de L’implèmentation",
-            bgColor:"bg-pink-600/40",
-            textColor:"text-pink-900",
-        },
-        {
-            title: "Outils",
-            icon: <PenTool />,
-            description: "Formation de vos Formateurs et Accompagnement Tout  au Long de L’implèmentation",
-            bgColor:"bg-slate-600/40",
-            textColor:"text-slate-900",
-        }
-    ]
+
     return (
         <div className="lg:px-20 py-20 px-5 font-Poppins lg:space-y-20 space-y-10 relative">
             <h1 className="font-bold lg:text-[82px] md:text-6xl text-4xl text-center">Intégration Scolaire</h1>
@@ -34,8 +11,8 @@ const IntScolaire = () => {
             </div>
             <div className='grid grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] gap-8 place-content-center lg:!mt-40 mx-10'>
                 {
-                    data.map((item, index) => (
-                        <IntScolaireCard  key={index} item={item} index={index}/>
+                    IntScolaireData.map((item, index) => (
+                        <IntScolaireCard key={index} item={item} />
                     ))
                 }
             </div>

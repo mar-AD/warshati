@@ -4,13 +4,9 @@ import { LanguageType } from "@/lib/types";
 import "flag-icons/css/flag-icons.min.css"
 import { ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { languages } from "@/lib/data";
 const LanguageSelector = () => {
-    const languages: LanguageType[] = [
-        { code: "FR", name: "Français", flag: "fr" },
-        { code: "AR", name: "العربية", flag: "sa" },
-        { code: "EN", name: "English", flag: "gb" },
-        { code: "ESP", name: "Español", flag: "es" }
-    ];
+    
     const [selectedLanguage, setSelectedLanguage] = useState<LanguageType>(languages.find(language => language.code.toLowerCase() == navigator.language.split("-")[0]) || languages[0])
     const [showMenu, setShowMenu] = useState(false)
     const ref = useRef<HTMLDivElement>(null)

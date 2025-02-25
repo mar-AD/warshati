@@ -3,23 +3,8 @@ import Checkbox from "/public/images/Checkbox.png"
 // import image_8 from "/public/images/image_8.png"
 // import image_7 from "/public/images/image_7.png"
 import VideoSlider from "../VideoSlider";
+import { experienceData, frameworkData } from "@/lib/data";
 const DigitalLabExp = () => {
-    const experienceData = [
-        "La curiosité des enfants",
-        "Développer leurs compétences pratiques",
-        "Les préparer à exceller dans le monde de demain",
-        "Tout en rassurant les parents sur leur avenir"
-    ];
-
-    const frameworkData = [
-        "Apprentissage centré sur l’enfant",
-        "Apprentissage personnalisé, progressif et adapté",
-        "Apprentissage orienté Problème/Solution",
-        "Apprentissage axé sur projet et cas réel",
-        "Réinventer l’apprentissage",
-        "Stimuler la créativité",
-        "Préparer à exceller dans le monde de demain"
-    ];
     return (
         <div className="lg:p-32 p-16 lg:gap-16 gap-10 bg-light-gray space-y-20">
             <div className="flex items-start place-self-center justify-between xl:gap-x-56 gap-x-0 max-xl:flex-col">

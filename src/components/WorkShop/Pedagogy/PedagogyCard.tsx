@@ -4,7 +4,8 @@ import { ArrowRightCircle } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-const PedagogyCard = ({ item }) => {
+import { ParcoursType } from "@/lib/types";
+const PedagogyCard = ({ item }:{item:ParcoursType}) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleDescription = () => {

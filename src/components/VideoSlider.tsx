@@ -12,29 +12,27 @@ const VideoSlider = () => {
     const [videos, setVideos] = useState([{
         src: "/videos/video_1.mp4",
         played: false,
-        poster:"/images/image_7.png"
+        poster: "/images/image_7.png"
     }, {
         src: "/videos/video_2.mp4",
         played: false,
-        poster:"/images/image_8.png"
+        poster: "/images/image_8.png"
     }])
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
     const togglePlay = (e: React.MouseEvent, src: string) => {
-        e.stopPropagation(); // Prevent event bubbling to the CarouselItem
-
-        // Find the video element and its index
+        e.stopPropagation();
         const index = videos.findIndex((video) => video.src === src);
         const video = videoRefs.current[index];
 
         if (video) {
             if (!video.paused) {
-                video.pause(); // Pause the video
+                video.pause()
             } else {
-                video.play(); // Play the video
+                video.play();
             }
 
-            // Update the played state in the videos array
+
             setVideos((prevVideos) =>
                 prevVideos.map((item) =>
                     item.src === src ? { ...item, played: !item.played } : item

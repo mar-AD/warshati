@@ -1,44 +1,10 @@
-import { Facebook, Instagram, Linkedin, Mail, MapPin, PhoneCallIcon, Twitter, Youtube } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import contact from "/public/images/contact.png"
+import { contacts, socials } from "@/lib/data"
 const ContactUs = () => {
-    const socials = [
-        {
-            icon: <Facebook />,
-            link: "/",
-        },
-        {
-            icon: <Instagram />,
-            link: "/",
-        },
-        {
-            icon: <Linkedin />,
-            link: "/",
-        },
-        {
-            icon: <Twitter />,
-            link: "/",
-        },
-        {
-            icon: <Youtube />,
-            link: "/",
-        }
-    ]
-    const contacts = [
-        {
-            icon: <PhoneCallIcon className="fill-white " />,
-            value: '+212 5 55 55 55 55'
-        },
-        {
-            icon: <Mail className="fill-white text-black" />,
-            value: 'warshaticg@gmail.com'
-        },
-        {
-            icon: <MapPin className="fill-white text-black" />,
-            value: '56 BOULEVARD MOULAY YOUSSEF 3 ETG APPT 14 – CASABLANCA.'
-        }
-    ]
+
+
     return (
         <div className="lg:px-20 py-20 px-5 font-Poppins lg:space-y-20 space-y-10 relative bg-light-gray">
             <h1 className="font-extrabold lg:text-[82px] md:text-4xl text-2xl text-center">Contactez nous</h1>
@@ -55,9 +21,9 @@ const ContactUs = () => {
                     </div>
                     <div className="space-y-16">
                         {
-                            contacts.map(({ icon, value }, index) => (
+                            contacts.map(({ Icon, value }, index) => (
                                 <div className="flex items-center gap-5" key={index}>
-                                    {icon}
+                                    <Icon />
                                     <p className="max-w-72">{value}</p>
                                 </div>
                             ))
@@ -65,9 +31,9 @@ const ContactUs = () => {
                     </div>
                     <div className="flex gap-8 flex-wrap">
                         {
-                            socials.map(({ icon, link }, index) => (
+                            socials.map(({ Icon, link }, index) => (
                                 <Link href={link} className="bg-violet-800 p-2 rounded-full hover:bg-violet-100 hover:text-violet-900 duration-500 z-10" key={index} target="_blank">
-                                    {icon}
+                                    <Icon />
                                 </Link>
                             ))
                         }

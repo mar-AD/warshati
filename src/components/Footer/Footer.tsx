@@ -1,50 +1,9 @@
-import { NavType } from "@/lib/types"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, PhoneCallIcon, Twitter, Youtube } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import logo_white from "/public/images/white_logo.png"
+import { contacts, links, socials } from "@/lib/data"
 const Footer = () => {
-    const links: NavType[] = [
-        { label: "R&I", link: "#" },
-        { label: "Blog", link: "#" },
-        { label: "Contact", link: "#" }
-    ]
-    const socials = [
-        {
-            icon: <Facebook />,
-            link: "/",
-        },
-        {
-            icon: <Instagram />,
-            link: "/",
-        },
-        {
-            icon: <Linkedin />,
-            link: "/",
-        },
-        {
-            icon: <Twitter />,
-            link: "/",
-        },
-        {
-            icon: <Youtube />,
-            link: "/",
-        }
-    ]
-    const contacts = [
-        {
-            icon: <PhoneCallIcon className="fill-white " />,
-            value: '+212 5 55 55 55 55'
-        },
-        {
-            icon: <Mail className="fill-white text-black" />,
-            value: 'warshaticg@gmail.com'
-        },
-        {
-            icon: <MapPin className="fill-white text-black" />,
-            value: '56 BOULEVARD MOULAY YOUSSEF 3 ETG APPT 14 – CASABLANCA.'
-        }
-    ]
+
     return (
         <div className="bg-[#011C2A] text-white p-16 font-Poppins space-y-8">
             <div className="flex items-start justify-between flex-wrap gap-16">
@@ -66,9 +25,9 @@ const Footer = () => {
                     <h1 className="font-semibold capitalize">Nous contacter</h1>
                     <div className="space-y-10">
                         {
-                            contacts.map(({ icon, value }, index) => (
+                            contacts.map(({ Icon, value }, index) => (
                                 <div className="flex items-center gap-5" key={index}>
-                                    {icon}
+                                    <Icon className="size-4" />
                                     <p className="max-w-72 text-slate-400 hover:text-white duration-500">{value}</p>
                                 </div>
                             ))
@@ -88,9 +47,9 @@ const Footer = () => {
                     <p className="text-slate-400">&copy; Warshati. Tous droits réservés - warshati {new Date().getFullYear()}</p>
                     <div className="flex gap-8 flex-wrap justify-end">
                         {
-                            socials.map(({ icon, link }, index) => (
+                            socials.map(({ Icon, link }, index) => (
                                 <Link href={link} className="bg-slate-800 p-2 rounded-full hover:bg-slate-100 hover:text-slate-900 duration-500 z-10" key={index} target="_blank">
-                                    {icon}
+                                    <Icon className="size-4" />
                                 </Link>
                             ))
                         }

@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils";
 
 const Header = () => {
-    const [showMenu, setShowMenu] = useState(false)
+    const [showMenu, setShowMenu] = useState<boolean>(false)
     const ref=useRef<HTMLDivElement>(null)
     const clickOutSide = (e: MouseEvent) => {
             if (ref.current && !ref.current.contains(e.target as Node)) {

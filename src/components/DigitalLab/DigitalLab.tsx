@@ -12,8 +12,8 @@ import arrow from "/public/images/arrow.png"
 import robot from "/public/images/robot.png"
 import bubble from "/public/images/bubble.png"
 import DigitalLabExp from "./DigitalLabExp"
+import { DigitalLabData } from "@/lib/data"
 const DigitalLab = () => {
-    const data = ["Des laboratoires digitaux", "Des maquettes d’apprentissage interactives", "De coding", "Des prototypes de projets innovants"]
     return (
         <div className="relative pt-20 overflow-hidden">
             <Image className="absolute -left-20 -z-10 -top-20 w-56" src={circles} alt="" />
@@ -29,7 +29,7 @@ const DigitalLab = () => {
                 <div className="font-Poppins font-medium space-y-8 mb-5">
                     <h1 className="font-bold lg:text-[28px] md:text-2xl text-xl">Plateforme <span className="text-violet-700">éducative intégrant</span></h1>
                     <ul>
-                        {data.map((item, i) => (
+                        {DigitalLabData.map((item, i) => (
                             <li className="flex gap-x-2 my-7 lg:text-lg" key={i}><Image className="lg:size-8 size-5" src={Checkbox} alt="" />
                                 {item}</li>
                         ))}

@@ -1,34 +1,10 @@
 import Image from 'next/image';
 import space_man from '/public/images/parcours/space_man.png';
-import image_1 from '/public/images/parcours/parcours_1.png';
-import image_2 from '/public/images/parcours/parcours_2.png';
-import image_3 from '/public/images/parcours/parcours_3.png';
-import image_4 from '/public/images/parcours/parcours_4.png';
-import { cn } from '@/lib/utils';
+
 import ParcoursCard from './ParcoursCard';
+import { ParcoursData } from '@/lib/data';
 const Parcours = () => {
-    const data = [
-        {
-            title: "Explorateur",
-            description: "Découvrir et S'épanouir",
-            image: image_1
-        },
-        {
-            title: "Créateur",
-            description: "Imaginer et Innover",
-            image: image_2
-        },
-        {
-            title: "Novateur",
-            description: "Inventer et Transformer",
-            image: image_3
-        },
-        {
-            title: "Junior",
-            description: "Maîtriser et Exceller",
-            image: image_4
-        }
-    ]
+    
     return (
         <div className="lg:px-20 py-20 px-5 font-Poppins lg:space-y-20 space-y-10 relative">
             <Image src={space_man} alt='' className='absolute top-44 right-10 max-xl:hidden' />
@@ -40,7 +16,7 @@ const Parcours = () => {
             <div className='grid grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] gap-4 place-content-center lg:!mt-44'>
 
                 {
-                    data.map((item, index) => (
+                    ParcoursData.map((item, index) => (
                         <ParcoursCard index={index} item={item} key={index}/>
                     ))
                 }

@@ -4,14 +4,10 @@ import Pedagogy from "./Pedagogy/Pedagogy";
 import WorkShopCard from "./WorkShopCard";
 import Parcours from "./Parcours/Parcours";
 import Niveaux from "./Niveaux/Niveaux";
+import { ageGroups } from "@/lib/data";
 
 const WorkShop = () => {
-    const ageGroups = [
-        { ageRange: "6-8 ans", description: "Premiers apprentissages fondamentaux", image: "/images/image_" },
-        { ageRange: "9-11 ans", description: "Consolidation et exploration", image: "/images/image-" },
-        { ageRange: "12-14 ans", description: "Développement de la pensée critique", image: "/images/image-" },
-        { ageRange: "15-18 ans", description: "Spécialisation et autonomisation", image: "/images/image-" },
-    ];
+
     return (
         <div className="">
             <div className="lg:px-20 py-20 px-5 space-y-44">

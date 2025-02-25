@@ -3,13 +3,10 @@ import { cn } from "@/lib/utils";
 import { NavType } from "@/lib/types";
 import Link from "next/link";
 import { useState } from "react";
+import { links } from "@/lib/data";
 
 const Navbar = ({showMenu}:{showMenu:boolean}) => {
-    const [data,setData] =useState<NavType[]>([
-        { label: "R&I", link: "#", selected: true },
-        { label: "Blog", link: "#" },
-        { label: "Contact", link: "#" }
-    ]);
+    const [data,setData] =useState<NavType[]>(links);
 
     const selectLink=(label:string)=>{
         data.forEach((item) => {
