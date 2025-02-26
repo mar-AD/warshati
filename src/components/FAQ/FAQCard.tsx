@@ -1,5 +1,6 @@
 "use client"
 
+import { FadeOut } from "@/lib/animations"
 import { FAQType } from "@/lib/types"
 import { cn } from "@/lib/utils"
 import { AnimatePresence, motion } from "framer-motion"
@@ -11,7 +12,11 @@ const FAQCard = ({ index, faq }:{index:number,faq:FAQType}) => {
     const ref = useRef<(HTMLParagraphElement | null)[]>([])
 
     return (
-        <div key={index} className={cn("border p-5  rounded-3xl flex items-start justify-between",
+        <motion.div
+        variants={FadeOut(faq.delay)}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }} key={index} className={cn("border p-5  rounded-3xl flex items-start justify-between",
             opened && "bg-violet-400/50 border-2 border-violet-800"
         )}>
             <div className="space-y-5 w-full">
@@ -41,7 +46,7 @@ const FAQCard = ({ index, faq }:{index:number,faq:FAQType}) => {
                     }
                 </AnimatePresence>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

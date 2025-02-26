@@ -7,7 +7,8 @@ import AuthButton from "./AuthButton"
 import { Menu, X } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils";
-
+import { motion } from "framer-motion"
+import { FadeDown } from "@/lib/animations"
 const Header = () => {
     const [showMenu, setShowMenu] = useState<boolean>(false)
     const ref=useRef<HTMLDivElement>(null)
@@ -24,7 +25,11 @@ const Header = () => {
             }
         })
     return (
-        <div className="flex items-center justify-between md:px-14 px-4 py-10 font-Poppins absolute top-0 w-full z-50">
+        <motion.div
+        variants={FadeDown(.1)}
+        initial="initial"
+        animate="animate"
+        className="flex items-center justify-between md:px-14 px-4 py-10 font-Poppins absolute top-0 w-full z-50 bg-light-gray">
             {/* Logo Section */}
             <Link href={"/"} className="min-w-44 w-44">
                 <Image priority src={warshati_logo} alt="warshati_logo" />
@@ -51,7 +56,7 @@ const Header = () => {
                         <Menu />
                 }
             </button>
-        </div>
+        </motion.div>
     )
 }
 

@@ -2,6 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@plugin 'tailwind-scrollbar';
+
 
 .btn{
     @apply capitalize border h-14 md:px-8 px-5 rounded-3xl flex items-center justify-center font-bold lg:text-lg text-sm font-Poppins transition-colors duration-300

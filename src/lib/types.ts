@@ -24,11 +24,13 @@ export type CurriculaType = {
   title: string;
   Icon: LucideIcon;
   description: string;
+  delay: number;
 };
 export type ParcoursType = {
   title: string;
   image: StaticImageData;
   description: string;
+  delay?: number;
 };
 
 export interface ThematiqueType extends ParcoursType {
@@ -36,6 +38,8 @@ export interface ThematiqueType extends ParcoursType {
 }
 export interface niveauxType extends ParcoursType {
   num: StaticImageData;
+  bgColor: string;
+  borderColor: string;
 }
 export interface IntScolaireType extends CurriculaType {
   bgColor: string;
@@ -44,9 +48,11 @@ export interface IntScolaireType extends CurriculaType {
 export type FAQType = {
   title: string;
   content: string;
+  delay:number
 };
 export type ageType = {
   ageRange: string;
   description: string;
   image: string;
+  delay: number;
 };

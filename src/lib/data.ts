@@ -128,58 +128,68 @@ export const FAQData: FAQType[] = [
     title: "C’est quoi Warshati ?",
     content:
       "Warshati est une plateforme éducative intelligente marocaine décidée à l’apprentissage des programmes STEMA (Science, Technologies, Ingénierie, Arts et Mathématiques) et de l’Intelligence Intellectuelle. Elle offre une approche immersive et interactive, visant à préparer les étudiants aux défis du 2e siècle en intégrant des compétences essentielles telles que la pensée critique, la collaboration, la créativité et la résolution de problèmes.",
+    delay: 0.2,
   },
   {
     title: "Pourquoi choisir Warshati ?",
     content:
       "Warshati se distingue par son approche innovante et sa capacité à personneliser l’apprentissage. Grâce à une méthodologie basée sur l’apprentissage par projet et la réflexion active, elle favorise le développement des compétences cognitives et socio-émotionnelles des étudiants. En outre, Warshati propose une plateforme interactive et accessible, adaptée aux besoins du système éducatif marocain et international.",
+    delay: 0.3,
   },
   {
     title: "Comment se déroule Warshati ?",
     content:
       "Warshati se déroule sous forme de programmes structurés et de parcours d’apprentissage qui combinent l’intérêt et pratique. Les étudiants travaillent au sein d’autres projets corrects dans des laboratoires thématiques (STEMA, M, IoT, etc.) et utilisent des outils numériques pour développer des compétences techniques et humaines. L’enseignement est structuré selon la méthode « 100, we do, you do », favorisant l’apprentissage collaboratif et l’autonomie.",
+    delay: 0.4,
   },
   {
     title: "Qui délivre Warshati ?",
     content:
       "Warshati est délivré par une équipe de formations spécialisées en pédagogie et en systèmes éducatifs, accompagnée de personnes accadémières et industrielles pour assurer la qualité et la pertinence des programmes proposés.",
+    delay: 0.5,
   },
   {
     title: "Pour qui est destiné Warshati ?",
     content:
       "Warshati s’adresse à tous les étudiants, du primaire au secondaire, ainsi qu’aux enseignants désireux de se perfectionner dans les domaines des sciences, de la technologie, de l’ingénierie, des arts et des mathématiques. Il est aussi conçu pour les établissements éducatifs qui souhaitent intégrer les compétences du 3e siècle dans leurs programmes.",
+    delay: 0.6,
   },
   {
     title: "Où se déroule Warshati ?",
     content:
       "Warshati se déploie à la fois en ligne et dans des ateliers physiques appelés « Smart Workshops ». Ces ateliers se trouvent dans différentes régions du Maroc et sont également accessibles à distance via la plateforme numérique.",
+    delay: 0.7,
   },
   {
     title: "Quand puis-je commander Warshati ?",
     content:
       "Vous pouvez commander Warshati à tout moment sur notre plateforme en ligne. Les programmes sont disponibles tout au long de l’année, et vous pouvez commencer dès que vous êtes prêt à vous inscrire.",
+    delay: 0.8,
   },
   {
     title: "Quel est l’âge ciblé pour Warshati ?",
     content:
       "Warshati est destiné aux enfants et jeunes adultes, principalement de 6 à 18 ans, mais il propose également des formations pour les enseignants et les professionnels désireux de se perfectionner dans les domaines du STEMA et de l’IA.",
+    delay: 0.9,
   },
   {
     title: "Quels prérequis & niveau",
     content:
       "Le programme Warshati est destiné à tous les étudiants intéressés par les domaines du STEMA et de l’IA, qu’ils soient débutantes ou avancés. Il est également conçu pour les éducateurs cherchant à intégrer ces disciplines dans leurs pratiques pédagogiques.",
+    delay: 1,
   },
   {
     title: "Où se déroulent les Smart Workshops ?",
     content:
       " Les Smart Workshops de Warshati sont organisés dans divers centres de formation, ecoles,etc, ainsi qu'en ligne pour permettre un accès flexible. Chaque atelier est conçu pour offrir une expérience pratique et interactive, adaptée aux besoins des participants.",
+    delay: 1.2,
   },
 ];
 
 export const links: NavType[] = [
-  { label: "R&I", link: "#", selected: true },
-  { label: "Blog", link: "#" },
-  { label: "Contact", link: "#" },
+  { label: "R&I", link: "R&I", selected: true },
+  { label: "Blog", link: "blog" },
+  { label: "Contact", link: "contact" },
 ];
 
 export const languages: LanguageType[] = [
@@ -197,6 +207,7 @@ export const IntScolaireData: IntScolaireType[] = [
       "Formation de vos Formateurs et Accompagnement Tout  au Long de L’implèmentation",
     bgColor: "bg-violet-600/40",
     textColor: "text-violet-900",
+    delay: 0.2,
   },
   {
     title: "Complémentaire",
@@ -205,6 +216,7 @@ export const IntScolaireData: IntScolaireType[] = [
       "Formation de vos Formateurs et Accompagnement Tout  au Long de L’implèmentation",
     bgColor: "bg-pink-600/40",
     textColor: "text-pink-900",
+    delay: 0.3,
   },
   {
     title: "Outils",
@@ -213,6 +225,7 @@ export const IntScolaireData: IntScolaireType[] = [
       "Formation de vos Formateurs et Accompagnement Tout  au Long de L’implèmentation",
     bgColor: "bg-slate-600/40",
     textColor: "text-slate-900",
+    delay: 0.4,
   },
 ];
 
@@ -222,24 +235,28 @@ export const CurriculaData: CurriculaType[] = [
     description:
       "Projets pratiques axés sur les défis contemporains, mettant en avant la collaboration, la gestion de projet et l’innovation.Exploration des opportunités dans les domaines STEAM .",
     Icon: Atom,
+    delay: 0.2,
   },
   {
     title: "AI & ML",
     description:
       "Développement des compétences avancées , avec une introduction aux technologies émergentes.Participation à des projets complexes encourageant l’analyse et la pensée critique.",
     Icon: BrainCircuit,
+    delay: 0.3,
   },
   {
     title: "Computational Thing",
     description:
       "Renforcement des compétences en littératie et numératie grâce à des approches interactives. Exploration des notions scientifiques et technologiques à travers des projets collaboratifs favorisant.",
     Icon: Cpu,
+    delay: 0.4,
   },
   {
     title: "Coding  Text & Block",
     description:
       "Projets pratiques axés sur les défis contemporains, mettant en avant la collaboration, la gestion de projet et l’innovation. Exploration des opportunités dans les domaines STEAM et de l’intelligence artificielle.",
     Icon: SquareCode,
+    delay: 0.5,
   },
 ];
 
@@ -249,6 +266,9 @@ export const niveauxData: niveauxType[] = [
     description: "Exploration du matériel et concepts technologiques",
     image: image_1,
     num: num_1,
+    bgColor: "hover:bg-[#EA9765]/30",
+    borderColor: "hover:border-[#EA9765]",
+    delay: 0.2,
   },
   {
     title: "Initiation",
@@ -256,12 +276,18 @@ export const niveauxData: niveauxType[] = [
       "Introduction aux Principes de Base et Pratiques Fondamentales",
     image: image_2,
     num: num_2,
+    bgColor: "hover:bg-[#DDDEE2]/30",
+    borderColor: "hover:border-[#DDDEE2]",
+    delay: 0.3,
   },
   {
     title: "Développement",
     description: "Approfondissement des Compétences et Techniques Avancées",
     image: image_3,
     num: num_3,
+    bgColor: "hover:bg-[#FFE09E]/30",
+    borderColor: "hover:border-[#FFE09E]",
+    delay: 0.4,
   },
   {
     title: "Application",
@@ -269,12 +295,18 @@ export const niveauxData: niveauxType[] = [
       "Mise en Pratique des Connaissances à travers des Projets Réels",
     image: image_4,
     num: num_4,
+    bgColor: "hover:bg-[#A678E3]/30",
+    borderColor: "hover:border-[#A678E3]",
+    delay: 0.5,
   },
   {
     title: "Maîtrise",
     description: "Perfectionnement et Innovation dans des Contextes Complexes",
     image: image_5,
     num: num_5,
+    bgColor: "hover:bg-[#3DB53F]/30",
+    borderColor: "hover:border-[#3DB53F]",
+    delay: 0.5,
   },
 ];
 
@@ -283,21 +315,25 @@ export const ParcoursData: ParcoursType[] = [
     title: "Explorateur",
     description: "Découvrir et S'épanouir",
     image: image_parcours_1,
+    delay: 0.2,
   },
   {
     title: "Créateur",
     description: "Imaginer et Innover",
     image: image_parcours_2,
+    delay: 0.3,
   },
   {
     title: "Novateur",
     description: "Inventer et Transformer",
     image: image_parcours_3,
+    delay: 0.4,
   },
   {
     title: "Junior",
     description: "Maîtriser et Exceller",
     image: image_parcours_4,
+    delay: 0.5,
   },
 ];
 
@@ -307,24 +343,28 @@ export const PedagogyData: ParcoursType[] = [
     description:
       "Entre dans un monde d’amusement et de découverte ! Avec nos jeux et activités, apprendre les sciences devient un plaisir",
     image: pedagogy_1,
+    delay: 0.2,
   },
   {
     title: "Apprentissage Progressif",
     description:
       "Pas à pas, découvre les bases des sciences et technologies : coder, construire, comprendre le monde... tout devient facile avec Warshati !",
     image: pedagogy_2,
+    delay: 0.3,
   },
   {
     title: "Créativité et Exploration",
     description:
       "Libère ton imagination ! Crée des inventions uniques, explore de nouvelles idées et deviens un innovateur en herbe.",
     image: pedagogy_3,
+    delay: 0.4,
   },
   {
     title: "Collaboration et Partage",
     description:
       "Apprends avec tes amis et partage tes idées ! Chez Warshati, le travail en équipe est la clé pour réaliser de grandes choses.",
     image: pedagogy_4,
+    delay: 0.5,
   },
 ];
 
@@ -442,25 +482,29 @@ export const ThematiqueData: ThematiqueType[] = [
   },
 ];
 
-export const ageGroups:ageType[] = [
+export const ageGroups: ageType[] = [
   {
     ageRange: "6-8 ans",
     description: "Premiers apprentissages fondamentaux",
     image: "/images/image_",
+    delay: 0.2,
   },
   {
     ageRange: "9-11 ans",
     description: "Consolidation et exploration",
     image: "/images/image-",
+    delay: 0.3,
   },
   {
     ageRange: "12-14 ans",
     description: "Développement de la pensée critique",
     image: "/images/image-",
+    delay: 0.4,
   },
   {
     ageRange: "15-18 ans",
     description: "Spécialisation et autonomisation",
     image: "/images/image-",
+    delay: 0.5,
   },
 ];

@@ -2,10 +2,15 @@ import Image from "next/image"
 import arrow from '/public/images/arrow.png';
 import { cn } from "@/lib/utils";
 import { ParcoursType } from "@/lib/types";
-
+import { FadeRight } from "@/lib/animations";
+import { motion } from "framer-motion";
 const ParcoursCard = ({ index, item }: { index: number, item: ParcoursType }) => {
     return (
-        <div className={cn("flex flex-col items-center gap-y-5 relative border rounded-3xl place-self-center w-96 p-5 shadow-2xl shadow-black/5",
+        <motion.div
+        variants={FadeRight(item.delay!)}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }} className={cn("flex flex-col items-center gap-y-5 relative border rounded-3xl place-self-center w-96 p-5 shadow-2xl shadow-black/5",
             index === 0 && "lg:border-violet-800 lg:border-2 lg:-translate-y-16 translate-y-0"
         )}>
             {
@@ -22,7 +27,7 @@ const ParcoursCard = ({ index, item }: { index: number, item: ParcoursType }) =>
                 index === 0 && "text-violet-700"
 
             )}>{item.description}</p>
-        </div>
+        </motion.div>
     )
 }
 

@@ -5,6 +5,7 @@ import Image from "next/image"
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ParcoursType } from "@/lib/types";
+import { FadeRight } from "@/lib/animations";
 const PedagogyCard = ({ item }:{item:ParcoursType}) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -12,7 +13,11 @@ const PedagogyCard = ({ item }:{item:ParcoursType}) => {
         setIsExpanded(!isExpanded);
     };
     return (
-        <div className={cn("flex flex-col justify-center border items-center bg-white p-8 rounded-3xl gap-10 shadow-2xl shadow-black/20 lg:min-h-72 min-h-56",
+        <motion.div
+        variants={FadeRight(item.delay!)}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }} className={cn("flex flex-col justify-center border items-center bg-white p-8 rounded-3xl gap-10 shadow-2xl shadow-black/20 lg:min-h-72 min-h-56",
             isExpanded && "border-violet-900"
         )}>
             <Image src={item.image} className="lg:w-40 w-28" alt="" />
@@ -39,7 +44,7 @@ const PedagogyCard = ({ item }:{item:ParcoursType}) => {
                     )} />
                 </button>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
