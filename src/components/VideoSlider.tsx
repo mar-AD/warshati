@@ -10,11 +10,11 @@ import { useRef, useState } from "react"
 
 const VideoSlider = () => {
     const [videos, setVideos] = useState([{
-        src: "/videos/video_1.mp4",
+        src: "/videos/home/video_1.mp4",
         played: false,
         poster: "/images/home/digitalLab/image_7.png"
     }, {
-        src: "/videos/video_2.mp4",
+        src: "/videos/home/video_2.mp4",
         played: false,
         poster: "/images/home/digitalLab/image_8.png"
     }])
