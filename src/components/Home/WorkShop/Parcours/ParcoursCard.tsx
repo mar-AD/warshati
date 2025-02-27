@@ -1,5 +1,5 @@
 import Image from "next/image"
-import arrow from '/public/images/arrow.png';
+import arrow from '/public/images/home/digitalLab/arrow.png';
 import { cn } from "@/lib/utils";
 import { ParcoursType } from "@/lib/types";
 import { FadeRight } from "@/lib/animations";

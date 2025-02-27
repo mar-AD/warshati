@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import logo_white from "/public/images/white_logo.png"
+import logo_white from "/public/images/logos/white_logo.png"
 import { contacts, links, socials } from "@/lib/data"
 import { motion } from "framer-motion"
 import { FadeRight, FadeUp } from "@/lib/animations"

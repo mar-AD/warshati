@@ -12,11 +12,11 @@ const VideoSlider = () => {
     const [videos, setVideos] = useState([{
         src: "/videos/video_1.mp4",
         played: false,
-        poster: "/images/image_7.png"
+        poster: "/images/home/digitalLab/image_7.png"
     }, {
         src: "/videos/video_2.mp4",
         played: false,
-        poster: "/images/image_8.png"
+        poster: "/images/home/digitalLab/image_8.png"
     }])
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 

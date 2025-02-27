@@ -1,8 +1,6 @@
 import Image from "next/image"
-import Checkbox from "/public/images/Checkbox.png"
-// import image_8 from "/public/images/image_8.png"
-// import image_7 from "/public/images/image_7.png"
-import VideoSlider from "../VideoSlider";
+import Checkbox from "/public/images/home/digitalLab/Checkbox.png"
+import VideoSlider from "../../VideoSlider";
 import { experienceData, frameworkData } from "@/lib/data";
 import { motion } from "framer-motion";
 import { FadeLeft, FadeRight } from "@/lib/animations";

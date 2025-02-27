@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
-import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "../ui/carousel"
+import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "../../ui/carousel"
 import useMediaQuery from "@/lib/UseMediaQuery"
 import PartenariatCard from "./PartenariatCard"
 import { cn } from "@/lib/utils"

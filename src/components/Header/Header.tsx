@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import warshati_logo from "/public/images/warshati_logo.png"
+import warshati_logo from "/public/images/logos/warshati_logo.png"
 import Navbar from "./Navbar"
 import AuthButton from "./AuthButton"
 import { Menu, X } from "lucide-react"
