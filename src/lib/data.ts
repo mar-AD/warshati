@@ -1,3 +1,7 @@
+import projects_1 from "/public/images/R&I/projects/projects_1.png";
+import projects_2 from "/public/images/R&I/projects/projects_2.png";
+import projects_3 from "/public/images/R&I/projects/projects_3.png";
+import projects_4 from "/public/images/R&I/projects/projects_4.png";
 import pedagogy_1 from "/public/images/home/pedagogy/pedagogy_1.png";
 import pedagogy_2 from "/public/images/home/pedagogy/pedagogy_2.png";
 import pedagogy_3 from "/public/images/home/pedagogy/pedagogy_3.png";
@@ -59,6 +63,7 @@ import {
   NavType,
   niveauxType,
   ParcoursType,
+  PrioritairesType,
   SocialType,
   ThematiqueType,
 } from "./types";
@@ -505,6 +510,62 @@ export const ageGroups: ageType[] = [
     ageRange: "15-18 ans",
     description: "Spécialisation et autonomisation",
     image: "/images/home/age/image-",
+    delay: 0.5,
+  },
+];
+
+export const prioritairesData: PrioritairesType[] = [
+  {
+    title: "Technologies éducatives intelligentes",
+    description:
+      "Utilisation de l’IA, des algorithmes adaptatifs, et de la réalité augmentée.",
+    delay: 0.2,
+  },
+  {
+    title: "STEAM Labs",
+    description: "Développement d’outils et de maquettes interactives.",
+    delay: 0.3,
+  },
+  {
+    title: "Plateformes collaboratives",
+    description:
+      "Renforcement des connexions entre élèves, enseignants, et parents.",
+    delay: 0.4,
+  },
+  {
+    title: "Approches pédagogiques innovantes",
+    description: "Gamification, apprentissage actif et personnalisé.",
+    delay: 0.5,
+  },
+];
+
+export const pojectsData: ParcoursType[] = [
+  {
+    image: projects_1,
+    title: "Technologies éducatives intelligentes",
+    description:
+      "Un outil qui personnalise les parcours d’apprentissage à l’aide de l’intelligence artificielle.",
+    delay: 0.2,
+  },
+  {
+    image: projects_2,
+    title: "STEAM Labs",
+    description:
+      "Modules portables pour enseigner les disciplines STEAM dans les zones rurales.",
+    delay: 0.3,
+  },
+  {
+    image: projects_3,
+    title: "Plateformes collaboratives",
+    description:
+      "Analyse des comportements des apprenants pour optimiser les contenus éducatifs.",
+    delay: 0.4,
+  },
+  {
+    image: projects_4,
+    title: "Approches pédagogiques innovantes",
+    description:
+      "Conception de kits interactifs pour expérimenter les concepts technologiques.",
     delay: 0.5,
   },
 ];

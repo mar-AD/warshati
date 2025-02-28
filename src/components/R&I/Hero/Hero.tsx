@@ -1,40 +1,17 @@
 "use client"
-import hero_img_0 from "/public/images/R&I/hero/hero_img_0.jpg"
-import hero_img_1 from "/public/images/R&I/hero/hero_img_1.jpg"
-import { ArrowRight, Eye, Pause } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { ArrowRight, Eye } from "lucide-react"
 import { motion } from "framer-motion"
-import { FadeRight, FadeUp } from "@/lib/animations"
-import Image from "next/image"
+import { FadeUp } from "@/lib/animations"
+import HeroImage from "./HeroImage"
 const Hero = () => {
     return (
         <div
             className="bg-light-gray lg:px-3 lg:flex-col-reverse md:px-16 px-10 2xl:pb-56 pb-10 h-max flex justify-center">
             {/* Hero Section */}
             <div className="md:pt-56 pt-36 flex flex-wrap max-2xl:flex-col-reverse xl:justify-between w-full gap-x-80 lg:gap-y-56 gap-y-20 lg:items-start">
-                <motion.div
-                    variants={FadeRight(.2)}
-                    initial="initial"
-                    whileInView="animate"
-                    className="relative flex max-lg:flex-col gap-4 w-auto items-center justify-center">
-                    <div
-                        className={cn("flex justify-center items-center"
-                        )}>
-                        <Image src={hero_img_0} alt="" />
-                        <button className="absolute bg-black /50 backdrop-blur-lg p-3 rounded-full text-white cursor-pointer active:scale-75 duration-700">
-                            <Pause size={24} />
-
-                        </button>
-                    </div>
-                    <div
-                        className={cn(" 2xl:absolute -right-[25rem]  top-44 flex justify-center items-center"
-                        )}>
-                        <Image src={hero_img_1} alt="" />
-                        <button className="absolute bg-black /50 backdrop-blur-lg p-3 rounded-full text-white cursor-pointer active:scale-75 duration-700">
-                            <Pause size={24} />
-                        </button>
-                    </div>
-                </motion.div >
+                {/* Hero Image */}
+                <HeroImage />
+                {/* Hero Text*/}
                 <div className="font-Poppins space-y-7">
                     <motion.h1
                         variants={FadeUp(.3)}

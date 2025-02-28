@@ -56,3 +56,9 @@ export type ageType = {
   image: string;
   delay: number;
 };
+
+export type PrioritairesType = {
+  title: string;
+  description: string;
+  delay:number
+};

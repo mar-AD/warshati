@@ -2,12 +2,14 @@
 import { cn } from "@/lib/utils";
 import { NavType } from "@/lib/types";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { links } from "@/lib/data";
+import { usePathname } from "next/navigation";
 
 const Navbar = ({showMenu}:{showMenu:boolean}) => {
     const [data,setData] =useState<NavType[]>(links);
-
+    const pathname=usePathname()
+    console.log(pathname)
     const selectLink=(label:string)=>{
         data.forEach((item) => {
             if(item.label===label){
@@ -18,6 +20,9 @@ const Navbar = ({showMenu}:{showMenu:boolean}) => {
         });
         setData([...data]);
     }
+    useEffect(()=>{
+        selectLink("/")
+    },[pathname])
     return (
         <div className={"flex justify-center items-center"}>
             <ul className={cn("flex font-Poppins text-stone-500 gap-x-4 justify-center items-center",
@@ -26,7 +31,7 @@ const Navbar = ({showMenu}:{showMenu:boolean}) => {
                 {data.map((item, index) => (
                     <li onClick={()=>selectLink(item.label)} key={index}>
                         <Link href={item.link} className={cn("px-3 py-1.5 text-xl rounded-md transition-colors duration-300",
-                            item.selected ? "text-violet-600":"hover:text-stone-800"
+                            item.selected||pathname.toLowerCase()==="/"+item.label.toLowerCase() ? "text-violet-600 font-bold":"hover:text-stone-800"
                         )}>
                             {item.label}
                         </Link>
