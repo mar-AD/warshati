@@ -1,3 +1,8 @@
+import contribution_1 from "/public/images/R&I/contributions/contribution_1.png";
+import contribution_2 from "/public/images/R&I/contributions/contribution_2.png";
+import contribution_3 from "/public/images/R&I/contributions/contribution_3.png";
+import collaboration_1 from "/public/images/R&I/collaboration/collaboration_1.png";
+import collaboration_2 from "/public/images/R&I/collaboration/collaboration_2.png";
 import projects_1 from "/public/images/R&I/projects/projects_1.png";
 import projects_2 from "/public/images/R&I/projects/projects_2.png";
 import projects_3 from "/public/images/R&I/projects/projects_3.png";
@@ -572,23 +577,66 @@ export const projectsDomaineData: ParcoursType[] = [
 
 export const projectsRecentData: PrioritairesType[] = [
   {
-      title: "AI Classroom",
-      description: "Un outil qui personnalise les parcours d'apprentissage à l'aide de l'intelligence artificielle.",
-      delay: 0.2,
+    title: "AI Classroom",
+    description:
+      "Un outil qui personnalise les parcours d'apprentissage à l'aide de l'intelligence artificielle.",
+    delay: 0.2,
   },
   {
-      title: "STEAM Everywhere",
-      description: "Modules portables pour enseigner les disciplines STEAM dans les zones rurales.",
-      delay: 0.3,
+    title: "STEAM Everywhere",
+    description:
+      "Modules portables pour enseigner les disciplines STEAM dans les zones rurales.",
+    delay: 0.3,
   },
   {
-      title: "Data for Learning",
-      description: "Analyse des comportements des apprenants pour optimiser les contenus éducatifs.",
-      delay: 0.4,
+    title: "Data for Learning",
+    description:
+      "Analyse des comportements des apprenants pour optimiser les contenus éducatifs.",
+    delay: 0.4,
   },
   {
-      title: "Approches pédagogiques innovantes",
-      description: "Conception de kits interactifs pour expérimenter les concepts technologiques.",
-      delay: 0.5,
-  }
+    title: "Approches pédagogiques innovantes",
+    description:
+      "Conception de kits interactifs pour expérimenter les concepts technologiques.",
+    delay: 0.5,
+  },
+];
+
+export const collaborationData: ParcoursType[] = [
+  {
+    title: "Collaboration avec des chercheurs",
+    description: "Pour explorer les méthodologies éducatives basées sur l’IA.",
+    delay: 0.2,
+    image: collaboration_1,
+  },
+  {
+    title: "Partenariat local",
+    description:
+      "Intégration de solutions adaptées au système éducatifmarocain.",
+    delay: 0.3,
+    image: collaboration_2,
+  },
+];
+export const contributionsData: ParcoursType[] = [
+  {
+    title: "Article scientifique",
+    description:
+      "L’impact des Smart Workshops sur la réussite scolaire au Maroc.",
+    delay: 0.2,
+    image: contribution_1,
+  },
+  {
+    title: "Rapport",
+    description:
+      " Analyse des besoins technologiques dans les écoles rurales marocaines.",
+    delay: 0.3,
+    image: contribution_2,
+  },
+  {
+    title: "Projets pilotes",
+    description:
+      " Résultats des ateliers expérimentaux dans 3 académies pilotes.",
+    delay: 0.4,
+    image: contribution_3,
+  },
 ];
