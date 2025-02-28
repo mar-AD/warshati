@@ -539,7 +539,7 @@ export const prioritairesData: PrioritairesType[] = [
   },
 ];
 
-export const pojectsData: ParcoursType[] = [
+export const projectsDomaineData: ParcoursType[] = [
   {
     image: projects_1,
     title: "Technologies éducatives intelligentes",
@@ -568,4 +568,27 @@ export const pojectsData: ParcoursType[] = [
       "Conception de kits interactifs pour expérimenter les concepts technologiques.",
     delay: 0.5,
   },
+];
+
+export const projectsRecentData: PrioritairesType[] = [
+  {
+      title: "AI Classroom",
+      description: "Un outil qui personnalise les parcours d'apprentissage à l'aide de l'intelligence artificielle.",
+      delay: 0.2,
+  },
+  {
+      title: "STEAM Everywhere",
+      description: "Modules portables pour enseigner les disciplines STEAM dans les zones rurales.",
+      delay: 0.3,
+  },
+  {
+      title: "Data for Learning",
+      description: "Analyse des comportements des apprenants pour optimiser les contenus éducatifs.",
+      delay: 0.4,
+  },
+  {
+      title: "Approches pédagogiques innovantes",
+      description: "Conception de kits interactifs pour expérimenter les concepts technologiques.",
+      delay: 0.5,
+  }
 ];
