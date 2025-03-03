@@ -20,7 +20,7 @@ const Contributions = () => {
                     <p className="font-semibold lg:text-[22px] md:text-base text-sm text-stone-400 lg:max-w-[55rem] md:max-w-[40rem] max-w-[25rem] text-center">Retrouvez ici les études, publications, et résultats marquants de nos recherches :</p>
                 </motion.div>
             </div>
-            <div className="flex items-start gap-20 justify-center">
+            <div className="flex items-start flex-wrap gap-10 justify-center">
                 {
                     contributionsData.map((contribution, index) => (
                         <ContributionCard key={index} contribution={contribution} />

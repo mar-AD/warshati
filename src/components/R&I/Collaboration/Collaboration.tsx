@@ -1,8 +1,8 @@
 "use client"
-import { FadeRight, FadeUp } from "@/lib/animations"
+import {  FadeUp } from "@/lib/animations"
 import { collaborationData } from "@/lib/data"
 import { motion } from "framer-motion"
-import Image from "next/image"
+import CollaborationCard from "./CollaborationCard"
 const Collaboration = () => {
     return (
         <div className="lg:px-10 py-20 px-5 font-Poppins lg:space-y-20 space-y-10 bg-light-gray">
@@ -21,20 +21,10 @@ const Collaboration = () => {
                         capacités en recherche et innovation.</p>
                 </motion.div>
             </div>
-            <div className="flex items-start gap-20 justify-center">
+            <div className="flex items-start gap-20 justify-center flex-wrap">
                 {
                     collaborationData.map((item, index) => (
-                        <motion.div
-                            variants={FadeRight(item.delay!)}
-                            initial="initial"
-                            whileInView="animate"
-                            viewport={{ once: true }} key={index} className="group hover:bg-violet-800 hover:text-white space-y-10 w-full rounded-xl border duration-500 p-8 shadow-2xl shadow-black/10">
-                            <div className="flex gap-x-4 items-center">
-                                <Image className="bg-slate-200 p-1.5 rounded-lg w-12 group-hover:bg-white" src={item.image} alt={item.title} />
-                                <h1 className="font-semibold group-hover:text-white text-2xl">{item.title}</h1>
-                            </div>
-                            <p className="text-sm">{item.description}</p>
-                        </motion.div>
+                        <CollaborationCard key={index} item={item}/>
                     ))
                 }
             </div>

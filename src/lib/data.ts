@@ -69,6 +69,7 @@ import {
   niveauxType,
   ParcoursType,
   PrioritairesType,
+  QuestionType,
   SocialType,
   ThematiqueType,
 } from "./types";
@@ -638,5 +639,17 @@ export const contributionsData: ParcoursType[] = [
       " Résultats des ateliers expérimentaux dans 3 académies pilotes.",
     delay: 0.4,
     image: contribution_3,
+  },
+];
+
+export const questionsData: QuestionType[] = [
+  {
+    question: "Pourquoi investir dans l’innovation éducative ?",
+    answer:
+      "Pour garantir un apprentissage efficace et durable, adapté aux défis de demain.",
+  },
+  {
+    question: "Comment collaborer avec Warshati ?",
+    answer: "Contactez notre équipe via le formulaire dédié.",
   },
 ];

@@ -62,3 +62,8 @@ export type PrioritairesType = {
   description: string;
   delay:number
 };
+
+export type QuestionType={
+  question: string;
+  answer: string;
+}
