@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import lines from "/public/images/Integration-Scolaire/hero/lines.png"
+import lines from "/public/images/IntegrationScolaire/hero/lines.png"
 import HeroImage from "./HeroImage"
 import { motion } from "framer-motion"
 import {  FadeUp } from "@/lib/animations"

@@ -1,5 +1,5 @@
-import Hero from "@/components/Integration-Scolaire/Hero/Hero"
-import Warshati from "@/components/Integration-Scolaire/WithWarshati/Warshati"
+import Hero from "@/components/IntegrationScolaire/Hero/Hero"
+import Warshati from "@/components/IntegrationScolaire/WithWarshati/Warshati"
 
 const page = () => {
     return (
