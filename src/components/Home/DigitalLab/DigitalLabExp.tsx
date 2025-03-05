@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Checkbox from "/public/images/home/digitalLab/Checkbox.png"
+import Checkbox from "/public/images/Home/digitalLab/Checkbox.png"
 import VideoSlider from "../../VideoSlider";
 import { experienceData, frameworkData } from "@/lib/data";
 import { motion } from "framer-motion";

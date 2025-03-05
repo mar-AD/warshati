@@ -7,40 +7,40 @@ import projects_1 from "/public/images/R&I/projects/projects_1.png";
 import projects_2 from "/public/images/R&I/projects/projects_2.png";
 import projects_3 from "/public/images/R&I/projects/projects_3.png";
 import projects_4 from "/public/images/R&I/projects/projects_4.png";
-import pedagogy_1 from "/public/images/home/pedagogy/pedagogy_1.png";
-import pedagogy_2 from "/public/images/home/pedagogy/pedagogy_2.png";
-import pedagogy_3 from "/public/images/home/pedagogy/pedagogy_3.png";
-import pedagogy_4 from "/public/images/home/pedagogy/pedagogy_4.png";
-import image_1 from "/public/images/home/niveaux/award_1.png";
-import num_1 from "/public/images/home/niveaux/1.png";
-import image_2 from "/public/images/home/niveaux/award_2.png";
-import num_2 from "/public/images/home/niveaux/2.png";
-import image_3 from "/public/images/home/niveaux/award_3.png";
-import num_3 from "/public/images/home/niveaux/3.png";
-import image_4 from "/public/images/home/niveaux/award_4.png";
-import num_4 from "/public/images/home/niveaux/4.png";
-import image_5 from "/public/images/home/niveaux/award_5.png";
-import num_5 from "/public/images/home/niveaux/5.png";
-import image_parcours_1 from "/public/images/home/parcours/parcours_1.png";
-import image_parcours_2 from "/public/images/home/parcours/parcours_2.png";
-import image_parcours_3 from "/public/images/home/parcours/parcours_3.png";
-import image_parcours_4 from "/public/images/home/parcours/parcours_4.png";
-import image_thematique_1 from "/public/images/home/thematique/image_1.png";
-import image_thematique_2 from "/public/images/home/thematique/image_2.png";
-import image_thematique_3 from "/public/images/home/thematique/image_3.png";
-import image_thematique_4 from "/public/images/home/thematique/image_4.png";
-import image_thematique_5 from "/public/images/home/thematique/image_5.png";
-import image_thematique_6 from "/public/images/home/thematique/image_6.png";
-import image_thematique_7 from "/public/images/home/thematique/image_7.png";
-import image_thematique_8 from "/public/images/home/thematique/image_8.png";
-import image_thematique_9 from "/public/images/home/thematique/image_9.png";
-import image_thematique_10 from "/public/images/home/thematique/image_10.png";
-import image_thematique_11 from "/public/images/home/thematique/image_11.png";
-import image_thematique_12 from "/public/images/home/thematique/image_12.png";
-import image_thematique_13 from "/public/images/home/thematique/image_13.png";
-import image_thematique_14 from "/public/images/home/thematique/image_14.png";
-import image_thematique_15 from "/public/images/home/thematique/image_15.png";
-import image_thematique_16 from "/public/images/home/thematique/image_16.png";
+import pedagogy_1 from "/public/images/Home/pedagogy/pedagogy_1.png";
+import pedagogy_2 from "/public/images/Home/pedagogy/pedagogy_2.png";
+import pedagogy_3 from "/public/images/Home/pedagogy/pedagogy_3.png";
+import pedagogy_4 from "/public/images/Home/pedagogy/pedagogy_4.png";
+import image_1 from "/public/images/Home/niveaux/award_1.png";
+import num_1 from "/public/images/Home/niveaux/1.png";
+import image_2 from "/public/images/Home/niveaux/award_2.png";
+import num_2 from "/public/images/Home/niveaux/2.png";
+import image_3 from "/public/images/Home/niveaux/award_3.png";
+import num_3 from "/public/images/Home/niveaux/3.png";
+import image_4 from "/public/images/Home/niveaux/award_4.png";
+import num_4 from "/public/images/Home/niveaux/4.png";
+import image_5 from "/public/images/Home/niveaux/award_5.png";
+import num_5 from "/public/images/Home/niveaux/5.png";
+import image_parcours_1 from "/public/images/Home/parcours/parcours_1.png";
+import image_parcours_2 from "/public/images/Home/parcours/parcours_2.png";
+import image_parcours_3 from "/public/images/Home/parcours/parcours_3.png";
+import image_parcours_4 from "/public/images/Home/parcours/parcours_4.png";
+import image_thematique_1 from "/public/images/Home/thematique/image_1.png";
+import image_thematique_2 from "/public/images/Home/thematique/image_2.png";
+import image_thematique_3 from "/public/images/Home/thematique/image_3.png";
+import image_thematique_4 from "/public/images/Home/thematique/image_4.png";
+import image_thematique_5 from "/public/images/Home/thematique/image_5.png";
+import image_thematique_6 from "/public/images/Home/thematique/image_6.png";
+import image_thematique_7 from "/public/images/Home/thematique/image_7.png";
+import image_thematique_8 from "/public/images/Home/thematique/image_8.png";
+import image_thematique_9 from "/public/images/Home/thematique/image_9.png";
+import image_thematique_10 from "/public/images/Home/thematique/image_10.png";
+import image_thematique_11 from "/public/images/Home/thematique/image_11.png";
+import image_thematique_12 from "/public/images/Home/thematique/image_12.png";
+import image_thematique_13 from "/public/images/Home/thematique/image_13.png";
+import image_thematique_14 from "/public/images/Home/thematique/image_14.png";
+import image_thematique_15 from "/public/images/Home/thematique/image_15.png";
+import image_thematique_16 from "/public/images/Home/thematique/image_16.png";
 import {
   Atom,
   BrainCircuit,
@@ -498,25 +498,25 @@ export const ageGroups: ageType[] = [
   {
     ageRange: "6-8 ans",
     description: "Premiers apprentissages fondamentaux",
-    image: "/images/home/age/image-",
+    image: "/images/Home/age/image-",
     delay: 0.2,
   },
   {
     ageRange: "9-11 ans",
     description: "Consolidation et exploration",
-    image: "/images/home/age/image-",
+    image: "/images/Home/age/image-",
     delay: 0.3,
   },
   {
     ageRange: "12-14 ans",
     description: "Développement de la pensée critique",
-    image: "/images/home/age/image-",
+    image: "/images/Home/age/image-",
     delay: 0.4,
   },
   {
     ageRange: "15-18 ans",
     description: "Spécialisation et autonomisation",
-    image: "/images/home/age/image-",
+    image: "/images/Home/age/image-",
     delay: 0.5,
   },
 ];

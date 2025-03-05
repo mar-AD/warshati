@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import space_man from '/public/images/home/parcours/space_man.png';
+import space_man from '/public/images/Home/parcours/space_man.png';
 import ParcoursCard from './ParcoursCard';
 import { ParcoursData } from '@/lib/data';
 import { FadeUp } from '@/lib/animations';

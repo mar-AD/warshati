@@ -24,7 +24,29 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "Current branch is: ${env.BRANCH_NAME}"
-                git branch: "${env.BRANCH_NAME}", url: 'git@github.com:Pubsilon/cashier-frontend.git'
+                git branch: "${env.BRANCH_NAME}", url: 'git@github.com:Pubsilon/warshati-website.git'
+            }
+        }
+
+        stage('Prepare Configuration') {
+            steps {
+                script {
+
+                    def configFileId
+                    if (env.BRANCH_NAME == 'main') {
+                        configFileId = 'd688a297-d14e-4d37-9c56-d3a2284b24cc'
+                    }
+
+                    configFileProvider([configFile(fileId: configFileId, variable: 'CONFIG_FILE_PATH')]) {
+                        def port = sh(script: "grep '^PORT=' ${CONFIG_FILE_PATH} | cut -d '=' -f2", returnStdout: true).trim()
+                        env.PORT = port
+                        sh '''
+                            echo "Using configuration file at $CONFIG_FILE_PATH"
+                            cp $CONFIG_FILE_PATH .env
+                        '''
+                    }
+
+                }
             }
         }
 
@@ -46,7 +68,7 @@ pipeline {
         stage('Build and Deploy') {
             steps {
                 script {
-                    sh "docker compose -f docker-compose.yml up -d --build --force-recreate"
+                    sh "docker compose -f docker-compose.yml up -d --build"
                 }
             }
         }
