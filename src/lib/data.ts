@@ -55,7 +55,6 @@ import {
   PersonStanding,
   PhoneCallIcon,
   SquareCode,
-  Twitter,
   Youtube,
 } from "lucide-react";
 import {
