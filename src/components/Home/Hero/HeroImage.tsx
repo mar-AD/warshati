@@ -1,8 +1,8 @@
 import Image from "next/image"
-import image_1 from "/public/images/home/hero/image_1.png"
-import image_2 from "/public/images/home/hero/image_2.png"
-import image from "/public/images/home/hero/image.png"
-import circles from "/public/images/home/digitalLab/circles.png"
+import image_1 from "/public/images/Home/hero/image_1.png"
+import image_2 from "/public/images/Home/hero/image_2.png"
+import image from "/public/images/Home/hero/image.png"
+import circles from "/public/images/Home/digitalLab/circles.png"
 import { FadeLeft, FadeRight } from "@/lib/animations"
 import { motion } from "framer-motion"
 const HeroImage = () => {
