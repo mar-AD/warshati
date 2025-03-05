@@ -73,6 +73,7 @@ import {
   SocialType,
   ThematiqueType,
 } from "./types";
+import { FaXTwitter } from "react-icons/fa6";
 export const socials: SocialType[] = [
   {
     Icon: Facebook,
@@ -87,7 +88,7 @@ export const socials: SocialType[] = [
     link: "/",
   },
   {
-    Icon: Twitter,
+    Icon: FaXTwitter,
     link: "/",
   },
   {
@@ -99,7 +100,7 @@ export const socials: SocialType[] = [
 export const contacts: ContactType[] = [
   {
     Icon: PhoneCallIcon,
-    value: "+212 5 55 55 55 55",
+    value: "+212675654343",
   },
   {
     Icon: Mail,
@@ -198,14 +199,14 @@ export const FAQData: FAQType[] = [
 ];
 
 export const links: NavType[] = [
-  { label: "R&I", link: "R&I" },
-  { label: "Blog", link: "blog" },
-  { label: "Contact", link: "contact" },
+  { label: "R&I", link: "/R&I" },
+  { label: "Blog", link: "/Blog" },
+  { label: "Contact", link: "/Contact" },
 ];
 
 export const languages: LanguageType[] = [
   { code: "FR", name: "Français", flag: "fr" },
-  { code: "AR", name: "العربية", flag: "sa" },
+  { code: "AR", name: "العربية", flag: "ma" },
   { code: "EN", name: "English", flag: "gb" },
   { code: "ESP", name: "Español", flag: "es" },
 ];

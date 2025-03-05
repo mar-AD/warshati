@@ -44,8 +44,8 @@ const ContactUs = () => {
                     <div className="flex gap-8 flex-wrap">
                         {
                             socials.map(({ Icon, link }, index) => (
-                                <Link href={link} className="bg-violet-800 p-2 rounded-full hover:bg-violet-100 hover:text-violet-900 duration-500 z-10" key={index} target="_blank">
-                                    <Icon className="max-md:size-4" />
+                                <Link href={link} className="bg-violet-800 p-2 rounded-full flex items-center hover:bg-violet-100 hover:text-violet-900 duration-500 z-10" key={index} target="_blank">
+                                    <Icon className="max-md:size-4 size-6" />
                                 </Link>
                             ))
                         }

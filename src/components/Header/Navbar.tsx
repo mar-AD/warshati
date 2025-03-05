@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation";
 const Navbar = ({showMenu}:{showMenu:boolean}) => {
     const [data,setData] =useState<NavType[]>(links);
     const pathname=usePathname()
-    console.log(pathname)
     const selectLink=(label:string)=>{
         data.forEach((item) => {
             if(item.label===label){

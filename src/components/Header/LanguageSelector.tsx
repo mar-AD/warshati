@@ -6,15 +6,15 @@ import { ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { languages } from "@/lib/data";
 const LanguageSelector = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState<LanguageType>(
-    languages.find((language) => {
-      if (typeof window !== "undefined") {
-        return language.code.toLowerCase() == navigator.language.split("-")[0];
-      } else {
-        return false;
-      }
-    }) || languages[0]
-  );
+  const [selectedLanguage, setSelectedLanguage] = useState<LanguageType>(languages[0]);
+
+  useEffect(() => {
+    const userLanguage = navigator.language.split("-")[0];
+    const defaultLanguage = languages.find((language) => 
+      language.code.toLowerCase() === userLanguage
+    ) || languages[0];
+    setSelectedLanguage(defaultLanguage);
+  }, []);
   const [showMenu, setShowMenu] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 

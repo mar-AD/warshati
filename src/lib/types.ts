@@ -1,5 +1,6 @@
 import { LucideIcon } from "lucide-react";
 import { StaticImageData } from "next/image";
+import { IconType } from "react-icons";
 
 export type NavType = {
   label: string;
@@ -13,7 +14,7 @@ export type LanguageType = {
   flag: string;
 };
 export type SocialType = {
-  Icon: LucideIcon;
+  Icon: LucideIcon|IconType;
   link: string;
 };
 export type ContactType = {
