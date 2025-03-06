@@ -16,6 +16,7 @@ export type LanguageType = {
 export type SocialType = {
   Icon: LucideIcon|IconType;
   link: string;
+  followers?:number
 };
 export type ContactType = {
   Icon: LucideIcon;
@@ -73,4 +74,10 @@ export type TestimonialsType={
   description:string
   image:StaticImageData
   delay:number
+}
+export type articleType={
+  title:string,
+  name:string
+  date:string
+  image:string
 }

@@ -63,6 +63,7 @@ import {
 } from "lucide-react";
 import {
   ageType,
+  articleType,
   ContactType,
   CurriculaType,
   FAQType,
@@ -82,22 +83,27 @@ export const socials: SocialType[] = [
   {
     Icon: Facebook,
     link: "/",
+    followers: 600,
   },
   {
     Icon: Instagram,
     link: "/",
+    followers: 469,
   },
   {
     Icon: Linkedin,
     link: "/",
+    followers: 300,
   },
   {
     Icon: FaXTwitter,
     link: "/",
+    followers: 567,
   },
   {
     Icon: Youtube,
     link: "/",
+    followers: 600,
   },
 ];
 
@@ -665,26 +671,102 @@ export const testimonialsData: TestimonialsType[] = [
     description:
       "Grâce au AI Lab de mon école, j'ai pu créer une application qui déteste les émotions dans des images. Cela m'a inspiré à poursuivre une carrière en science des données.",
     image: testimonials_1,
-    delay:.2
+    delay: 0.2,
   },
   {
     name: "Nadia Radi",
     description:
       "Levem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: testimonials_2,
-    delay:.3
+    delay: 0.3,
   },
   {
     name: "Fatima Zahra M",
     description:
       "Levem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: testimonials_3,
-    delay:.4
+    delay: 0.4,
   },
   {
     name: "Samba Krat",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: testimonials_4,
-    delay:.5
+    delay: 0.5,
+  },
+];
+
+export const articleData:articleType[] = [
+  {
+    image: "/images/Blog/articles/article_",
+    title: "article",
+    name: "Comment les Smart Workshops transforment l'apprentissage des élèves?",
+    date: "August 20, 2025",
+  },
+  {
+    image: "/images/Blog/articles/article_",
+    title: "article",
+    name: "Top 5 des projets STEAM à réaliser avec vos étudiants",
+    date: "August 20, 2025",
+  },
+  {
+    image: "/images/Blog/articles/article_",
+    title: "article",
+    name: "L'intelligence artificielle dans les classes marocaines : Opportunités et défis",
+    date: "August 20, 2025",
+  },
+  {
+    image: "/images/Blog/articles/article_",
+    title: "article",
+    name: "Coding pour enfants : Où commencer et pourquoi c'est crucial ?",
+    date: "August 20, 2025",
+  },
+  {
+    image: "/images/Blog/articles/article_",
+    title: "article",
+    name: "L'impact des maquettes interactives sur la compréhension scientifique des jeunes apprenants",
+    date: "August 20, 2025",
+  },
+  {
+    image: "/images/Blog/articles/article_",
+    title: "article",
+    name: "Les compétences du 21e siècle développées grâce aux programmes STEAM",
+    date: "Aucher 20, 2025",
+  },
+  {
+    image: "/images/Blog/articles/article_",
+    title: "article",
+    name: "Pourquoi intégrer l’IoT dans l’éducation ?",
+    date: "Aujourd’hui, 2025",
+  },
+  {
+    image: "/images/Blog/articles/article_",
+    title: "article",
+    name: "Gamification dans l’éducation : Un levier puissant pour l’engagement",
+    date: "Aujourd’hui, 2025",
+  },
+  {
+    image: "/images/Blog/articles/article_",
+    title: "article",
+    name: "STEAM pour l’inclusion : Rendre la technologie accessible à tous",
+    date: "Aujourd’hui, 2025",
+  },
+  {
+    image: "/images/Blog/articles/article_",
+    title: "article",
+    name: "Le rôle des maquettes dans l’enseignement des concepts d’ingénierie",
+    date: "August 20, 2025",
+  },
+  {
+    image: "/images/Blog/articles/article_",
+    title: "article",
+    name: "Intelligence artificielle et créativité : Une alliance inattendue",
+    date: "August 20, 2025",
+  },
+  {
+    image: "/images/Blog/articles/article_",
+    title: "article",
+    name: "Construire une culture STEAM dans les écoles marocaines",
+    date: "August 20, 2025",
   },
 ];
