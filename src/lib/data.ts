@@ -1,3 +1,7 @@
+import testimonials_1 from "/public/images/IntegrationScolaire/testimonials/testimonials-1.png";
+import testimonials_2 from "/public/images/IntegrationScolaire/testimonials/testimonials-2.png";
+import testimonials_3 from "/public/images/IntegrationScolaire/testimonials/testimonials-3.png";
+import testimonials_4 from "/public/images/IntegrationScolaire/testimonials/testimonials-4.png";
 import contribution_1 from "/public/images/R&I/contributions/contribution_1.png";
 import contribution_2 from "/public/images/R&I/contributions/contribution_2.png";
 import contribution_3 from "/public/images/R&I/contributions/contribution_3.png";
@@ -70,6 +74,7 @@ import {
   PrioritairesType,
   QuestionType,
   SocialType,
+  TestimonialsType,
   ThematiqueType,
 } from "./types";
 import { FaXTwitter } from "react-icons/fa6";
@@ -651,5 +656,35 @@ export const questionsData: QuestionType[] = [
   {
     question: "Comment collaborer avec Warshati ?",
     answer: "Contactez notre équipe via le formulaire dédié.",
+  },
+];
+
+export const testimonialsData: TestimonialsType[] = [
+  {
+    name: "Mousol L",
+    description:
+      "Grâce au AI Lab de mon école, j'ai pu créer une application qui déteste les émotions dans des images. Cela m'a inspiré à poursuivre une carrière en science des données.",
+    image: testimonials_1,
+    delay:.2
+  },
+  {
+    name: "Nadia Radi",
+    description:
+      "Levem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: testimonials_2,
+    delay:.3
+  },
+  {
+    name: "Fatima Zahra M",
+    description:
+      "Levem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: testimonials_3,
+    delay:.4
+  },
+  {
+    name: "Samba Krat",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: testimonials_4,
+    delay:.5
   },
 ];

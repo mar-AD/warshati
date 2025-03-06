@@ -128,9 +128,9 @@ const WarshatiCards = () => {
             whileInView="animate"
             viewport={{once:true}}
             className="flex justify-start flex-col items-start gap-5 p-4 border bg-white rounded-xl w-full md:w-[37rem]">
-                <div className="relative flex items-center justify-center">
-                    <div className="md:w-8 md:h-14 w-5 h-12 rounded-l-full bg-violet-800/20 rotate-45 absolute"></div>
-                    <h1 className="font-Inter font-medium md:text-4xl text-3xl text-violet-600">06</h1>
+                <div className="relative flex items-center justify-end">
+                <div className="md:w-8 md:h-14 w-5 h-12 rounded-l-full bg-violet-800/20 -rotate-45 -scale-x-100 absolute"></div>
+                <h1 className="font-Inter font-medium md:text-4xl text-3xl text-violet-600">06</h1>
                 </div>
                 <h1 className="font-bold md:text-2xl text-lg text-violet-800">Avantages des STEAM et AI Labs ?</h1>
                 <div>

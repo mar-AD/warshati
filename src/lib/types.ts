@@ -68,3 +68,9 @@ export type QuestionType={
   question: string;
   answer: string;
 }
+export type TestimonialsType={
+  name: string;
+  description:string
+  image:StaticImageData
+  delay:number
+}

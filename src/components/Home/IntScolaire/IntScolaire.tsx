@@ -3,6 +3,8 @@ import { FadeUp } from "@/lib/animations"
 import IntScolaireCard from "./IntScolaireCard"
 import { IntScolaireData } from "@/lib/data"
 import { motion } from "framer-motion"
+import { Plus } from "lucide-react"
+import Link from "next/link"
 const IntScolaire = () => {
 
     return (
@@ -25,6 +27,9 @@ const IntScolaire = () => {
                         <IntScolaireCard key={index} item={item} />
                     ))
                 }
+            <Link href={"/Integration-Scolaire"} className="place-self-end col-span-3  btn btn-violet-outline !gap-x-3">
+                savoir <Plus />
+            </Link>
             </div>
         </div>
     )
