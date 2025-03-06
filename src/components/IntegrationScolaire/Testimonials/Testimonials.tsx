@@ -30,7 +30,7 @@ const Testimonials = () => {
                 viewport={{ once: true }}
                 className="btn btn-violet !rounded-lg !font-medium">Savoir Plus</motion.button>
             </div>
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid lg:grid-cols-2 gap-10">
                 {
                     testimonialsData.map((item,index)=>(
 
