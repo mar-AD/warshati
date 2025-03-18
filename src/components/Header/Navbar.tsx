@@ -21,6 +21,7 @@ const Navbar = ({showMenu}:{showMenu:boolean}) => {
     }
     useEffect(()=>{
         selectLink("/")
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[pathname])
     return (
         <div className={"flex justify-center items-center"}>

@@ -80,7 +80,7 @@ const Thematique = () => {
                             <Image className="absolute -right-8 -top-8 w-[60px]" src={image_4} alt="" />
                             <h1 className="border-4 border-violet-800 rounded-full max-w-[650px] w-full px-6 py-2 text-center text-muted-foreground
                                 text-[0.75rem] sm:text-sm md:text-base lg:text-[1.019rem] font-bold">
-                                Une série de 10 à 20 Smart Workshops, axée sur la réalisation d'un projet concret inspiré par un thème spécifique
+                                Une série de 10 à 20 Smart Workshops, axée sur la réalisation d&apos;un projet concret inspiré par un thème spécifique
                             </h1>
                             </div>
                         </div>
@@ -98,7 +98,6 @@ const Thematique = () => {
                     ))}
                 </div>
             </Carousel>
-            {/* <button className="btn btn-violet-outline !gap-x-3">savoir <Plus /></button> */}
         </div >
     )
 }

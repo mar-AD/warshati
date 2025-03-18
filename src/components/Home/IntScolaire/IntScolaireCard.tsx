@@ -20,11 +20,7 @@ const IntScolaireCard = ({ item: { Icon, ...rest } }: { item: IntScolaireType })
                     rest.textColor
                 )}
                 >
-                {typeof Icon === "function" ? (
-                    <Icon/>
-                ) : (
                     <Image src={Icon} alt="" width={30} height={30} className="w-8 md:w-10" />
-                )}
                 </span>
                 {rest.title}
             </h2>

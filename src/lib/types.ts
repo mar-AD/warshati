@@ -24,7 +24,7 @@ export type ContactType = {
 };
 export type CurriculaType = {
   title: string;
-  Icon: LucideIcon | StaticImageData;
+  Icon: LucideIcon;
   description: string;
   delay: number;
 };
@@ -49,9 +49,13 @@ export interface niveauxType extends ParcoursType {
   bgColor: string;
   borderColor: string;
 }
-export interface IntScolaireType extends CurriculaType {
+export interface IntScolaireType {
   bgColor: string;
   textColor: string;
+  title: string;
+  Icon: StaticImageData;
+  description: string;
+  delay: number;
 }
 export type FAQType = {
   title: string;
