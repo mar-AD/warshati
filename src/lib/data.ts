@@ -45,6 +45,13 @@ import image_thematique_13 from "/public/images/Home/thematique/image_13.png";
 import image_thematique_14 from "/public/images/Home/thematique/image_14.png";
 import image_thematique_15 from "/public/images/Home/thematique/image_15.png";
 import image_thematique_16 from "/public/images/Home/thematique/image_16.png";
+import formation_1 from "/public/images/Home/formation/formation_continue.png";
+import formation_2 from "/public/images/Home/formation/ateliers.png";
+import formation_3 from "/public/images/Home/formation/coaching.png";
+import formation_4 from "/public/images/Home/formation/ressources.png";
+import intScolaire_1 from "/public/images/Home/intScolaire/image_2.png";
+import intScolaire_2 from "/public/images/Home/intScolaire/image_3.png";
+import intScolaire_3 from "/public/images/Home/intScolaire/image_4.png";
 import {
   Atom,
   BrainCircuit,
@@ -60,6 +67,11 @@ import {
   PhoneCallIcon,
   SquareCode,
   Youtube,
+  Info,
+  Network,
+  ShieldCheck,
+  LayoutDashboard
+
 } from "lucide-react";
 import {
   ageType,
@@ -67,6 +79,7 @@ import {
   ContactType,
   CurriculaType,
   FAQType,
+  FormationType,
   IntScolaireType,
   LanguageType,
   NavType,
@@ -122,10 +135,11 @@ export const contacts: ContactType[] = [
   },
 ];
 export const DigitalLabData: string[] = [
-  "Des laboratoires digitaux",
-  "Des maquettes d’apprentissage interactives",
-  "De coding",
-  "Des prototypes de projets innovants",
+  "Système de gestion de l'apprentissage (LMS)",
+  "Laboratoire numérique",
+  "Kits WarshaMaker ",
+  "Programmes éducatifs et évaluation",
+  "Formation professionnelle des enseignants",
 ];
 
 export const experienceData: string[] = [
@@ -224,28 +238,28 @@ export const languages: LanguageType[] = [
 export const IntScolaireData: IntScolaireType[] = [
   {
     title: "Accompagnement",
-    Icon: GraduationCap,
+    Icon: intScolaire_1,
     description:
-      "Formation de vos Formateurs et Accompagnement Tout  au Long de L’implèmentation",
+      "Warshati accompagne les écoles et les enseignants dans l’intégration fluide de ses outils pédagogiques grâce à des formations, un suivi personnalisé et un support continu.",
     bgColor: "bg-violet-600/40",
     textColor: "text-violet-900",
     delay: 0.2,
   },
   {
     title: "Complémentaire",
-    Icon: PersonStanding,
+    Icon: intScolaire_2,
     description:
-      "Formation de vos Formateurs et Accompagnement Tout  au Long de L’implèmentation",
-    bgColor: "bg-pink-600/40",
+      "Warshati s’intègre harmonieusement aux programmes scolaires, enrichissant les apprentissages avec des approches interactives et innovantes alignées sur les objectifs éducatifs. ",
+    bgColor: "bg-customCard-card1",
     textColor: "text-pink-900",
     delay: 0.3,
   },
   {
     title: "Outils",
-    Icon: PenTool,
+    Icon: intScolaire_3,
     description:
-      "Formation de vos Formateurs et Accompagnement Tout  au Long de L’implèmentation",
-    bgColor: "bg-slate-600/40",
+      " Des équipements à la pointe de la technologie permettant de se familiariser avec les outils du futur.",
+    bgColor: "bg-customCard-card2",
     textColor: "text-slate-900",
     delay: 0.4,
   },
@@ -255,30 +269,58 @@ export const CurriculaData: CurriculaType[] = [
   {
     title: "STEAM",
     description:
-      "Projets pratiques axés sur les défis contemporains, mettant en avant la collaboration, la gestion de projet et l’innovation.Exploration des opportunités dans les domaines STEAM .",
+      "Un programme d'éducation STEAM bien structuré offre aux élèves des expériences d'apprentissage pratiques et interdisciplinaires, intégrant les sciences, la technologie, l'ingénierie, les arts et les mathématiques de manière significative.",
     Icon: Atom,
     delay: 0.2,
   },
   {
     title: "AI & ML",
     description:
-      "Développement des compétences avancées , avec une introduction aux technologies émergentes.Participation à des projets complexes encourageant l’analyse et la pensée critique.",
+      "Un programme structuré initie les élèves à l'intelligence artificielle (IA) et à l'apprentissage automatique (ML) à travers des activités pratiques adaptées à leur âge, favorisant la résolution de problèmes, la créativité et la pensée computationnelle.",
     Icon: BrainCircuit,
     delay: 0.3,
   },
   {
-    title: "Computational Thing",
+    title: "Computational Thinging",
     description:
-      "Renforcement des compétences en littératie et numératie grâce à des approches interactives. Exploration des notions scientifiques et technologiques à travers des projets collaboratifs favorisant.",
+      "Un programme axé sur le développement logiciel et la science des données, permet aux élèves de développer leurs compétences en raisonnement logique et en pensée algorithmique, tout en cultivant leur esprit d’analyse de manière créative et efficace",
     Icon: Cpu,
     delay: 0.4,
   },
   {
-    title: "Coding  Text & Block",
+    title: "Coding Text & Block",
     description:
-      "Projets pratiques axés sur les défis contemporains, mettant en avant la collaboration, la gestion de projet et l’innovation. Exploration des opportunités dans les domaines STEAM et de l’intelligence artificielle.",
+      "Un programme strucutré qui offre aux élèves une approche progressive du codage en combinant des langages de programmation visuels basés sur des blocs et des langages textuels traditionnels. Les élèves commencent par des blocs, puis progressent vers l’écriture de code textuel.",
     Icon: SquareCode,
     delay: 0.5,
+  },
+  {
+    title: "Information & Data",
+    description:
+      "Learn how to find the right information online, choose reliable sources, and organize digital content in a smart way! Discover how to search, store, and manage data safely and easily.",
+    Icon: Info,
+    delay: 0.6,
+  },
+  {
+    title: "Creating Digital Content",
+    description:
+      "Learn how to make and edit digital content! Discover how to add new ideas to existing knowledge while respecting copyrights and licenses. Plus, explore how to give clear instructions to a computer to make it work the way you want!",
+    Icon: LayoutDashboard,
+    delay: 0.7,
+  },
+  {
+    title: "Staying Safe Online",
+    description:
+      "Learn how to keep your devices, personal data, and privacy secure in the digital world. Discover ways to protect your well-being, both physically and mentally, while using technology. Understand how digital tools can help everyone feel included and how to use them responsibly to care for our planet.",
+    Icon: ShieldCheck,
+    delay: 0.7,
+  },
+  {
+    title: "Connected & Collaborative",
+    description:
+      "Engage, connect, and work together using digital tools while respecting cultural and generational diversity. Learn how to participate in digital society, manage your online identity, and build a positive digital reputation.",
+    Icon: Network,
+    delay: 0.7,
   },
 ];
 
@@ -359,30 +401,57 @@ export const ParcoursData: ParcoursType[] = [
   },
 ];
 
+export const FormationData: FormationType[] = [
+  {
+    title: "Formation Continue",
+    description: "Programmes de formation innovants pour rester à la pointe de la pédagogie numérique et développer de nouvelles compétences.",
+    image: formation_1,
+    delay: 0.2,
+  },
+  {
+    title: "Ateliers Interactifs",
+    description: "Sessions pratiques et collaboratives pour expérimenter des approches pédagogiques modernes et adaptées aux technologies actuelles.",
+    image: formation_2,
+    delay: 0.3,
+  },
+  {
+    title: "Coaching et Mentorat",
+    description: "Coaching et Mentorat Description : Accompagnement personnalisé par des experts pour soutenir et enrichir vos pratiques en classe.",
+    image: formation_3,
+    delay: 0.4,
+  },
+  {
+    title: "Ressources et Outils Pédagogiques",
+    description: "Accès à une bibliothèque complète d’outils numériques, guides et supports pour optimiser votre enseignement.",
+    image: formation_4,
+    delay: 0.5,
+  },
+];
+
 export const PedagogyData: ParcoursType[] = [
   {
-    title: "Découverte Ludique",
+    title: "Créativité & Innovation",
     description:
-      "Entre dans un monde d’amusement et de découverte ! Avec nos jeux et activités, apprendre les sciences devient un plaisir",
+      "Libère ton imagination ! Crée des inventions uniques, explore de nouvelles idées et deviens un innovateur en herbe.",
     image: pedagogy_1,
     delay: 0.2,
   },
   {
-    title: "Apprentissage Progressif",
+    title: "Pensée critique",
     description:
-      "Pas à pas, découvre les bases des sciences et technologies : coder, construire, comprendre le monde... tout devient facile avec Warshati !",
+      " Éveille ta réflexion ! Analyse les idées, pose des questions et développe une pensée logique pour mieux comprendre le monde qui t’entoure.",
     image: pedagogy_2,
     delay: 0.3,
   },
   {
-    title: "Créativité et Exploration",
+    title: "Résolution de problèmes",
     description:
-      "Libère ton imagination ! Crée des inventions uniques, explore de nouvelles idées et deviens un innovateur en herbe.",
+      "Relève des défis ! Trouve des solutions innovantes et apprends à surmonter les obstacles avec créativité et stratégie.",
     image: pedagogy_3,
     delay: 0.4,
   },
   {
-    title: "Collaboration et Partage",
+    title: "Collaboration & Communication",
     description:
       "Apprends avec tes amis et partage tes idées ! Chez Warshati, le travail en équipe est la clé pour réaliser de grandes choses.",
     image: pedagogy_4,

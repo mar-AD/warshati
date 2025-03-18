@@ -71,7 +71,15 @@
 
         --chart-5: 27 87% 67%;
 
-        --radius: 0.5rem}
+        --radius: 0.5rem;
+
+        --custom-card-1: 221 100% 94%;
+
+        --custom-card-2: 45 97% 87%;
+
+        --custom-card-3: 158 87% 88%;
+
+        --custom-card-4: 23 100% 93%;}
   .dark {
 
         --background: 224 71.4% 4.1%;

@@ -13,12 +13,12 @@ const page = () => {
       <Hero />
       {/* Warshati Digital Lab */}
       <DigitalLab />
+      {/* Partenariat */}
+      <Partenariat />
       {/* Smart Workshops Program */}
       <WorkShop />
       {/* Intégration Scolaire */}
       <IntScolaire />
-      {/* Partenariat */}
-      <Partenariat />
       {/* FAQ */}
       <FAQ />
       {/* ContactUs */}

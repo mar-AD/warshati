@@ -7,7 +7,7 @@ import { FadeLeft, FadeRight } from "@/lib/animations"
 import { motion } from "framer-motion"
 const HeroImage = () => {
     return (
-        <div className="flex max-lg:flex-col justify-center items-center mt-32 gap-20">
+        <div className="flex max-lg:flex-col justify-center items-center mt-16 gap-20">
             <motion.div
                 variants={FadeRight(.3)}
                 initial="initial"

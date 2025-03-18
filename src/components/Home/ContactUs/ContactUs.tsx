@@ -17,7 +17,7 @@ const ContactUs = () => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }} className="flex justify-center">
-                <p className="font-semibold lg:text-[22px] md:text-base text-sm text-stone-400 lg:max-w-[55rem] md:max-w-[40rem] max-w-[25rem] text-center">Entrez vos coordonnées, nous vous contacterons pour répondre à vos besoins.
+                <p className="font-semibold lg:text-[22px] md:text-base text-sm text-muted-foreground lg:max-w-[55rem] md:max-w-[40rem] max-w-[25rem] text-center">Entrez vos coordonnées, nous vous contacterons pour répondre à vos besoins.
                 </p>
             </motion.div>
             <motion.div

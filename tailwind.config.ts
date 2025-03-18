@@ -35,6 +35,9 @@ export default {
       Vazirmatn: ["Vazirmatn", "sans-serif"],
     },
     extend: {
+      screens: {
+        "2xl": "1800px",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -81,6 +84,12 @@ export default {
           "3": "hsl(var(--chart-3))",
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
+        },
+        customCard: {
+          "card1": "hsl(var(--custom-card-1))", // Muted cyan/teal
+          "card2": "hsl(var(--custom-card-2))", // Soft pastel yellow
+          "card3": "hsl(var(--custom-card-3))", // Light pastel yellow/beige
+          "card4": "hsl(var(--custom-card-4))", // Pale mint green
         },
       },
     },

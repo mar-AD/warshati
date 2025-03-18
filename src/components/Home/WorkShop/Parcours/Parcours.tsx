@@ -4,26 +4,39 @@ import ParcoursCard from './ParcoursCard';
 import { ParcoursData } from '@/lib/data';
 import { FadeUp } from '@/lib/animations';
 import { motion } from 'framer-motion';
+import pen_line from "/public/images/Home/hero/pen_line.png";
+import victore_1 from "/public/images/Home/parcours/victore_1.png";
 const Parcours = () => {
 
     return (
         <div className="lg:px-20 py-20 px-5 font-Poppins lg:space-y-20 space-y-10 relative">
-            <Image src={space_man} alt='' className='absolute top-44 right-10 max-xl:hidden' />
-            <motion.h1
-                variants={FadeUp(.2)}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                className="lg:text-6xl md:text-5xl text-4xl font-bold text-violet-700 text-center">Parcours
-            </motion.h1>
+            <Image src={space_man} alt='' className='absolute top-10 right-10 max-xl:hidden' />
+            <Image 
+                className="absolute top-0 right-[35rem] !m-0 lg:left-[30rem] md:right-[10rem] sm:right-[5rem] max-sm:right-[5rem] lg:w-[280px] md:w-[180px] sm:w-[140px] max-sm:w-[140px]"
+                draggable={false} 
+                src={victore_1} 
+                alt="Line Image" 
+            />
             <motion.div
-                variants={FadeUp(.3)}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }} className="flex justify-center">
-                <p className="font-semibold lg:text-[22px] md:text-base text-sm text-stone-400 lg:max-w-[68rem] md:max-w-[72rem] max-w-[80rem] text-center">Chaque parcours est soigneusement conçu pour orienter les apprenants à travers l&apos;univers fascinant de STEAM & AI.</p>
+                    variants={FadeUp(.3)}
+                    initial="initial"
+                    animate="animate"
+                    className="flex flex-col items-start gap-3 !mt-8"
+                >
+                    <div className="flex flex-col items-start pl-32 md:pl-20 sm:pl-10 max-sm:pl-5 max-w-[61rem] ">
+                        <h1 className="text-[32px] lg:text-[32px] md:text-[28px] sm:text-[24px] max-sm:text-[20px] font-bold text-start text-muted-foreground">
+                            Learning Pathway
+                        </h1>
+                        <Image 
+                            className="lg:w-[280px] md:w-[250px] sm:w-[190px] max-sm:w-[160px]" 
+                            draggable={false} 
+                            src={pen_line} 
+                            alt="Pen Line Image" 
+                        />
+                    </div>
+
             </motion.div>
-            <div className='grid grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] gap-4 place-content-center lg:!mt-44'>
+            <div className='grid grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] gap-4 place-content-center lg:!mt-52'>
 
                 {
                     ParcoursData.map((item, index) => (

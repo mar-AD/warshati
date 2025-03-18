@@ -24,11 +24,17 @@ export type ContactType = {
 };
 export type CurriculaType = {
   title: string;
-  Icon: LucideIcon;
+  Icon: LucideIcon | StaticImageData;
   description: string;
   delay: number;
 };
 export type ParcoursType = {
+  title: string;
+  image: StaticImageData;
+  description: string;
+  delay?: number;
+};
+export type FormationType = {
   title: string;
   image: StaticImageData;
   description: string;

@@ -8,6 +8,9 @@ import { ThematiqueData } from "@/lib/data";
 import { Plus } from "lucide-react";
 import { FadeUp } from "@/lib/animations";
 import { motion } from "framer-motion";
+import Image from "next/image"
+import robot_2 from "/public/images/Home/curricula/robot_2.png"
+import image_4 from "/public/images/Home/curricula/image_4.png"
 const Thematique = () => {
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
@@ -36,14 +39,7 @@ const Thematique = () => {
                 variants={FadeUp(.2)}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }} className="lg:text-6xl md:text-5xl text-4xl font-bold text-violet-700 text-center">Thématique</motion.h1>
-            <motion.div
-                variants={FadeUp(.3)}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }} className="flex justify-center">
-                <p className="font-semibold lg:text-[22px] md:text-base text-sm text-stone-400 lg:max-w-[68rem] md:max-w-[72rem] max-w-[80rem] text-center">Ensemble des thématiques et des axes en constante évolution, axé sur des projets et centré autour des concepts STEAM & AI.</p>
-            </motion.div>
+                viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-6xl text-4xl text-center">Smart Workshops Project</motion.h1>
             <Carousel
                 opts={{
                     loop: true,
@@ -61,6 +57,35 @@ const Thematique = () => {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
+                <motion.div
+                    variants={FadeUp(.3)}
+                    initial="initial"
+                    animate="animate"
+                    className="flex flex-col items-start gap-3"
+                >
+                    <div className="flex md:flex-row flex-col-reverse justify-between items-center md:items-end w-full gap-6 px-5 max-w-[100vw]">
+                        <button className="!w-fit btn btn-violet-outline mt-6 md:mt-0 mx-auto md:mx-0">
+                            <Plus /> Savoir
+                        </button>
+
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
+                            <Image
+                            className="w-[200px] md:w-[180px] sm:w-[160px] max-sm:w-[140px] lg:w-[220px]"
+                            draggable={false}
+                            src={robot_2}
+                            alt="Pen Line Image"
+                            />
+
+                            <div className="relative w-fit">
+                            <Image className="absolute -right-8 -top-8 w-[60px]" src={image_4} alt="" />
+                            <h1 className="border-4 border-violet-800 rounded-full max-w-[650px] w-full px-6 py-2 text-center text-muted-foreground
+                                text-[0.75rem] sm:text-sm md:text-base lg:text-[1.019rem] font-bold">
+                                Une série de 10 à 20 Smart Workshops, axée sur la réalisation d'un projet concret inspiré par un thème spécifique
+                            </h1>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
                 <div className="flex justify-center mt-10">
                     {Array.from({ length: count }).map((_, index) => (
                         <div onClick={() => api?.scrollTo(index)}
@@ -73,7 +98,7 @@ const Thematique = () => {
                     ))}
                 </div>
             </Carousel>
-            <button className="btn btn-violet-outline !gap-x-3">savoir <Plus /></button>
+            {/* <button className="btn btn-violet-outline !gap-x-3">savoir <Plus /></button> */}
         </div >
     )
 }
