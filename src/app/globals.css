@@ -128,7 +128,17 @@
 
         --chart-4: 280 65% 60%;
 
-        --chart-5: 340 75% 55%}}
+        --chart-5: 340 75% 55%}
+
+        .scrollbar-hidden::-webkit-scrollbar {
+          display: none;
+      }
+  
+      .scrollbar-hidden {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      }
 
 @layer base {
   * {

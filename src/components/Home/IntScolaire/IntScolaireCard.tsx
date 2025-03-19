@@ -25,7 +25,7 @@ const IntScolaireCard = ({ item: { Icon, ...rest } }: { item: IntScolaireType })
                 {rest.title}
             </h2>
             <div className="flex items-center">
-                <p className="ml-2 text-md text-stone-400 group-hover:text-white">
+                <p className="ml-2 text-[16px] text-stone-500 group-hover:text-white">
                 {rest.description}
                 </p>
             </div>

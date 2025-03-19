@@ -40,17 +40,17 @@ const DigitalLab = () => {
                             className="relative flex justify-center items-center flex-1 min-w-[300px] max-w-[500px]">
                             <Image className="absolute -left-12 -top-14" src={image_4} alt="" />
                             <Image className="absolute -right-10 -top-7" src={image_5} alt="" />
-                            <Image className="absolute -right-16" src={arrow_yellow} alt="" />
+                            <Image className="absolute -right-16 max-xl:hidden" src={arrow_yellow} alt="" />
                             <DigitalLabCard 
                                 image={ai_image} 
                                 title="Découvre le monde magique de l'IA" 
-                                content="Apprends à créer des robots intelligents, des jeux interactifs et des projets amusants grâce à l’intelligence artificielle. Deviens un petit génie de la technologie tout en t’amusant !" 
+                                content="AI-Kids Lab est un espace éducatif innovant dédié à l’initiation des enfants à l’intelligence artificielle et aux technologies du futur et de la pensée algorithmique." 
                             />
                         </motion.div>
                     </div>
 
                     <div className="flex max-xl:flex-col items-center mt-20 2xl:translate-x-60 gap-20 w-full">
-                        <Image className="absolute max-xl:hidden bottom-110 -left-32 -rotate-90" src={arrow} alt="" />
+                        <Image className="absolute max-xl:hidden bottom-110 -scale-x-100 -left-32 -rotate-12" src={arrow} alt="" />
                         {/* Card */}
                         <motion.div
                             variants={FadeRight(.3)}
@@ -60,16 +60,18 @@ const DigitalLab = () => {
                             className="relative flex justify-center items-center flex-1 min-w-[300px] max-w-[500px]">
                             <Image className="absolute -left-12 -top-14 " src={image_4} alt="" />
                             <Image className="absolute -right-10 -top-7" src={image_5} alt="" />
-                            <Image className="absolute -right-16 -rotate-180" src={arrow} alt="" />
+                            <Image className="absolute -right-16 -rotate-180 lg:w-[40px] max-xl:hidden" src={arrow} alt="" />
                             <DigitalLabCard 
                                 image={image_9} 
                                 title="Au-delà de la technologie, cultive la Digital Literacy" 
-                                content="Warshati Digital Lab est un espace interactif où les enfants explorent le numérique, adoptent les bonnes pratiques et deviennent des acteurs responsables et éclairés du monde connecté." 
+                                content="Warshati Digital Lab est un espace interactif où les enfants explorent le numérique, adoptent les bonnes pratiques et deviennent des acteurs responsables et éclairés du monde connecté."
+                                hasBorder
+                                textViolet
                             />
                         </motion.div>
                     </div>
 
-                    <div className="flex max-xl:flex-col-reverse justify-between items-center mt-16 lg:gap-40 gap-20 w-full">
+                    <div className="flex max-xl:flex-col-reverse justify-between items-center mt-20 lg:gap-40 gap-20 w-full">
                         {/* Card */}
                         <motion.div
                             variants={FadeRight(.3)}
@@ -77,13 +79,14 @@ const DigitalLab = () => {
                             whileInView="animate"
                             viewport={{ once: true }} 
                             className="relative flex justify-center items-center flex-1 min-w-[300px] max-w-[500px]">
-                            <Image className="absolute bottom-20 max-xl:hidden -right-32 -rotate-90 z-30" src={arrow_yellow} alt="" />
+                            <Image className="absolute bottom-20 max-xl:hidden -right-20 rotate-[80deg] z-30 lg:w-[50px]" src={arrow_yellow} alt="" />
                             <Image className="absolute -right-12 -top-14 -scale-x-100" src={image_4} alt="" />
                             <Image className="absolute -left-10 -scale-x-100 -top-7" src={image_5} alt="" />
+                            <Image className="absolute -left-2 rotate-180 -top-20 lg:w-[50px] max-xl:hidden" src={arrow_yellow} alt="" />
                             <DigitalLabCard 
                                 image={image_3} 
                                 title="Imagine, crée et joue avec STEAM" 
-                                content="Construis des robots, invente des gadgets et explore les sciences en t’amusant. Avec STEAM, apprendre devient une aventure incroyable pleine de découvertes !" 
+                                content="Warshati STEAM Lab est un espace d’apprentissage interactif, conçu pour stimuler la créativité, la pensée critique et l'innovation, il propose des ateliers pratiques et des projets expérimentaux." 
                             />
                         </motion.div>
                     </div>
@@ -104,8 +107,8 @@ const DigitalLab = () => {
                             ))}
                         </ul>
                         <div className="flex gap-5">
-                            <button className="btn btn-violet">Se Connecter <ArrowRight /></button>
-                            <button className="btn btn-violet-outline">Savoir <Plus /></button>
+                            <button className="btn btn-violet !rounded-full">Se Connecter <ArrowRight /></button>
+                            <button className="btn btn-violet-outline !rounded-full">Savoir <Plus /></button>
                         </div>
                     </motion.div>
 
@@ -118,20 +121,21 @@ const DigitalLab = () => {
                         className="font-Poppins font-medium space-y-8 relative flex items-center justify-center mt-16"
                     >
                         <Image 
-                            className="w-[381px] lg:w-[381px] md:w-[280px] sm:w-[280px] min-[400px]:w-[180px] w-[150px] max-w-none !important" 
-                            src={robot} 
-                            alt="" 
+                        className="max-w-none w-[240px] sm:w-[240px] md:w-[280px] lg:w-[381px]" 
+                        src={robot} 
+                        alt="" 
                         />
+
                         <Image 
-                            className="absolute lg:-top-10 lg:left-72 
-                                    w-[220px] lg:w-[220px] md:w-[180px] sm:w-[180px] min-[400px]:w-[100px] w-[80px] 
-                                    md:top-[-50px] md:left-[65%] 
+                        className="absolute top-[-45px] left-[70%] 
                                     sm:top-[-40px] sm:left-[70%] 
-                                    min-[400px]:top-[-30px] min-[400px]:left-[68%]
-                                    w-[80px] top-[-25px] left-[55%]" 
-                            src={bubble} 
-                            alt="" 
+                                    md:top-[-50px] md:left-[70%] 
+                                    lg:-top-10 lg:left-72 
+                                    w-[150px] sm:w-[150px] md:w-[180px] lg:w-[220px]" 
+                        src={bubble} 
+                        alt="" 
                         />
+
                     </motion.div>
                 </div>
             </div>

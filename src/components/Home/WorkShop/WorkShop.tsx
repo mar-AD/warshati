@@ -22,7 +22,7 @@ const WorkShop = () => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }} className="flex justify-center">
-                    <h1 className="font-Poppins font-extrabold lg:text-[82px] md:text-5xl text-3xl !leading-tight lg:max-w-[70rem] md:max-w-[41rem] max-w-[26rem] text-center">Warshati Pedagogical Framework</h1>
+                    <h1 className="font-Poppins font-extrabold lg:text-[82px] md:text-5xl text-3xl !leading-tight lg:max-w-[90rem] md:max-w-[41rem] max-w-[26rem] text-center">Warshati Pedagogical Framework</h1>
                 </motion.div>
                 <motion.div
                     variants={FadeUp(.3)}

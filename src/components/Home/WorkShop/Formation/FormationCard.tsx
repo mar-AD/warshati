@@ -35,7 +35,7 @@ const FormationCard = ({ index, item }: { index: number, item: FormationType }) 
 
             <div className="text-center pb-5 px-10 bg-white rounded-b-3xl w-full">
                 <h3 className="text-xl font-bold pb-3">{item.title}</h3>
-                <p className="text-sm text-stone-500">{item.description}</p>
+                <p className=" text-stone-500">{item.description}</p>
             </div>
         </motion.div>
     );

@@ -37,7 +37,6 @@ const Parcours = () => {
 
             </motion.div>
             <div className='grid grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] gap-4 place-content-center lg:!mt-52'>
-
                 {
                     ParcoursData.map((item, index) => (
                         <ParcoursCard index={index} item={item} key={index} />
