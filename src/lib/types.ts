@@ -91,3 +91,21 @@ export type articleType={
   date:string
   image:string
 }
+
+export type CommencerDataSetType = {
+  question: string;
+  answers: CommencerDataType[];
+};
+
+export type CommencerDataType = {
+  text: string,
+  reply: string,
+  delay: number,
+  image: StaticImageData
+}
+
+export type CommencerCardType = {
+  leftText:string,
+  cardText: string,
+  image: StaticImageData
+}

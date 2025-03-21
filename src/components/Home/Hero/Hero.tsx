@@ -6,6 +6,7 @@ import { Play } from "lucide-react"
 import HeroImage from "./HeroImage"
 import { motion } from "framer-motion"
 import { FadeOut, FadeUp } from "@/lib/animations"
+import Link from "next/link"
 const Hero = () => {
     return (
         <div
@@ -34,7 +35,10 @@ const Hero = () => {
                         variants={FadeUp(.6)}
                         initial="initial"
                         animate="animate" className="flex max-lg:flex-col md:gap-x-14 gap-y-8 mt-10">
-                        <button className="btn btn-violet">Commencer</button>
+                        {/* <button className="btn btn-violet">Commencer</button> */}
+                        <Link href={"/Commencer"}>
+                            <button className="btn btn-violet">Commencer</button>
+                        </Link>
                         <button className="btn !font-Vazirmatn !border-none gap-x-4"><Play className="bg-violet-300 text-transparent fill-white md:p-2.5 p-1 md:size-max size-7 rounded-full" /> Regarder la vidéo</button>
                     </motion.div>
                 </div>

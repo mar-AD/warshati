@@ -57,6 +57,24 @@ import formation_4 from "/public/images/Home/formation/ressources.png";
 import intScolaire_1 from "/public/images/Home/intScolaire/image_2.png";
 import intScolaire_2 from "/public/images/Home/intScolaire/image_3.png";
 import intScolaire_3 from "/public/images/Home/intScolaire/image_4.png";
+import commencer_1 from "/public/images/Commencer/commoncer-1.png";
+import commencer_2 from "/public/images/Commencer/commoncer-2.png";
+import commencer_3 from "/public/images/Commencer/commoncer-3.png";
+import commencer_4 from "/public/images/Commencer/commoncer-4.png";
+import commencer_5 from "/public/images/Commencer/commoncer-5.png";
+import commencer_6 from "/public/images/Commencer/commoncer-6.png";
+import commencer_7 from "/public/images/Commencer/commoncer-7.png";
+import commencer_8 from "/public/images/Commencer/commoncer-8.png";
+import commencer_9 from "/public/images/Commencer/commoncer-9.png";
+import commencer_10 from "/public/images/Commencer/commoncer-10.png";
+import commencer_11 from "/public/images/Commencer/commoncer-11.png";
+import commencer_12 from "/public/images/Commencer/commoncer-12.png";
+import commencer_13 from "/public/images/Commencer/commoncer-13.png";
+import commencer_14 from "/public/images/Commencer/commoncer-14.png";
+import commencer_15 from "/public/images/Home/digitalLab/ai_image.png";
+import commencer_16 from "/public/images/Home/digitalLab/image_9.png";
+import commencer_17 from "/public/images/Commencer/commoncer-18.png";
+import commencer_18 from "/public/images/Commencer/commoncer-15.png";
 import {
   Atom,
   BrainCircuit,
@@ -81,6 +99,9 @@ import {
 import {
   ageType,
   articleType,
+  CommencerCardType,
+  CommencerDataSetType,
+  // CommencerDataType,
   ContactType,
   CurriculaType,
   FAQType,
@@ -238,6 +259,188 @@ export const languages: LanguageType[] = [
   { code: "AR", name: "العربية", flag: "ma" },
   { code: "EN", name: "English", flag: "gb" },
   { code: "ESP", name: "Español", flag: "es" },
+];
+
+export const CommencerCards: CommencerCardType[] = [
+  {
+    leftText: "Getting smarter every day!", 
+    cardText: "Warshati keeps you engaged with interactive lessons, fun challenges, and daily inspiration—designed just for you.",
+    image:commencer_13
+  },
+  {
+    leftText: "You're on the right track!", 
+    cardText: "With Warshati’s fun and well-structured courses, I’ve mastered concepts that once felt challenging. Now, I feel confident tackling real-world problems and technical challenges with ease!",
+    image:commencer_14
+  },
+];
+
+export const ThirdPhaseData = {
+  firstCard: {
+    leftText: "You’re in the right place!",
+    cardText: "Young minds use Warshati to sharpen their problem-solving skills and grow their knowledge.",
+    image: commencer_12,
+    icon: commencer_12,
+    timeout: 7000, 
+  },
+
+  choices: [
+    {leftText: "Let’s create a personalized learning journey just for you!"},
+    {
+      text: "AI Discovery",
+      nextCard: {
+        leftText: "Learn 6x more effectively!", 
+        cardText: "Warshati's tailored, interactive lessons with hands-on practice accelerate learning 6x faster than videos",
+        icon: commencer_18,
+        image: commencer_15,
+        timeout: 7000,
+        finalCards: [
+          { text: "Fundamentals", icon: commencer_12},
+          { text: "Data Science", icon: commencer_12 },
+          { text: "Applied AI", icon: commencer_12 },
+          { text: "AI & Ethics", icon: commencer_12 },
+        ]
+      }
+    },
+    {
+      text: "STEAM Competency",
+      nextCard: {
+        leftText: "Learn 6x more effectively!", 
+        cardText: "Warshati's tailored, interactive lessons with hands-on practice accelerate learning 6x faster than videos",
+        icon: commencer_18,
+        image: commencer_17,
+        timeout: 7000,
+        finalCards: [
+          { text: "Technology & Computing", icon: commencer_12 },
+          { text: "Science & Engineering", icon: commencer_12 },
+          { text: "Mathematics & Logic", icon: commencer_12 },
+          { text: "Arts & Creativity", icon: commencer_12 },
+        ]
+      }
+    },
+    {
+      text: "Digital literacy",
+      nextCard: {
+        leftText: "Learn 6x more effectively!", 
+        cardText: "Warshati's tailored, interactive lessons with hands-on practice accelerate learning 6x faster than videos",
+        icon: commencer_18,
+        image: commencer_16,
+        timeout: 7000,
+        finalCards: [
+          { text: "Information & Data", icon: commencer_12 },
+          { text: "Creating Digital Content", icon: commencer_12 },
+          { text: "Staying Safe Online", icon: commencer_12 },
+          { text: "Connected & Collaborative", icon: commencer_12 },
+        ]
+      }
+    }
+  ]
+};
+
+
+
+
+export const CommencerDataSets: CommencerDataSetType[] = [
+  {
+    question: "What’s your top goal?",
+    answers: [
+      {
+        text: "Advancing Your Career",
+        reply: "Get Ready to embrace the future",
+        delay: 0.2,
+        image: commencer_1,
+      },
+      {
+        text: "Keeping your skills sharp",
+        reply: "The key to a life full of excitement. Wise choice!",
+        delay: 0.3,
+        image: commencer_2,
+      },
+      {
+        text: "Mastering Technology Skills",
+        reply: "Your future self will thank you.",
+        delay: 0.4,
+        image: commencer_3,
+      },
+      {
+        text: "Supporting My Child’s Learning",
+        reply: "Igniting young minds is always rewarding.",
+        delay: 0.5,
+        image: commencer_4,
+      },
+      {
+        text: "Empowering My Student’s Education",
+        reply: "A sophisticated decision.",
+        delay: 0.6,
+        image: commencer_5,
+      },
+      {
+        text: "Exploring New Opportunities",
+        reply: "Intriguing... A mystery awaits.",
+        delay: 0.7,
+        image: commencer_6,
+      },
+    ],
+  },
+
+  {
+    question: "What would you like to explore today?",
+    answers: [
+      {
+        text: "Learning new skills",
+        reply: "Great choice! Learning never stops.",
+        delay: 0.2,
+        image: commencer_7,
+      },
+      {
+        text: "Following my curiosity",
+        reply: "Curiosity leads to amazing discoveries!",
+        delay: 0.3,
+        image: commencer_8,
+      },
+      {
+        text: "Becoming a problem-solving pro",
+        reply: "Get ready to tackle challenges like a pro!",
+        delay: 0.4,
+        image: commencer_9,
+      },
+      {
+        text: "Reviewing the basics",
+        reply: "A strong foundation makes everything easier.",
+        delay: 0.5,
+        image: commencer_10,
+      },
+      {
+        text: "Something else",
+        reply: "Awesome! Let’s explore together.",
+        delay: 0.6,
+        image: commencer_11,
+      },
+    ],
+  },
+
+  // {
+  //   question: "What motivates you the most?",
+  //   answers: [
+  //     {
+  //       text: "Self-Improvement",
+  //       reply: "Your growth journey never ends!",
+  //       delay: 1,
+  //       image: commencer_10,
+  //     },
+  //     {
+  //       text: "Career Success",
+  //       reply: "Aiming high is always rewarding!",
+  //       delay: 1,
+  //       image: commencer_11,
+  //     },
+  //     {
+  //       text: "Helping Others",
+  //       reply: "Empowering others is fulfilling!",
+  //       delay: 1,
+  //       image: commencer_12,
+  //     },
+  //   ],
+  // },
 ];
 
 export const IntScolaireData: IntScolaireType[] = [
