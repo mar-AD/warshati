@@ -17,7 +17,7 @@ const CommencerList = ({ data, onSelect }: CommencerListProps) => {
     };
 
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 max-md:mt-5">
             {data.map((item, index) => (
                 <motion.div
                     key={index}
@@ -27,8 +27,8 @@ const CommencerList = ({ data, onSelect }: CommencerListProps) => {
                     onClick={() => handleClick(index, item.reply)}
                     whileTap={{ scale: 0.95 }}
                 >
-                    <p className="font-bold text-[20px]">{item.text}</p>
-                    <Image src={item.image} alt={item.text} width={50} height={50} />
+                    <p className="font-bold text-[18px] max-md:text-xs">{item.text}</p>
+                    <Image className=" lg:w-[50px] lg:h-[50px] max-md:w-8 max-md:h-8" src={item.image} alt={item.text} width={50} height={50} />
                 </motion.div>
             ))}
         </div>

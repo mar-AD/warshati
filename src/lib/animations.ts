@@ -1,4 +1,4 @@
-export const FadeUp = (delay: number, y: number = 50) => {
+export const FadeUp = (delay: number, y: number = 50, keepTransform = false) => {
   return {
     initial: {
       opacity: 0,
@@ -6,7 +6,7 @@ export const FadeUp = (delay: number, y: number = 50) => {
     },
     animate: {
       opacity: 1,
-      y: 0,
+      y: keepTransform ? y : 0,
       transition: {
         type: "spring",
         stiffness: 100,
@@ -91,3 +91,22 @@ export const FadeOut = (delay: number) => {
     },
   };
 };
+export const FadeTyping = (delay: number) => {
+  return {
+    initial: { opacity: 0, y: 5, scale: 0.9 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 10,
+        duration:1,
+        delay,
+      },
+    },
+  };
+};
+
+

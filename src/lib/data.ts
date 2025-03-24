@@ -75,6 +75,23 @@ import commencer_15 from "/public/images/Home/digitalLab/ai_image.png";
 import commencer_16 from "/public/images/Home/digitalLab/image_9.png";
 import commencer_17 from "/public/images/Commencer/commoncer-18.png";
 import commencer_18 from "/public/images/Commencer/commoncer-15.png";
+import commencer_19 from "/public/images/Commencer/commoncer-19.png";
+import commencer_20 from "/public/images/Commencer/commoncer-20.png";
+import commencer_21 from "/public/images/Commencer/commoncer-21.png";
+import commencer_22 from "/public/images/Commencer/commoncer-22.png";
+import commencer_23 from "/public/images/Commencer/commoncer-23.png";
+import commencer_24 from "/public/images/Commencer/selected-1-1.png";
+import commencer_25 from "/public/images/Commencer/selected-1-2.png";
+import commencer_26 from "/public/images/Commencer/selected-1-3.png";
+import commencer_27 from "/public/images/Commencer/selected-1-4.png";
+import commencer_28 from "/public/images/Commencer/selected-2-1.png";
+import commencer_29 from "/public/images/Commencer/selected-2-2.png";
+import commencer_30 from "/public/images/Commencer/selected-2-3.png";
+import commencer_31 from "/public/images/Commencer/selected-2-4.png";
+import commencer_32 from "/public/images/Commencer/selected-3-1.png";
+import commencer_33 from "/public/images/Commencer/selected-3-2.png";
+import commencer_34 from "/public/images/Commencer/selected-3-3.png";
+import commencer_35 from "/public/images/Commencer/selected-3-4.png";
 import {
   Atom,
   BrainCircuit,
@@ -265,12 +282,12 @@ export const CommencerCards: CommencerCardType[] = [
   {
     leftText: "Getting smarter every day!", 
     cardText: "Warshati keeps you engaged with interactive lessons, fun challenges, and daily inspiration—designed just for you.",
-    image:commencer_13
+    icon:commencer_13
   },
   {
     leftText: "You're on the right track!", 
     cardText: "With Warshati’s fun and well-structured courses, I’ve mastered concepts that once felt challenging. Now, I feel confident tackling real-world problems and technical challenges with ease!",
-    image:commencer_14
+    icon:commencer_14
   },
 ];
 
@@ -294,10 +311,10 @@ export const ThirdPhaseData = {
         image: commencer_15,
         timeout: 7000,
         finalCards: [
-          { text: "Fundamentals", icon: commencer_12},
-          { text: "Data Science", icon: commencer_12 },
-          { text: "Applied AI", icon: commencer_12 },
-          { text: "AI & Ethics", icon: commencer_12 },
+          { text: "Fundamentals", icon: commencer_24},
+          { text: "Data Science", icon: commencer_25 },
+          { text: "Applied AI", icon: commencer_26 },
+          { text: "AI & Ethics", icon: commencer_27 },
         ]
       }
     },
@@ -310,10 +327,10 @@ export const ThirdPhaseData = {
         image: commencer_17,
         timeout: 7000,
         finalCards: [
-          { text: "Technology & Computing", icon: commencer_12 },
-          { text: "Science & Engineering", icon: commencer_12 },
-          { text: "Mathematics & Logic", icon: commencer_12 },
-          { text: "Arts & Creativity", icon: commencer_12 },
+          { text: "Technology & Computing", icon: commencer_28 },
+          { text: "Science & Engineering", icon: commencer_29 },
+          { text: "Mathematics & Logic", icon: commencer_30 },
+          { text: "Arts & Creativity", icon: commencer_31 },
         ]
       }
     },
@@ -326,10 +343,10 @@ export const ThirdPhaseData = {
         image: commencer_16,
         timeout: 7000,
         finalCards: [
-          { text: "Information & Data", icon: commencer_12 },
-          { text: "Creating Digital Content", icon: commencer_12 },
-          { text: "Staying Safe Online", icon: commencer_12 },
-          { text: "Connected & Collaborative", icon: commencer_12 },
+          { text: "Information & Data", icon: commencer_32 },
+          { text: "Creating Digital Content", icon: commencer_33 },
+          { text: "Staying Safe Online", icon: commencer_34 },
+          { text: "Connected & Collaborative", icon: commencer_35 },
         ]
       }
     }
@@ -418,29 +435,65 @@ export const CommencerDataSets: CommencerDataSetType[] = [
     ],
   },
 
-  // {
-  //   question: "What motivates you the most?",
-  //   answers: [
-  //     {
-  //       text: "Self-Improvement",
-  //       reply: "Your growth journey never ends!",
-  //       delay: 1,
-  //       image: commencer_10,
-  //     },
-  //     {
-  //       text: "Career Success",
-  //       reply: "Aiming high is always rewarding!",
-  //       delay: 1,
-  //       image: commencer_11,
-  //     },
-  //     {
-  //       text: "Helping Others",
-  //       reply: "Empowering others is fulfilling!",
-  //       delay: 1,
-  //       image: commencer_12,
-  //     },
-  //   ],
-  // },
+  {
+    question: "What's your daily learning goal?",
+    answers: [
+      {
+        text: "10 min",
+        reply: "That’s 365 lessons a year!",
+        delay: 1,
+        image: commencer_19,
+      },
+      {
+        text: "15 min",
+        reply: "That’s 547 lessons a year!",
+        delay: 1,
+        image: commencer_19,
+      },
+      {
+        text: "20 min",
+        reply: "That’s 730 lessons a year!",
+        delay: 1,
+        image: commencer_19,
+      },
+      {
+        text: "30 min",
+        reply: "That’s 1094 lessons a year!",
+        delay: 1,
+        image: commencer_19,
+      },
+    ],
+  },
+
+  {
+    question: "When do you want to learn?",
+    answers: [
+      {
+        text: "In the morning, during breakfast or on my way to school",
+        reply: "Your brain loves a good start. Smart move!",
+        delay: 1,
+        image: commencer_20,
+      },
+      {
+        text: "During a quick break, like lunch or between activities",
+        reply: "Exploring science under the stars? Sounds magical!",
+        delay: 1,
+        image: commencer_21,
+      },
+      {
+        text: "At night, after dinner or while getting ready for bed",
+        reply: " Anytime is a great time to learn.",
+        delay: 1,
+        image: commencer_22,
+      },
+      {
+        text: "At another time that works for me",
+        reply: "Knowledge waits for no one!",
+        delay: 1,
+        image: commencer_23,
+      },
+    ],
+  },
 ];
 
 export const IntScolaireData: IntScolaireType[] = [

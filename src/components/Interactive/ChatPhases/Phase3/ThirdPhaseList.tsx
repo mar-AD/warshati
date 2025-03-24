@@ -4,7 +4,7 @@ import { ThirdPhaseData } from "@/lib/data";
 import Image from "next/image";
 
 interface ThirdChoicesProps {
-  onSelect: (index: number) => void;
+    onSelect: (index: number) => void;
 }
 
 const ThirdChoices = ({ onSelect }: ThirdChoicesProps) => {
@@ -29,9 +29,9 @@ const ThirdChoices = ({ onSelect }: ThirdChoicesProps) => {
                 onClick={() => onSelect(actualIndex)}
                 whileTap={{ scale: 0.95 }}
                 >
-                <p className="font-bold text-[20px]">{item.text}</p>
+                <p className="font-bold lg:text-[18px] md:text-[15px] sm:text-[15px] xm:text-[15px]">{item.text}</p>
                 {item.nextCard && (
-                    <Image src={item.nextCard.image} alt={item.text} width={50} height={50} />
+                    <Image className="lg:w-[50px] lg:h-[50px] max-md:w-8 max-md:h-8" src={item.nextCard.image} alt={item.text} width={50} height={50} />
                 )}
                 </motion.div>
             );

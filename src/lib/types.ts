@@ -107,5 +107,5 @@ export type CommencerDataType = {
 export type CommencerCardType = {
   leftText:string,
   cardText: string,
-  image: StaticImageData
+  icon: StaticImageData
 }
