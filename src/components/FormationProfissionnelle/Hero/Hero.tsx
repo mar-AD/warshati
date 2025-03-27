@@ -68,17 +68,17 @@ const Hero = () => {
                     viewport={{ once: true }}
                     className="w-full md:w-[60%] flex flex-col justify-center h-full"
                     >
-                        <h1 className="font-bold font-Poppins lg:text-5xl md:text-3xl text-2xl pb-5">
+                        <h1 className="font-bold font-Vazirmatn lg:text-5xl md:text-3xl text-2xl pb-5">
                             <span className="text-violet-800">Objectif</span> du Programme
                         </h1>
-                        <p className="font-Poppins text-[18px] sm:text-[18px] md:text-[22px]  lg:text-[29px] font-medium !leading-relaxed">
+                        <p className="font-Poppins text-[18px] sm:text-[18px] md:text-[22px] font-medium !leading-relaxed">
                             La formation continue des enseignants est essentielle pour s’adapter aux nouvelles méthodes
                             d’apprentissage et aux technologies éducatives. Warshati propose un programme structuré et innovant.
                         </p>
 
                         <ul>
                             {FormationProfessionnelleData.map((item, i) => (
-                                <li className="flex gap-x-2 my-7 text-[18px] sm:text-[18px] md:text-[22px] lg:text-[28px] font-bold" key={i}>
+                                <li className="flex gap-x-2 my-7 text-[18px] sm:text-[18px] md:text-[22px] font-bold" key={i}>
                                     <Image className="size-8" src={Checkbox} alt="" />
                                     {item}
                                 </li>

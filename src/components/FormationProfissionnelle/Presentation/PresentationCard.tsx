@@ -13,7 +13,7 @@ const PresentationCards = () => {
             </div>
 
             <div>
-              <h2 className="text-xl md:text-[.5rem] lg:text-2xl font-bold text-white">{item.text}</h2>
+              <h2 className="text-xl md:text-[] lg:text-2xl font-bold text-white">{item.text}</h2>
               <p className="text-gray-700 text-sm md:text-base mt-2">{item.discreption}</p>
             </div>
           </div>

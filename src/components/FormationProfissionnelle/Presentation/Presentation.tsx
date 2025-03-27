@@ -13,7 +13,7 @@ const Presentation = () => {
             variants={FadeUp(.5)}
             initial="initial"
             animate="animate"
-            className="font-Poppins text-center font-bold  lg:text-5xl md:text-3xl text-2xl">
+            className="font-Vazirmatn text-center font-bold  lg:text-5xl md:text-3xl text-2xl">
                 Présentation de la Formation
             </motion.h1>
             <motion.p

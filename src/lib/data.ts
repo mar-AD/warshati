@@ -481,19 +481,19 @@ export const CommencerDataSets: CommencerDataSetType[] = [
       },
       {
         text: "During a quick break, like lunch or between activities",
-        reply: "Exploring science under the stars? Sounds magical!",
+        reply: "Knowledge waits for no one!",
         delay: 1,
         image: commencer_21,
       },
       {
         text: "At night, after dinner or while getting ready for bed",
-        reply: " Anytime is a great time to learn.",
+        reply: " Exploring science under the stars? Sounds magical!",
         delay: 1,
         image: commencer_22,
       },
       {
         text: "At another time that works for me",
-        reply: "Knowledge waits for no one!",
+        reply: " Anytime is a great time to learn.",
         delay: 1,
         image: commencer_23,
       },
