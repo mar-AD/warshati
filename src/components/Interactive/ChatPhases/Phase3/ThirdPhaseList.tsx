@@ -31,7 +31,7 @@ const ThirdChoices = ({ onSelect }: ThirdChoicesProps) => {
                 >
                 <p className="font-bold lg:text-[18px] md:text-[15px] sm:text-[15px] xm:text-[15px]">{item.text}</p>
                 {item.nextCard && (
-                    <Image className="lg:w-[50px] lg:h-[50px] max-md:w-8 max-md:h-8" src={item.nextCard.image} alt={item.text} width={50} height={50} />
+                    <Image className="lg:w-[50px] lg:h-[50px] max-md:w-8 max-md:h-8" src={item.nextCard.image} alt='' width={50} height={50} />
                 )}
                 </motion.div>
             );

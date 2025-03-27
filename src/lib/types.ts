@@ -109,3 +109,44 @@ export type CommencerCardType = {
   cardText: string,
   icon: StaticImageData
 }
+
+//this is all for the thirdPhaseDatatType ----
+export type FinalCardType = {
+  text: string;
+  icon: StaticImageData;
+};
+
+export type NextCardType = {
+  leftText: string;
+  cardText: string;
+  icon: StaticImageData;
+  image: StaticImageData;
+  timeout: number;
+  finalCards: FinalCardType[];
+};
+
+export type ChoiceType = {
+  text?: string;
+  leftText?: string;
+  nextCard?: NextCardType;
+};
+
+export type FirstCardType = {
+  leftText: string;
+  cardText: string;
+  icon: StaticImageData;
+  image: StaticImageData;
+  timeout: number;
+};
+
+// final ---
+export type ThirdPhaseDataType = {
+  firstCard: FirstCardType;
+  choices: Array<ChoiceType>;
+};
+
+export type Presentation1Type = {
+  image: StaticImageData;
+  text: string;
+  discreption: string
+}

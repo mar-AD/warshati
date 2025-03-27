@@ -3,6 +3,7 @@ import { FadeUp } from '@/lib/animations';
 import { motion } from 'framer-motion';
 import FormationCard from './FormationCard';
 import { Plus } from 'lucide-react';
+import Link from 'next/link';
 const Formation = () => {
 
     return (
@@ -21,9 +22,12 @@ const Formation = () => {
                     ))
                 }
             </div>
-            <button className="!w-fit btn btn-violet-outline mt-6 md:mt-0 mx-auto md:mx-0">
-                            <Plus /> Savoir
-                        </button>
+            <Link
+            href={"/Formation-Profissionnelle"}
+            className="!w-fit btn btn-violet-outline mt-6 md:mt-0 mx-auto md:mx-0"
+            >
+                <Plus /> Savoir
+            </Link>
         </div >
     )
 }

@@ -92,6 +92,9 @@ import commencer_32 from "/public/images/Commencer/selected-3-1.png";
 import commencer_33 from "/public/images/Commencer/selected-3-2.png";
 import commencer_34 from "/public/images/Commencer/selected-3-3.png";
 import commencer_35 from "/public/images/Commencer/selected-3-4.png";
+import presontation_1 from "/public/images/Formation/formation-2.png";
+import presontation_2 from "/public/images/Formation/formation-3.png";
+import presontation_3 from "/public/images/Formation/formation-4.png";
 import {
   Atom,
   BrainCircuit,
@@ -128,11 +131,13 @@ import {
   NavType,
   niveauxType,
   ParcoursType,
+  Presentation1Type,
   PrioritairesType,
   QuestionType,
   SocialType,
   TestimonialsType,
   ThematiqueType,
+  ThirdPhaseDataType,
 } from "./types";
 import { FaXTwitter } from "react-icons/fa6";
 export const socials: SocialType[] = [
@@ -291,7 +296,7 @@ export const CommencerCards: CommencerCardType[] = [
   },
 ];
 
-export const ThirdPhaseData = {
+export const ThirdPhaseData: ThirdPhaseDataType = {
   firstCard: {
     leftText: "You’re in the right place!",
     cardText: "Young minds use Warshati to sharpen their problem-solving skills and grow their knowledge.",
@@ -1135,3 +1140,31 @@ export const articleData:articleType[] = [
     date: "August 20, 2025",
   },
 ];
+
+export const FormationProfessionnelleData: string[] = [
+  "Intégrer les outils numériques dans leur pédagogie.",
+  "Améliorer leurs méthodes d’enseignement par des approches interactives.",
+  "Développer de nouvelles compétences pour un enseignement plus engageant.",
+];
+
+export const presontationData1:Presentation1Type[] = [
+{
+  image: presontation_1,
+  text: "Une approche interactive et innovante",
+  discreption:"Méthodes modernes et outils numériques."
+  
+},
+{
+  image: presontation_2,
+  text: "Accès à une communauté éducative",
+  discreption:"Échangez et collaborez avec d’autres enseignants."
+  
+},
+{
+  image: presontation_3,
+  text: "Un programme sur mesure",
+  discreption:"Adapté aux enseignants du primaire, secondaire et universitaire."
+  
+},
+
+]
