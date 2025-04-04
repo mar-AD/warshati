@@ -95,6 +95,20 @@ import commencer_35 from "/public/images/Commencer/selected-3-4.png";
 import presontation_1 from "/public/images/Formation/formation-2.png";
 import presontation_2 from "/public/images/Formation/formation-3.png";
 import presontation_3 from "/public/images/Formation/formation-4.png";
+import presontation_4 from "/public/images/Formation/formation-5.png";
+import presontation_5 from "/public/images/Formation/formation-6.png";
+import presontation_6 from "/public/images/Formation/formation-7.png";
+import presontation_7 from "/public/images/Formation/formation-8.png";
+import presontation_8 from "/public/images/Formation/formation-9.png";
+import presontation_9 from "/public/images/Formation/formation-10.png";
+import presontation_10 from "/public/images/Formation/formation-11.png";
+import presontation_11 from "/public/images/Formation/formation-12.png";
+import presontation_12 from "/public/images/Formation/formation-13.png";
+import presontation_13 from "/public/images/Formation/formation-14.png";
+import presontation_14 from "/public/images/Formation/formation-15.png";
+import presontation_15 from "/public/images/Formation/formation-16.png";
+import presontation_16 from "/public/images/Formation/formation-17.png";
+import presontation_17 from "/public/images/Formation/formation-18.png";
 import {
   Atom,
   BrainCircuit,
@@ -130,8 +144,10 @@ import {
   LanguageType,
   NavType,
   niveauxType,
+  ObjectifDuProgrammeDataType,
   ParcoursType,
   Presentation1Type,
+  Presentation2Type,
   PrioritairesType,
   QuestionType,
   SocialType,
@@ -1166,5 +1182,163 @@ export const presontationData1:Presentation1Type[] = [
   discreption:"Adapté aux enseignants du primaire, secondaire et universitaire."
   
 },
-
 ]
+
+export const presontationData2:Presentation2Type[] = [
+  {
+    image: presontation_4,
+    text: "Enseignants du primaire et secondaire",
+  },
+  {
+    image: presontation_5,
+    text: "Formateurs et éducateurs",
+  },
+  {
+    image: presontation_6,
+    text: "Enseignants universitaires",
+  },
+  
+]
+
+export const programmesDeFormationData: string[][] = [
+  [
+    "Sessions de formation sur les pédagogies actives et numériques.",
+    "Développement des compétences en enseignement hybride (présentiel et en ligne).",
+    "Formation sur l’intelligence artificielle et la gamification en éducation.",
+  ],
+
+  [
+    "Ateliers Interactifs",
+    "Sessions collaboratives en petits groupes.",
+    "Jeux de rôle et simulations pour mieux comprendre les approches pédagogiques modernes",
+  ],
+
+  [
+    "Accompagnement personnalisé par des experts en éducation numérique",
+    "Sessions de coaching en individuel ou en groupe.",
+    "Suivi pédagogique pour aider à appliquer les nouvelles pratiques en classe.",
+  ],
+
+  [
+    "Accès exclusif à une bibliothèque numérique avec des outils d'enseignement innovants à tester en classe",
+    "Et avec Une plateforme en ligne pour partager et échanger avec d’autres enseignants",
+  ]
+];
+
+export const objectifDuProgrammeData: ObjectifDuProgrammeDataType[][] = [
+  [
+    {
+      image: presontation_7,
+      text: "Utilisation des outils numériques en classe",
+      discreption: "Intégration des plateformes éducatives et des LMS (Learning Management Systems).",
+      color: "c7e7ff",
+      delay: 0.2,
+    },
+    {
+      image: presontation_8,
+      text: "Approches pédagogiques modernes",
+      discreption: "Apprentissage par projet, classe inversée, pédagogie différenciée.",
+      color: "ffe798",
+      delay: 0.3,
+    },
+    {
+      image: presontation_9,
+      text: "Évaluation et suivi des élèves",
+      discreption: "Utilisation de l'IA pour le suivi et la personnalisation des parcours d’apprentissage.",
+      color: "dafef9",
+      delay: 0.4,
+    },
+  ],
+  [
+    {
+      image: presontation_10,
+      text: "Créer une leçon interactive avec Genially ou Canva",
+      discreption: "",
+      color: "c7e7ff",
+      delay: 0.2,
+    },
+    {
+      image: presontation_11,
+      text: "Utiliser l’IA pour générer du contenu pédagogique",
+      discreption: "",
+      color: "ffe798",
+      delay: 0.3,
+    },
+    {
+      image: presontation_12,
+      text: "Développer une séquence pédagogique immersive en VR/AR",
+      discreption: "",
+      color: "dafef9",
+      delay: 0.4,
+    },
+  ],
+  [
+    {
+      image: presontation_13,
+      text: "Coaching en présentiel ou en ligne",
+      discreption: "",
+      color: "e4fff9",
+      delay: 0.2,
+    },
+    {
+      image: presontation_14,
+      text: "Plan d’accompagnement personnalisé sur plusieurs semaines",
+      discreption: "",
+      color: "ffe9da",
+      delay: 0.3,
+    },
+  ],
+  [
+    {
+      image: presontation_15,
+      text: "Guides pratiques et fiches pédagogiques",
+      discreption: "",
+      color: "ffecbb",
+      delay: 0.2,
+    },
+    {
+      image: presontation_16,
+      text: "Modèles de cours interactifs et supports numériques",
+      discreption: "",
+      color: "bbe3ff",
+      delay: 0.3,
+    },
+    {
+      image: presontation_17,
+      text: "Vidéos tutorielles et études de cas",
+      discreption: "",
+      color: "ffcff2",
+      delay: 0.4,
+    },
+  ],
+];
+
+export const TemoignagesData: string[] = [
+  '"Grâce à Warshati, j’ai intégré des outils interactifs qui ont transformé ma manière d’enseigner !"',
+  '"Grâce à Warshati, j’ai intégré des outils interactifs qui ont transformé ma manière d’enseigner !"',
+  '"Grâce à Warshati, j’ai intégré des outils interactifs qui ont transformé ma manière d’enseigner !"',
+  '"Grâce à Warshati, j’ai intégré des outils interactifs qui ont transformé ma manière d’enseigner !"',
+  '"Grâce à Warshati, j’ai intégré des outils interactifs qui ont transformé ma manière d’enseigner !"',
+];
+
+export const QFPData: FAQType[] = [
+  {
+    title: "Quels sont les prérequis pour participer à la formation ?",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, elit at luctus dictum, felis dolor sagittis justo, ac viverra ligula libero ut purus. Integer ut mauris ut dolor dictum tincidunt. Curabitur eget erat vel erat suscipit ultrices. Vivamus tincidunt, nisl id posuere luctus, sapien felis convallis lectus, nec consectetur lorem libero ut velit",
+    delay: 0.2,
+  },
+  {
+    title: "Les formations sont-elles certifiées ?",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor velit ut libero blandit, in auctor risus iaculis. Integer volutpat, lacus at molestie malesuada, nisi est accumsan nisl, et suscipit eros augue at nisl. Curabitur nec magna eget elit tincidunt hendrerit non a nisl. Nulla facilisi. Aenean feugiat felis et lectus dictum malesuada. Morbi tincidunt orci ut justo maximus, sit amet efficitur nisl dignissim",
+    delay: 0.3,
+  },
+  {
+    title: "Comment puis-je accéder aux ressources après la formation ?",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor velit ut libero blandit, in auctor risus iaculis. Integer volutpat, lacus at molestie malesuada, nisi est accumsan nisl, et suscipit eros augue at nisl. Curabitur nec magna eget elit tincidunt hendrerit non a nisl. Nulla facilisi. Aenean feugiat felis et lectus dictum malesuada. Morbi tincidunt orci ut justo maximus, sit amet efficitur nisl dignissim",
+    delay: 0.4,
+  },
+
+];

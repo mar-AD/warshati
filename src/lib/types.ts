@@ -1,3 +1,4 @@
+import { color } from "framer-motion";
 import { LucideIcon } from "lucide-react";
 import { StaticImageData } from "next/image";
 import { IconType } from "react-icons";
@@ -149,4 +150,14 @@ export type Presentation1Type = {
   image: StaticImageData;
   text: string;
   discreption: string
+}
+
+export type Presentation2Type = {
+  image: StaticImageData;
+  text: string;
+}
+
+export interface ObjectifDuProgrammeDataType extends Presentation1Type {
+  color: string;
+  delay: number;
 }

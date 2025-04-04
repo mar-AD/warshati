@@ -110,3 +110,29 @@ export const FadeTyping = (delay: number) => {
 };
 
 
+export const dropdown = (delay: number) => {
+  return {
+    initial: { opacity: 0, y: -10, scaleY: 0.8 },
+    animate: { 
+      opacity: 1, 
+      y: 0, 
+      scaleY: 1, 
+      transition: { 
+        duration: 0.3, 
+        ease: "easeInOut", 
+        delay 
+      } 
+    },
+    exit: { 
+      opacity: 0, 
+      y: -10, 
+      scaleY: 0.8, 
+      transition: { 
+        duration: 0.3, 
+        ease: "easeInOut" 
+      } 
+    },
+  };
+};
+
+

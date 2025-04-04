@@ -26,7 +26,7 @@ const Formation = () => {
             href={"/Formation-Profissionnelle"}
             className="!w-fit btn btn-violet-outline mt-6 md:mt-0 mx-auto md:mx-0"
             >
-                <Plus /> Savoir
+                Savoir <Plus className="ml-2"/>
             </Link>
         </div >
     )

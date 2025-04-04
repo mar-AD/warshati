@@ -16,9 +16,9 @@ const IntScolaire = () => {
                     ))}
                     <Link 
                         href={"/Integration-Scolaire"} 
-                        className="place-self-end col-span-full sm:col-span-2 lg:col-span-3 btn btn-violet-outline !gap-x-3"
+                        className="place-self-end col-span-full sm:col-span-2 lg:col-span-3 btn btn-violet-outline"
                     >
-                        savoir <Plus />
+                        savoir <Plus className="ml-2"/>
                     </Link>
                 </div>
             </div>

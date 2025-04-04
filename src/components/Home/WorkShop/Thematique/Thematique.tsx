@@ -65,7 +65,7 @@ const Thematique = () => {
                 >
                     <div className="flex md:flex-row flex-col-reverse justify-between items-center md:items-end w-full gap-6 px-5 max-w-[100vw]">
                         <button className="!w-fit btn btn-violet-outline mt-6 md:mt-0 mx-auto md:mx-0">
-                            <Plus /> Savoir
+                            Savoir <Plus className="ml-2"/>
                         </button>
 
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-4">

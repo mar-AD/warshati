@@ -3,28 +3,45 @@ import { FadeUp } from "@/lib/animations"
 import { motion } from "framer-motion"
 import flight from "/public/images/Home/hero/flight.png";
 import Image from "next/image"
-import PresentationCards from "./PresentationCard";
+import PresentationCards from "./1stSectionCards";
+import FirstSectionCards from "./1stSectionCards";
+import SecondSectionCards from "./2ndSectionCards";
 
 const Presentation = () => {
     return (
         <div className=" relative bg-white px-14 py-20 max-md:py-10">
-            <Image src={flight} alt="" className=" absolute top-5 -left-0 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-40"/>    
+            <Image src={flight} alt="" className=" absolute top-5 -left-0 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-72"/>    
             <motion.h1
             variants={FadeUp(.5)}
             initial="initial"
-            animate="animate"
-            className="font-Vazirmatn text-center font-bold  lg:text-5xl md:text-3xl text-2xl">
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="text-center font-extrabold font-Poppins lg:text-6xl md:text-4xl text-2xl">
                 Présentation de la Formation
             </motion.h1>
             <motion.p
             variants={FadeUp(.5)}
             initial="initial"
-            animate="animate"
-            className="font-Poppins text-center text-[18px] sm:text-[18px] md:text-[22px] lg:text-[22px] font-medium !leading-relaxed"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="text-slate-600 font-semibold font-Poppins text-center text-[18px] sm:text-[18px] md:text-[20px] lg:text-[22px] !leading-relaxed pt-3"
             >
                 <span className="text-purple-800">Pourquoi</span> suivre une formation continue avec <span className="text-purple-800"> Warshati ?</span>
             </motion.p>
-            <PresentationCards/>
+
+            <FirstSectionCards/>
+
+            <motion.p
+            variants={FadeUp(.5)}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className=" text-slate-600 font-semibold font-Poppins text-center text-[18px] sm:text-[18px] md:text-[20px] lg:text-[22px] !leading-relaxed mt-14"
+            >
+                Public <span className="text-purple-800"> concerné</span>
+            </motion.p>
+
+            <SecondSectionCards/>
 
         </div>
     )

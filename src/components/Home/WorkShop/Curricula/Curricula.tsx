@@ -64,7 +64,7 @@ const Curricula = () => {
                     <div className="flex flex-col-reverse md:flex-row items-center md:items-end gap-6 w-full max-w-[61rem]">
 
                         <button className="!w-fit btn btn-violet-outline mt-6 md:mt-0 mx-auto md:mx-0">
-                            <Plus /> Savoir
+                            Savoir <Plus className="ml-2" />
                         </button>
 
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
