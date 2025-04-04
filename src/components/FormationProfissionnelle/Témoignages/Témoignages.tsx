@@ -35,7 +35,7 @@ const Temoignages = () => {
             viewport={{ once: true }}
             className="text-slate-600 font-semibold font-Poppins text-center text-[18px] sm:text-[18px] md:text-[20px] lg:text-[22px]!leading-relaxed pt-3"
             >
-                Section avec <span className="text-purple-800"> des témoignages d'enseignants</span> ayant suivi nos formations.
+                Section avec <span className="text-purple-800"> des témoignages d&rsquo;enseignants</span> ayant suivi nos formations.
             </motion.p>
 
             <div className={`flex items-stretch justify-center lg:space-x-16 w-full flex-wrap sm:pt-5 md:pt-10 lg:pt-20 ${isScreen ? '' : 'flex-col-reverse'}`}>

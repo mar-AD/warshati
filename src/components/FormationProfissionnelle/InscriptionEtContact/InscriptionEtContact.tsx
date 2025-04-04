@@ -24,7 +24,7 @@ const InscriptionEtContact = () => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }} className="flex justify-center">
-                <p className="font-semibold lg:text-[22px] md:text-base text-sm text-muted-foreground lg:max-w-[55rem] md:max-w-[40rem] max-w-[25rem] text-center pt-7">Section avec <span className="text-violet-800">des témoignages d'enseignants</span> ayant suivi nos formations.
+                <p className="font-semibold lg:text-[22px] md:text-base text-sm text-muted-foreground lg:max-w-[55rem] md:max-w-[40rem] max-w-[25rem] text-center pt-7">Section avec <span className="text-violet-800">des témoignages d&apos;enseignants</span> ayant suivi nos formations.
                 </p>
             </motion.div>
             <div className="flex justify-center items-center min-h-screen">
@@ -32,8 +32,7 @@ const InscriptionEtContact = () => {
             variants={FadeOut(.3)}
                 initial="initial"
                 whileInView="animate"
-            className="bg-white p-3 flex max-lg:flex-col gap-5 items-start justify-center lg:w-[90%] place-self-center border shadow-2xl shadow-black/30 rounded-3xl relative mt-14">
-                {/* contact information */}
+            className="bg-white p-3 flex max-lg:flex-col gap-5 items-start justify-center lg:w-[90%] place-self-center border shadow-2xl shadow-black/30 rounded-3xl relative mt-14 overflow-hidden">
                 <div className="relative bg-[#011C2B] text-white font-Poppins rounded-xl h-full p-12 md:space-y-48 space-y-20 lg:w-1/2 w-full">
                     <div className="space-y-3">
                         <h1 className="text-[28px] font-semibold">Contact Information</h1>
@@ -61,7 +60,6 @@ const InscriptionEtContact = () => {
                     <div className="bg-[#FFF9F921] rounded-full size-80 absolute -bottom-24 -right-32 z-0"></div>
                     <div className="bg-[#FFF9F921] size-32 absolute bottom-24 right-24 z-0 rounded-full"></div>
                 </div>
-                {/* contact form */}
                 <InscriptionEtContactForm />
             <Image className= {`absolute -bottom-10 right-10  ${isScreen ?"": "hidden"}`} src={contact} alt="" />
             </motion.div>

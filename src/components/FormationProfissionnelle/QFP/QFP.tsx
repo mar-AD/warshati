@@ -13,7 +13,7 @@ const QFP = () => {
                 variants={FadeUp(.2)}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }} className="font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-6xl text-center !leading-tight">Questions fréquemment posées</motion.h1>
+                viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-4xl text-2xl text-center !leading-tight">Questions fréquemment posées</motion.h1>
                 
             <div className="flex flex-col lg:flex-row gap-5">
                 <div className="flex-1 space-y-5">

@@ -22,7 +22,7 @@ const QFPCard = ({ index, faq }:{index:number,faq:FAQType}) => {
             <div className="space-y-5 w-full">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                        <span className="size-11 flex justify-center items-center bg-gray-200 rounded-full">{(index + 1) >= 10 ? index + 1 : "0" + (index + 1)}</span>
+                        <span className="min-w-8 min-h-8 lg:min-w-11 lg:min-h-11 flex justify-center items-center bg-gray-200 rounded-full">{(index + 1) >= 10 ? index + 1 : "0" + (index + 1)}</span>
                         <h3 className="font-semibold lg:text-lg text-sm">{faq.title}</h3>
                     </div>
                     <Plus onClick={() => setOpened(prev => !prev)} className={cn("lg:size-7 size-6 text-violet-600 transition-transform duration-500",

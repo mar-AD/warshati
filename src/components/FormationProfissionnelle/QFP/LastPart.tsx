@@ -16,7 +16,7 @@ const LastPart = () => {
     const isExtraLargeScreen = useMediaQuery("(min-width: 1550px) and (max-width: 1800px)");
     const isExtraExtraLargeScreen = useMediaQuery("(min-width: 1800px)");
 
-  return (
+return (
     <div
         className={`lg:px-[7.25rem] py-20 px-5 font-Poppins gap-10 relative flex items-center justify-between overflow-hidden
         ${isSmallScreen ? "flex-col-reverse" : "lg:flex-row flex-col"}`}
@@ -29,8 +29,8 @@ const LastPart = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className={`w-full h-[568px] flex items-center justify-center 
-                ${isExtraSmallScreen ? "order-2 w-full" : ""}
+            className={`w-full  flex items-center justify-center 
+                ${isExtraSmallScreen ? "order-2 w-full h-auto" : "h-[568px]"}
                 ${isSmallScreen && !isExtraSmallScreen ? "order-2 w-full" : "order-2 lg:w-1/2"}`}
         >
             <Image 
@@ -50,7 +50,7 @@ const LastPart = () => {
                 ${isExtraSmallScreen ? "order-2 w-full" : ""}
                 ${isSmallScreen && !isExtraSmallScreen ? "order-1 w-full" : "order-1 lg:w-1/2"}`}
         >
-            <div className={`relative w-full h-[568px] flex ${isExtraSmallScreen || isSmallScreen ? "justify-start items-center" : "justify-left items-end"}`}>
+            <div className={`relative w-full h-[568px] flex ${isExtraSmallScreen || isSmallScreen ? "justify-start place-items-end" : "justify-left items-end"}`}>
                 <Image 
                     className={`max-w-none ${isExtraExtraLargeScreen ? "!w-[350px]" : "!w-[321px]"}`}  
                     src={robot}  

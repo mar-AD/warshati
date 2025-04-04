@@ -3,7 +3,6 @@ import { FadeUp } from "@/lib/animations"
 import { motion } from "framer-motion"
 import flight from "/public/images/Home/hero/flight.png";
 import Image from "next/image"
-import PresentationCards from "./1stSectionCards";
 import FirstSectionCards from "./1stSectionCards";
 import SecondSectionCards from "./2ndSectionCards";
 

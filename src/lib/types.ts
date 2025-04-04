@@ -1,4 +1,3 @@
-import { color } from "framer-motion";
 import { LucideIcon } from "lucide-react";
 import { StaticImageData } from "next/image";
 import { IconType } from "react-icons";

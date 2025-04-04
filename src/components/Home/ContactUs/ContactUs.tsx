@@ -24,7 +24,7 @@ const ContactUs = () => {
             variants={FadeOut(.3)}
                 initial="initial"
                 whileInView="animate"
-            className="bg-white p-3 flex max-lg:flex-col gap-5 items-start justify-center lg:w-[90%] place-self-center border shadow-2xl shadow-black/30 rounded-3xl relative">
+            className="bg-white p-3 flex max-lg:flex-col gap-5 items-start justify-center lg:w-[90%] place-self-center border shadow-2xl shadow-black/30 rounded-3xl relative overflow-hidden">
                 {/* contact information */}
                 <div className="relative bg-[#011C2B] text-white font-Poppins rounded-xl h-full p-12 md:space-y-48 space-y-20 lg:w-1/2 w-full">
                     <div className="space-y-3">

@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
@@ -118,16 +120,18 @@ export default function CustomVideoPlayer({
 
     document.addEventListener("fullscreenchange", handleFullscreenChange);
 
-    if (videoRef.current) {
-      videoRef.current.addEventListener("timeupdate", updateTime);
+    const videoElement = videoRef.current;
+
+    if (videoElement) {
+      videoElement.addEventListener("timeupdate", updateTime);
     }
-    if (videoRef.current) {
-      videoRef.current.volume = volume;
+    if (videoElement) {
+      videoElement.volume = volume;
     }
 
     return () => {
       document.removeEventListener("fullscreenchange", handleFullscreenChange);
-      videoRef.current?.removeEventListener("timeupdate", updateTime);
+      videoElement?.removeEventListener("timeupdate", updateTime);
     };
   }, [volume]);
 
