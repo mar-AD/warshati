@@ -1,7 +1,7 @@
 def getServerName(String branchName) {
     switch(branchName) {
         case 'main':
-            return 'deploy.warshati.ma'
+            return 'warshati.ma'
         case 'develop':
             return 'deploy-develop.warshati.ma'
         case 'test':
