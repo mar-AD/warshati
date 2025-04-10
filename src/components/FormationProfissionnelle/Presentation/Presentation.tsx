@@ -8,7 +8,7 @@ import SecondSectionCards from "./2ndSectionCards";
 
 const Presentation = () => {
     return (
-        <div className=" relative bg-white px-14 py-20 max-md:py-10">
+        <div className=" relative bg-white px-5 sm:px-14 md:px-14 lg:px-14 py-20 max-md:py-10">
             <Image src={flight} alt="" className=" absolute top-5 -left-0 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-72"/>    
             <motion.h1
             variants={FadeUp(.5)}

@@ -13,9 +13,7 @@ const Formation = () => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-6xl text-4xl text-center">Formation Professionnelle Enseignants</motion.h1>
-            <div className='grid grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] gap-4 place-content-center !mt-[9.25rem]
-'>
-
+            <div className='grid grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] gap-4 place-content-center !mt-[9.25rem]'>
                 {
                     FormationData.map((item, index) => (
                         <FormationCard index={index} item={item} key={index} />

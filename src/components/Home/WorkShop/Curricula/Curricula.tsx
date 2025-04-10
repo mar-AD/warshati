@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 import robot_3 from "/public/images/Home/curricula/robot_3.png"
 import image_4 from "/public/images/Home/curricula/image_4.png"
+import Link from "next/link"
 const Curricula = () => {
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
@@ -63,9 +64,11 @@ const Curricula = () => {
                 >
                     <div className="flex flex-col-reverse md:flex-row items-center md:items-end gap-6 w-full max-w-[61rem]">
 
-                        <button className="!w-fit btn btn-violet-outline mt-6 md:mt-0 mx-auto md:mx-0">
+                        <Link
+                        href={"/Smart-Workshops-Program"}
+                        className="!w-fit btn btn-violet-outline mt-6 md:mt-0 mx-auto md:mx-0">
                             Savoir <Plus className="ml-2" />
-                        </button>
+                        </Link>
 
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
                             <Image

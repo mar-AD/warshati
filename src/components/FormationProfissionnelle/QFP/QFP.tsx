@@ -21,12 +21,6 @@ const QFP = () => {
                         <QFPCard key={index} faq={faq} index={index} />
                     ))}
                 </div>
-
-                <div className="flex-1 space-y-5">
-                    {QFPData.slice(5, 10).map((faq, index) => (
-                        <QFPCard key={index + 5} faq={faq} index={index + 5} />
-                    ))}
-                </div>
             </div>
         </div>
         <LastPart/>

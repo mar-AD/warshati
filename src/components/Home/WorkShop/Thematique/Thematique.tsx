@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import Image from "next/image"
 import robot_2 from "/public/images/Home/curricula/robot_2.png"
 import image_4 from "/public/images/Home/curricula/image_4.png"
+import Link from "next/link";
 const Thematique = () => {
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
@@ -64,9 +65,11 @@ const Thematique = () => {
                     className="flex flex-col items-start gap-3"
                 >
                     <div className="flex md:flex-row flex-col-reverse justify-between items-center md:items-end w-full gap-6 px-5 max-w-[100vw]">
-                        <button className="!w-fit btn btn-violet-outline mt-6 md:mt-0 mx-auto md:mx-0">
+                        <Link
+                        href={"/Smart-Workshops-Project"}
+                        className="!w-fit btn btn-violet-outline mt-6 md:mt-0 mx-auto md:mx-0">
                             Savoir <Plus className="ml-2"/>
-                        </button>
+                        </Link>
 
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
                             <Image

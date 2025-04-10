@@ -13,7 +13,7 @@ import Checkbox from "/public/images/Home/digitalLab/Checkbox.png"
 const Hero = () => {
     const isScreen = useMediaQuery("(max-width: 1280px) and (min-width: 1024px)")
     return (
-        <div className="bg-light-gray px-14 pb-14 max-md:pb-7">
+        <div className="bg-light-gray px-5 sm:px-14 md:px-14 lg:px-14 pb-14 max-md:pb-7">
             <div className="pt-56 relative">
                 <div className="flex flex-col items-center justify-center relative gap-y-3">
                     <Image src={flight} alt="" className=" absolute top-5 -right-14 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-72 translate scale-x-[-1]"/>    
@@ -58,7 +58,7 @@ const Hero = () => {
                         viewport={{ once: true }}
                         className="w-full md:w-[40%] flex justify-center items-center md:h-auto h-full"
                     >
-                        <Image className="w-full h-full object-cover rounded-tr-[10rem] rounded-bl-[10rem] max-md:rounded-bl-[6rem] max-md:rounded-tr-[6rem]" src={image_2} alt="" />
+                        <Image className="w-full  object-cover h-[240px] sm:md:h-full  md:h-full lg:h-full rounded-tr-[4rem] rounded-bl-[4rem] sm:rounded-bl-[6rem] sm:rounded-tr-[6rem] md:rounded-bl-[6rem] md:rounded-tr-[6rem] lg:rounded-tr-[10rem] lg:rounded-bl-[10rem]" src={image_2} alt="" />
                     </motion.div>
 
                     <motion.div

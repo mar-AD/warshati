@@ -109,6 +109,55 @@ import presontation_14 from "/public/images/Formation/formation-15.png";
 import presontation_15 from "/public/images/Formation/formation-16.png";
 import presontation_16 from "/public/images/Formation/formation-17.png";
 import presontation_17 from "/public/images/Formation/formation-18.png";
+import SmartWProgram_1 from "/public/images/SmartWorkshopsProgram/SmartWProgram-2.png";
+import SmartWProgram_2 from "/public/images/SmartWorkshopsProgram/SmartWProgram-3.png";
+import SmartWProgram_3 from "/public/images/SmartWorkshopsProgram/SmartWProgram-4.png";
+import SmartWProgram_4 from "/public/images/SmartWorkshopsProgram/SmartWProgram-5.png";
+import SmartWProgram_5 from "/public/images/SmartWorkshopsProgram/SmartWProgram-6.png";
+import SmartWProgram_6 from "/public/images/SmartWorkshopsProgram/SmartWProgram-7.png";
+import SmartWProgram_7 from "/public/images/SmartWorkshopsProgram/SmartWProgram-8.png";
+import SmartWProgram_8 from "/public/images/SmartWorkshopsProgram/SmartWProgram-9.png";
+import SmartWProgram_9 from "/public/images/SmartWorkshopsProgram/SmartWProgram-10.png";
+import SmartWProgram_10 from "/public/images/SmartWorkshopsProgram/SmartWProgram-11.png";
+import SmartWProgram_11 from "/public/images/SmartWorkshopsProgram/SmartWProgram-12.png";
+import SmartWProgram_12 from "/public/images/SmartWorkshopsProgram/SmartWProgram-13.png";
+import SmartWProject_1 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-2.png";
+import SmartWProject_2 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-3.png";
+import SmartWProject_3 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-4.png";
+import SmartWProject_4 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-5.png";
+import SmartWProject_5 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-6.png";
+import SmartWProject_6 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-7.png";
+import SmartWProject_7 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-8.png";
+import SmartWProject_8 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-9.png";
+import SmartWProject_9 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-10.png";
+import SmartWProject_10 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-11.png";
+import SmartWProject_11 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-12.png";
+import SmartWProject_12 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-13.png";
+import SmartWProject_13 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-14.png";
+import SmartWProject_14 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-15.png";
+import SmartWProject_15 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-16.png";
+import SmartWProject_16 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-17.png";
+import SmartWProject_17 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-18.png";
+import SmartWProject_18 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-19.png";
+import SmartWProject_19 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-20.png";
+import SmartWProject_20 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-21.png";
+import SmartWProject_21 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-22.png";
+import SmartWProject_22 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-23.png";
+import SmartWProject_23 from "/public/images/SmartWorkshopsProject/smartWorkshopsProject-24.png";
+import SmartEducationPlatform_1 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-2.png"
+import SmartEducationPlatform_2 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-3.png"
+import SmartEducationPlatform_3 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-4.png"
+import SmartEducationPlatform_4 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-5.png"
+import SmartEducationPlatform_5 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-6.png"
+import SmartEducationPlatform_6 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-7.png"
+import SmartEducationPlatform_7 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-8.png"
+import SmartEducationPlatform_8 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-9.png"
+import SmartEducationPlatform_9 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-11.png"
+import SmartEducationPlatform_10 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-12.png"
+import SmartEducationPlatform_11 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-13.png"
+import SmartEducationPlatform_12 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-14.png"
+import SmartEducationPlatform_13 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-15.png"
+import SmartEducationPlatform_14 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-16.png"
 import {
   Atom,
   BrainCircuit,
@@ -142,6 +191,7 @@ import {
   FormationType,
   IntScolaireType,
   LanguageType,
+  LmsDataType,
   NavType,
   niveauxType,
   ObjectifDuProgrammeDataType,
@@ -149,7 +199,10 @@ import {
   Presentation1Type,
   Presentation2Type,
   PrioritairesType,
+  ProgramObjective,
+  ProgrrmFeaturesData,
   QuestionType,
+  SmartWorkshopsProgramDataType,
   SocialType,
   TestimonialsType,
   ThematiqueType,
@@ -1342,3 +1395,392 @@ export const QFPData: FAQType[] = [
   },
 
 ];
+
+export const SmartWorkshopsProgramData: SmartWorkshopsProgramDataType[] = [
+  {
+    title: "AI Kids",
+    content:
+      "nitiation à l’intelligence artificielle pour les jeunes.",
+    image: SmartWProgram_1,
+  },
+  {
+    title: "STEAM Competency",
+    content:
+      "Développement des compétences en sciences, technologie, ingénierie, artset mathématiques.",
+    image: SmartWProgram_2,
+  },
+  {
+    title: "Digital Literacy",
+    content:
+      " Apprentissage des fondamentaux du numérique et de la cybersécurité.",
+    image: SmartWProgram_3,
+  },
+
+];
+
+export const presontationData1_1:Presentation1Type[] = [
+  {
+    image: SmartWProgram_4,
+    text: "Un apprentissage basé sur ",
+    discreption:"la pratique et l’expérimentation."
+    
+  },
+  {
+    image: SmartWProgram_5,
+    text: "Un programme structuré, adapté aux ",
+    discreption:"enfants et adolescents"
+    
+  },
+  {
+    image: SmartWProgram_6,
+    text: "Un environnement ludique etstimulant",
+    discreption:"favorisant la créativité et la collaboration."
+    
+  },
+  ]
+  
+  export const presontationData2_2:Presentation2Type[] = [
+    {
+      image: SmartWProgram_7,
+      text: "Enfants dès 6 ans",
+    },
+    {
+      image: SmartWProgram_8,
+      text: "Adolescents et jeunes de 12 à 18 ans",
+    },
+    {
+      image: SmartWProgram_9,
+      text: "Écoles, centres éducatifs et familles",
+    },
+    
+  ]
+
+  export const nosProgrammesData:Presentation1Type[] = [
+    {
+      image: SmartWProgram_10,
+      text: "Construis ton propre assistant IA !",
+      discreption:"– Un atelier où les enfants programment une IA simple qui reconnaît des objets et répond à des questions."
+      
+    },
+    {
+      image: SmartWProgram_11,
+      text: "Fabrique et programme ton propre robot !",
+      discreption:"Un projet où les jeunes conçoivent, assemblent et codent un robot fonctionnel."
+      
+    },
+    {
+      image: SmartWProgram_12,
+      text: "Hacker éthique en herbe ",
+      discreption:"Un atelier où les participants apprennent les bases de la cybersécurité et testent des techniques de protection contre le piratage."
+      
+    },
+  ]
+
+  export const nosProgrammesObjective:ProgramObjective[] = [
+    {
+      objective: "Initier les jeunes aux bases de l’IA et à son impact sur le monde.",
+      Activités: [
+        { number: 1, text: "Création de modèles d’IA simples." },
+        { number: 2, text: "Expérimentation avec des chatbots et reconnaissance faciale" },
+        { number: 3, text: "Projets interactifs pour comprendre le Machine Learning." }
+      ]
+    },
+    {
+      objective: "Apprendre par le jeu et l’expérimentation en intégrant sciences, technologie, ingénierie, arts et mathématiques.",
+      Activités: [
+        { number: 1, text: "Expériences scientifiques et construction de prototypes" },
+        { number: 2, text: "Programmation et robotique avec Arduino et Scratch." },
+        { number: 3, text: "Impression 3D et design interactif." }
+      ]
+    },
+    {
+      objective: "Sensibiliser les jeunes à l'utilisation responsable et sécurisée des outils numériques.",
+      Activités : [
+        { number: 1, text: "Création de modèles d’IA simples." },
+        { number: 2, text: "Expérimentation avec des chatbots et reconnaissance faciale" },
+        { number: 3, text: "Projets interactifs pour comprendre le Machine Learning." }
+      ]
+    }
+  ];
+
+  export const QFPData_2: FAQType[] = [
+    {
+      title: "À partir de quel âge mon enfant peut-il participer ?",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, elit at luctus dictum, felis dolor sagittis justo, ac viverra ligula libero ut purus. Integer ut mauris ut dolor dictum tincidunt. Curabitur eget erat vel erat suscipit ultrices. Vivamus tincidunt, nisl id posuere luctus, sapien felis convallis lectus, nec consectetur lorem libero ut velit",
+      delay: 0.2,
+    },
+    {
+      title: "Les ateliers nécessitent-ils un matériel spécifique ?",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor velit ut libero blandit, in auctor risus iaculis. Integer volutpat, lacus at molestie malesuada, nisi est accumsan nisl, et suscipit eros augue at nisl. Curabitur nec magna eget elit tincidunt hendrerit non a nisl. Nulla facilisi. Aenean feugiat felis et lectus dictum malesuada. Morbi tincidunt orci ut justo maximus, sit amet efficitur nisl dignissim",
+      delay: 0.3,
+    },
+    {
+      title: "Comment suivre l’évolution des compétences des participants ?",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor velit ut libero blandit, in auctor risus iaculis. Integer volutpat, lacus at molestie malesuada, nisi est accumsan nisl, et suscipit eros augue at nisl. Curabitur nec magna eget elit tincidunt hendrerit non a nisl. Nulla facilisi. Aenean feugiat felis et lectus dictum malesuada. Morbi tincidunt orci ut justo maximus, sit amet efficitur nisl dignissim",
+      delay: 0.4,
+    },
+  
+  ];
+
+  export const progrrmFeatures: ProgrrmFeaturesData[] = [
+    {
+      number: '01',
+      title: 'Développer',
+      description: 'la pensée critique et la résolution de problèmes.',
+      image: SmartWProject_1,
+      color:'#e1e9fe'
+    },
+    {
+      number: '02',
+      title: 'Encourager',
+      description: "l'innovation à travers des projets concrets.",
+      image: SmartWProject_2,
+      color:'#ffeed2'
+    },
+    {
+      number: '03',
+      title: 'Favoriser',
+      description: "la collaboration et l'apprentissage structuré.",
+      image: SmartWProject_3,
+      color:'#f6e2ff'
+    },
+    {
+      number: '04',
+      title: 'Développer',
+      description: 'la pensée critique et la résolution de problèmes.',
+      image: SmartWProject_4,
+      color:'#ffeed2'
+    },
+  ];
+
+  export const conceptDuProgrammesData:Presentation1Type[] = [
+    {
+      image: SmartWProject_5,
+      text: "Thème central",
+      discreption:"Une problématique majeure (ex : véhicules autonomes, maisons intelligentes, énergies renouvelables)."
+      
+    },
+    {
+      image: SmartWProject_6,
+      text: "Axes pédagogiques ",
+      discreption:"Des sous-thématiques abordant différents aspects du projet."
+      
+    },
+    {
+      image: SmartWProject_7,
+      text: "Défis progressifs ",
+      discreption:"Une montée en compétences à travers des missions et expérimentations."  
+    },
+  ]
+
+  export const conceptDuProgrammesData_2:Presentation2Type[] = [
+    {
+      image: SmartWProject_8,
+      text: "Jeunes de 8 à 18 ans",
+    },
+    {
+      image: SmartWProject_9,
+      text: "Écoles, clubs scientifiques et centres éducatifs",
+    },
+    {
+      image: SmartWProject_10,
+      text: "Étudiants passionnés par l’innovation et la technologie",
+    },
+    
+  ]
+
+  export const ExempleDeProjetsCardData: ParcoursType[][] = [
+    [
+      {
+        title: "Programmation embarquée",
+        description: "Concevoir le système de navigation du véhicule",
+        image: SmartWProject_11,
+        delay: 0.2,
+      },
+      {
+        title: "Vision par ordinateur",
+        description: "Implémenter la reconnaissance d’obstacles et de panneaux de signalisation.",
+        image: SmartWProject_12,
+        delay: 0.3,
+      },
+      {
+        title: "Systèmes embarqués",
+        description: "Intégration des capteurs pour la détection et la prise de décision",
+        image: SmartWProject_13,
+        delay: 0.4,
+      },
+    ],
+    [
+      {
+        title: "Production d’énergie verte ",
+        description: "Création de panneaux solaires et d’éoliennes miniatures.",
+        image: SmartWProject_17,
+        delay: 0.2,
+      },
+      {
+        title: "Stockage et gestion d’énergie ",
+        description: " Simulation de systèmes de batteries intelligentes.",
+        image: SmartWProject_18,
+        delay: 0.3,
+      },
+      {
+        title: "Optimisation et automatisation",
+        description: "Modélisation d’un réseau énergétique efficace.",
+        image: SmartWProject_19,
+        delay: 0.4,
+      },
+    ]
+  ];
+
+  export const ExempleDeProjetsCardData_2: FormationType[] = [
+    {
+      title: "Domotique & IoT",
+      description: "Concevoir un système connecté pour gérer l’éclairage et la température",
+      image: SmartWProject_14,
+      delay: 0.2,
+    },
+    {
+      title: "Intelligence Artificielle",
+      description: "Créer un assistant vocal intelligent",
+      image: SmartWProject_15,
+      delay: 0.3,
+    },
+    {
+      title: "Énergies renouvelables",
+      description: "Simuler une gestion énergétique efficace avec des panneaux solaires.",
+      image: SmartWProject_16,
+      delay: 0.4,
+    },
+  ];
+
+  export const approchePedagogiqueData:Presentation1Type[] = [
+    {
+      image: SmartWProject_20,
+      text: "Exploration thématique",
+      discreption:"Chaque projet débute par un état des lieux du sujet traité."
+      
+    },
+    {
+      image: SmartWProject_21,
+      text: "Travail collaboratif",
+      discreption:"Les participants avancent en équipes multidisciplinaires."
+      
+    },
+    {
+      image: SmartWProject_22,
+      text: "Prototypage et itération ",
+      discreption:"Les solutions sont testées et améliorées progressivement."  
+    },
+    {
+      image: SmartWProject_23,
+      text: "Présentation et évaluation",
+      discreption:"Chaque projet est finalisé par une démonstration et une évaluation des acquis."  
+    },
+  ]
+
+  export const QFPData_3: FAQType[] = [
+    {
+      title: "Quel est le niveau de difficulté des projets ?",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, elit at luctus dictum, felis dolor sagittis justo, ac viverra ligula libero ut purus. Integer ut mauris ut dolor dictum tincidunt. Curabitur eget erat vel erat suscipit ultrices. Vivamus tincidunt, nisl id posuere luctus, sapien felis convallis lectus, nec consectetur lorem libero ut velit",
+      delay: 0.2,
+    },
+    {
+      title: "Quels sont les prérequis pour participer ?",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor velit ut libero blandit, in auctor risus iaculis. Integer volutpat, lacus at molestie malesuada, nisi est accumsan nisl, et suscipit eros augue at nisl. Curabitur nec magna eget elit tincidunt hendrerit non a nisl. Nulla facilisi. Aenean feugiat felis et lectus dictum malesuada. Morbi tincidunt orci ut justo maximus, sit amet efficitur nisl dignissim",
+      delay: 0.3,
+    },
+    {
+      title: "Peut-on suivre un projet en ligne ?",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor velit ut libero blandit, in auctor risus iaculis. Integer volutpat, lacus at molestie malesuada, nisi est accumsan nisl, et suscipit eros augue at nisl. Curabitur nec magna eget elit tincidunt hendrerit non a nisl. Nulla facilisi. Aenean feugiat felis et lectus dictum malesuada. Morbi tincidunt orci ut justo maximus, sit amet efficitur nisl dignissim",
+      delay: 0.4,
+    },
+  
+  ];
+
+  export const lmsData: LmsDataType[] = [
+    {
+      image: SmartEducationPlatform_1,
+      text: "Des outils pour la création et la diffusion de contenus interactifs.",
+      color: "#df385b"
+    },
+    {
+      image: SmartEducationPlatform_2,
+      text: "La gestion des ressources éducatives.",
+      color:"#5ab48e"
+    },
+    {
+      image: SmartEducationPlatform_3,
+      text: " La conception de quiz et l'évaluation des progrès des apprenants.",
+      color:"#6720c2"
+    },
+    {
+      image: SmartEducationPlatform_4,
+      text: "La planification des sessions et le suivi de la formation en ligne.",
+      color:"#fab437"
+    },
+    {
+      image: SmartEducationPlatform_5,
+      text: "Un programme de formation continue pour les enseignants.",
+      color:"#2aaa94"
+    },
+  ]
+
+  export const labsData: LmsDataType[][] = [
+    [ 
+      {
+        image: SmartEducationPlatform_6,
+        text: "Initiation à l'intelligence artificielle pour les jeunes apprenants.",
+        color: "#df385b"
+      },
+      {
+        image: SmartEducationPlatform_7,
+        text: " Expériences interactives pour comprendre les principes du machine learning.",
+        color:"#3b2381"
+      },
+      {
+        image: SmartEducationPlatform_8,
+        text: "Stimulation de la curiosité et de l'innovation dans le domaine de l'IA.",
+        color:"#2aaa94"
+      },
+    ],
+    [ 
+      {
+        image: SmartEducationPlatform_9,
+        text: "Introduction à la programmation par blocs.",
+        color: "#5ab48e"
+      },
+      {
+        image: SmartEducationPlatform_10,
+        text: " Exploration de concepts en sciences, technologie, ingénierie, arts et mathématiques",
+        color:"#6720c2"
+      },
+      {
+        image: SmartEducationPlatform_11,
+        text: "Réalisation de projets concrets favorisant la pensée computationnelle.",
+        color:"#29b9e7"
+      },
+    ],
+    [ 
+      {
+        image: SmartEducationPlatform_12,
+        text: "Développement des compétences numériques essentielles",
+        color:"#2aaa94"
+      },
+      {
+        image: SmartEducationPlatform_13,
+        text: " Apprentissage des outils digitaux et des bonnes pratiques en cybersécurité.",
+        color:"#3b2381"
+      },
+      {
+        image: SmartEducationPlatform_14,
+        text: "Sensibilisation à l'éthique et à la citoyenneté numérique.",
+        color: "#df385b"
+      },
+    ],
+  ]

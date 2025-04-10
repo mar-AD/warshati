@@ -2,7 +2,7 @@
 import Image from "next/image"
 import flight from "/public/images/Home/hero/flight.png";
 import { motion } from "framer-motion";
-import { FadeUp } from "@/lib/animations";
+import { FadeLeft, FadeRight, FadeUp } from "@/lib/animations";
 import { objectifDuProgrammeData, programmesDeFormationData } from "@/lib/data";
 import ProgramCard from "./ProgramCards";
 import Checkbox from "/public/images/Home/digitalLab/Checkbox.png"
@@ -11,7 +11,7 @@ import ProgramSequel from "./ProgramSequel";
 const Program = () => {
     return (
       <>
-        <div className=" relative bg-light-gray px-14 pt-[4.5rem] pb-9 max-md:pb-7">
+        <div className=" relative bg-light-gray px-5 sm:px-14 md:px-14 lg:px-14 pt-[4.5rem] pb-9 max-md:pb-7">
             <Image src={flight} alt="" className="  absolute top-5 right-0 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-72 translate scale-x-[-1]"/> 
             <motion.h1
             variants={FadeUp(.3)}
@@ -38,7 +38,12 @@ const Program = () => {
                 <div className="w-full lg:w-1/2">
                 <h1 className=" text-slate-600 font-semibold text-[22px] sm:text-[22px] md:text-[20px] lg:text-[26px]">Avec Exemples de <span className="text-violet-500">modules proposés</span></h1>
 
-                    <ul className="space-y-9 pt-10">
+                    <motion.ul
+                    variants={FadeRight(0.2)}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    className="space-y-9 pt-10">
                     {programmesDeFormationData[0].map((item, i) => (
                         <li
                         key={i}
@@ -48,7 +53,7 @@ const Program = () => {
                         {item}
                         </li>
                     ))}
-                    </ul>
+                    </motion.ul>
                 </div>
 
                 <div className="w-full lg:w-1/2 gap-5 flex flex-col sm:flex-row flex-wrap">
@@ -87,7 +92,12 @@ const Program = () => {
                   Ateliers Interactifs <span className="text-violet-500">(Exemples)</span>
                 </h1>
 
-                <ul className="space-y-9 pt-10">
+                <motion.ul
+                variants={FadeLeft(0.2)}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                className="space-y-9 pt-10">
                   {programmesDeFormationData[1].map((item, i) => (
                     <li
                       key={i}
@@ -97,7 +107,7 @@ const Program = () => {
                       {item}
                     </li>
                   ))}
-                </ul>
+                </motion.ul>
               </div>
             </div>
 

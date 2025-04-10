@@ -3,10 +3,12 @@ import Image from "next/image"
 import { objectifDuProgrammeData, programmesDeFormationData } from "@/lib/data";
 import ProgramCard from "./ProgramCards";
 import Checkbox from "/public/images/Home/digitalLab/Checkbox.png"
+import { motion } from "framer-motion";
+import { FadeLeft, FadeRight } from "@/lib/animations";
 
 const ProgramSequel = () => {
     return (
-        <div className=" relative  px-14 pt-12 pb-[5.75rem] max-md:pb-7">
+        <div className=" relative px-5 sm:px-14 md:px-14 lg:px-14 pt-12 pb-[5.75rem] max-md:pb-7">
         
             
             {/* section3-------------- */}
@@ -14,7 +16,12 @@ const ProgramSequel = () => {
                 <div className="w-full lg:w-1/2 ">
                     <h1 className=" text-slate-600 font-semibold text-[22px] sm:text-[22px] md:text-[20px] lg:text-[26px]">Coaching et <span className="text-violet-500">Mentorat</span> (Exemples ) </h1>
 
-                    <ul className="space-y-9 pt-10">
+                    <motion.ul
+                    variants={FadeRight(0.2)}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    className="space-y-9 pt-10">
                     {programmesDeFormationData[2].map((item, i) => (
                         <li
                         key={i}
@@ -24,7 +31,7 @@ const ProgramSequel = () => {
                         {item}
                         </li>
                     ))}
-                    </ul>
+                    </motion.ul>
                 </div>
 
                 <div className="w-full lg:w-1/2 gap-12 flex flex-col sm:flex-row flex-wrap">
@@ -63,7 +70,12 @@ const ProgramSequel = () => {
                     Ressources et <span className="text-violet-500">Outils Pédagogiques</span> (Exemples )
                     </h1>
 
-                    <ul className="space-y-9 pt-10">
+                    <motion.ul
+                    variants={FadeLeft(0.2)}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    className="space-y-9 pt-10">
                     {programmesDeFormationData[3].map((item, i) => (
                         <li
                         key={i}
@@ -73,7 +85,7 @@ const ProgramSequel = () => {
                         {item}
                         </li>
                     ))}
-                    </ul>
+                    </motion.ul>
                 </div>
             </div>
 

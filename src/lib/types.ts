@@ -160,3 +160,33 @@ export interface ObjectifDuProgrammeDataType extends Presentation1Type {
   color: string;
   delay: number;
 }
+
+export type SmartWorkshopsProgramDataType = {
+  title: string;
+  content: string;
+  image: StaticImageData;
+};
+
+//for nos programes objective section
+
+type SubObjective = {
+  number: number;
+  text: string;
+};
+
+export type ProgramObjective = {
+  objective: string;
+  Activités: SubObjective[];
+};
+
+export type ProgrrmFeaturesData = {
+  number: string;
+  title: string;
+  description: string;
+  image: StaticImageData;
+  color: string
+};
+
+export interface LmsDataType extends Presentation2Type {
+  color: string
+}

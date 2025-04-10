@@ -16,6 +16,7 @@ import bubble from "/public/images/Home/digitalLab/bubble.png"
 import { DigitalLabData } from "@/lib/data"
 import { motion } from "framer-motion"
 import { FadeLeft, FadeRight, FadeUp } from "@/lib/animations"
+import Link from "next/link"
 const DigitalLab = () => {
     return (
         <div className="lg:px-20 py-20 px-5 relative pt-20 overflow-hidden">
@@ -108,7 +109,7 @@ const DigitalLab = () => {
                         </ul>
                         <div className="flex gap-5">
                             <button className="btn btn-violet !rounded-full">Se Connecter <ArrowRight /></button>
-                            <button className="btn btn-violet-outline !rounded-full">Savoir <Plus /></button>
+                            <Link href={"/Smart-Education-Platform"} className="btn btn-violet-outline !rounded-full">Savoir <Plus /></Link>
                         </div>
                     </motion.div>
 

@@ -152,7 +152,6 @@ export default function CustomVideoPlayer({
         }
       }}
     >
-      {/* Video */}
       <video
         ref={videoRef}
         src={selectedQuality}
@@ -164,28 +163,27 @@ export default function CustomVideoPlayer({
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
       />
-  
+
       <div
         className="absolute inset-0 bg-transparent cursor-pointer"
         onClick={togglePlay}
       ></div>
-  
+
       {showControls && (
         <div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
           onClick={togglePlay}
         >
-          {playing ? <Pause fill="white" size={48} className="text-white" /> : <Play fill="white" size={48} className="text-white" />}
+          {playing ? <Pause fill="white" className="text-white w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-10 lg:h-10" /> : <Play fill="white" className="text-white w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-10 lg:h-10" />}
         </div>
       )}
-  
+
       <div
         className={`absolute bottom-0 left-0 w-full flex flex-col justify-end bg-gradient-to-t from-black/70 via-black/50 to-transparent transition-opacity duration-500 ${
           showControls ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         } z-20`}
         style={{ height: "60px" }}
       >
-
         <div
           ref={progressRef}
           className="relative h-1 w-full bg-gray-600 cursor-pointer"
@@ -193,15 +191,13 @@ export default function CustomVideoPlayer({
         >
           <div className="absolute h-1 bg-violet-500" style={{ width: `${(currentTime / duration) * 100}%` }} />
         </div>
-  
 
-        <div className="flex items-center justify-between px-4 py-3">
-          <div className="flex items-center space-x-3">
+        <div className="flex items-center justify-between px-2 py-2 sm:px-4 sm:py-3">
+          <div className="flex items-center space-x-2 sm:space-x-3 text-xs sm:text-sm md:text-sm lg:text-sm">
             <button onClick={togglePlay} className="text-white">
-              {playing ? <Pause fill="white" size={24} /> : <Play fill="white" size={24} />}
+              {playing ? <Pause fill="white" className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" /> : <Play fill="white" className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" />}
             </button>
-            <button><SkipForward fill="white" className="text-white w-6 h-6" /></button>
-  
+            <button><SkipForward fill="white" className="text-white w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" /></button>
 
             <div
               className="relative flex items-center"
@@ -209,7 +205,7 @@ export default function CustomVideoPlayer({
               onMouseLeave={() => setShowVolumeSlider(false)}
             >
               <button onClick={toggleMute}>
-                {muted ? <VolumeX fill="white" className="text-white w-6 h-6" /> : <Volume2 fill="white" className="text-white w-6 h-6" />}
+                {muted ? <VolumeX fill="white" stroke="white" className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-7 lg:h-7" /> : <Volume2 fill="white" stroke="white" className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 size-7" />}
               </button>
               <input
                 type="range"
@@ -218,32 +214,31 @@ export default function CustomVideoPlayer({
                 step="0.01"
                 value={volume}
                 onChange={handleVolumeChange}
-                className={`absolute left-1 w-24 cursor-pointer text-violet-700 ${
+                className={`absolute left-1 w-16 sm:w-20 md:w-24 lg:w-24 cursor-pointer text-violet-700 ${
                   showVolumeSlider ? "opacity-100 relative" : "opacity-0"
                 }`}
               />
             </div>
-  
-            <span className="text-white text-sm">
+
+            <span className="text-white text-xs sm:text-sm md:text-sm lg:text-sm">
               {formatTime(currentTime)} / {formatTime(duration)}
             </span>
           </div>
-  
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4 text-xs sm:text-sm md:text-sm lg:text-sm">
             <div className="relative">
               <button
                 onClick={() => setShowQualityList(!showQualityList)}
                 className="relative flex items-center text-white"
               >
-                <Settings className="w-6 h-6" />
-                <span className="absolute -top-2 -right-3 bg-violet-600 text-white text-xs px-1 py-.5">
+                <Settings className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" />
+                <span className="absolute -top-2 -right-3 bg-violet-600 text-white text-[.5rem] sm:text-xs px-1 py-.5">
                   {selectedQualityLabel === "1080p" ? "HD" : ""}
                 </span>
               </button>
-  
+
               {showQualityList && (
-                <div className="absolute bottom-10 right-0 bg-gray-800 text-white text-sm rounded-md shadow-lg overflow-hidden">
+                <div className="absolute bottom-6 sm:bottom-10 right-0 bg-gray-800 text-white text-xs sm:text-sm md:text-sm lg:text-sm rounded-md shadow-lg overflow-hidden">
                   {videoQualities.map((quality, index) => (
                     <button
                       key={index}
@@ -258,9 +253,9 @@ export default function CustomVideoPlayer({
                 </div>
               )}
             </div>
-  
+
             <button onClick={toggleFullscreen} className="text-white">
-              {isFullscreen ? <Minimize size={24} /> : <Maximize size={24} />}
+              {isFullscreen ? <Minimize className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" /> : <Maximize className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" />}
             </button>
           </div>
         </div>

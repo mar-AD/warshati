@@ -7,7 +7,7 @@ import useMediaQuery from "@/lib/UseMediaQuery";
 const SecondSectionCards = () => {
     const isScreen = useMediaQuery("(min-width: 1026px) and (max-width: 1430px)");
   return (
-    <div className="  px-8 md:px-16 lg:px-28 rounded-2xl mt-16">
+    <div className=" md:px-16 lg:px-28 rounded-2xl mt-16">
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {presontationData2.map((item, index) => (
             <motion.div

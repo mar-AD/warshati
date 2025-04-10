@@ -16,7 +16,7 @@ const Temoignages = () => {
         { label: '360p', url: '/videos/home/video_2(1).mp4' },
     ];
     return (
-        <div className=" relative bg-light-gray px-14 pt-[4.5rem] pb-20 max-md:pb-7">
+        <div className=" relative bg-light-gray px-5 sm:px-14 md:px-14 lg:px-14 pt-[4.5rem] pb-20 max-md:pb-7">
             <Image src={flight} alt="" className="  absolute top-28 left-0 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-72"/> 
             <motion.h1
             variants={FadeUp(.3)}
