@@ -2,9 +2,8 @@
 import Image from "next/image"
 import lines from "/public/images/IntegrationScolaire/hero/Lines.png"
 import { motion } from "framer-motion"
-import {  FadeDown, FadeRight, FadeUp } from "@/lib/animations"
+import { FadeUp } from "@/lib/animations"
 import image_1 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-1.png"
-import useMediaQuery from "@/lib/UseMediaQuery"
 import LmsCards from "./LmsCards"
 import { lmsData } from "@/lib/data"
 import InnovationLabs from "./InnovationLabs"
@@ -12,8 +11,6 @@ import InnovationLabs from "./InnovationLabs"
 
 
 const Lms = () => {
-    const isScreen = useMediaQuery("(max-width: 1280px) and (min-width: 1024px)")
-    const isScreen_2 = useMediaQuery("(min-width: 1765px)")
     return (
         <>
         <div className="bg-light-gray px-5 sm:px-14 md:px-14 lg:px-36 pb-32 lg:pt-16">
@@ -32,7 +29,7 @@ const Lms = () => {
                             <Image className="size-6 lg:size-9 fill-violet-700" src={image_1} alt="" />
                         </div>
                         <h1 className={`text-violet-800 font-bold text-center font-Vazirmatn 
-                            ${isScreen ? "text-[2.5rem]" : "lg:text-5xl md:text-3xl text-xl"}`}>
+                            text-[2.5rem] lg:text-5xl md:text-3xl text-xl}`}>
                             Learning Management System (LMS)
                         </h1>
                     </motion.div>
@@ -44,7 +41,7 @@ const Lms = () => {
                         viewport={{ once: true }}
                         className="text-[#262626] font-Poppins max-w-[50rem] sm:max-w-[55rem] md:max-w-[75rem] lg:max-w-[89rem] text-center lg:text-[38px] md:text-2xl text-lg font-medium !leading-relaxed"
                     >
-                        Un système de gestion permettant l'administration fluide des cours, des élèves et des enseignants. Iloffre :
+                        Un système de gestion permettant l&apos;administration fluide des cours, des élèves et des enseignants. Iloffre :
                     </motion.h1>
 
                 </div>

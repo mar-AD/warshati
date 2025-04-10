@@ -2,8 +2,7 @@
 import Image from "next/image"
 
 import { motion } from "framer-motion"
-import {  FadeLeft, FadeRight, FadeUp } from "@/lib/animations"
-import useMediaQuery from "@/lib/UseMediaQuery"
+import {  FadeLeft, FadeRight } from "@/lib/animations"
 import VideoSlider from "@/components/VideoSlider"
 import { ArrowRight } from "lucide-react"
 import green_cercle from "/public/images/SmartEducationPlatform/green.png";
@@ -12,7 +11,6 @@ import green_rec from "/public/images/SmartEducationPlatform/green-rec.png";
 import violet_rec from "/public/images/SmartEducationPlatform/violet-rec.png";
 
 const InnovationLabs = () => {
-    const isScreen = useMediaQuery("(max-width: 1280px) and (min-width: 1024px)")
     return (
         <div className=" px-5 sm:px-14 md:px-14 lg:px-44 lg:pb-20 max-md:pb-7 pt-20">
 

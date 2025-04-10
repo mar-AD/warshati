@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import { presontationData1, presontationData1_1 } from "@/lib/data";
+import { presontationData1_1 } from "@/lib/data";
 import { motion } from "framer-motion";
 import { FadeUp } from "@/lib/animations";
 

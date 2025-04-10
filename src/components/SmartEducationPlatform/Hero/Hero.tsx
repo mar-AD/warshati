@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import lines from "/public/images/IntegrationScolaire/hero/Lines.png"
 import { motion } from "framer-motion"
 import {  FadeLeft, FadeRight, FadeUp } from "@/lib/animations"
 import useMediaQuery from "@/lib/UseMediaQuery"
@@ -36,7 +35,7 @@ const Hero = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }} className="text-slate-600 font-Poppins  text-center lg:text-[24px] md:text-[20px] text-[16px] font-bold  !leading-relaxed">
-                            Un Écosystème d'Apprentissage Numérique Innovant
+                            Un Écosystème d&apos;Apprentissage Numérique Innovant
                     </motion.h1>
                     
                 </div>
