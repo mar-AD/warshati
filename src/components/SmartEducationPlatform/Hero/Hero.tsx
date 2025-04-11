@@ -15,8 +15,8 @@ const Hero = () => {
         <div className="px-5 sm:px-14 md:px-14 lg:px-14 pb-28 max-md:pb-14">
             <div className="pt-56 relative">
                 <div className="flex flex-col items-center justify-center relative gap-y-3">
-                    <Image src={flight} alt="" className=" absolute top-5 -right-4 sm:-right-14 md:-right-14 lg:-right-14 w-[3.5rem] sm:w-[5rem] md:w-[10rem] lg:w-72 scale-x-[-1]"/>
-                    <Image src={green_cercle} alt="" className=" absolute -top-5 -left-4 sm:-left-4 md:-left-4 lg:left-32 w-[3.5rem] sm:w-[4rem] md:w-[5rem] lg:w-[7rem]"/>
+                    <Image src={flight} alt="" className=" absolute top-5 -right-4 sm:-right-14 md:-right-14 lg:-right-14 w-[3.5rem] sm:w-[5rem] md:w-[10rem] lg:w-72 scale-x-[-1] "/>
+                    <Image src={green_cercle} alt="" className=" absolute -top-5 -left-4 sm:-left-4 md:-left-4 lg:left-32 w-[3.5rem] sm:w-[4rem] md:w-[5rem] lg:w-[7rem] -z-10"/>
                     <Image src={violet_cercle} alt="" className=" absolute -bottom-[4rem] lg:-bottom-[23rem] -left-4 sm:-left-14 md:-left-14 lg:left-32 w-[1rem] sm:w-[1rem] md:w-[2rem] lg:w-[3rem]"/>   
 
                     <motion.div
@@ -40,7 +40,7 @@ const Hero = () => {
                     
                 </div>
 
-                <div className="flex flex-col pt-24 gap-20 md:flex-row w-full justify-center items-center">
+                <div className="flex flex-col pt-24 gap-8 md:gap-20 lg:gap-20 md:flex-row w-full justify-center items-center">
                     <motion.div
                         variants={FadeRight(0.8)}
                         initial="initial"

@@ -7,10 +7,10 @@ import image_1 from "/public/images/SmartEducationPlatform/SmartEducationPlatfor
 import LmsCards from "./LmsCards"
 import { lmsData } from "@/lib/data"
 import InnovationLabs from "./InnovationLabs"
-
-
+import useMediaQuery from "@/lib/UseMediaQuery"
 
 const Lms = () => {
+    const isScreen = useMediaQuery("(max-width: 1280px) and (min-width: 1024px)")
     return (
         <>
         <div className="bg-light-gray px-5 sm:px-14 md:px-14 lg:px-36 pb-32 lg:pt-16">
@@ -28,8 +28,8 @@ const Lms = () => {
                         <div className="bg-violet-700/20 p-2 rounded-lg flex items-center">
                             <Image className="size-6 lg:size-9 fill-violet-700" src={image_1} alt="" />
                         </div>
-                        <h1 className={`text-violet-800 font-bold text-center font-Vazirmatn 
-                            text-[2.5rem] lg:text-5xl md:text-3xl text-xl}`}>
+                        <h1 className={`text-violet-800 font-bold text-center font-Poppins 
+                            ${isScreen ? "text-[2.5rem]" : "lg:text-5xl md:text-3xl text-xl"}`}>
                             Learning Management System (LMS)
                         </h1>
                     </motion.div>

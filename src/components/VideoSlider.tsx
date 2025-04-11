@@ -16,6 +16,11 @@ const VideoSlider = ({ videoIndex }: { videoIndex: number }) => {
         src: "/videos/home/video_1.mp4",
         played: false,
         poster: "/images/Blog/articles/article_9.jpg"
+    },
+    {
+        src: "/videos/home/video_1.mp4",
+        played: false,
+        poster: "/images/Blog/articles/article_1.jpg"
     }
     ]);
     

@@ -5,9 +5,6 @@ import FirstLibsSection from "./labsSection1";
 import SecondLibsSection from "./labsSection2";
 import ThirdLibsSection from "./labsSection3";
 
-
-
-
 const Labs = () => {
 
     return (

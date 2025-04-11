@@ -158,6 +158,16 @@ import SmartEducationPlatform_11 from "/public/images/SmartEducationPlatform/Sma
 import SmartEducationPlatform_12 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-14.png"
 import SmartEducationPlatform_13 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-15.png"
 import SmartEducationPlatform_14 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-16.png"
+import SmartEducationPlatform_15 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-19.png"
+import SmartEducationPlatform_16 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-20.png"
+import SmartEducationPlatform_17 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-21.png"
+import SmartEducationPlatform_18 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-22.png"
+import SmartEducationPlatform_19 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-23.png"
+import SmartEducationPlatform_20 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-24.png"
+import SmartEducationPlatform_21 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-28.png"
+import SmartEducationPlatform_22 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-29.png"
+import SmartEducationPlatform_23 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-30.png"
+import SmartEducationPlatform_24 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-31.png"
 import {
   Atom,
   BrainCircuit,
@@ -184,6 +194,7 @@ import {
   articleType,
   CommencerCardType,
   CommencerDataSetType,
+  ComposantesDuProgrammeDataType,
   // CommencerDataType,
   ContactType,
   CurriculaType,
@@ -1783,4 +1794,71 @@ export const presontationData1_1:Presentation1Type[] = [
         color: "#df385b"
       },
     ],
+  ]
+
+  export const WarshaMakerKitsData: Presentation2Type[] = [
+    {
+      text:
+        "Favorisent l'apprentissage basé sur les projets.",
+      image: SmartEducationPlatform_15,
+    },
+    {
+      text:
+        "Offrent une approche intuitive et visuelle du codage.",
+      image: SmartEducationPlatform_16,
+    },
+    {
+      text:
+        " Développent les compétences en résolution de problèmes, créativité et pensée critique",
+      image: SmartEducationPlatform_17,
+    },
+  
+  ];
+
+  export const SmartPedFrameworkData:Presentation1Type[] = [
+    {
+      image: SmartEducationPlatform_18,
+      text: "Un contenu de cours ",
+      discreption:"exhaustif avec des fiches pédagogiques et des guides d'apprentissage"
+      
+    },
+    {
+      image: SmartEducationPlatform_19,
+      text: "Un flux d'apprentissage",
+      discreption:"progressif, adapté à différents groupes d'âge."
+      
+    },
+    {
+      image: SmartEducationPlatform_20,
+      text: "Une évaluation",
+      discreption:"rigoureuse à l'aide de quiz et de projets."  
+    },
+  ]
+
+
+  export const ComposantesDuProgrammeCardData: ComposantesDuProgrammeDataType[]= [
+      {
+        title: "Formation continue",
+        description: "Programmes innovants pour rester à la pointe de la pédagogie numérique.",
+        image: SmartEducationPlatform_21,
+        color: "#eaf2ff",
+      },
+      {
+        title: "Ateliers interactifs ",
+        description: "Sessions pratiques et collaboratives pour expérimenter les nouvelles approchesd'enseignement.",
+        image: SmartEducationPlatform_22,
+        color: "#fff3ef",
+      },
+      {
+        title: "Coaching et mentorat",
+        description: "Accompagnement personnalisé par des experts.",
+        image: SmartEducationPlatform_23,
+        color: "#ebdcff",
+      },
+      {
+        title: "Ressources et outils",
+        description: "Accès à une bibliothèque de guides, supports numériques et outils pédagogiques.",
+        image: SmartEducationPlatform_24,
+        color: "#dcf5ff",
+      },
   ]

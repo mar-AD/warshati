@@ -32,15 +32,23 @@ const Hero = () => {
                         <Image className="lg:place-self-end md:place-self-center place-self-end lg:-translate-y-7 md:-translate-y-5 lg:w-[57%] w-[39%] md:w-[36%] -translate-y-4 max-md:-translate-x-20" draggable={false} width={900} src={pen_line} alt="" />
                     </motion.div>
                     <motion.div
-                        variants={FadeUp(.6)}
-                        initial="initial"
-                        animate="animate" className="flex max-lg:flex-col md:gap-x-14 gap-y-8 mt-10">
-                        {/* <button className="btn btn-violet">Commencer</button> */}
-                        <Link href={"/Commencer"}>
-                            <button className="btn btn-violet">Commencer</button>
+                    variants={FadeUp(0.6)}
+                    initial="initial"
+                    animate="animate"
+                    className="flex items-center justify-center gap-x-4 overflow-x-auto mt-10 whitespace-nowrap"
+                    >
+                        <Link href="/Commencer">
+                            <button className="btn btn-violet text-sm sm:text-base md:text-lg min-w-fit">
+                            Commencer
+                            </button>
                         </Link>
-                        <button className="btn !font-Vazirmatn !border-none gap-x-4"><Play className="bg-violet-300 text-transparent fill-white md:p-2.5 p-1 md:size-max size-7 rounded-full" /> Regarder la vidéo</button>
+
+                        <button className="btn !font-Vazirmatn !border-none gap-x-2 text-sm sm:text-base md:text-lg min-w-fit">
+                            <Play className="bg-violet-300 text-transparent fill-white p-1.5 md:p-2.5 size-7 md:size-9 rounded-full" />
+                            Regarder la vidéo
+                        </button>
                     </motion.div>
+
                 </div>
             </div>
             <HeroImage />

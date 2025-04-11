@@ -3,7 +3,7 @@ import DigitalLab from "@/components/Home/DigitalLab/DigitalLab"
 import FAQ from "@/components/Home/FAQ/FAQ"
 import Hero from "@/components/Home/Hero/Hero"
 import IntScolaire from "@/components/Home/IntScolaire/IntScolaire"
-import Partenariat from "@/components/Home/Partenariat/Partenariat"
+// import Partenariat from "@/components/Home/Partenariat/Partenariat"
 import WorkShop from "@/components/Home/WorkShop/WorkShop"
 
 const page = () => {
@@ -14,7 +14,7 @@ const page = () => {
       {/* Warshati Digital Lab */}
       <DigitalLab />
       {/* Partenariat */}
-      <Partenariat />
+      {/* <Partenariat /> */}
       {/* Smart Workshops Program */}
       <WorkShop />
       {/* Intégration Scolaire */}

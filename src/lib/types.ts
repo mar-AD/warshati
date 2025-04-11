@@ -190,3 +190,7 @@ export type ProgrrmFeaturesData = {
 export interface LmsDataType extends Presentation2Type {
   color: string
 }
+
+export interface ComposantesDuProgrammeDataType extends FormationType {
+  color: string
+}
