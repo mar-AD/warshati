@@ -1,11 +1,10 @@
 import Image from "next/image"
-import arrow from '/public/images/Home/digitalLab/arrow.png';
 import { cn } from "@/lib/utils";
 import { ComposantesDuProgrammeDataType } from "@/lib/types";
 import { FadeRight } from "@/lib/animations";
 import { motion } from "framer-motion";
 
-const ComposantesDuProgrammeCard = ({ index, item }: { index: number, item: ComposantesDuProgrammeDataType }) => {
+const ComposantesDuProgrammeCard = ({ item }: { index: number, item: ComposantesDuProgrammeDataType }) => {
     return (
         <motion.div
         variants={FadeRight(item.delay!)}

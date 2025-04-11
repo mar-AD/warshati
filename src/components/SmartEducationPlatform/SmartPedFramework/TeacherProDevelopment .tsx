@@ -55,7 +55,7 @@ const TeacherProDevelopment  = () => {
                             >
                                 <p>
                                     Un programme conçu pour renforcer les compétences des enseignants en intégrant les approches
-                                    pédagogiques modernes dans l'enseignement du STEAM, de l'IA et de la littératie numérique.
+                                    pédagogiques modernes dans l&apos;enseignement du STEAM, de l&apos;IA et de la littératie numérique.
                                 </p>
                             </motion.div>
                         </div>

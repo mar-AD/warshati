@@ -44,7 +44,7 @@ const WarshatiSmartEducationPlatform = () => {
                             <p>
                                 La Warshati Smart Education Platform est une solution complète et innovante qui prépare les élèves
                                 et enseignants à un avenir numérique en constante évolution. Grâce à une intégration fluide des
-                                technologies éducatives, elle révolutionne l'apprentissage et offre une expérience à la fois immersive
+                                technologies éducatives, elle révolutionne l&apos;apprentissage et offre une expérience à la fois immersive
                                 et enrichissante.
                             </p>
                         </motion.div>
