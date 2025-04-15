@@ -81,7 +81,3 @@ const WorkShop = () => {
 }
 
 export default WorkShop
-
-function useTranslation(): { t: any; } {
-    throw new Error("Function not implemented.");
-}

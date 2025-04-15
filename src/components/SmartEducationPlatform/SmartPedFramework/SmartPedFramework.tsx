@@ -4,12 +4,10 @@ import lines from "/public/images/IntegrationScolaire/hero/Lines.png"
 import { motion } from "framer-motion"
 import { FadeUp } from "@/lib/animations"
 import image_1 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-25.png"
-import useMediaQuery from "@/lib/UseMediaQuery"
 import SmartPedFrameworkCard from "./SmartPedFrameworkCard"
 import TeacherProDevelopment from "./TeacherProDevelopment "
 
 const SmartPedFramework = () => {
-    const isScreen = useMediaQuery("(max-width: 1280px) and (min-width: 1024px)")
     return (
         <>
         <div className="bg-light-gray px-5 sm:px-14 md:px-14 lg:px-14 pt-16  pb-16">

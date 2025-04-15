@@ -7,10 +7,8 @@ import image_1 from "/public/images/SmartEducationPlatform/SmartEducationPlatfor
 import LmsCards from "./LmsCards"
 import { lmsData } from "@/lib/data"
 import InnovationLabs from "./InnovationLabs"
-import useMediaQuery from "@/lib/UseMediaQuery"
 
 const Lms = () => {
-    const isScreen = useMediaQuery("(max-width: 1280px) and (min-width: 1024px)")
     return (
         <>
         <div className="bg-light-gray px-5 sm:px-14 md:px-14 lg:px-36 pb-32 pt-16">

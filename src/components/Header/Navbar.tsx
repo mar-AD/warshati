@@ -19,7 +19,6 @@ const Navbar = ({showMenu}:{showMenu:boolean}) => {
             selected: normalizedPath.toLowerCase() === item.link.toLowerCase(),
         }));
         setData(updated);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[pathname, locale])
     return (
         <div className={"flex justify-center items-center"}>

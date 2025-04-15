@@ -63,7 +63,7 @@ export default async function LocaleLayout({
 }) {
   const locale = await getLocale(); // get current locale safely
   const messages = await getMessages(); //loads messages via middleware
-  const dir = locale === "ar" ? "rtl" : "ltr";
+  // const dir = locale === "ar" ? "rtl" : "ltr";
   if (!messages) notFound();
 
   return (

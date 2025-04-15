@@ -4,14 +4,12 @@ import lines from "/public/images/IntegrationScolaire/hero/Lines.png"
 import { motion } from "framer-motion"
 import {  FadeLeft, FadeRight, FadeUp } from "@/lib/animations"
 import image_1 from "/public/images/Formation/formation-1.png"
-import useMediaQuery from "@/lib/UseMediaQuery"
 import flight from "/public/images/Home/hero/flight.png";
 import image_2 from "/public/images/Blog/hero_bg.jpg";
 import { FormationProfessionnelleData } from "@/lib/data";
 import Checkbox from "/public/images/Home/digitalLab/Checkbox.png"
 
 const Hero = () => {
-    const isScreen = useMediaQuery("(max-width: 1280px) and (min-width: 1024px)")
     return (
         <div className="bg-light-gray px-5 sm:px-14 md:px-14 lg:px-14 pb-14 max-md:pb-7">
             <div className="pt-56 relative">
