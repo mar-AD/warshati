@@ -16,20 +16,20 @@ const Hero = () => {
         <div className="bg-light-gray px-5 sm:px-14 md:px-14 lg:px-14 pb-14 max-md:pb-7">
             <div className="pt-56 relative">
                 <div className="flex flex-col items-center justify-center relative gap-y-3">
-                    <Image src={flight} alt="" className=" absolute top-5 -left-4 sm:-left-14 md:-left-14 lg:-left-14 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-72"/>    
+                    <Image src={flight} alt="" className=" absolute top-5 -left-4 sm:-left-14 md:-left-14 lg:-left-14 w-[2.3rem] sm:w-[6rem] md:w-[10rem] lg:w-72"/>    
 
                     <motion.div
                         variants={FadeUp(.3)}
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        className="flex !items-center gap-x-2 relative bg-white p-3 lg:px-5 border justify-center rounded-xl">
+                        className="flex !items-center gap-x-2 relative bg-white p-3 lg:px-5 border justify-center rounded-xl max-w-[90%]">
                         <Image src={lines} className="absolute -left-9 -top-8" alt=""/>
                         <div className=" bg-violet-700/20 p-2 rounded-lg flex items-center">
                             <Image className="size-6 lg:size-9 fill-violet-700" src={image_1} alt="" />
                         </div>
                         <h1 className={`text-violet-800 font-bold text-center font-Vazirmatn 
-                            ${isScreen ? "text-[2.5rem]" : "lg:text-5xl md:text-3xl text-xl"}`}>
+                            lg:text-5xl md:text-3xl text-xl`}>
                             Smart Workshops Program
                         </h1>
                     </motion.div>

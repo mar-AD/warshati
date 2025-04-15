@@ -17,7 +17,9 @@ import { DigitalLabData } from "@/lib/data"
 import { motion } from "framer-motion"
 import { FadeLeft, FadeRight, FadeUp } from "@/lib/animations"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 const DigitalLab = () => {
+    const t = useTranslations("home.digital_lab");
     return (
         <div className="lg:px-20 py-20 px-5 relative pt-20 overflow-hidden">
             <Image className="absolute -left-20 -z-10 -top-[8rem] w-56" src={circles} alt="" />
@@ -26,7 +28,7 @@ const DigitalLab = () => {
                 variants={FadeUp(.1)}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-6xl text-4xl text-center">Warshati Smart Education Platform</motion.h1>
+                viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-6xl text-4xl text-center">{t("title")}</motion.h1>
             <div className="flex items-start gap-20 md:gap-12 sm:gap-0 max-sm:gap-0 max-md:flex max-[800px]:flex-col-reverse max-md:items-center text-center ">
 
 
@@ -44,8 +46,8 @@ const DigitalLab = () => {
                             <Image className="absolute -right-16 max-xl:hidden" src={arrow_yellow} alt="" />
                             <DigitalLabCard 
                                 image={ai_image} 
-                                title="Découvre le monde magique de l'IA" 
-                                content="AI-Kids Lab est un espace éducatif innovant dédié à l’initiation des enfants à l’intelligence artificielle et aux technologies du futur et de la pensée algorithmique." 
+                                title={t("card_1.title")}
+                                content={t("card_1.content")}
                             />
                         </motion.div>
                     </div>
@@ -64,8 +66,8 @@ const DigitalLab = () => {
                             <Image className="absolute -right-16 -rotate-180 lg:w-[40px] max-xl:hidden" src={arrow} alt="" />
                             <DigitalLabCard 
                                 image={image_9} 
-                                title="Au-delà de la technologie, cultive la Digital Literacy" 
-                                content="Warshati Digital Lab est un espace interactif où les enfants explorent le numérique, adoptent les bonnes pratiques et deviennent des acteurs responsables et éclairés du monde connecté."
+                                title={t("card_2.title")}
+                                content={t("card_2.content")}
                                 hasBorder
                                 textViolet
                             />
@@ -86,8 +88,8 @@ const DigitalLab = () => {
                             <Image className="absolute -left-2 rotate-180 -top-20 lg:w-[50px] max-xl:hidden" src={arrow_yellow} alt="" />
                             <DigitalLabCard 
                                 image={image_3} 
-                                title="Imagine, crée et joue avec STEAM" 
-                                content="Warshati STEAM Lab est un espace d’apprentissage interactif, conçu pour stimuler la créativité, la pensée critique et l'innovation, il propose des ateliers pratiques et des projets expérimentaux." 
+                                title={t("card_3.title")}
+                                content={t("card_3.content")}
                             />
                         </motion.div>
                     </div>
@@ -98,9 +100,19 @@ const DigitalLab = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }} className="font-Poppins font-medium space-y-8 mb-5 mt-16">
-                        <h1 className="font-bold lg:text-[39px] md:text-2xl text-xl">Plateforme <span className="text-violet-700">éducative intégrant</span></h1>
+                        <h1 className="font-bold lg:text-[39px] md:text-2xl text-xl">
+                            {t.rich('subtitle', {
+                                highlight: (chunks) => <span className="text-violet-700">{chunks}</span>
+                            })}
+                        </h1>
                         <ul>
-                            {DigitalLabData.map((item, i) => (
+                            {/* {DigitalLabData.map((item, i) => (
+                                <li className="flex gap-x-2 my-7 text-[28px] md:text-[24px] sm:text-[20px] max-sm:text-[16px]" key={i}>
+                                    <Image className="lg:size-8 size-5" src={Checkbox} alt="" />
+                                    {item}
+                                </li>
+                            ))} */}
+                            {t.raw("features").map((item: string, i: number) => (
                                 <li className="flex gap-x-2 my-7 text-[28px] md:text-[24px] sm:text-[20px] max-sm:text-[16px]" key={i}>
                                     <Image className="lg:size-8 size-5" src={Checkbox} alt="" />
                                     {item}
@@ -108,8 +120,8 @@ const DigitalLab = () => {
                             ))}
                         </ul>
                         <div className="flex gap-5">
-                            <button className="btn btn-violet !rounded-full">Se Connecter <ArrowRight /></button>
-                            <Link href={"/Smart-Education-Platform"} className="btn btn-violet-outline !rounded-full">Savoir <Plus /></Link>
+                            <button className="btn btn-violet !rounded-full">{t("cta_login")} <ArrowRight /></button>
+                            <Link href={"/Smart-Education-Platform"} className="btn btn-violet-outline !rounded-full">{t("cta_learn_more")} <Plus /></Link>
                         </div>
                     </motion.div>
 

@@ -38,7 +38,7 @@ const ExempleDeProjet = () => {
             </div>
 
             <div className=" w-full relative">
-                <Image src={flight} alt="" className=" absolute top-5 -left-0 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-72"/> 
+                <Image src={flight} alt="" className=" absolute top-5 -left-5 md:-left-0 lg:-left-0 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-72"/> 
                 <motion.p
                 variants={FadeUp(.5)}
                 initial="initial"

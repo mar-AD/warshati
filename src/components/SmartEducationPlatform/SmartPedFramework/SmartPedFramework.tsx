@@ -19,13 +19,13 @@ const SmartPedFramework = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        className="flex !items-center gap-x-2 relative bg-white p-3 lg:px-5 border justify-center rounded-xl">
+                        className="flex !items-center gap-x-2 relative bg-white p-3 lg:px-5 border justify-center rounded-xl max-w-[90%]">
                         <Image src={lines} className="absolute -left-9 -top-8" alt=""/>
                         <div className=" bg-violet-700/20 p-2 rounded-lg flex items-center">
                             <Image className="size-6 lg:size-9 fill-violet-700" src={image_1} alt="" />
                         </div>
                         <h1 className={`text-violet-800 font-bold text-center font-Vazirmatn 
-                            ${isScreen ? "text-[2.5rem]" : "lg:text-5xl md:text-3xl text-xl"}`}>
+                            lg:text-5xl md:text-3xl text-xl `}>
                             Smart Pedagogical Framework
                         </h1>
                     </motion.div>

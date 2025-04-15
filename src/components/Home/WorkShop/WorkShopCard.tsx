@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
-const WorkShopCard: React.FC<ageType> = ({ ageRange, description, image,delay }) => {
+const WorkShopCard: React.FC<ageType> = ({ ageRange, description, image, delay }) => {
   return (
     <motion.div
       variants={FadeRight(delay)}

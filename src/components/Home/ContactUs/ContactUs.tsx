@@ -4,21 +4,22 @@ import { contacts, socials } from "@/lib/data"
 import ContactForm from "./ContactForm"
 import { FadeOut, FadeUp } from "@/lib/animations"
 import { motion } from "framer-motion"
+import { useTranslations } from "next-intl"
 const ContactUs = () => {
+    const t = useTranslations("home.contact_section");
     return (
         <div className="lg:px-20 py-20 px-5 font-Poppins lg:space-y-20 space-y-10 relative bg-light-gray">
             <motion.h1
                 variants={FadeUp(.2)}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }} className="font-extrabold lg:text-[82px] md:text-4xl text-2xl text-center">Contactez nous</motion.h1>
+                viewport={{ once: true }} className="font-extrabold lg:text-[82px] md:text-4xl text-2xl text-center">{t("title")}</motion.h1>
             <motion.div
                 variants={FadeUp(.3)}
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }} className="flex justify-center">
-                <p className="font-semibold lg:text-[22px] md:text-base text-sm text-muted-foreground lg:max-w-[55rem] md:max-w-[40rem] max-w-[25rem] text-center">Entrez vos coordonnées, nous vous contacterons pour répondre à vos besoins.
-                </p>
+                <p className="font-semibold lg:text-[22px] md:text-base text-sm text-muted-foreground lg:max-w-[55rem] md:max-w-[40rem] max-w-[25rem] text-center">{t("description")}</p>
             </motion.div>
             <motion.div
             variants={FadeOut(.3)}
@@ -28,8 +29,8 @@ const ContactUs = () => {
                 {/* contact information */}
                 <div className="relative bg-[#011C2B] text-white font-Poppins rounded-xl h-full p-12 md:space-y-48 space-y-20 lg:w-1/2 w-full">
                     <div className="space-y-3">
-                        <h1 className="text-[28px] font-semibold">Contact Information</h1>
-                        <p className="text-lg max-w-96">Écrivez quelque chose pour démarrer une discussion !</p>
+                        <h1 className="text-[28px] font-semibold">{t("contact_information_title")}</h1>
+                        <p className="text-lg max-w-96">{t("contact_information_description")}</p>
                     </div>
                     <div className="space-y-16">
                         {

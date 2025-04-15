@@ -5,35 +5,33 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { links } from "@/lib/data";
 import { usePathname } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 
 const Navbar = ({showMenu}:{showMenu:boolean}) => {
     const [data,setData] =useState<NavType[]>(links);
     const pathname=usePathname()
-    const selectLink=(label:string)=>{
-        data.forEach((item) => {
-            if(item.label===label){
-                item.selected=true;
-            }else{
-                item.selected=false;
-            }
-        });
-        setData([...data]);
-    }
+    const locale = useLocale();
+    const t = useTranslations("nav");
     useEffect(()=>{
-        selectLink("/")
+        const normalizedPath = pathname.replace(`/${locale}`, ""); 
+        const updated = links.map((item) => ({
+            ...item,
+            selected: normalizedPath.toLowerCase() === item.link.toLowerCase(),
+        }));
+        setData(updated);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[pathname])
+    },[pathname, locale])
     return (
         <div className={"flex justify-center items-center"}>
             <ul className={cn("flex font-Poppins text-stone-500 gap-x-4 justify-center items-center",
             showMenu&&"max-lg:flex-col gap-y-8"
             )}>
                 {data.map((item, index) => (
-                    <li onClick={()=>selectLink(item.label)} key={index}>
+                    <li key={index}>
                         <Link href={item.link} className={cn("px-3 py-1.5 text-xl rounded-md transition-colors duration-300",
                             item.selected||pathname.toLowerCase()==="/"+item.label.toLowerCase() ? "text-violet-600 font-bold":"hover:text-stone-800"
                         )}>
-                            {item.label}
+                            {t(item.label)}
                         </Link>
                     </li>
                 ))}

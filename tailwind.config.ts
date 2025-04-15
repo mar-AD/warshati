@@ -35,9 +35,6 @@ export default {
       Vazirmatn: ["Vazirmatn", "sans-serif"],
     },
     extend: {
-      screens: {
-        "2xl": "1800px",
-      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

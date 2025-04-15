@@ -1,0 +1,238 @@
+{
+  "nav": {
+    "ri": "R&I",
+    "blog": "Blog",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign up"
+  },
+  "footer": {
+    "description": "A fun and innovative educational platform offering STEAM & AI digital labs, interactive models, coding workshops, and prototypes to reinvent learning, stimulate creativity, and prepare for success in the world of tomorrow.",
+    "quick_links": "Quick links",
+    "contact_us": "Contact Us",
+    "newsletter": "Sign up for our newsletter",
+    "newsletter_text": "It will send you weekly updates for better management of your tools.",
+    "email_placeholder": "Your email address",
+    "subscribe": "Subscribe",
+    "footer_text": "Warshati. All rights reserved - warshati {year}"
+  },
+  "home": {
+    "page_title": "Where <highlight>the future</highlight> is built today!",
+    "start_button": "Start",
+    "video_button": "Watch the video",
+    "contact_form": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "number": "Phone Number",
+      "message": "Message",
+      "message_placeholder": "Write your message here.",
+      "send_message": "Send Message"
+    },
+    "contact_section": {
+      "title": "Contact Us",
+      "description": "Enter your details, and we will contact you to address your needs.",
+      "contact_information_title": "Contact Information",
+      "contact_information_description": "Write something to start a conversation!"
+    },
+    "digital_lab": {
+      "title": "Warshati Smart Education Platform",
+      "subtitle": "Integrated <highlight>educational platform</highlight>",
+      "cta_login": "Login",
+      "cta_learn_more": "Learn More",
+      "card_1": {
+        "title": "Discover the magical world of AI",
+        "content": "AI-Kids Lab is an innovative educational space dedicated to introducing children to artificial intelligence, future technologies, and algorithmic thinking."
+      },
+      "card_2": {
+        "title": "Beyond tech, grow your Digital Literacy",
+        "content": "Warshati Digital Lab is an interactive space where children explore digital tools, adopt best practices, and become responsible, informed digital citizens."
+      },
+      "card_3": {
+        "title": "Imagine, create, and play with STEAM",
+        "content": "Warshati STEAM Lab is an interactive learning space designed to stimulate creativity, critical thinking, and innovation through hands-on workshops and experimental projects."
+      },
+      "features": [
+        "Learning Management System (LMS)",
+        "Digital Laboratory",
+        "WarshaMaker Kits",
+        "Educational programs and evaluation",
+        "Teacher professional training"
+      ]
+    },
+    "Intégration_Scolaire": {
+      "title": "School Integration",
+      "subtitle": "Immersive <highlight>unique experience designed to awaken</highlight>",
+      "list_1": [
+        "Children's curiosity",
+        "Develop their practical skills",
+        "Prepare them to excel in tomorrow's world",
+        "While reassuring parents about their future"
+      ],
+      "list_2": [
+        "Child-centered learning",
+        "Personalized, progressive, and adaptive learning",
+        "Problem/Solution-oriented learning",
+        "Project-based and real-case learning",
+        "Reinventing learning",
+        "Stimulating creativity",
+        "Preparing them to excel in tomorrow's world"
+      ],
+      "text": "Methodically structured to facilitate a smooth and enriching integration of STEAM & AI into the school curriculum."
+    },
+    "Warshati_Pedagogical_Framework": {
+      "title": "Warshati Pedagogical Framework",
+      "subtitle": "K-12 Education",
+      "ageGroups": [
+        {
+          "ageRange": "6–8 years",
+          "description": "Fundamental early learning"
+        },
+        {
+          "ageRange": "9–11 years",
+          "description": "Consolidation and exploration"
+        },
+        {
+          "ageRange": "12–14 years",
+          "description": "Development of critical thinking"
+        },
+        {
+          "ageRange": "15–18 years",
+          "description": "Specialization and empowerment"
+        }
+      ]
+    },
+    "pedarogy": {
+      "title": "21st Century Skills",
+      "pedarogy": [
+          {
+              "title": "Creativity & Innovation",
+              "description": "Unleash your imagination! Create unique inventions, explore new ideas, and become a budding innovator."
+          },
+          {
+              "title": "Critical Thinking",
+              "description": "Awaken your thinking! Analyze ideas, ask questions, and develop logical thinking to better understand the world around you."
+          },
+          {
+              "title": "Problem Solving",
+              "description": "Face challenges! Find innovative solutions and learn how to overcome obstacles with creativity and strategy."
+          },
+          {
+              "title": "Adaptability & Autonomy",
+              "description": "Be flexible and independent! Adapt to new situations and take control of your learning with confidence."
+          },
+          {
+              "title": "Collaboration & Communication",
+              "description": "Learn with friends and share ideas! At Warshati, teamwork is key to achieving great things."
+          },
+          {
+              "title": "Scientific Mindset & Curiosity",
+              "description": "Explore, test, and discover! Ask questions, experiment, and build an insatiable curiosity for the world around you."
+          },
+          {
+              "title": "Ethical Awareness",
+              "description": "Use technology responsibly! Learn ethical values, online safety, and become a responsible digital citizen."
+          },
+          {
+              "title": "Entrepreneurial Spirit",
+              "description": "Turn your ideas into action! Learn innovation, initiative, and develop an entrepreneurial mindset from a young age."
+          },
+          {
+              "title": "Digital Culture",
+              "description": "Master the digital world! Understand technologies, protect your data, and use digital tools responsibly and creatively."
+          }
+      ]
+    },
+    "parcours": {
+      "title": "Learning Pathway",
+      "parcours": [
+          {
+              "title": "Explorer",
+              "description": "Discover and Thrive"
+          },
+          {
+              "title": "Creator",
+              "description": "Imagine and Innovate"
+          },
+          {
+              "title": "Innovator",
+              "description": "Invent and Transform"
+          },
+          {
+              "title": "Junior",
+              "description": "Master and Excel"
+          }
+      ]
+    },
+    "niveaux": {
+      "title": "Progressive Learning Levels",
+      "list": [
+        {
+          "title": "Discovery",
+          "description": "Exploration of equipment and technological concepts"
+        },
+        {
+          "title": "Initiation",
+          "description": "Introduction to basic principles and fundamental practices"
+        },
+        {
+          "title": "Development",
+          "description": "Deepening of skills and advanced techniques"
+        },
+        {
+          "title": "Application",
+          "description": "Applying knowledge through real-world projects"
+        },
+        {
+          "title": "Mastery",
+          "description": "Refinement and innovation in complex contexts"
+        }
+      ]
+    },
+    "curricula": {
+      "title": "Smart Workshops Program",
+      "items": [
+        {
+          "title": "STEAM",
+          "description": "A well-structured STEAM education program offers students hands-on, interdisciplinary learning experiences by meaningfully integrating science, technology, engineering, arts, and mathematics."
+        },
+        {
+          "title": "AI & ML",
+          "description": "A structured program introduces students to Artificial Intelligence (AI) and Machine Learning (ML) through age-appropriate, practical activities, encouraging problem-solving, creativity, and computational thinking."
+        },
+        {
+          "title": "Computational Thinking",
+          "description": "A curriculum focused on software development and data science helps students strengthen their logical reasoning and algorithmic thinking skills, while nurturing creative and efficient problem analysis."
+        },
+        {
+          "title": "Coding (Text & Block)",
+          "description": "A progressive coding program that combines visual block-based programming with traditional text-based languages. Students begin with block coding and gradually move toward writing actual code."
+        },
+        {
+          "title": "Information & Data",
+          "description": "Learn to search for accurate information online, choose trustworthy sources, and organize digital content smartly. Discover how to safely find, store, and manage data."
+        },
+        {
+          "title": "Creating Digital Content",
+          "description": "Learn how to design and edit digital content! Explore how to build on existing knowledge while respecting copyrights and licenses, and how to give clear instructions to computers."
+        },
+        {
+          "title": "Online Safety",
+          "description": "Learn how to protect your devices, personal data, and privacy in the digital world. Discover how to safeguard your well-being while using technology, and understand how digital tools can promote inclusion and sustainability."
+        },
+        {
+          "title": "Connected & Collaborative",
+          "description": "Engage, connect, and collaborate using digital tools while embracing cultural and generational diversity. Learn to manage your online identity and build a strong, positive digital presence."
+        }
+      ],
+      "text": "The program spans a full academic year, structured around quarterly milestones.",
+      "subtext": "The program spans a full academic year, structured around quarterly milestones.",
+      "see_btn": "Learn more"
+    }
+
+
+
+
+
+  }
+}

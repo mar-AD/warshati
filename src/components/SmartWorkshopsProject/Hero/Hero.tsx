@@ -21,7 +21,7 @@ const Hero = () => {
                     <Image
                         src={flight}
                         alt=""
-                        className="absolute top-5 -right-4 sm:-right-14 md:-right-14 lg:-right-36 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-72 scale-x-[-1]"
+                        className="absolute top-5 -right-4 sm:-right-14 md:-right-14 lg:-right-36 w-[2.3rem] sm:w-[6rem] md:w-[10rem] lg:w-72 scale-x-[-1]"
                     />
 
                     <motion.div
@@ -29,7 +29,7 @@ const Hero = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        className="flex !items-center gap-x-2 relative bg-white p-3 lg:px-5 border justify-center rounded-xl"
+                        className="flex !items-center gap-x-2 relative bg-white p-3 lg:px-5 border justify-center rounded-xl max-w-[90%]"
                     >
                         <Image src={lines} className="absolute -left-9 -top-8" alt="" />
                         <div className="bg-violet-700/20 p-2 rounded-lg flex items-center">

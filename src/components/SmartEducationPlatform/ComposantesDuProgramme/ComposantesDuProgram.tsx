@@ -5,30 +5,28 @@ import flight from "/public/images/Home/hero/flight.png";
 import { motion } from "framer-motion"
 import { FadeUp } from "@/lib/animations"
 import image_1 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-26.png"
-import useMediaQuery from "@/lib/UseMediaQuery"
 import ComposantesDuProgrammeCard from "./ComposantesDuProgrammeCards"
 import { ComposantesDuProgrammeCardData } from "@/lib/data"
 import WarshatiSmartEducationPlatform from "./WarshatiSmartEducationPlatform"
 
 const ComposantesDuProgramme = () => {
-    const isScreen = useMediaQuery("(max-width: 1280px) and (min-width: 1024px)")
     return (
         <>
         <div className="relative px-5 sm:px-14 md:px-14 lg:px-14 pt-16  pb-16 md:pb-32 lg:pb-32">
-            <Image src={flight} alt="" className=" absolute top-0 -left-0 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-72"/>
+            <Image src={flight} alt="" className=" absolute top-0 -left-0 w-[2.3rem] sm:w-[6rem] md:w-[10rem] lg:w-72"/>
             <div className="flex flex-col items-center justify-center relative gap-y-3">
                     <motion.div
                         variants={FadeUp(.3)}
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        className="flex !items-center gap-x-2 relative bg-white p-3 lg:px-5 border justify-center rounded-xl">
+                        className="flex !items-center gap-x-2 relative bg-white p-3 lg:px-5 border justify-center rounded-xl max-w-[90%]">
                         <Image src={lines} className="absolute -left-9 -top-8" alt=""/>
                         <div className=" bg-violet-700/20 p-2 rounded-lg flex items-center">
                             <Image className="size-6 lg:size-9 fill-violet-700" src={image_1} alt="" />
                         </div>
                         <h1 className={`text-violet-800 font-bold text-center font-Vazirmatn 
-                            ${isScreen ? "text-[2.5rem]" : "lg:text-5xl md:text-3xl text-xl"}`}>
+                            lg:text-5xl md:text-3xl text-xl`}>
                             Composantes du Programme
                         </h1>
                     </motion.div>

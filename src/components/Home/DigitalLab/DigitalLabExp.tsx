@@ -7,24 +7,33 @@ import { FadeLeft, FadeRight, FadeUp } from "@/lib/animations";
 import image_1 from '/public/images/Home/intScolaire/image_1.png'
 import image_4 from "/public/images/Home/digitalLab/image_4.png"
 import arrow_yellow from "/public/images/Home/digitalLab/arrow_yellow.png"
+import { useTranslations } from "next-intl";
 const DigitalLabExp = () => {
+    const t = useTranslations("home.Intégration_Scolaire");
     return (
         <div className="lg:px-20 py-20 px-5 lg:gap-16 gap-10 bg-light-gray">
             <motion.h1
                 variants={FadeUp(.2)}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-6xl text-4xl text-center">Intégration Scolaire</motion.h1>
-            <div className="flex items-start place-self-center justify-between xl:gap-x-20 gap-x-10 max-xl:flex-col max-xl:gap-y-10 mt-20">
+                viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-6xl text-4xl text-center">{t("title")}</motion.h1>
+            <div className="flex items-start  justify-between xl:gap-x-20 gap-x-10 max-xl:flex-col max-xl:gap-y-10 mt-20">
                 <motion.div
                 variants={FadeRight(.2)}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }} className="lg:space-y-10 place-self-center">
-                    <h1 className="lg:text-3xl text-xl font-bold font-Poppins">Expérience <span className="text-violet-800">immersive unique, conçue pour éveiller</span></h1>
+                viewport={{ once: true }} className="lg:space-y-10 ">
+                    <h1 className="lg:text-3xl text-xl font-bold font-Poppins">
+                        {t.rich('subtitle', {
+                            highlight: (chunks) => <span className="text-violet-700">{chunks}</span>
+                        })}
+                    </h1>
                     <ul>
-                        {experienceData.map((item: string, i) => (
-                            <li className="flex gap-3 my-6 lg:text-[1.5rem] md:text-base sm:text-sm max-sm:text-sm items-center font-semibold font-Poppins" key={i}><Image className="lg:size-8 size-5" src={Checkbox} alt="" />{item}</li>
+                        {t.raw("list_1").map((item: string, i: number) => (
+                            <li className="flex gap-3 my-6 lg:text-[1.5rem] md:text-base sm:text-sm max-sm:text-sm items-center font-semibold font-Poppins" key={i}>
+                                <Image className="lg:size-8 size-5" src={Checkbox} alt="" />
+                                {item}
+                            </li>
                         ))}
                     </ul>
                 </motion.div>
@@ -32,25 +41,27 @@ const DigitalLabExp = () => {
                 variants={FadeLeft(.2)}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }} className="relative flex items-center justify-center lg:max-w-[600px]  place-self-center">
+                viewport={{ once: true }} 
+                className="relative flex items-center justify-center w-full h-[250px] xs:h-[250px] sm:h-[280px] md:h-[300px] lg:h-[320px] sm:max-w-[600px] md:max-w-[600px] lg:max-w-[600px]">
                     <VideoSlider videoIndex={0}/>
                 </motion.div>
             </div>
-            <div className="flex items-start place-self-center justify-between xl:gap-x-20 gap-x-10 max-xl:flex-col-reverse max-xl:gap-y-10 mt-[3rem]">
+            <div className="flex items-start  justify-between xl:gap-x-20 gap-x-10 max-xl:flex-col-reverse max-xl:gap-y-10 mt-[3rem]">
                 <motion.div
                 variants={FadeRight(.3)}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }} className="relative flex items-center justify-center lg:max-w-[800px]  place-self-center">
+                viewport={{ once: true }} 
+                className="relative flex items-center justify-center w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[451px] sm:max-w-[800px] md:max-w-[800px] lg:max-w-[800px]">
                     <VideoSlider videoIndex={1}/>
                 </motion.div>
                 <motion.div
                 variants={FadeLeft(.3)}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }} className=" place-self-center">
+                viewport={{ once: true }} className="">
                     <ul>
-                        {frameworkData.map((item: string, i) => (
+                        {t.raw("list_2").map((item: string, i: number) => (
                             <li className="flex gap-3 my-6 lg:text-[1.5rem] md:text-base sm:text-sm max-sm:text-sm  items-center font-semibold font-Poppins" key={i}><Image className="lg:size-8 size-5" src={Checkbox} alt="" />{item}</li>
                         ))}
                     </ul>
@@ -76,7 +87,7 @@ const DigitalLabExp = () => {
                     </div>
 
                     <p className="font-semibold lg:text-[22px] md:text-base text-sm text-black lg:max-w-[68rem] md:max-w-[72rem] max-w-[80rem]">
-                        Méthodiquement structuré pour faciliter une intégration fluide et enrichissante de STEAM & AI dans le programme scolaire.
+                        {t("text")}
                     </p>
 
                     <Image className="absolute -right-3 -top-5 -scale-x-100 -translate-y-1/2 translate-x-1/2 w-[70px]" src={image_4} alt="" />

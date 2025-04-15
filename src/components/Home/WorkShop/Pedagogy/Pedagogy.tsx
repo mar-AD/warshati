@@ -10,6 +10,7 @@ import { FadeUp } from "@/lib/animations"
 import Image from "next/image"
 import pen_line from "/public/images/Home/hero/pen_line.png"
 import victore_2 from "/public/images/Home/pedagogy/victore_2.png"
+import { useTranslations } from "next-intl"
 
 const Pedagogy = () => {
     const [api, setApi] = useState<CarouselApi>()
@@ -19,6 +20,8 @@ const Pedagogy = () => {
     const isMediumScreen = useMediaQuery("(max-width: 1400px)")
 
     const slidesToScroll = isSmallScreen ? 1 : isMediumScreen ? 2 : 4
+
+    const  t  = useTranslations("home.pedarogy");
 
     useEffect(() => {
         if (!api) return
@@ -47,7 +50,7 @@ const Pedagogy = () => {
             >
                 <div className="flex flex-col items-end pr-32 md:pr-20 sm:pr-10 max-sm:pr-5 max-w-[61rem]">
                     <h1 className="text-[32px] lg:text-[32px] md:text-[28px] sm:text-[24px] max-sm:text-[20px] font-bold text-end text-muted-foreground">
-                        21st century skills
+                        {t("title")}
                     </h1>
                     <Image 
                         className="w-[200px] md:w-[200px] sm:w-[170px] max-sm:w-[150px] lg:w-[250px]" 
@@ -66,9 +69,20 @@ const Pedagogy = () => {
                 setApi={setApi}
             >
                 <CarouselContent className="min-h-[18rem]">
-                    {PedagogyData.map((card, index) => (
+                    {/* {PedagogyData.map((card, index) => (
                         <CarouselItem className="xl:basis-1/4 md:basis-1/2 md:pl-6" key={index}>
                             <PedagogyCard item={card} />
+                        </CarouselItem>
+                    ))} */}
+                    {PedagogyData.map((card, index) => (
+                        <CarouselItem className="xl:basis-1/4 md:basis-1/2 md:pl-6" key={index}>
+                            <PedagogyCard
+                                item={{
+                                    ...card, 
+                                    title: t(`pedarogy.${index}.title`),
+                                    description: t(`pedarogy.${index}.description`),
+                                }}
+                            />
                         </CarouselItem>
                     ))}
                 </CarouselContent>

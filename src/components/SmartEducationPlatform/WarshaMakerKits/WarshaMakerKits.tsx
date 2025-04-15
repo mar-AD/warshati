@@ -12,19 +12,19 @@ const WarshaMakerKits = () => {
     return (
         <div className="bg-white  pb-16 md:pb-24 lg:pb-36 pt-24 md:pt-32  lg:pt-40">
             <div className="relative  px-5 sm:px-14 md:px-14 lg:px-44">
-            <Image src={flight} alt="" className=" absolute -top-20 -right-0 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-72 scale-x-[-1]"/>
-                <div className=" flex flex-col lg:flex-row justify-between items-center lg:gap-36">
+            <Image src={flight} alt="" className=" absolute -top-20 -right-0 w-[2.3rem] sm:w-[6rem] md:w-[10rem] lg:w-72 scale-x-[-1]"/>
+                <div className=" flex flex-col 2xl:flex-row justify-between items-center 2xl:gap-36">
                     <motion.div
                     variants={FadeRight(0.2)}
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    className="w-full lg:w-2/3 relative flex items-center justify-center mb-10 lg:mb-0"
+                    className="w-full 2xl:w-2/3 relative flex items-center justify-center mb-10 2xl:mb-0"
                     >
                         <Image
                         src={image_1}
                         alt=""
-                        className="rounded-[44px] w-full lg:w-[829px] lg:h-[467px] object-cover z-10"
+                        className="rounded-[44px] w-full 2xl:w-[829px] 2xl:h-[467px] object-cover z-10"
                         />
                         <Image
                         src={green_cercle}
@@ -43,9 +43,9 @@ const WarshaMakerKits = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        className="w-full lg:w-3/5 flex flex-col justify-center"
+                        className="w-full 2xl:w-3/5 flex flex-col justify-center"
                     >
-                        <h1 className="font-extrabold font-Poppins lg:text-5xl md:text-4xl text-2xl pt-5 md:pt-0 lg:pt-0 lg:pb-5 text-center lg:text-left">
+                        <h1 className="font-extrabold font-Poppins lg:text-5xl md:text-4xl text-2xl pt-5 md:pt-0 lg:pt-0 lg:pb-5 2xl:text-left z-10">
                             <span className="text-violet-800">WarshaMaker</span> Kits
                         </h1>
 

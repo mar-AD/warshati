@@ -11,8 +11,8 @@ import violet_rec from "/public/images/SmartEducationPlatform/violet-rec.png";
 const WarshatiSmartEducationPlatform = () => {
     return (
         <div className=" bg-light-gray px-5 sm:px-14 md:px-14 lg:px-44 pb-20 pt-20">
-            <div className="flex flex-col xl:flex-row items-stretch justify-between xl:gap-x-20 gap-x-10 xl:gap-y-0 gap-y-10 px-8">
-                <div className=" w-full xl:w-1/2 xl:text-left flex flex-col justify-between">
+            <div className="flex flex-col 2xl:flex-row items-stretch justify-between 2xl:gap-x-20 gap-x-10 2xl:gap-y-0 gap-y-10 px-4">
+                <div className=" w-full 2xl:w-1/2 2xl:text-left flex flex-col justify-between">
                     <div className="lg:mt-10">
                         <motion.h1
                         variants={FadeRight(0.2)}
@@ -56,10 +56,10 @@ const WarshatiSmartEducationPlatform = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    className="w-full xl:w-1/2 relative flex items-center justify-center mt-6 xl:mt-0"
+                    className="w-full 2xl:w-1/2 relative flex items-center justify-center mt-6 2xl:mt-0"
                 >
-                    <div className="relative w-full lg:w-[705px] lg:h-[471px]">
-                    <div className="relative z-10 lg:h-[471px]">
+                    <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px] lg:w-[705px] lg:h-[471px]">
+                    <div className="relative z-10 w-full h-full">
                     <VideoSlider videoIndex={3} />
                         </div>
                         <Image src={green_rec} alt="" className=" absolute -top-5 -left-5 w-[4rem] sm:w-[4rem] md:w-[6rem] lg:w-[8rem] "/>

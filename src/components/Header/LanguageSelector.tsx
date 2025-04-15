@@ -1,53 +1,60 @@
 "use client";
+
+import { useEffect, useRef, useState } from "react";
+import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { languages } from "@/lib/data";
 import { LanguageType } from "@/lib/types";
 import "flag-icons/css/flag-icons.min.css";
-import { ChevronDown } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-import { languages } from "@/lib/data";
-const LanguageSelector = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState<LanguageType>(languages[0]);
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 
-  useEffect(() => {
-    const userLanguage = navigator.language.split("-")[0];
-    const defaultLanguage = languages.find((language) => 
-      language.code.toLowerCase() === userLanguage
-    ) || languages[0];
-    setSelectedLanguage(defaultLanguage);
-  }, []);
+const LanguageSelector = () => {
+  const router = useRouter();
+  const pathname = usePathname(); // get current path
+  const locale = useLocale(); // actual current locale
+  const [selectedLanguage, setSelectedLanguage] = useState<LanguageType>(
+    languages.find((lang) => lang.code.toLowerCase() === locale.toLowerCase())|| languages[0] // fallback to 'fr'
+
+  );
   const [showMenu, setShowMenu] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  const clickOutSide = (e: MouseEvent) => {
-    if (ref.current && !ref.current.contains(e.target as Node)) {
-      setShowMenu(false);
-    }
-  };
+  useEffect(() => {
+    const found = languages.find((lang) => lang.code === locale);
+    if (found) setSelectedLanguage(found);
+  }, [locale]);
 
   useEffect(() => {
-    window.addEventListener("mousedown", clickOutSide);
-    return () => {
-      window.removeEventListener("mousedown", clickOutSide);
+    const clickOutSide = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setShowMenu(false);
+      }
     };
-  });
+    window.addEventListener("mousedown", clickOutSide);
+    return () => window.removeEventListener("mousedown", clickOutSide);
+  }, []);
+
+  const changeLocale = (lang: LanguageType) => {
+    setSelectedLanguage(lang);
+    router.replace(pathname, { locale: lang.code });
+  };
 
   return (
-    <div className="" ref={ref}>
+    <div ref={ref}>
       <div
-        onClick={() => setShowMenu((prev) => !prev)}
+        onClick={() => setShowMenu(prev => !prev)}
         className="flex items-center gap-x-2 rounded-md cursor-pointer"
       >
-        <span
-          className={cn(`fi fi-${selectedLanguage.flag} rounded-md `)}
-        ></span>
+        <span className={cn(`fi fi-${selectedLanguage.flag} rounded-md`)} />
         <div className="flex gap-x-1">
-          <p className="text-stone-500 text-xs font-semibold ">
+          <p className="text-stone-500 text-xs font-semibold">
             {selectedLanguage.code}
           </p>
           <ChevronDown
             className={cn(
               "size-3 transition-transform duration-300",
-              !showMenu ? "rotate-0" : "rotate-180"
+              showMenu ? "rotate-180" : "rotate-0"
             )}
           />
         </div>
@@ -56,23 +63,21 @@ const LanguageSelector = () => {
         <div
           className={cn(
             "absolute z-20 right-0 mt-2 bg-white border p-4 rounded-md duration-300 transition-[visibility_filter_opacity_transform]",
-            showMenu
-              ? "visible blur-none opacity-100 scale-100"
-              : " invisible blur-sm opacity-0 scale-90"
+            showMenu ? "visible blur-none opacity-100 scale-100" : "invisible blur-sm opacity-0 scale-90"
           )}
         >
           {languages.map((language, i) => (
             <div
-              onClick={() => setSelectedLanguage(language)}
               key={i}
+              onClick={() => changeLocale(language)}
               className={cn(
                 "flex gap-x-2 p-2 my-1 rounded-md cursor-pointer group",
-                selectedLanguage.code == language.code
+                selectedLanguage.code === language.code
                   ? "bg-violet-300"
                   : "hover:bg-violet-200"
               )}
             >
-              <span className={cn(`fi fi-${language.flag} rounded-md`)}></span>
+              <span className={cn(`fi fi-${language.flag} rounded-md`)} />
               <p className="text-stone-600 font-medium group-hover:text-violet-900">
                 {language.name}
               </p>

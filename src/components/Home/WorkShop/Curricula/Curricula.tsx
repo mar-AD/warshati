@@ -12,6 +12,7 @@ import Image from "next/image"
 import robot_3 from "/public/images/Home/curricula/robot_3.png"
 import image_4 from "/public/images/Home/curricula/image_4.png"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 const Curricula = () => {
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
@@ -20,6 +21,8 @@ const Curricula = () => {
     const isMediumScreen = useMediaQuery("(max-width: 1400px)");
 
     const slidesToScroll = isSmallScreen ? 1 : isMediumScreen ? 2 : 4;
+
+    const t = useTranslations("home.curricula")
 
     useEffect(() => {
         if (!api) {
@@ -40,7 +43,7 @@ const Curricula = () => {
                 variants={FadeUp(.2)}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-6xl text-4xl text-center">Smart Workshops Program</motion.h1>
+                viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-6xl text-4xl text-center">{t("title")}</motion.h1>
             <Carousel
                 opts={{
                     loop: true,
@@ -52,7 +55,14 @@ const Curricula = () => {
                 <CarouselContent>
                     {CurriculaData.map((card, index) => (
                         <CarouselItem className="xl:basis-1/4 md:basis-1/2 md:pl-6" key={index}>
-                            <CurriculaCard item={card} />
+                            {/* <CurriculaCard item={card} /> */}
+                            <CurriculaCard
+                            item={{
+                                ...card,
+                                title: t(`items.${index}.title`),
+                                description: t(`items.${index}.description`),
+                            }}
+                            />
                         </CarouselItem>
                     ))}
                 </CarouselContent>
@@ -67,7 +77,7 @@ const Curricula = () => {
                         <Link
                         href={"/Smart-Workshops-Program"}
                         className="!w-fit btn btn-violet-outline mt-6 md:mt-0 mx-auto md:mx-0">
-                            Savoir <Plus className="ml-2" />
+                            {t("see_btn")} <Plus className="ml-2" />
                         </Link>
 
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
@@ -82,7 +92,7 @@ const Curricula = () => {
                             <Image className="absolute -right-8 -top-8 w-[60px]" src={image_4} alt="" />
                             <h1 className="border-4 border-violet-800 rounded-full max-w-[650px] w-full px-6 py-2 text-center text-muted-foreground
                                 text-[0.75rem] sm:text-sm md:text-base lg:text-[1.019rem] font-bold">
-                                Programme s’étend sur une année scolaire, structurée autour de jalons trimestriels.
+                                {t("subtext")}
                             </h1>
                             </div>
                         </div>

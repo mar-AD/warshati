@@ -12,8 +12,9 @@ import pen_line from "/public/images/Home/hero/pen_line.png";
 import victore_1 from "/public/images/Home/age/victore_1.png";
 import Image from "next/image";
 import Formation from "./Formation/Formation";
+import { useTranslations } from "next-intl";
 const WorkShop = () => {
-
+    const  t  = useTranslations("home.Warshati_Pedagogical_Framework");
     return (
         <div className="">
             <div className="lg:px-20 py-20 px-5">
@@ -22,7 +23,7 @@ const WorkShop = () => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }} className="flex justify-center">
-                    <h1 className="font-Poppins font-extrabold lg:text-[82px] md:text-5xl text-3xl !leading-tight lg:max-w-[90rem] md:max-w-[41rem] max-w-[26rem] text-center">Warshati Pedagogical Framework</h1>
+                    <h1 className="font-Poppins font-extrabold lg:text-[82px] md:text-5xl text-3xl !leading-tight lg:max-w-[90rem] md:max-w-[41rem] max-w-[26rem] text-center">{t("title")}</h1>
                 </motion.div>
                 <motion.div
                     variants={FadeUp(.3)}
@@ -33,7 +34,7 @@ const WorkShop = () => {
                     <div className="relative flex items-start gap-5 lg:pl-32 md:pl-20 sm:pl-10 max-sm:pl-5 max-w-[61rem]">
                         <div className="flex flex-col items-start">
                             <h1 className="text-[32px] lg:text-[32px] md:text-[28px] sm:text-[24px] max-sm:text-[20px] font-bold text-start text-muted-foreground">
-                                K-12 Education
+                            {t("subtitle")}
                             </h1>
                             <Image 
                                 className="w-[200px] md:w-[180px] sm:w-[160px] max-sm:w-[140px] lg:w-[220px]" 
@@ -54,8 +55,18 @@ const WorkShop = () => {
 
                 <div className="grid grid-cols-[repeat(auto-fill,_minmax(380px,_1fr))] gap-x-6 gap-y-32 mt-[18.5rem] max-md:mt-36 md:mt-[18.5rem] lg:mt-[18.5rem]">
 
-                    {ageGroups.map((group, index) => (
+                    {/* {ageGroups.map((group, index) => (
                         <WorkShopCard delay={group.delay} image={group.image + index + ".png"} ageRange={group.ageRange} description={group.description} key={index} />
+                    ))} */}
+
+                    {ageGroups.map((group, index) => (
+                        <WorkShopCard
+                            key={index}
+                            delay={group.delay}
+                            image={group.image + index + ".png"}
+                            ageRange={t(`ageGroups.${index}.ageRange`)}
+                            description={t(`ageGroups.${index}.description`)}
+                        />
                     ))}
                 </div>
             </div>
@@ -70,3 +81,7 @@ const WorkShop = () => {
 }
 
 export default WorkShop
+
+function useTranslation(): { t: any; } {
+    throw new Error("Function not implemented.");
+}

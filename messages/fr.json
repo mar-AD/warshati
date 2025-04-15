@@ -1,0 +1,243 @@
+{
+    "nav": {
+        "ri": "R&I",
+        "blog": "Blog",
+        "contact": "Contact",
+        "login": "se connecter",
+        "signup": "s'inscrire"
+    },
+    "footer": {
+        "description": "Plateforme éducative ludique et innovante offrant des laboratoires digitaux STEAM & AI, des maquettes interactives, des ateliers de coding et des prototypes, pour réinventer l’apprentissage, stimuler la créativité et préparer à exceller dans le monde de demain.",
+        "quick_links": "liens rapides",
+        "contact_us": "Nous contacter",
+        "newsletter": "Inscrivez-vous à notre newsletter",
+        "newsletter_text":"Vous enverra des mises à jour hebdomadaires pour une meilleure gestion de vos outils.",
+        "email_placeholder": "Votre adresse e-mail",
+        "subscribe": "s'abonner",
+        "footer_text": "Warshati. Tous droits réservés - warshati {year}"
+    },
+    "home": {
+        "page_title": "Là où <highlight>l’avenir</highlight> se construit aujourd’hui !",
+        "start_button": "Commencer",
+        "video_button": "Regarder la vidéo",
+        "contact_form": {
+            "first_name": "Prénom",
+            "last_name": "Nom",
+            "email": "Email",
+            "number": "Numéro",
+            "message": "Message",
+            "message_placeholder": "Écrivez votre message.",
+            "send_message": "Envoyer un message"
+        },
+        "contact_section": {
+            "title": "Contactez nous",
+            "description": "Entrez vos coordonnées, nous vous contacterons pour répondre à vos besoins.",
+            "contact_information_title": "Contact Information",
+            "contact_information_description": "Écrivez quelque chose pour démarrer une discussion !"
+        },
+        "digital_lab": {
+            "title": "Warshati Smart Education Platform",
+            "subtitle": "Plateforme <highlight>éducative intégrant</highlight>",
+            "cta_login": "Se Connecter",
+            "cta_learn_more": "Savoir",
+            "card_1": {
+            "title": "Découvre le monde magique de l'IA",
+            "content": "AI-Kids Lab est un espace éducatif innovant dédié à l’initiation des enfants à l’intelligence artificielle et aux technologies du futur et de la pensée algorithmique."
+            },
+            "card_2": {
+            "title": "Au-delà de la technologie, cultive la Digital Literacy",
+            "content": "Warshati Digital Lab est un espace interactif où les enfants explorent le numérique, adoptent les bonnes pratiques et deviennent des acteurs responsables et éclairés du monde connecté."
+            },
+            "card_3": {
+            "title": "Imagine, crée et joue avec STEAM",
+            "content": "Warshati STEAM Lab est un espace d’apprentissage interactif, conçu pour stimuler la créativité, la pensée critique et l'innovation, il propose des ateliers pratiques et des projets expérimentaux."
+            },
+            "features": [
+                "Système de gestion de l'apprentissage (LMS)",
+                "Laboratoire numérique",
+                "Kits WarshaMaker ",
+                "Programmes éducatifs et évaluation",
+                "Formation professionnelle des enseignants"
+            ]
+        },
+        "Intégration_Scolaire": {
+            "title": "Intégration Scolaire",
+            "subtitle": "Expérience <highlight>immersive unique, conçue pour éveiller</highlight>",
+            "list_1": [
+                "La curiosité des enfants",
+                "Développer leurs compétences pratiques",
+                "Les préparer à exceller dans le monde de demain",
+                "Tout en rassurant les parents sur leur avenir"
+            ],
+            "list_2": [
+                "Apprentissage centré sur l’enfant",
+                "Apprentissage personnalisé, progressif et adapté",
+                "Apprentissage orienté Problème/Solution",
+                "Apprentissage axé sur projet et cas réel",
+                "Réinventer l’apprentissage",
+                "Stimuler la créativité",
+                "Préparer à exceller dans le monde de demain"
+            ],
+            "text": "Méthodiquement structuré pour faciliter une intégration fluide et enrichissante de STEAM & AI dans le programme scolaire."
+        },
+        "Warshati_Pedagogical_Framework": {
+            "title": "Warshati Pedagogical Framework",
+            "subtitle": "K-12 Education",
+            "ageGroups": [
+                {
+                    "ageRange": "6-8 ans",
+                    "description": "Premiers apprentissages fondamentaux"
+                },
+                {
+                    "ageRange": "9-11 ans",
+                    "description": "Consolidation et exploration"
+                },
+                {
+                    "ageRange": "12-14 ans",
+                    "description": "Développement de la pensée critique"
+                },
+                {
+                    "ageRange": "15-18 ans",
+                    "description": "Spécialisation et autonomisation"
+                }
+            ]
+        },
+        "pedarogy":{
+            "title":"21st century skills",
+            "pedarogy": [
+                {
+                    "title": "Créativité & Innovation",
+                    "description":"Libère ton imagination ! Crée des inventions uniques, explore de nouvelles idées et deviens un innovateur en herbe."
+                },
+                {
+                    "title": "Pensée critique",
+                    "description":
+                    " Éveille ta réflexion ! Analyse les idées, pose des questions et développe une pensée logique pour mieux comprendre le monde qui t’entoure."
+                },
+                {
+                "title": "Résolution de problèmes",
+                "description":
+                    "Relève des défis ! Trouve des solutions innovantes et apprends à surmonter les obstacles avec créativité et stratégie."
+                },
+                {
+                "title": "Adaptabilité & autonomie",
+                "description":
+                    "Sois flexible et autonome ! Adapte-toi aux nouvelles situations et prends les commandes de ton apprentissage avec confiance."
+                },
+                {
+                "title": "Collaboration & Communication",
+                "description":
+                    "Apprends avec tes amis et partage tes idées ! Chez Warshati, le travail en équipe est la clé pour réaliser de grandes choses."
+                },
+                {
+                "title": "Esprit Scientifique & Curiosité",
+                "description":
+                    " Explore, teste et découvre ! Pose des questions, expérimente et développe une curiosité insatiable pour le monde qui t’entoure."
+                },
+                {
+                "title": "Conscience Éthique",
+                "description":
+                    "Utilise la technologie avec responsabilité ! Apprends les valeurs éthiques, la sécurité en ligne et deviens un citoyen numérique engagé."
+                },
+                {
+                "title": "Esprit d’Entrepreneuriat",
+                "description":
+                    "ransforme tes idées en actions ! Apprends à innover, à prendre des initiatives et à développer une mentalité d’entrepreneur dès le plus jeune âge"
+                },
+                {
+                "title": "Culture Numérique",
+                "description":
+                    "Maîtrise le monde numérique ! Comprends les technologies, protège tes données et utilise le numérique de manière responsable et créative."
+                }
+            ]
+        },
+        "parcours": {
+            "title": "Learning Pathway",
+            "parcours": [
+            {
+                "title": "Explorateur",
+                "description": "Découvrir et S'épanouir"
+            },
+            {
+                "title": "Créateur",
+                "description": "Imaginer et Innover"
+            },
+            {
+                "title": "Novateur",
+                "description": "Inventer et Transformer"
+            },
+            {
+                "title": "Junior",
+                "description": "Maîtriser et Exceller"
+            }
+            ]
+        },
+        "niveaux": {
+            "title": "Progressive Learning Levels",
+            "list": [
+                {
+                "title": "Découverte",
+                "description": "Exploration du matériel et concepts technologiques"
+                },
+                {
+                "title": "Initiation",
+                "description": "Introduction aux Principes de Base et Pratiques Fondamentales"
+                },
+                {
+                "title": "Développement",
+                "description": "Approfondissement des Compétences et Techniques Avancées"
+                },
+                {
+                "title": "Application",
+                "description": "Mise en Pratique des Connaissances à travers des Projets Réels"
+                },
+                {
+                "title": "Maîtrise",
+                "description": "Perfectionnement et Innovation dans des Contextes Complexes"
+                }
+            ]
+        },
+        "curricula": {
+            "title": "Smart Workshops Program",
+            "items": [
+                {
+                "title": "STEAM",
+                "description": "Un programme d'éducation STEAM bien structuré offre aux élèves des expériences d'apprentissage pratiques et interdisciplinaires, intégrant les sciences, la technologie, l'ingénierie, les arts et les mathématiques de manière significative."
+                },
+                {
+                "title": "IA & ML",
+                "description": "Un programme structuré initie les élèves à l'intelligence artificielle (IA) et à l'apprentissage automatique (ML) à travers des activités pratiques adaptées à leur âge, favorisant la résolution de problèmes, la créativité et la pensée computationnelle."
+                },
+                {
+                "title": "Pensée Computationnelle",
+                "description": "Un programme axé sur le développement logiciel et la science des données, permet aux élèves de développer leurs compétences en raisonnement logique et en pensée algorithmique, tout en cultivant leur esprit d’analyse de manière créative et efficace."
+                },
+                {
+                "title": "Programmation (Textuelle & Blocs)",
+                "description": "Un programme structuré qui offre aux élèves une approche progressive du codage en combinant des langages de programmation visuels basés sur des blocs et des langages textuels traditionnels. Les élèves commencent par des blocs, puis progressent vers l’écriture de code textuel."
+                },
+                {
+                "title": "Information & Données",
+                "description": "Apprenez à trouver les bonnes informations en ligne, à choisir des sources fiables et à organiser le contenu numérique intelligemment ! Découvrez comment rechercher, stocker et gérer les données de manière sécurisée et efficace."
+                },
+                {
+                "title": "Créer du Contenu Numérique",
+                "description": "Apprenez à créer et à modifier du contenu numérique ! Découvrez comment enrichir les connaissances existantes tout en respectant les droits d’auteur. Apprenez aussi à donner des instructions claires à un ordinateur pour le faire fonctionner selon vos besoins."
+                },
+                {
+                "title": "Sécurité en Ligne",
+                "description": "Apprenez à sécuriser vos appareils, données personnelles et vie privée dans le monde numérique. Découvrez comment préserver votre bien-être tout en utilisant la technologie et comprenez comment les outils numériques peuvent favoriser l'inclusion et la durabilité."
+                },
+                {
+                "title": "Connecté & Collaboratif",
+                "description": "Participez, connectez-vous et collaborez à l’aide d’outils numériques tout en respectant la diversité culturelle et générationnelle. Apprenez à gérer votre identité en ligne et à bâtir une réputation numérique positive."
+                }
+            ],
+            "text": "Programme s’étend sur une année scolaire, structurée autour de jalons trimestriels.",
+            "subtext": "Programme s’étend sur une année scolaire, structurée autour de jalons trimestriels.",
+            "see_btn": "Savoir"
+        }
+
+    }
+    
+}

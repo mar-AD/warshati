@@ -2,12 +2,14 @@
 import Image from "next/image"
 import flight from "/public/images/Home/hero/flight.png"
 import pen_line from "/public/images/Home/hero/pen_line.png"
-import { Play } from "lucide-react"
 import HeroImage from "./HeroImage"
 import { motion } from "framer-motion"
 import { FadeOut, FadeUp } from "@/lib/animations"
 import Link from "next/link"
+import VideoModal from "./VideoModal"
+import { useTranslations } from 'next-intl';
 const Hero = () => {
+    const  t  = useTranslations('home');
     return (
         <div
             className="bg-light-gray px-3 pb-32">
@@ -28,7 +30,11 @@ const Hero = () => {
                         initial="initial"
                         animate="animate"
                         className="">
-                        <h1 className="place-self-center lg:text-[96px] md:text-6xl text-4xl font-bold md:max-w-[61rem] max-w-96 text-center font-Vazirmatn lg:leading-[112.5px] md:!leading-tight leading-normal">Là où <span className="text-violet-800">l’avenir</span> se construit aujourd’hui !</h1>
+                        <h1 className="place-self-center lg:text-[96px] md:text-6xl text-4xl font-bold md:max-w-[61rem] max-w-96 text-center font-Vazirmatn lg:leading-[112.5px] md:!leading-tight leading-normal">
+                            {t.rich('page_title', {
+                                highlight: (chunks) => <span className="text-violet-800">{chunks}</span>
+                            })}
+                        </h1>
                         <Image className="lg:place-self-end md:place-self-center place-self-end lg:-translate-y-7 md:-translate-y-5 lg:w-[57%] w-[39%] md:w-[36%] -translate-y-4 max-md:-translate-x-20" draggable={false} width={900} src={pen_line} alt="" />
                     </motion.div>
                     <motion.div
@@ -39,14 +45,12 @@ const Hero = () => {
                     >
                         <Link href="/Commencer">
                             <button className="btn btn-violet text-sm sm:text-base md:text-lg min-w-fit">
-                            Commencer
+                            {t("start_button")}
                             </button>
                         </Link>
 
-                        <button className="btn !font-Vazirmatn !border-none gap-x-2 text-sm sm:text-base md:text-lg min-w-fit">
-                            <Play className="bg-violet-300 text-transparent fill-white p-1.5 md:p-2.5 size-7 md:size-9 rounded-full" />
-                            Regarder la vidéo
-                        </button>
+                        <VideoModal/>
+                        
                     </motion.div>
 
                 </div>
