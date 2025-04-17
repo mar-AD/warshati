@@ -13,6 +13,7 @@ import { useLocale, useTranslations } from "next-intl"
 import layoutFr from '../../../../messages/fr.json';
 import layoutAr from '../../../../messages/ar.json';
 import layoutEn from '../../../../messages/en.json';
+import { Article } from "@/lib/types"
 
 export default function BlogLayout({ children }: { children: ReactNode }) {
     const isMediumScreen = useMediaQuery("(max-width: 1000px)")
@@ -35,7 +36,7 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
 
     const combinedArticles = articleData.map((sharedArticle) => {
         const translatedArticle = translatedArticles.find(
-            (a: any) => a.slug === sharedArticle.slug
+            (a: Article) => a.slug === sharedArticle.slug
         );
 
         return translatedArticle

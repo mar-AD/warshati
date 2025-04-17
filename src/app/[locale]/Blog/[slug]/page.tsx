@@ -11,6 +11,7 @@ import PopularTags from "@/components/Blog/PopularTags";
 import Reviews from "@/components/Blog/Reviews";
 import CommentForm from "@/components/Blog/CommentForm";
 import Image from "next/image";
+import { Article } from "@/lib/types";
 
 const ArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -27,7 +28,7 @@ const ArticlePage = () => {
   const sharedArticle = articleData.find((a) => a.slug === slug);
 
   const translatedArticle = translatedArticles.find(
-    (a: any) => a.slug === slug
+    (a: Article) => a.slug === slug
   );
 
 

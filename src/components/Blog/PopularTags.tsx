@@ -9,12 +9,15 @@ const PopularTags = () => {
     return (
         <div className="flex gap-6 flex-wrap items-center justify-between  border-t-2 border-b-2 py-7">
             <div className="flex gap-x-7 gap-y-4 flex-wrap items-center">
-            {populaires.slice(1, 5).map((item, index) => (
-                <p key={index} className="px-4 py-1.5 text-xs text-white rounded-lg border"
-                style={{ backgroundColor: ["#ef4444", "#22c55e", "#4b5563", "#94a3b8"][index] }}>
-                {item}
-                </p>
-            ))}
+                {populaires.slice(1, 5).map((item, index) => (
+                    <p 
+                    key={index} 
+                    className="px-4 py-1.5 text-xs text-white rounded-lg border"
+                    style={{ backgroundColor: ["#ef4444", "#22c55e", "#4b5563", "#94a3b8"][index] }}
+                    >
+                        {item}
+                    </p>
+                ))}
             </div>
             <div className="flex items-center gap-x-5 text-slate-400 capitalize">
                 <button className="flex gap-x-3 items-center">

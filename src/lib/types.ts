@@ -194,3 +194,26 @@ export interface LmsDataType extends Presentation2Type {
 export interface ComposantesDuProgrammeDataType extends FormationType {
   color: string
 }
+
+
+export type Article = {
+  slug: string;
+  article: string;
+  title: string;
+  date: string;
+  content: {
+    intro: string;
+    head?: string;
+    head_content?: string[];
+    head_1?: string;
+    head_1_content?: string[];
+    head_2?: string;
+    head_2_content?: string | string[];
+    head_3?: string;
+    head_3_content?: string;
+    projects?: {
+      name: string;
+      description: string;
+    }[];
+  };
+};
