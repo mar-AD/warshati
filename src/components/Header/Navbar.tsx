@@ -27,7 +27,7 @@ const Navbar = ({showMenu}:{showMenu:boolean}) => {
             )}>
                 {data.map((item, index) => (
                     <li key={index}>
-                        <Link href={item.link} className={cn("px-3 py-1.5 text-xl rounded-md transition-colors duration-300",
+                        <Link href={item.link} locale={locale} className={cn("px-3 py-1.5 text-xl rounded-md transition-colors duration-300",
                             item.selected||pathname.toLowerCase()==="/"+item.label.toLowerCase() ? "text-violet-600 font-bold":"hover:text-stone-800"
                         )}>
                             {t(item.label)}

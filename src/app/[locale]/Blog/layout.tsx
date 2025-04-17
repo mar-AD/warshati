@@ -114,6 +114,7 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
                                                 <p className="text-xs text-slate-400">{article.date}</p>
                                                 <Link
                                                     href={`/Blog/${article.slug}`}
+                                                    locale={locale}
                                                     className="btn !rounded-lg !text-xs !h-9 btn-violet-outline"
                                                 >
                                                     savoir plus
