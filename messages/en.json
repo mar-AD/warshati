@@ -105,63 +105,63 @@
     "pedarogy": {
       "title": "21st Century Skills",
       "pedarogy": [
-          {
-              "title": "Creativity & Innovation",
-              "description": "Unleash your imagination! Create unique inventions, explore new ideas, and become a budding innovator."
-          },
-          {
-              "title": "Critical Thinking",
-              "description": "Awaken your thinking! Analyze ideas, ask questions, and develop logical thinking to better understand the world around you."
-          },
-          {
-              "title": "Problem Solving",
-              "description": "Face challenges! Find innovative solutions and learn how to overcome obstacles with creativity and strategy."
-          },
-          {
-              "title": "Adaptability & Autonomy",
-              "description": "Be flexible and independent! Adapt to new situations and take control of your learning with confidence."
-          },
-          {
-              "title": "Collaboration & Communication",
-              "description": "Learn with friends and share ideas! At Warshati, teamwork is key to achieving great things."
-          },
-          {
-              "title": "Scientific Mindset & Curiosity",
-              "description": "Explore, test, and discover! Ask questions, experiment, and build an insatiable curiosity for the world around you."
-          },
-          {
-              "title": "Ethical Awareness",
-              "description": "Use technology responsibly! Learn ethical values, online safety, and become a responsible digital citizen."
-          },
-          {
-              "title": "Entrepreneurial Spirit",
-              "description": "Turn your ideas into action! Learn innovation, initiative, and develop an entrepreneurial mindset from a young age."
-          },
-          {
-              "title": "Digital Culture",
-              "description": "Master the digital world! Understand technologies, protect your data, and use digital tools responsibly and creatively."
-          }
+        {
+          "title": "Creativity & Innovation",
+          "description": "Unleash your imagination! Create unique inventions, explore new ideas, and become a budding innovator."
+        },
+        {
+          "title": "Critical Thinking",
+          "description": "Awaken your thinking! Analyze ideas, ask questions, and develop logical thinking to better understand the world around you."
+        },
+        {
+          "title": "Problem Solving",
+          "description": "Face challenges! Find innovative solutions and learn how to overcome obstacles with creativity and strategy."
+        },
+        {
+          "title": "Adaptability & Autonomy",
+          "description": "Be flexible and independent! Adapt to new situations and take control of your learning with confidence."
+        },
+        {
+          "title": "Collaboration & Communication",
+          "description": "Learn with friends and share ideas! At Warshati, teamwork is key to achieving great things."
+        },
+        {
+          "title": "Scientific Mindset & Curiosity",
+          "description": "Explore, test, and discover! Ask questions, experiment, and build an insatiable curiosity for the world around you."
+        },
+        {
+          "title": "Ethical Awareness",
+          "description": "Use technology responsibly! Learn ethical values, online safety, and become a responsible digital citizen."
+        },
+        {
+          "title": "Entrepreneurial Spirit",
+          "description": "Turn your ideas into action! Learn innovation, initiative, and develop an entrepreneurial mindset from a young age."
+        },
+        {
+          "title": "Digital Culture",
+          "description": "Master the digital world! Understand technologies, protect your data, and use digital tools responsibly and creatively."
+        }
       ]
     },
     "parcours": {
       "title": "Learning Pathway",
       "parcours": [
-          {
-              "title": "Explorer",
-              "description": "Discover and Thrive"
-          },
-          {
-              "title": "Creator",
-              "description": "Imagine and Innovate"
-          },
-          {
-              "title": "Innovator",
-              "description": "Invent and Transform"
-          },
-          {
-              "title": "Junior",
-              "description": "Master and Excel"
-          }
+        {
+          "title": "Explorer",
+          "description": "Discover and Thrive"
+        },
+        {
+          "title": "Creator",
+          "description": "Imagine and Innovate"
+        },
+        {
+          "title": "Innovator",
+          "description": "Invent and Transform"
+        },
+        {
+          "title": "Junior",
+          "description": "Master and Excel"
+        }
       ]
     },
     "niveaux": {
@@ -228,11 +228,553 @@
       "text": "The program spans a full academic year, structured around quarterly milestones.",
       "subtext": "The program spans a full academic year, structured around quarterly milestones.",
       "see_btn": "Learn more"
+    },
+    "thematique": {
+      "title": "Smart Workshops Project",
+      "text": "A series of 10 to 20 Smart Workshops, focused on building a concrete project inspired by a specific theme.",
+      "see_btn": "Learn more",
+      "items": [
+        {
+          "title": "Smart Car",
+          "description": "A self-driving car that talks to you and helps avoid accidents for safer travel!"
+        },
+        {
+          "title": "Smart City",
+          "description": "Children explore technology trends and their impact on cities. They program their first self-driving car and control traffic lights."
+        },
+        {
+          "title": "Smart Home",
+          "description": "Children discover next-gen technologies installed in homes to make them smarter and safer."
+        },
+        {
+          "title": "Smart Factory",
+          "description": "Children explore various uses of robotics in industry like automatic assembly lines, scanners, robotic arms, forklifts, and more."
+        },
+        {
+          "title": "Smart Agriculture",
+          "description": "Learn to use tools that help plants grow better."
+        },
+        {
+          "title": "Connected Forests",
+          "description": "Use sensors to monitor trees and protect forests."
+        },
+        {
+          "title": "Connected Health",
+          "description": "Discover how technology can help treat patients and improve healthcare."
+        },
+        {
+          "title": "Digital Art",
+          "description": "Create drawings and objects using computers and 3D printers."
+        },
+        {
+          "title": "Space and Astronomy",
+          "description": "Explore stars and planets by building models and robots."
+        },
+        {
+          "title": "Smart Drones",
+          "description": "Learn how drones fly to capture photos, deliver packages, or monitor areas, all remotely controlled."
+        },
+        {
+          "title": "Renewable Energy",
+          "description": "Build models powered by sunlight, wind, or water."
+        },
+        {
+          "title": "Climate and Weather",
+          "description": "Understand the weather and build tools to measure rain, wind, and sunshine."
+        },
+        {
+          "title": "Fun Robots",
+          "description": "Build small robots that move, talk, or follow lines."
+        },
+        {
+          "title": "Educational Games",
+          "description": "Create interactive games that make learning fun."
+        },
+        {
+          "title": "Oceans and Protection",
+          "description": "Discover the secrets of the oceans and how to protect them using simple tools."
+        },
+        {
+          "title": "Artificial Limbs",
+          "description": "Discover how technology helps build moving arms, legs, and other parts to assist people, like robotic limbs."
+        }
+      ]
+    },
+    "formation": {
+      "title": "Professional Teacher Training",
+      "see_btn": "Learn More",
+      "items": [
+        {
+          "title": "Continuous Training",
+          "description": "Innovative training programs to stay at the forefront of digital pedagogy and develop new skills."
+        },
+        {
+          "title": "Interactive Workshops",
+          "description": "Hands-on and collaborative sessions to experiment with modern teaching approaches adapted to current technologies."
+        },
+        {
+          "title": "Coaching and Mentoring",
+          "description": "Personalized support from experts to enhance and enrich your classroom practices."
+        },
+        {
+          "title": "Educational Resources and Tools",
+          "description": "Access to a comprehensive library of digital tools, guides, and materials to optimize your teaching."
+        }
+      ]
+    },
+    "intScolaire": {
+      "see_btn": "Learn More",
+      "items": [
+        {
+          "title": "Support",
+          "description": "Warshati supports schools and teachers in the seamless integration of its educational tools through training, personalized follow-up, and continuous support."
+        },
+        {
+          "title": "Complementarity",
+          "description": "Warshati integrates harmoniously with school curricula, enriching learning with interactive and innovative approaches aligned with educational objectives."
+        },
+        {
+          "title": "Innovative Equipment",
+          "description": "State-of-the-art equipment allowing users to become familiar with the tools of the future."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "title": "What is Warshati?",
+          "content": "Warshati is an intelligent Moroccan educational platform dedicated to learning STEMA programs (Science, Technology, Engineering, Arts, and Mathematics) and Intellectual Intelligence. It offers an immersive and interactive approach, aiming to prepare students for the challenges of the 21st century by integrating essential skills such as critical thinking, collaboration, creativity, and problem-solving."
+        },
+        {
+          "title": "Why choose Warshati?",
+          "content": "Warshati stands out for its innovative approach and its ability to personalize learning. Through a methodology based on project-based learning and active reflection, it promotes the development of students’ cognitive and socio-emotional skills. In addition, Warshati offers an interactive and accessible platform, tailored to the needs of both the Moroccan and international educational systems."
+        },
+        {
+          "title": "How does Warshati work?",
+          "content": "Warshati is structured into programs and learning paths that combine interest with practical application. Students work on real-world projects in thematic labs (STEMA, M, IoT, etc.) and use digital tools to develop both technical and soft skills. The teaching follows the 'I do, we do, you do' method, encouraging collaborative learning and autonomy."
+        },
+        {
+          "title": "Who delivers Warshati?",
+          "content": "Warshati is delivered by a team of trainers specialized in pedagogy and educational systems, supported by academic and industry professionals to ensure the quality and relevance of the offered programs."
+        },
+        {
+          "title": "Who is Warshati for?",
+          "content": "Warshati is designed for all students from primary to secondary school, as well as teachers looking to improve their expertise in science, technology, engineering, arts, and mathematics. It is also intended for educational institutions that aim to integrate 21st-century skills into their curricula."
+        },
+        {
+          "title": "Where is Warshati held?",
+          "content": "Warshati is offered both online and in physical workshops called 'Smart Workshops'. These workshops are available in various regions of Morocco and are also accessible remotely via the digital platform."
+        },
+        {
+          "title": "When can I order Warshati?",
+          "content": "You can order Warshati at any time through our online platform. Programs are available year-round, and you can begin as soon as you’re ready to register."
+        },
+        {
+          "title": "What age group is Warshati for?",
+          "content": "Warshati is intended for children and young adults, primarily ages 6 to 18, but also offers training for teachers and professionals seeking to improve their knowledge in STEMA and AI fields."
+        },
+        {
+          "title": "What are the prerequisites and levels?",
+          "content": "The Warshati program is open to all students interested in STEMA and AI, whether beginners or advanced. It is also designed for educators aiming to integrate these disciplines into their teaching practices."
+        },
+        {
+          "title": "Where are the Smart Workshops held?",
+          "content": "Warshati’s Smart Workshops are organized in various training centers, schools, etc., as well as online for flexible access. Each workshop is designed to offer a hands-on, interactive experience tailored to participants’ needs."
+        }
+      ]
     }
+  },
+  "r&i": {
+    "hero": {
+      "title": "Research and Innovation at the Heart of Warshati",
+      "description": "At Warshati, Research and Innovation drive our educational solutions. We explore emerging technologies to prepare students for future challenges. Have an idea or want to contribute to our research? Contact our R&I team and help shape the future of education.",
+      "collabButton": "Propose a Collaboration",
+      "projectsButton": "View Our Projects"
+    },
+    "prioritaires": {
+      "title": "Our Priority Focus Areas",
+      "subtitle": "Examples of Recent Projects",
+      "items": [
+        {
+          "title": "Smart Educational Technologies",
+          "description": "Use of AI, adaptive algorithms, and augmented reality."
+        },
+        {
+          "title": "STEAM Labs",
+          "description": "Development of interactive tools and models."
+        },
+        {
+          "title": "Collaborative Platforms",
+          "description": "Strengthening connections between students, teachers, and parents."
+        },
+        {
+          "title": "Innovative Educational Approaches",
+          "description": "Gamification, active and personalized learning."
+        }
+      ]
+    },
+    "projectsDomaine": {
+      "title": "Ongoing R&I Projects",
+      "subtitle": "Warshati focuses its efforts on the following areas:",
+      "items": [
+        {
+          "title": "Intelligent Educational Technologies",
+          "description": "A tool that personalizes learning paths using artificial intelligence."
+        },
+        {
+          "title": "STEAM Labs",
+          "description": "Portable modules for teaching STEAM disciplines in rural areas."
+        },
+        {
+          "title": "Collaborative Platforms",
+          "description": "Analyzing learner behaviors to optimize educational content."
+        },
+        {
+          "title": "Innovative Pedagogical Approaches",
+          "description": "Designing interactive kits to explore technological concepts."
+        }
+      ]
+    },
+    "projectsRecent": {
+      "title": "Ongoing R&I Projects",
+      "subtitle": "Examples of recent projects",
+      "items": [
+        {
+          "title": "AI Classroom",
+          "description": "A tool that personalizes learning paths using artificial intelligence."
+        },
+        {
+          "title": "STEAM Everywhere",
+          "description": "Portable modules for teaching STEAM disciplines in rural areas."
+        },
+        {
+          "title": "Data for Learning",
+          "description": "Analyzing learner behaviors to optimize educational content."
+        },
+        {
+          "title": "Innovative Pedagogical Approaches",
+          "description": "Designing interactive kits to explore technological concepts."
+        }
+      ]
+    },
+    "collaboration": {
+      "title": "Let's work together",
+      "subtitle": "We collaborate with universities, laboratories, and companies to strengthen our research and innovation capabilities.",
+      "items": [
+        {
+          "title": "Collaboration with researchers",
+          "description": "To explore AI-based educational methodologies."
+        },
+        {
+          "title": "Local partnership",
+          "description": "Integration of solutions tailored to the Moroccan educational system."
+        }
+      ]
+    },
+    "contributions": {
+      "title": "Our scientific contributions",
+      "subtitle": "Discover our studies, publications, and key research findings:",
+      "items": [
+        {
+          "title": "Scientific article",
+          "description": "The impact of Smart Workshops on academic success in Morocco."
+        },
+        {
+          "title": "Report",
+          "description": "Analysis of technological needs in rural Moroccan schools."
+        },
+        {
+          "title": "Pilot projects",
+          "description": "Results from experimental workshops in 3 pilot academies."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently <br />Asked Questions",
+      "subtitle": "Still have questions? Contact our team<br /> at warshaticg@gmail.com",
+      "button": "See all FAQs",
+      "items": [
+        {
+          "question": "Why invest in educational innovation?",
+          "answer": "To ensure effective and sustainable learning, adapted to the challenges of tomorrow."
+        },
+        {
+          "question": "How to collaborate with Warshati?",
+          "answer": "Contact our team via the dedicated form."
+        }
+      ]
+    }
+  },
+  "blog": {
+    "heroSearch": {
+      "cat_btn": "Categories",
+      "place_holder": "search...",
+      "tags": [
+        "Smart Workshops",
+        "STEAM",
+        "Coding",
+        "Interactive prototypes",
+        "Creativity",
+        "IoT",
+        "Artificial Intelligence"
+      ]
+    },
+    "layout": {
+      "sujetsPopulaires": "Popular topics:",
+      "articlesCor": "Articles :",
+      "populaires": [
+        "Smart Workshops",
+        "STEAM",
+        "Coding",
+        "Creativity",
+        "AI",
+        "Interactive prototypes"
+      ],
+      "title": "Welcome to the blog!",
+      "text": "At Warshati, we believe that education is a key lever for preparing future generations for the challenges of the <bold>21st century</bold>. Our smart Moroccan platform offers innovative solutions by integrating <bold>STEAM and Artificial Intelligence</bold> programs to deliver an immersive and interactive learning experience. <br></br> Through this blog, we share news, educational resources, and insights on education and technology. Discover how our labs <bold>(STEAM LAB, AI LAB, IoT LAB, etc.)</bold>, assessment tools, and personalized teaching methods transform learning into an exciting adventure. <br></br> Stay connected to explore inspiring projects, user testimonials, and reflections on the evolution of educational systems. Together, let’s shape a future where creativity, collaboration, and innovation are at the heart of learning!"
+    },
+    "rest": {
+      "ajouter": "Add comment",
+      "poster_btn": "Post Comment",
+      "place_holder_1": "Your message...",
+      "place_holder_2": "Your name...",
+      "place_holder_3": "Your last name...",
+      "enseignant_btn": "STEAM Teacher",
+      "text": "Since I started using Smart Workshops, my students show real enthusiasm for science and technology!",
+      "publie": "Published on",
+      "comment": "3 comments",
+      "partager": "Share"
+    },
 
-
-
-
-
+    "articles": [
+      {
+        "slug": "article_1",
+        "article": "Article 1",
+        "title": "How Smart Workshops Are Transforming Student Learning",
+        "date": "January 14, 2025",
+        "content": {
+          "intro": "Traditional educational methods are evolving, and Smart Workshops are revolutionizing how students learn. But what makes these workshops so special?",
+          "theoryAndPractice": "Smart Workshops combine theory and practice through digital tools and interactive approaches. For example, by working on STEAM projects, students not only develop technical skills but also collaboration and creativity.",
+          "head": "Key Benefits",
+          "head_content": [
+            "Better understanding of complex concepts through active learning.",
+            "Development of essential 21st-century skills such as problem-solving and critical thinking."
+          ]
+        }
+      },
+      {
+        "slug": "article_2",
+        "article": "Article 2",
+        "title": "Top 5 STEAM Projects to Do with Your Students",
+        "date": "January 14, 2025",
+        "content": {
+          "intro": "Want to inspire your students? Here are 5 STEAM projects to implement in your classroom for fun and educational learning.",
+          "head": "Projects",
+          "projects": [
+            {
+              "name": "Build a Robotic Arm with Arduino",
+              "description": "Introduce students to programming and electronics."
+            },
+            {
+              "name": "Smart City Model",
+              "description": "Explore IoT and renewable energy concepts."
+            },
+            {
+              "name": "Digital Art with Python",
+              "description": "Combine technology and creativity to produce unique artworks."
+            },
+            {
+              "name": "Analyze Local Weather Data",
+              "description": "Teach data collection and analysis using modern tools."
+            }
+          ]
+        }
+      },
+      {
+        "slug": "article_3",
+        "article": "Article 3",
+        "title": "Artificial Intelligence in Moroccan Classrooms: Opportunities and Challenges",
+        "date": "January 14, 2025",
+        "content": {
+          "intro": "Artificial Intelligence (AI) is becoming a powerful tool in Moroccan schools. But how can it be effectively integrated, and what are the obstacles?",
+          "head": "Opportunities",
+          "head_content": [
+            "Creating personalized learning paths through data analysis.",
+            "Automating repetitive tasks for teachers.",
+            "Interactive tools like educational chatbots to answer student questions."
+          ],
+          "head_1": "Challenges",
+          "head_1_content": [
+            "Need to train teachers in emerging technologies.",
+            "Ensure equal access to technology in rural areas."
+          ]
+        }
+      },
+      {
+        "slug": "article_4",
+        "article": "Article 4",
+        "title": "Coding for Kids: Where to Start and Why It’s Crucial",
+        "date": "January 14, 2025",
+        "content": {
+          "intro": "Artificial Intelligence (AI) is becoming a powerful tool in Moroccan schools. But how can it be effectively integrated, and what are the obstacles?",
+          "head": "Why It’s Important",
+          "head_content": [
+            "Coding enhances logical thinking and creativity.",
+            "Digital skills are essential in nearly all careers."
+          ],
+          "head_1": "Challenges",
+          "head_1_content": [
+            "Online platforms like Scratch or Code.org.",
+            "Hands-on workshops, such as those offered by Warshati, for full immersion."
+          ],
+          "head_2": "Tip",
+          "head_2_content": [
+            "Start with simple projects, like game creation, to keep kids engaged."
+          ]
+        }
+      },
+      {
+        "slug": "article_5",
+        "article": "Article 5",
+        "title": "The Impact of Interactive Models on Young Learners' Scientific Understanding",
+        "date": "January 14, 2025",
+        "content": {
+          "intro": "Interactive models aren’t just fun—they help students better grasp scientific concepts by making them tangible.",
+          "head": "Examples",
+          "head_content": [
+            "A solar system model where students move the planets to understand orbits.",
+            "A hydraulic model to explain fluid mechanics principles."
+          ],
+          "head_1": "Results",
+          "head_1_content": [
+            "According to a recent study, students using interactive models retain 40% more information compared to traditional lessons."
+          ]
+        }
+      },
+      {
+        "slug": "article_6",
+        "article": "Article 6",
+        "title": "21st-Century Skills Developed Through STEAM Programs",
+        "date": "January 14, 2025",
+        "content": {
+          "intro": "In a constantly evolving world, 21st-century skills like creativity, collaboration, and critical thinking are essential. How do STEAM programs foster their development?",
+          "head": "Examples",
+          "head_content": [
+            "Collaboration through group projects.",
+            "Problem-solving via hands-on challenges.",
+            "Communication through presenting results."
+          ],
+          "head_2": "Real-World Example",
+          "head_2_content": "In a STEAM workshop, students built a water filtration system combining chemistry, engineering, and biology."
+        }
+      },
+      {
+        "slug": "article_7",
+        "article": "Article 7",
+        "title": "Why Integrate IoT in Education?",
+        "date": "January 14, 2025",
+        "content": {
+          "intro": "The Internet of Things (IoT) is transforming industries—but did you know it can also revolutionize classrooms?",
+          "head": "Educational Applications of IoT",
+          "head_content": [
+            "Real-time monitoring of scientific experiments.",
+            "Building smart home models with connected sensors.",
+            "Analyzing local environmental data."
+          ],
+          "head_1": "Impact on Learning",
+          "head_1_content": [
+            "Deeper understanding of technical concepts.",
+            "Development of data management skills."
+          ]
+        }
+      },
+      {
+        "slug": "article_8",
+        "article": "Article 8",
+        "title": "Gamification in Education: A Powerful Tool for Engagement",
+        "date": "January 14, 2025",
+        "content": {
+          "intro": "Gamification turns learning into an immersive and motivating adventure. But how does it actually work?",
+          "head": "Examples",
+          "head_content": [
+            "Using point and reward systems.",
+            "Creating challenges tailored to each student's level."
+          ],
+          "head_2": "Observed Results",
+          "head_2_content": "Students involved show a 30% increase in engagement.",
+          "head_3": "Warshati Example",
+          "head_3_content": "An interactive math quiz lets students progress in a game while reinforcing their knowledge."
+        }
+      },
+      {
+        "slug": "article_9",
+        "article": "Article 9",
+        "title": "STEAM for Inclusion: Making Technology Accessible to All",
+        "date": "January 14, 2025",
+        "content": {
+          "intro": "STEAM programs are not just for the elite—they are a powerful tool to promote inclusion.",
+          "head": "Inclusive Initiatives",
+          "head_content": [
+            "Workshops tailored for students with special needs.",
+            "Use of accessible tools like tablets with voice controls."
+          ],
+          "head_2": "Societal Impact",
+          "head_2_content": "Encouraging diversity in scientific and technical careers."
+        }
+      },
+      {
+        "slug": "article_10",
+        "article": "Article 10",
+        "title": "Why Integrate IoT in Education?",
+        "date": "January 14, 2025",
+        "content": {
+          "intro": "Engineering is often seen as abstract. Models help make these concepts concrete and understandable.",
+          "head": "Activity Examples",
+          "head_content": [
+            "Building bridges with recycled materials to understand forces and structures.",
+            "Creating miniature irrigation systems to teach hydraulic principles."
+          ],
+          "head_1": "Educational Benefits",
+          "head_1_content": [
+            "Active student engagement.",
+            "Better visualization of complex technical concepts."
+          ]
+        }
+      },
+      {
+        "slug": "article_11",
+        "article": "Article 11",
+        "title": "Why Integrate IoT in Education?",
+        "date": "January 14, 2025",
+        "content": {
+          "intro": "AI is often associated with analytical tasks, but it can also be a powerful tool to unleash students’ creativity.",
+          "head": "AI-Generated Creative Works",
+          "head_content": [
+            "AI-assisted generation of art.",
+            "Creation of interactive stories using language models."
+          ],
+          "head_2": "Why It Works",
+          "head_2_content": "AI offers a fresh perspective and inspires unique ideas."
+        }
+      },
+      {
+        "slug": "article_12",
+        "article": "Article 12",
+        "title": "Building a STEAM Culture in Moroccan Schools",
+        "date": "January 14, 2025",
+        "content": {
+          "intro": "To prepare students for a tech-driven future, Moroccan schools must build a strong STEAM culture.",
+          "head": "Key Steps",
+          "head_content": [
+            "Train teachers in new teaching methods.",
+            "Incorporate hands-on projects from an early age.",
+            "Collaborate with platforms like Warshati to access innovative tools."
+          ],
+          "head_2": "Expected Outcome",
+          "head_2_content": "Motivated, curious students ready to face future challenges."
+        }
+      }
+    ]
   }
 }

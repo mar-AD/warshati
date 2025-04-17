@@ -22,7 +22,7 @@ const FormationCard = ({ index, item }: { index: number, item: FormationType }) 
             whileInView="animate"
             viewport={{ once: true }} 
             className={cn(
-                "flex flex-col items-center gap-y-5 relative border rounded-3xl place-self-center w-96 shadow-2xl shadow-black/5 duration-300 group",
+                "flex flex-col items-center gap-y-5 relative border rounded-3xl place-self-center sm:w-96 h-[388px] shadow-2xl shadow-black/5 duration-300 group",
             )}
         >
             <div className={cn("w-full rounded-2xl overflow-hidden flex justify-center items-center p-4", bgColor)}>

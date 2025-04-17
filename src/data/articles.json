@@ -1,0 +1,241 @@
+[
+  {
+    "slug": "article_1",
+    "article": "Article 1",
+    "title": "Comment les Smart Workshops transforment l'apprentissage des élèves?",
+    "date": "14 Janvier 2025",
+    "content": {
+      "intro": "Les méthodes éducatives traditionnelles évoluent, et les Smart Workshops révolutionnent la façon dont les élèves apprennent. Mais qu'est-ce qui rend ces ateliers si spéciaux ?",
+      "theoryAndPractice": "Les Smart Workshops combinent théorie et pratique grâce à des outils numériques et des approches interactives. Par exemple, en travaillant sur des projets STEAM, les élèves développent non seulement des compétences techniques, mais aussi la collaboration et la créativité.",
+      "head": "Avantages clés",
+      "head_content": [
+        "Meilleure compréhension des concepts complexes grâce à l’apprentissage actif.",
+        "Développement des compétences essentielles pour le 21ᵉ siècle, comme la résolution de problèmes et la pensée critique."
+      ]
+    },
+    "image": "/images/Blog/articles/article_1.jpg"
+  },
+  {
+    "slug": "article_2",
+    "article": "Article 2",
+    "title": "Top 5 des projets STEAM à réaliser avec vos étudiants",
+    "content": {
+      "intro": "Envie d’inspirer vos élèves ? Voici 5 projets STEAM à mettre en place dans votre classe pour un apprentissage à la fois ludique et instructif.",
+      "head": "Projets",
+      "projects": [
+        {
+          "name": "Créer un bras robotisé avec Arduino",
+          "description": "Initiez les élèves à la programmation et à l'électronique."
+        },
+        {
+          "name": "Maquette de ville intelligente",
+          "description": "Explorez les concepts de l’IoT et de l’énergie renouvelable."
+        },
+        {
+          "name": "Art numérique avec Python",
+          "description": "Combinez technologie et créativité pour produire des œuvres uniques."
+        },
+        {
+          "name": "Analyse de données météorologiques locales",
+          "description": "Enseignez la collecte et l’analyse de données avec des outils modernes."
+        }
+      ]
+    },
+    "image": "/images/Blog/articles/article_2.jpg",
+    "date": "14 Janvier 2025"
+  },
+  {
+    "slug": "article_3",
+    "article": "Article 3",
+    "title": "L'intelligence artificielle dans les classes marocaines : Opportunités et défis",
+    "content": {
+      "intro": "L’intelligence artificielle (IA) est en train de devenir un outil puissant dans les écoles marocaines. Mais comment l’intégrer efficacement et quelles sont les limites à surmonter ?",
+      "head": "Opportunités",
+      "head_content": [
+        "Création de parcours d’apprentissage personnalisés grâce à l’analyse des données.",
+        "Automatisation des tâches répétitives pour les enseignants.",
+        "Outils interactifs, comme les chatbots éducatifs, pour répondre aux questions des élèves."
+      ],
+      "head_1": "Défis",
+      "head_1_content": [
+        "Besoin de former les enseignants aux technologies émergentes.",
+        "Assurer l’accès égal à ces technologies dans les régions rurales."
+      ]
+    },
+    "image": "/images/Blog/articles/article_3.jpg",
+    "date": "14 Janvier 2025"
+  },
+  {
+    "slug": "article_4",
+    "article": "Article 4",
+    "title": "Coding pour enfants : Où commencer et pourquoi c'est crucial ?",
+    "content": {
+      "intro": "L’intelligence artificielle (IA) est en train de devenir un outil puissant dans les écoles marocaines. Mais comment l’intégrer efficacement et quelles sont les limites à surmonter ?",
+      "head": "Pourquoi c’est important",
+      "head_content": [
+        "Le coding stimule la pensée logique et la créativité.",
+        "Les compétences numériques sont indispensables dans presque tous les métiers."
+      ],
+      "head_1": "Défis",
+      "head_1_content": [
+        "Plateformes en ligne comme Scratch ou Code.org.",
+        "Ateliers pratiques, comme ceux proposés par Warshati, pour une immersion totale."
+      ],
+      "head_2": "Conseil",
+      "head_2_content": [
+        "Commencez avec des projets simples, comme la création de jeux, pour maintenir l’intérêt des enfants."
+      ]
+    },
+    "image": "/images/Blog/articles/article_4.jpg",
+    "date": "14 Janvier 2025"
+  },
+  {
+    "slug": "article_5",
+    "article": "Article 5",
+    "title": " L'impact des maquettes interactives sur la compréhension scientifique des jeunes apprenants.",
+    "content": {
+      "intro": "Les maquettes interactives ne sont pas seulement amusantes ; elles permettent aux élèves de mieux comprendre les concepts scientifiques en les rendant tangibles.",
+      "head": "Exemples",
+      "head_content": [
+        "Une maquette d’un système solaire où les élèves peuvent manipuler les planètes pour comprendre leur orbite.",
+        "Une maquette hydraulique pour expliquer les principes de la mécanique des fluides."
+      ],
+      "head_1": "Résultats",
+      "head_1_content": [
+        "Selon une étude récente, les élèves utilisant des maquettes interactives retiennent 40 % d’informations en plus par rapport à une leçon classique"
+      ]
+    },
+    "image": "/images/Blog/articles/article_5.jpg",
+    "date": "14 Janvier 2025"
+  },
+  {
+    "slug": "article_6",
+    "article": "Article 6",
+    "title": "Les compétences du 21ᵉ siècle développées grâce aux programmes STEAM Introduction",
+    "content": {
+      "intro": "Dans un monde en constante évolution, les compétences du 21ᵉ siècle, comme la créativité, la collaboration et la pensée critique, sont indispensables. Comment les programmes STEAM contribuent-ils à leur développement ?",
+      "head": "Exemples",
+      "head_content": [
+        "Collaboration à travers des projets de groupe.",
+        "Résolution de problèmes avec des défis pratiques.",
+        "Communication grâce à la présentation des résultats."
+      ],
+      "head_2": "Exemples concret",
+      "head_2_content": "Dans un atelier STEAM, des élèves ont créé un système de filtration d'eau, combinant chimie, ingénierie et biologie."
+    },
+    "image": "/images/Blog/articles/article_6.jpg",
+    "date": "14 Janvier 2025"
+  },
+  {
+    "slug": "article_7",
+    "article": "Article 7",
+    "title": "Pourquoi intégrer l’IoT dans l’éducation ?",
+    "content": {
+      "intro": "L'Internet des Objets (IoT) révolutionne l'industrie, mais saviez-vous qu'il peut aussi transformer les salles de classe ?",
+      "head": "Applications éducatives de l’IoT",
+      "head_content": [
+        "Suivi en temps réel des expériences scientifiques.",
+        "Construction de modèles de maisons intelligentes avec capteurs connectés.",
+        "Analyse de données environnementales locales."
+      ],
+      "head_1": "Impact sur l’apprentissage",
+      "head_1_content": [
+        "Approfondissement de la compréhension des concepts techniques.",
+        "Développement des compétences en gestion de données."
+      ]
+    },
+    "image": "/images/Blog/articles/article_7.jpg",
+    "date": "14 Janvier 2025"
+  },
+  {
+    "slug": "article_8",
+    "article": "Article 8",
+    "title": "Gamification dans l'éducation : Un levier puissant pour l'engagement",
+    "content": {
+      "intro": "La gamification transforme l'apprentissage en une aventure immersive et motivante. Mais comment cela fonctionne-t-il exactement ?",
+      "head": "Exemples",
+      "head_content": [
+        "Utilisation de systèmes de points et de récompenses.",
+        "Création de défis adaptés au niveau de chaque élève."
+      ],
+      "head_2": "Résultats observés",
+      "head_2_content": "Les élèves participants montrent un engagement accru de 30 %.",
+      "head_3": "Exemple Warshati",
+      "head_3_content": "Un quiz interactif en mathématiques permet aux élèves de progresser dans un jeu tout en consolidant leurs connaissances."
+    },
+    "image": "/images/Blog/articles/article_8.jpg",
+    "date": "14 Janvier 2025"
+  },
+  {
+    "slug": "article_9",
+    "article": "Article 9",
+    "title": "STEAM pour l’inclusion : Rendre la technologie accessible à tous",
+    "content": {
+      "intro": "Les programmes STEAM ne sont pas réservés à une élite ; ils sont un outil puissant pour promouvoir l’inclusion.",
+      "head": "Initiatives inclusives",
+      "head_content": [
+        "Ateliers adaptés aux élèves ayant des besoins spécifiques.",
+        "Utilisation d’outils accessibles, comme les tablettes avec commandes vocales."
+      ],
+      "head_2": "Impact sociétal",
+      "head_2_content": "Encourager la diversité dans les carrières scientifiques et techniques."
+    },
+    "image": "/images/Blog/articles/article_9.jpg",
+    "date": "14 Janvier 2025"
+  },
+  {
+    "slug": "article_10",
+    "article": "Article 10",
+    "title": "Pourquoi intégrer l’IoT dans l’éducation ?",
+    "content": {
+      "intro": "L’ingénierie est un domaine souvent perçu comme abstrait. Les maquettes permettent de rendre ces concepts concrets et compréhensibles.",
+      "head": "Exemples d’activités",
+      "head_content": [
+        "Construction de ponts en matériaux recyclés pour comprendre les forces et structures.",
+        "Création de systèmes d’irrigation miniatures pour enseigner les principes hydrauliques."
+      ],
+      "head_1": "Bénéfices pédagogiques",
+      "head_1_content": [
+        "Engagement actif des élèves.",
+        "Meilleure visualisation des concepts techniques complexes."
+      ]
+    },
+    "image": "/images/Blog/articles/article_10.jpg",
+    "date": "14 Janvier 2025"
+  },
+  {
+    "slug": "article_11",
+    "article": "Article 11",
+    "title": "Pourquoi intégrer l’IoT dans l’éducation ?",
+    "content": {
+      "intro": "L’IA est souvent associée à des tâches analytiques, mais elle peut également être un puissant outil pour libérer la créativité des élèves.",
+      "head": "Génération d’œuvres d’art assistées par IA",
+      "head_content": [
+        "Génération d’œuvres d’art assistées par IA.",
+        "Création de récits interactifs à l’aide de modèles de langage."
+      ],
+      "head_2": "Pourquoi cela fonctionne",
+      "head_2_content": "L’IA offre une nouvelle perspective et inspire des idées uniques."
+    },
+    "image": "/images/Blog/articles/article_11.jpg",
+    "date": "14 Janvier 2025"
+  },
+  {
+    "slug": "article_12",
+    "article": "Article 12",
+    "title": "Construire une culture STEAM dans les écoles marocaines",
+    "content": {
+      "intro": "Pour préparer les élèves à un avenir technologique, les écoles marocaines doivent intégrer une culture STEAM forte.",
+      "head": "Étapes clés",
+      "head_content": [
+        "Former les enseignants aux nouvelles méthodes pédagogiques.",
+        "Intégrer des projets pratiques dès le plus jeune âge.",
+        "Collaborer avec des plateformes comme Warshati pour bénéficier d’outils innovants"
+      ],
+      "head_2": "Résultat attendu",
+      "head_2_content": "Des élèves motivés, curieux et prêts à relever les défis du futur"
+    },
+    "image": "/images/Blog/articles/article_12.jpg",
+    "date": "14 Janvier 2025"
+  }
+]

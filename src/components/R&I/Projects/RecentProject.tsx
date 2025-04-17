@@ -3,7 +3,9 @@ import { FadeOut, FadeUp } from "@/lib/animations"
 import {  projectsRecentData } from "@/lib/data"
 import { motion } from "framer-motion"
 import prioritaires from "/public/images/R&I/prioritaires/prioritaires_1.png"
+import { useTranslations } from "next-intl"
 const RecentProject = () => {
+    const t = useTranslations("r&i.projectsRecent")
     return (
         <div className="lg:px-20 py-20 px-5 font-Poppins lg:space-y-20 space-y-10">
             <div className="space-y-5">
@@ -11,13 +13,13 @@ const RecentProject = () => {
                     variants={FadeUp(.2)}
                     initial="initial"
                     whileInView="animate"
-                    viewport={{ once: true }} className="font-bold lg:text-[70px] md:text-3xl text-2xl text-center !leading-tight text-violet-800">Projets R&I en cours</motion.h1>
+                    viewport={{ once: true }} className="font-bold lg:text-[70px] md:text-3xl text-2xl text-center !leading-tight text-violet-800">{t("title")}</motion.h1>
                 <motion.div
                     variants={FadeUp(.3)}
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }} className="flex justify-center">
-                    <p className="font-semibold lg:text-[22px] md:text-base text-sm text-stone-400 lg:max-w-[55rem] md:max-w-[40rem] max-w-[25rem] text-center">Exemples de projets récents</p>
+                    <p className="font-semibold lg:text-[22px] md:text-base text-sm text-stone-400 lg:max-w-[55rem] md:max-w-[40rem] max-w-[25rem] text-center">{t("subtitle")}</p>
                 </motion.div>
             </div>
             <div className="relative flex justify-center items-start">
@@ -36,8 +38,8 @@ const RecentProject = () => {
                                 whileInView="animate"
                                 viewport={{ once: true }}
                                 key={index} className="space-y-2 overflow-hidden w-fit">
-                                <h1 className="font-semibold lg:text-[40px] text-2xl 2xl:text-nowrap leading-tight">{item.title}</h1>
-                                <p className="text-slate-500 max-w-96 max-lg:text-sm">{item.description}</p>
+                                <h1 className="font-semibold lg:text-[40px] text-2xl 2xl:text-nowrap leading-tight">{t(`items.${index}.title`)}</h1>
+                                <p className="text-slate-500 max-w-96 max-lg:text-sm">{t(`items.${index}.description`)}</p>
                             </motion.div>
                         ))
                     }

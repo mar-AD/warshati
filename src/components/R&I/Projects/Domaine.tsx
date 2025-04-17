@@ -3,8 +3,10 @@ import { FadeRight, FadeUp } from "@/lib/animations"
 import { projectsDomaineData } from "@/lib/data"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import { useTranslations } from "next-intl"
 import Image from "next/image"
 const Domaine = () => {
+    const t = useTranslations("r&i.projectsDomaine")
     return (
         <div className="lg:px-20 py-20 px-5 font-Poppins lg:space-y-20 space-y-10 bg-light-gray">
             <div className="space-y-5">
@@ -12,13 +14,13 @@ const Domaine = () => {
                     variants={FadeUp(.2)}
                     initial="initial"
                     whileInView="animate"
-                    viewport={{ once: true }} className="font-bold lg:text-[70px] md:text-3xl text-2xl text-center !leading-tight text-violet-800">Projets R&I en cours</motion.h1>
+                    viewport={{ once: true }} className="font-bold lg:text-[70px] md:text-3xl text-2xl text-center !leading-tight text-violet-800">{t("title")}</motion.h1>
                 <motion.div
                     variants={FadeUp(.3)}
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }} className="flex justify-center">
-                    <p className="font-semibold lg:text-[22px] md:text-base text-sm text-stone-400 lg:max-w-[55rem] md:max-w-[40rem] max-w-[25rem] text-center">Warshati concentre ses efforts sur les domaines :</p>
+                    <p className="font-semibold lg:text-[22px] md:text-base text-sm text-stone-400 lg:max-w-[55rem] md:max-w-[40rem] max-w-[25rem] text-center">{t("subtitle")}</p>
                 </motion.div>
             </div>
             <div className="flex justify-center items-start gap-8 flex-wrap">
@@ -37,10 +39,10 @@ const Domaine = () => {
                             </div>
                             <h2
                                 className="text-sm text-center bg-slate-200 px-5 py-1.5 rounded-full w-fit group-hover:bg-violet-700 group-hover:text-white duration-500">
-                                {project.title}
+                                {t(`items.${index}.title`)}
                             </h2>
                             <p>
-                                {project.description}
+                                {t(`items.${index}.description`)}
                             </p>
                         </motion.div>
                     ))

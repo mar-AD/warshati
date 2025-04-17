@@ -1,9 +1,6 @@
-import BlogTemp from "@/components/Blog/BlogTemp"
+"use client"
 
 const page = () => {
-    return (
-        <BlogTemp />
-    )
+  return <></>
 }
-
 export default page

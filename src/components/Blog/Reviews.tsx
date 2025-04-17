@@ -5,6 +5,7 @@ import React from 'react'
 import avatar from "/public/images/Blog/avatar.png"
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { useTranslations } from 'next-intl'
 
 const Reviews = () => {
     const reviews = [
@@ -25,11 +26,12 @@ const Reviews = () => {
         }
     ]
     const pathname=usePathname()
+    const t = useTranslations("blog.rest")
     return (
         <>
             <div className="border-b-2 py-6">
                 <div className={cn("flex items-start gap-5 py-3",
-                    pathname.split("/")[2] !=="article1"&&"hidden"
+                    pathname.split("/")[3] !=="article_1"&&"hidden"
                 )}>
                     <Image className="w-20 rounded-full h-16 object-cover" src={avatar} alt="" />
                     <div className="space-y-2">
@@ -43,14 +45,13 @@ const Reviews = () => {
                         </div>
                         <div>
                             <q className="font-bold text-slate-500">
-                                Depuis que j’utilise les Smart Workshops, mes élèves montrent un réel enthousiasme pour
-                                les sciences et la technologie !
+                                {t("text")}
                             </q>
                         </div>
-                        <button className="btn btn-violet !text-sm !p-3 !h-fit !rounded-lg !font-medium">Enseignant STEAM</button>
+                        <button className="btn btn-violet !text-sm !p-3 !h-fit !rounded-lg !font-medium">{t("enseignant_btn")}</button>
                     </div>
                 </div>
-                <h2 className="font-bold">3 comments</h2>
+                <h2 className="font-bold">{t("comment")}</h2>
             </div>
             <div>
                 {

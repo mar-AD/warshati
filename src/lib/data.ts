@@ -847,112 +847,112 @@ export const ThematiqueData: ThematiqueType[] = [
     title: "Voiture intelligente",
     description:
       "Une voiture qui se conduit toute seule, te parle et aide à éviter les accidents pour voyager en toute sécurité !",
-    image: image_thematique_1, // Replace with actual image URL
-    imageBgColor: "#d2b0ff", // Replace with actual background color
+    image: image_thematique_1,
+    imageBgColor: "#d2b0ff",
   },
   {
     title: "Ville intelligente",
     description:
       "L’enfant explore les tendances da la technologie et leurs impacts sur sa ville. Par exemple, il découvre et programme sa première voiture autonome et contrôle les feux de signalisation.",
-    image: image_thematique_2, // Replace with actual image URL
-    imageBgColor: "#f0b7a6", // Replace with actual background color
+    image: image_thematique_2,
+    imageBgColor: "#f0b7a6",
   },
   {
     title: "Maison intelligente",
     description:
       "L’enfant découvre les technologies de nouvelle génération qui sont installées dans la maison pour la rendre plus smart et plus sécurisées.",
-    image: image_thematique_3, // Replace with actual image URL
-    imageBgColor: "#f7b0ca", // Replace with actual background color
+    image: image_thematique_3,
+    imageBgColor: "#f7b0ca",
   },
   {
     title: "Usine intelligente",
     description:
       "L’enfant découvre les différentes utilisations de la robotique dans l’industrie en l’occurrence la chaîne automatique, le scanner, le bras qui déplace les objets, le chariot élévateurs, etc.",
-    image: image_thematique_4, // Replace with actual image URL
-    imageBgColor: "#adc7ed", // Replace with actual background color
+    image: image_thematique_4,
+    imageBgColor: "#adc7ed",
   },
   {
     title: "Agriculture intelligente",
     description:
       "Apprendre à utiliser des outils pour aider les plantes à mieux pousser.",
-    image: image_thematique_5, // Replace with actual image URL
-    imageBgColor: "#d2b0ff", // Replace with actual background color
+    image: image_thematique_5,
+    imageBgColor: "#d2b0ff",
   },
   {
     title: "Forêts connectées",
     description:
       "Utiliser des capteurs pour surveiller les arbres et protéger les forêts.",
-    image: image_thematique_6, // Replace with actual image URL
-    imageBgColor: "#f0b7a6", // Replace with actual background color
+    image: image_thematique_6,
+    imageBgColor: "#f0b7a6",
   },
   {
     title: "Santé connectée",
     description:
       "Découvrir comment la technologie peut aider à soigner les malades.",
-    image: image_thematique_7, // Replace with actual image URL
-    imageBgColor: "#f7b0ca", // Replace with actual background color
+    image: image_thematique_7,
+    imageBgColor: "#f7b0ca",
   },
   {
     title: "Art numérique",
     description:
       "Créer des dessins et des objets grâce aux ordinateurs et aux imprimantes 3D.",
-    image: image_thematique_8, // Replace with actual image URL
-    imageBgColor: "#adc7ed", // Replace with actual background color
+    image: image_thematique_8,
+    imageBgColor: "#adc7ed",
   },
   {
     title: "Espace et astronomie",
     description:
       "Explorer les étoiles et les planètes en construisant des maquettes et des robots.",
-    image: image_thematique_9, // Replace with actual image URL
-    imageBgColor: "#d2b0ff", // Replace with actual background color
+    image: image_thematique_9,
+    imageBgColor: "#d2b0ff",
   },
   {
     title: "Drones intelligents",
     description:
       "Apprends comment les drones volent dans le ciel pour prendre des photos, livrer des colis ou surveiller des endroits, tout en étant contrôlés à distance",
-    image: image_thematique_10, // Replace with actual image URL
-    imageBgColor: "#f7b0ca", // Replace with actual background color
+    image: image_thematique_10,
+    imageBgColor: "#f7b0ca",
   },
   {
     title: "Énergies renouvelables",
     description:
       "Construire des modèles qui fonctionnent avec le soleil, le vent ou l’eau.",
-    image: image_thematique_11, // Replace with actual image URL
-    imageBgColor: "#adc7ed", // Replace with actual background color
+    image: image_thematique_11,
+    imageBgColor: "#adc7ed",
   },
   {
     title: "Climat et météo",
     description:
       "Comprendre le temps qu’il fait et construire des outils pour mesurer la pluie, le vent et le soleil.",
-    image: image_thematique_12, // Replace with actual image URL
-    imageBgColor: "#f0b7a6", // Replace with actual background color
+    image: image_thematique_12,
+    imageBgColor: "#f0b7a6",
   },
   {
     title: "Robots amusants",
     description:
       "Construire des petits robots qui bougent, parlent ou suivent des lignes.",
-    image: image_thematique_13, // Replace with actual image URL
-    imageBgColor: "#f7b0ca", // Replace with actual background color
+    image: image_thematique_13,
+    imageBgColor: "#f7b0ca",
   },
   {
     title: "Jeux éducatifs",
     description: "Créer des jeux interactifs pour apprendre tout en s’amusant.",
-    image: image_thematique_14, // Replace with actual image URL
-    imageBgColor: "#adc7ed", // Replace with actual background color
+    image: image_thematique_14,
+    imageBgColor: "#adc7ed",
   },
   {
     title: "Oceans et protection",
     description:
       "Découvrir les secrets des océans et comment les protéger avec des outils simples.",
-    image: image_thematique_15, // Replace with actual image URL
-    imageBgColor: "#d2b0ff", // Replace with actual background color
+    image: image_thematique_15,
+    imageBgColor: "#d2b0ff",
   },
   {
     title: "Articulation artificielle",
     description:
       "Découvre comment la technologie aide à créer des bras, jambes ou autres parties du corps qui bougent, un peu comme des robots, pour aider les personnes à se déplacer.",
-    image: image_thematique_16, // Replace with actual image URL
-    imageBgColor: "#f7b0ca", // Replace with actual background color
+    image: image_thematique_16,
+    imageBgColor: "#f7b0ca",
   },
 ];
 

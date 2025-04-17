@@ -92,7 +92,7 @@ const Curricula = () => {
                             <Image className="absolute -right-8 -top-8 w-[60px]" src={image_4} alt="" />
                             <h1 className="border-4 border-violet-800 rounded-full max-w-[650px] w-full px-6 py-2 text-center text-muted-foreground
                                 text-[0.75rem] sm:text-sm md:text-base lg:text-[1.019rem] font-bold">
-                                {t("subtext")}
+                                {t("text")}
                             </h1>
                             </div>
                         </div>

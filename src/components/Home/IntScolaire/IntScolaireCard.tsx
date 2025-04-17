@@ -10,7 +10,7 @@ const IntScolaireCard = ({ item: { Icon, ...rest } }: { item: IntScolaireType })
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="border p-8 rounded-2xl space-y-6 w-fit hover:bg-violet-500 font-Poppins hover:text-white group duration-500"
+            className="border p-8 rounded-2xl space-y-6 w-full min-h-[249px] md:min-h-[226px]  hover:bg-violet-500 font-Poppins hover:text-white group duration-500"
             >
             <h2 className="font-bold lg:text-2xl text-lg flex gap-3 items-center">
                 <span

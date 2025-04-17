@@ -12,6 +12,7 @@ import Image from "next/image"
 import robot_2 from "/public/images/Home/curricula/robot_2.png"
 import image_4 from "/public/images/Home/curricula/image_4.png"
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 const Thematique = () => {
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
@@ -21,6 +22,7 @@ const Thematique = () => {
 
     const slidesToScroll = isSmallScreen ? 1 : isMediumScreen ? 2 : 4;
 
+    const t = useTranslations("home.thematique")
     useEffect(() => {
         if (!api) {
             return
@@ -40,7 +42,7 @@ const Thematique = () => {
                 variants={FadeUp(.2)}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-6xl text-4xl text-center">Smart Workshops Project</motion.h1>
+                viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-6xl text-4xl text-center">{t("title")}</motion.h1>
             <Carousel
                 opts={{
                     loop: true,
@@ -54,7 +56,12 @@ const Thematique = () => {
 
                     {ThematiqueData.map((card, index) => (
                         <CarouselItem className="xl:basis-1/4 md:basis-1/2  md:pl-6" key={index}>
-                            <ThematiqueCard item={card} />
+                            <ThematiqueCard item=
+                            {{...card,
+                                title: t(`items.${index}.title`),
+                                description: t(`items.${index}.description`)
+
+                            }} />
                         </CarouselItem>
                     ))}
                 </CarouselContent>
@@ -68,7 +75,7 @@ const Thematique = () => {
                         <Link
                         href={"/Smart-Workshops-Project"}
                         className="!w-fit btn btn-violet-outline mt-6 md:mt-0 mx-auto md:mx-0">
-                            Savoir <Plus className="ml-2"/>
+                            {t("see_btn")} <Plus className="ml-2"/>
                         </Link>
 
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
@@ -83,7 +90,7 @@ const Thematique = () => {
                             <Image className="absolute -right-8 -top-8 w-[60px]" src={image_4} alt="" />
                             <h1 className="border-4 border-violet-800 rounded-full max-w-[650px] w-full px-6 py-2 text-center text-muted-foreground
                                 text-[0.75rem] sm:text-sm md:text-base lg:text-[1.019rem] font-bold">
-                                Une série de 10 à 20 Smart Workshops, axée sur la réalisation d&apos;un projet concret inspiré par un thème spécifique
+                                {t("text")}
                             </h1>
                             </div>
                         </div>
