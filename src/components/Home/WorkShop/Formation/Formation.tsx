@@ -3,8 +3,8 @@ import { FadeUp } from '@/lib/animations';
 import { motion } from 'framer-motion';
 import FormationCard from './FormationCard';
 import { Plus } from 'lucide-react';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 const Formation = () => {
 const t = useTranslations("home.formation")
     return (

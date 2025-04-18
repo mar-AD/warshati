@@ -7,8 +7,10 @@ import image_2 from "/public/images/Blog/articles/article_4.jpg";
 import image_3 from "/public/images/Blog/articles/article_1.jpg";
 import green_cercle from "/public/images/SmartEducationPlatform/green.png";
 import violet_cercle from "/public/images/SmartEducationPlatform/violet.png";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
+    const t= useTranslations("smartEducationPlatform.hero")
     return (
         <div className="px-5 sm:px-14 md:px-14 lg:px-14 pb-28 max-md:pb-14">
             <div className="pt-56 relative">
@@ -25,7 +27,7 @@ const Hero = () => {
                         className="lg:mb-4 mb-2">
                         <h1 className={`text-[#2F327D] font-bold text-center font-Vazirmatn 
                             lg:text-[2.75rem] md:text-3xl text-xl`}>
-                            Warshati Smart Education Platform
+                            {t("title")}
                         </h1>
                     </motion.div>
                     <motion.h1
@@ -33,7 +35,7 @@ const Hero = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }} className="text-slate-600 font-Poppins  text-center lg:text-[24px] md:text-[20px] text-[16px] font-bold  !leading-relaxed">
-                            Un Écosystème d&apos;Apprentissage Numérique Innovant
+                            {t("subTitle")}
                     </motion.h1>
                     
                 </div>
@@ -54,7 +56,7 @@ const Hero = () => {
 
                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-[20px]">
                         <button className="btn text-white bg-transparent hover:bg-white/10 transition-all duration-300 px-6 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-5 md:py-6 lg:py-9 !font-thin !rounded-full text-base sm:text-lg md:text-xl lg:text-[22px] mt-20">
-                            Se Connecter
+                            {t("connect_btn")}
                         </button>
                         </div>
                     </motion.div>
@@ -75,7 +77,7 @@ const Hero = () => {
 
                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-[20px]">
                         <button className="btn btn-violet bg-white/90 text-violet-800 transition-all duration-300 px-6 sm:px-8 md:px-10 lg:px-7 py-4 sm:py-5 md:py-6 lg:py-9 !font-thin !rounded-full text-base sm:text-lg md:text-xl lg:text-[22px] mt-20">
-                            Inscrivez-vous maintenant
+                            {t("inscrivez_btn")}
                         </button>
                         </div>
                     </motion.div>

@@ -11,8 +11,8 @@ import { motion } from "framer-motion";
 import Image from "next/image"
 import robot_2 from "/public/images/Home/curricula/robot_2.png"
 import image_4 from "/public/images/Home/curricula/image_4.png"
-import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 const Thematique = () => {
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)

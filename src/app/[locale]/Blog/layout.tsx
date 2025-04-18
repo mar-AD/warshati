@@ -4,18 +4,17 @@
     import Hero from "@/components/Blog/Hero/Hero";
     import articleData from "@/data/articles.json";
     import { socials } from "@/lib/data";
-    import Link from "next/link";
     import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
     import Image from "next/image";
     import useMediaQuery from "@/lib/UseMediaQuery";
     import { cn } from "@/lib/utils";
-    import { useLocale, useTranslations } from "next-intl";
+    import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
     export default function BlogLayout({ children }: { children: ReactNode }) {
     const isMediumScreen = useMediaQuery("(max-width: 1000px)");
     const t = useTranslations("blog");
     const tArticles = useTranslations("blog.articles");
-    const locale = useLocale();
 
     const translatedArticles = articleData.map((article) => ({
         ...article,
@@ -104,7 +103,6 @@
                             <p className="text-xs text-slate-400">{article.date}</p>
                             <Link
                             href={`/Blog/${article.slug}`}
-                            locale={locale}
                             className="btn !rounded-lg !text-xs !h-9 btn-violet-outline"
                             >
                             {t("rest.savoirPlus")}

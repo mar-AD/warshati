@@ -2,9 +2,9 @@
 import IntScolaireCard from "./IntScolaireCard"
 import { IntScolaireData } from "@/lib/data"
 import { Plus } from "lucide-react"
-import Link from "next/link"
 import DigitalLabExp from "../DigitalLab/DigitalLabExp"
 import { useTranslations } from "next-intl"
+import { Link } from "@/i18n/navigation"
 const IntScolaire = () => {
 const t = useTranslations("home.intScolaire")
     return (

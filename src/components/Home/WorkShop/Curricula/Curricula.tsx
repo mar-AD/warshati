@@ -11,8 +11,8 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 import robot_3 from "/public/images/Home/curricula/robot_3.png"
 import image_4 from "/public/images/Home/curricula/image_4.png"
-import Link from "next/link"
 import { useTranslations } from "next-intl"
+import { Link } from "@/i18n/navigation"
 const Curricula = () => {
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)

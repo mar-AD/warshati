@@ -15,8 +15,8 @@ import robot from "/public/images/Home/digitalLab/robot1.png"
 import bubble from "/public/images/Home/digitalLab/bubble.png"
 import { motion } from "framer-motion"
 import { FadeLeft, FadeRight, FadeUp } from "@/lib/animations"
-import Link from "next/link"
 import { useTranslations } from "next-intl"
+import { Link } from "@/i18n/navigation"
 const DigitalLab = () => {
     const t = useTranslations("home.digital_lab");
     return (

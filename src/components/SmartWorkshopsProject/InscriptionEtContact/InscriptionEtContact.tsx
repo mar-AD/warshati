@@ -1,5 +1,4 @@
 "use client"
-import Link from "next/link"
 import { contacts, socials } from "@/lib/data"
 import { FadeOut, FadeUp } from "@/lib/animations"
 import { motion } from "framer-motion"
@@ -8,6 +7,7 @@ import Image from "next/image"
 import flight from "/public/images/Home/hero/flight.png";
 import contact from "/public/images/contact.png";
 import useMediaQuery from "@/lib/UseMediaQuery"
+import { Link } from "@/i18n/navigation"
 
 const InscriptionEtContact = () => {
     const isScreen = useMediaQuery("(min-width: 1025px)");

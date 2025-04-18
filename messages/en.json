@@ -765,5 +765,14 @@
         }
       }
     }
+  },
+  "smartEducationPlatform": {
+    "hero": {
+      "title": "Warshati Smart Education Platform",
+      "subTitle": "An Innovative Digital Learning Ecosystem",
+      "connect_btn": "Log In",
+      "inscrivez_btn": "Sign Up Now"
+    }
   }
+
 }

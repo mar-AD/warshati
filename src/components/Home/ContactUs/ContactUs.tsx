@@ -1,10 +1,10 @@
 "use client"
-import Link from "next/link"
 import { contacts, socials } from "@/lib/data"
 import ContactForm from "./ContactForm"
 import { FadeOut, FadeUp } from "@/lib/animations"
 import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
+import { Link } from "@/i18n/navigation"
 const ContactUs = () => {
     const t = useTranslations("home.contact_section");
     return (

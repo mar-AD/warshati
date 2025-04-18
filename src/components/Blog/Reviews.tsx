@@ -3,9 +3,9 @@ import { Star } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 import avatar from "/public/images/Blog/avatar.png"
-import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useTranslations } from 'next-intl'
+import { usePathname } from '@/i18n/navigation'
 
 const Reviews = () => {
     const reviews = [

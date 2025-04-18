@@ -765,5 +765,14 @@
         }
       }
     }
+  },
+  "smartEducationPlatform": {
+    "hero": {
+      "title": "منصة ورشتي للتعليم الذكي",
+      "subTitle": "نظام بيئي مبتكر للتعلم الرقمي",
+      "connect_btn": "تسجيل الدخول",
+      "inscrivez_btn": "سجّل الآن"
+    }
   }
+
 }

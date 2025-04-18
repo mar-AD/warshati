@@ -1,11 +1,10 @@
 "use client"
 import { cn } from "@/lib/utils";
 import { NavType } from "@/lib/types";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { links } from "@/lib/data";
-import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 
 const Navbar = ({showMenu}:{showMenu:boolean}) => {
     const [data,setData] =useState<NavType[]>(links);
@@ -27,7 +26,7 @@ const Navbar = ({showMenu}:{showMenu:boolean}) => {
             )}>
                 {data.map((item, index) => (
                     <li key={index}>
-                        <Link href={item.link} locale={locale} className={cn("px-3 py-1.5 text-xl rounded-md transition-colors duration-300",
+                        <Link href={item.link} className={cn("px-3 py-1.5 text-xl rounded-md transition-colors duration-300",
                             item.selected||pathname.toLowerCase()==="/"+item.label.toLowerCase() ? "text-violet-600 font-bold":"hover:text-stone-800"
                         )}>
                             {t(item.label)}

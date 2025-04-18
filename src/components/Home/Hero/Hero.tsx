@@ -5,9 +5,9 @@ import pen_line from "/public/images/Home/hero/pen_line.png"
 import HeroImage from "./HeroImage"
 import { motion } from "framer-motion"
 import { FadeOut, FadeUp } from "@/lib/animations"
-import Link from "next/link"
 import VideoModal from "./VideoModal"
 import { useTranslations } from 'next-intl';
+import { Link } from "@/i18n/navigation"
 const Hero = () => {
     const  t  = useTranslations('home');
     return (

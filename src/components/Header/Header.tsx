@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import Link from "next/link"
 import warshati_logo from "/public/images/logos/warshati_logo.png"
 import Navbar from "./Navbar"
 import AuthButton from "./AuthButton"
@@ -9,6 +8,7 @@ import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion"
 import { FadeDown } from "@/lib/animations"
+import { Link } from "@/i18n/navigation"
 const Header = () => {
     const [showMenu, setShowMenu] = useState<boolean>(false)
     const ref=useRef<HTMLDivElement>(null)
