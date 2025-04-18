@@ -544,12 +544,12 @@
       "text": "Since I started using Smart Workshops, my students show real enthusiasm for science and technology!",
       "publie": "Published on",
       "comment": "3 comments",
-      "partager": "Share"
+      "partager": "Share",
+      "savoirPlus": "Learn more"
     },
 
-    "articles": [
-      {
-        "slug": "article_1",
+    "articles": {
+      "article_1": {
         "article": "Article 1",
         "title": "How Smart Workshops Are Transforming Student Learning",
         "date": "January 14, 2025",
@@ -563,8 +563,7 @@
           ]
         }
       },
-      {
-        "slug": "article_2",
+      "article_2": {
         "article": "Article 2",
         "title": "Top 5 STEAM Projects to Do with Your Students",
         "date": "January 14, 2025",
@@ -591,8 +590,7 @@
           ]
         }
       },
-      {
-        "slug": "article_3",
+      "article_3": {
         "article": "Article 3",
         "title": "Artificial Intelligence in Moroccan Classrooms: Opportunities and Challenges",
         "date": "January 14, 2025",
@@ -611,8 +609,7 @@
           ]
         }
       },
-      {
-        "slug": "article_4",
+      "article_4": {
         "article": "Article 4",
         "title": "Coding for Kids: Where to Start and Why It’s Crucial",
         "date": "January 14, 2025",
@@ -634,8 +631,7 @@
           ]
         }
       },
-      {
-        "slug": "article_5",
+      "article_5": {
         "article": "Article 5",
         "title": "The Impact of Interactive Models on Young Learners' Scientific Understanding",
         "date": "January 14, 2025",
@@ -652,8 +648,7 @@
           ]
         }
       },
-      {
-        "slug": "article_6",
+      "article_6": {
         "article": "Article 6",
         "title": "21st-Century Skills Developed Through STEAM Programs",
         "date": "January 14, 2025",
@@ -669,8 +664,7 @@
           "head_2_content": "In a STEAM workshop, students built a water filtration system combining chemistry, engineering, and biology."
         }
       },
-      {
-        "slug": "article_7",
+      "article_7": {
         "article": "Article 7",
         "title": "Why Integrate IoT in Education?",
         "date": "January 14, 2025",
@@ -689,8 +683,7 @@
           ]
         }
       },
-      {
-        "slug": "article_8",
+      "article_8": {
         "article": "Article 8",
         "title": "Gamification in Education: A Powerful Tool for Engagement",
         "date": "January 14, 2025",
@@ -707,8 +700,7 @@
           "head_3_content": "An interactive math quiz lets students progress in a game while reinforcing their knowledge."
         }
       },
-      {
-        "slug": "article_9",
+      "article_9": {
         "article": "Article 9",
         "title": "STEAM for Inclusion: Making Technology Accessible to All",
         "date": "January 14, 2025",
@@ -723,8 +715,7 @@
           "head_2_content": "Encouraging diversity in scientific and technical careers."
         }
       },
-      {
-        "slug": "article_10",
+      "article_10": {
         "article": "Article 10",
         "title": "Why Integrate IoT in Education?",
         "date": "January 14, 2025",
@@ -742,8 +733,7 @@
           ]
         }
       },
-      {
-        "slug": "article_11",
+      "article_11": {
         "article": "Article 11",
         "title": "Why Integrate IoT in Education?",
         "date": "January 14, 2025",
@@ -758,8 +748,7 @@
           "head_2_content": "AI offers a fresh perspective and inspires unique ideas."
         }
       },
-      {
-        "slug": "article_12",
+      "article_12": {
         "article": "Article 12",
         "title": "Building a STEAM Culture in Moroccan Schools",
         "date": "January 14, 2025",
@@ -775,6 +764,6 @@
           "head_2_content": "Motivated, curious students ready to face future challenges."
         }
       }
-    ]
+    }
   }
 }

@@ -203,6 +203,7 @@ export type Article = {
   date: string;
   content: {
     intro: string;
+    theoryAndPractice?: string;
     head?: string;
     head_content?: string[];
     head_1?: string;
