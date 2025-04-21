@@ -1,47 +1,64 @@
-import { useState, useEffect } from "react";
-import { CommencerCards } from "@/lib/data";
-import Card from "../Cards";
-import { motion } from "framer-motion";
-import { FadeUp } from "@/lib/animations";
+"use client"
+
+import { useState, useEffect } from "react"
+import { useTranslations } from "next-intl"
+import { CommencerCards } from "@/lib/data"
+import Card from "../Cards"
+import { motion } from "framer-motion"
+import { FadeUp } from "@/lib/animations"
 
 interface SixthPhaseProps {
-  setScreenIndex: (index: number) => void;  
-  setLeftText: (text: string) => void;
-  setOverflowVisible: (visible: boolean) => void;
+  setScreenIndex: (index: number) => void
+  setLeftText: (text: string) => void
+  setOverflowVisible: (visible: boolean) => void
 }
 
+const SixthPhase = ({
+  setScreenIndex,
+  setLeftText,
+  setOverflowVisible
+}: SixthPhaseProps) => {
+  const [currentCardIndex, setCurrentCardIndex] = useState(0)
+  const t = useTranslations("commencer")
 
-const SixthPhase = ({ setScreenIndex, setLeftText, setOverflowVisible }: SixthPhaseProps) => {
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const translatedCards = t.raw("commencerCards") as { leftText: string; cardText: string }[]
+
+  const mergedCards = translatedCards.map((text, i) => ({
+    ...text,
+    icon: CommencerCards[i]?.icon
+  }))
+
+  console.log(mergedCards)
 
   useEffect(() => {
-    setLeftText(CommencerCards[currentCardIndex].leftText || "");
-    setOverflowVisible(true);
+    const current = mergedCards[currentCardIndex]
 
-    const cardTimeout = setTimeout(() => {
-      if (currentCardIndex < CommencerCards.length - 1) {
-        setCurrentCardIndex((prev) => prev + 1);
+    setLeftText(current.leftText || "")
+    setOverflowVisible(true)
+
+    const timer = setTimeout(() => {
+      if (currentCardIndex < mergedCards.length - 1) {
+        setCurrentCardIndex((prev) => prev + 1)
       } else {
-        setOverflowVisible(false);
-        setScreenIndex(7);
+        setOverflowVisible(false)
+        setScreenIndex(7)
       }
-    }, 15000);
+    }, 15000)
 
-    return () => clearTimeout(cardTimeout);
-  }, [currentCardIndex, setScreenIndex, setLeftText, setOverflowVisible]);
+    return () => clearTimeout(timer)
+  }, [currentCardIndex])
 
   return (
     <motion.div
-    key={currentCardIndex}
-    variants={FadeUp(2)}
-    initial="initial"
-    animate="animate"
-    exit="initial"
-    className=""
-  >
-    <Card cardData={CommencerCards[currentCardIndex]} />
-  </motion.div>
+      key={currentCardIndex}
+      variants={FadeUp(2)}
+      initial="initial"
+      animate="animate"
+      exit="initial"
+    >
+      <Card cardData={mergedCards[currentCardIndex]} />
+    </motion.div>
   )
-};
+}
 
-export default SixthPhase;
+export default SixthPhase

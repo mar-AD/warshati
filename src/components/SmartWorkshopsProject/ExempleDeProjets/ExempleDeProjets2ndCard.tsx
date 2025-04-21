@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { FormationType } from "@/lib/types";
+import { ParcoursType } from "@/lib/types";
 import { FadeRight } from "@/lib/animations";
 import { motion } from "framer-motion";
 
-const ExempleDeProjets2ndCard = ({ index, item }: { index: number, item: FormationType }) => {
+const ExempleDeProjets2ndCard = ({ index, item }: { index: number, item: ParcoursType }) => {
     const cardColors = [
         "bg-customCard-card1",
         "bg-customCard-card2",

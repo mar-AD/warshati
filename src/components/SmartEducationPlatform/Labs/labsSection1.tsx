@@ -6,8 +6,10 @@ import { motion } from "framer-motion"
 import { FadeUp } from "@/lib/animations"
 import Image from "next/image"
 import image_1 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-10.png"
+import { useTranslations } from "next-intl"
 
 const FirstLibsSection = () => {
+    const t = useTranslations("smartEducationPlatform.labs")
     return (
         <div className="flex flex-col items-center justify-center relative gap-y-3 px-5 sm:px-14 md:px-14 lg:px-36">
 
@@ -26,15 +28,21 @@ const FirstLibsSection = () => {
                 className={`text-violet-800 font-bold text-center font-Vazirmatn 
                 lg:text-5xl md:text-3xl text-xl`}
             >
-                AI-Kids Lab
+                {t("title_1")}
             </h1>
             </motion.div>
 
             <div className="pt-28 md:pt-32 lg:pt-44 relative">
             <div className="flex flex-wrap justify-center gap-24">
-                {labsData[0].map((item, index) => (
-                <LabsCards key={index} item={item} />
-                ))}
+            {labsData[0].map((item, index) => (
+            <LabsCards
+                key={index}
+                item={{
+                ...item, 
+                text: t(`labsData.${0}.${index}`),
+                }}
+            />
+            ))}
             </div>
             </div>
     

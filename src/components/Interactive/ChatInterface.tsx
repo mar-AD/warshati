@@ -1,10 +1,8 @@
-
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import ProgressBar from "./ProgressBar";
 import ThirdPhase from "./ChatPhases/Phase3/PhaseThree";
-import { CommencerDataSets } from "@/lib/data";
 import Image from "next/image";
 import waveing_robot from "../../../public/images/Commencer/waveing-robot2.gif";
 import image from "../../../public/images/Commencer/image.png";
@@ -20,13 +18,17 @@ import PhaseFifth from "./ChatPhases/Phase5/PhaseFifth";
 import SixthPhase from "./ChatPhases/Phase6/SixthPhase";
 import SeventhPhase from "./ChatPhases/Phase7/SeventhPhase";
 import warchati from "../../../public/images/Commencer/w.png";
+import { useTranslations } from "next-intl";
 
 const ChatInterface = () => {
-  const [leftText, setLeftText] = useState("Hi, I’m Wsep...");
+  const t =useTranslations("commencer")
+  const [leftText, setLeftText] = useState(t("greeting"));
   const [screenIndex, setScreenIndex] = useState(0);
   const [showLeft, setShowLeft] = useState(true);
   const [screenWidth, setScreenWidth] = useState(1024);
   const [overflowVisible, setOverflowVisible] = useState(false);
+
+  
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -41,11 +43,11 @@ const ChatInterface = () => {
 
   useEffect(() => {
     const firstTimeout = setTimeout(() => {
-      setLeftText("Let’s build a learning path just for you");
+      setLeftText(t("greeting_1"));
     }, 5000);
 
     const secondTimeout = setTimeout(() => {
-      setLeftText(CommencerDataSets[0].question);
+      setLeftText(t("commencerDataSets.0.question"));
       setScreenIndex(1);
     }, 10000);
 
@@ -55,9 +57,32 @@ const ChatInterface = () => {
     };
   }, []);
 
+  const [containerHeight, setContainerHeight] = useState("8rem")
+const textMeasureRef = useRef<HTMLParagraphElement>(null)
+
+useLayoutEffect(() => {
+  if (textMeasureRef.current) {
+    const el = textMeasureRef.current
+    const computedStyle = window.getComputedStyle(el)
+    const lineHeight = parseFloat(computedStyle.lineHeight)
+    const measuredHeight = el.offsetHeight
+    const lines = Math.round(measuredHeight / lineHeight)
+
+    const isMobile = window.innerWidth < 768
+
+    if (lines >= 4) {
+      setContainerHeight(isMobile ? "10rem" : "12rem")
+    } else if (lines === 3) {
+      setContainerHeight(isMobile ? "8rem" : "10rem")
+    } else {
+      setContainerHeight(isMobile ? "6rem" : "8rem")
+    }
+  }
+}, [leftText])
+
   return (
 
-  <div className="relative p-14 flex flex-col items-center justify-center min-h-screen overflow-hidden max-md:mt-10 ">
+  <div className="relative p-8 flex flex-col items-center justify-center min-h-screen overflow-hidden max-md:mt-10 ">
     <ProgressBar 
       currentStep={screenIndex} 
       totalSteps={8} 
@@ -120,8 +145,25 @@ const ChatInterface = () => {
         className="relative flex flex-col items-center text-center w-full lg:w-auto h-[80%] order-1"
       >
 
-        <div className="relative w-full max-w-[30rem] h-auto">
-          <Image src={image} alt="Main Image" className="w-full h-auto" />
+        <div className="absolute -z-10 opacity-0 pointer-events-none left-0 top-0">
+          <p
+            ref={textMeasureRef}
+            className=" font-bold text-[calc(1vw+0.5rem)] max-md:text-[18px] pl-[15%] pr-[5%] break-words leading-tight "
+          >
+            {leftText}
+          </p>
+        </div>
+
+        <motion.div
+          animate={{ height: containerHeight }}
+          transition={{ duration: 0.3 }}
+          className="relative lg:w-full md:w-full sm:w-full max-w-[30rem] "
+        >
+          <Image
+            src={image}
+            alt="Main Image"
+            className="w-full h-full rounded-xl"
+          />
 
           <motion.p
             key={leftText}
@@ -129,13 +171,13 @@ const ChatInterface = () => {
             initial="initial"
             animate="animate"
             exit="initial"
-            className="absolute inset-0 flex items-center justify-start text-violet-700 font-bold text-[calc(1vw+0.5rem)] max-md:text-[18px] pl-[15%] pr-[5%] break-words leading-tight text-left">
+            className="absolute inset-0 flex items-center justify-start text-violet-700 font-bold text-[calc(1vw+0.5rem)] max-md:text-[18px] pl-[15%] pr-[5%] break-words leading-tight text-left"
+          >
             {leftText}
           </motion.p>
-        </div>
-      </motion.div>
-      
-      
+        </motion.div>
+
+      </motion.div>   
       )}
 
       <motion.div

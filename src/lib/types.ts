@@ -81,7 +81,7 @@ export type QuestionType={
 }
 export type TestimonialsType={
   name: string;
-  description:string
+  description?:string
   image:StaticImageData
   delay:number
 }

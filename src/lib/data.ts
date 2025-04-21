@@ -362,7 +362,7 @@ export const languages: LanguageType[] = [
   { code: "FR", name: "Français", flag: "fr" },
   { code: "AR", name: "العربية", flag: "ma" },
   { code: "EN", name: "English", flag: "gb" },
-  { code: "ESP", name: "Español", flag: "es" },
+  { code: "ES", name: "Español", flag: "es" },
 ];
 
 export const CommencerCards: CommencerCardType[] = [
@@ -384,7 +384,7 @@ export const ThirdPhaseData: ThirdPhaseDataType = {
     cardText: "Young minds use Warshati to sharpen their problem-solving skills and grow their knowledge.",
     image: commencer_12,
     icon: commencer_12,
-    timeout: 7000, 
+    timeout: 15000, 
   },
 
   choices: [
@@ -396,7 +396,7 @@ export const ThirdPhaseData: ThirdPhaseDataType = {
         cardText: "Warshati's tailored, interactive lessons with hands-on practice accelerate learning 6x faster than videos",
         icon: commencer_18,
         image: commencer_15,
-        timeout: 7000,
+        timeout: 15000,
         finalCards: [
           { text: "Fundamentals", icon: commencer_24},
           { text: "Data Science", icon: commencer_25 },
@@ -412,7 +412,7 @@ export const ThirdPhaseData: ThirdPhaseDataType = {
         cardText: "Warshati's tailored, interactive lessons with hands-on practice accelerate learning 6x faster than videos",
         icon: commencer_18,
         image: commencer_17,
-        timeout: 7000,
+        timeout: 15000,
         finalCards: [
           { text: "Technology & Computing", icon: commencer_28 },
           { text: "Science & Engineering", icon: commencer_29 },
@@ -428,7 +428,7 @@ export const ThirdPhaseData: ThirdPhaseDataType = {
         cardText: "Warshati's tailored, interactive lessons with hands-on practice accelerate learning 6x faster than videos",
         icon: commencer_18,
         image: commencer_16,
-        timeout: 7000,
+        timeout: 15000,
         finalCards: [
           { text: "Information & Data", icon: commencer_32 },
           { text: "Creating Digital Content", icon: commencer_33 },
@@ -1120,29 +1120,29 @@ export const questionsData: QuestionType[] = [
 export const testimonialsData: TestimonialsType[] = [
   {
     name: "Mousol L",
-    description:
-      "Grâce au AI Lab de mon école, j'ai pu créer une application qui déteste les émotions dans des images. Cela m'a inspiré à poursuivre une carrière en science des données.",
+    // description:
+    //   "Grâce au AI Lab de mon école, j'ai pu créer une application qui déteste les émotions dans des images. Cela m'a inspiré à poursuivre une carrière en science des données.",
     image: testimonials_1,
     delay: 0.2,
   },
   {
     name: "Nadia Radi",
-    description:
-      "Levem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    // description:
+    //   "Levem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: testimonials_2,
     delay: 0.3,
   },
   {
     name: "Fatima Zahra M",
-    description:
-      "Levem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    // description:
+    //   "Levem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: testimonials_3,
     delay: 0.4,
   },
   {
     name: "Samba Krat",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    // description:
+    //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: testimonials_4,
     delay: 0.5,
   },
@@ -1628,6 +1628,26 @@ export const presontationData1_1:Presentation1Type[] = [
     ],
     [
       {
+        title: "Domotique & IoT",
+        description: "Concevoir un système connecté pour gérer l’éclairage et la température",
+        image: SmartWProject_14,
+        delay: 0.2,
+      },
+      {
+        title: "Intelligence Artificielle",
+        description: "Créer un assistant vocal intelligent",
+        image: SmartWProject_15,
+        delay: 0.3,
+      },
+      {
+        title: "Énergies renouvelables",
+        description: "Simuler une gestion énergétique efficace avec des panneaux solaires.",
+        image: SmartWProject_16,
+        delay: 0.4,
+      },
+    ],
+    [
+      {
         title: "Production d’énergie verte ",
         description: "Création de panneaux solaires et d’éoliennes miniatures.",
         image: SmartWProject_17,
@@ -1646,27 +1666,6 @@ export const presontationData1_1:Presentation1Type[] = [
         delay: 0.4,
       },
     ]
-  ];
-
-  export const ExempleDeProjetsCardData_2: FormationType[] = [
-    {
-      title: "Domotique & IoT",
-      description: "Concevoir un système connecté pour gérer l’éclairage et la température",
-      image: SmartWProject_14,
-      delay: 0.2,
-    },
-    {
-      title: "Intelligence Artificielle",
-      description: "Créer un assistant vocal intelligent",
-      image: SmartWProject_15,
-      delay: 0.3,
-    },
-    {
-      title: "Énergies renouvelables",
-      description: "Simuler une gestion énergétique efficace avec des panneaux solaires.",
-      image: SmartWProject_16,
-      delay: 0.4,
-    },
   ];
 
   export const approchePedagogiqueData:Presentation1Type[] = [

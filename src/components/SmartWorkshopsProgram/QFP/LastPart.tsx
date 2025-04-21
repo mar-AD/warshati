@@ -7,6 +7,7 @@ import article_1 from "/public/images/Blog/articles/article_1.jpg"
 import circles from "/public/images/Home/digitalLab/circles.png"
 import arrow from "/public/images/Formation/formation-arrow.png"
 import useMediaQuery from "@/lib/UseMediaQuery";
+import { useTranslations } from "next-intl";
 
 const LastPart = () => {
     const isExtraSmallScreen = useMediaQuery("(max-width: 750px)");
@@ -15,6 +16,7 @@ const LastPart = () => {
     const isLargeScreen = useMediaQuery("(min-width: 1400px) and (max-width: 1550px)");
     const isExtraLargeScreen = useMediaQuery("(min-width: 1550px) and (max-width: 1800px)");
     const isExtraExtraLargeScreen = useMediaQuery("(min-width: 1800px)");
+    const t = useTranslations("smartWorkshopsProgram.faq")
 
 return (
     <div
@@ -89,7 +91,7 @@ return (
                     ${isLargeScreen && !isMediumScreen ? "text-[16px]" : ""}
                     ${isExtraExtraLargeScreen ? "text-[18px]" : ""}
                     `}>
-                        Accédez aux formations maintenant !
+                        {t("text")}
                     </p>
                 </div>
                 <Image 

@@ -4,14 +4,15 @@ import Image from "next/image";
 import flight from "/public/images/Home/hero/flight.png";
 import { motion } from "framer-motion";
 import { FadeUp } from "@/lib/animations";
-import { nosProgrammesObjective } from "@/lib/data";
-import ProgramSection, { styleVioletText } from "./ProgramSections";
-
+// import { nosProgrammesObjective } from "@/lib/data";
+import ProgramSection from "./ProgramSections";
+import { useTranslations } from "next-intl";
 
 const Program = () => {
+  const t = useTranslations('smartWorkshopsProgram.program');
   return (
     <>
-      <div className="relative bg-light-gray  px-5 sm:px-14 md:px-14 lg:px-14 pt-[4.5rem] pb-9 max-md:pb-7">
+      <div className="relative bg-light-gray px-5 sm:px-14 md:px-14 lg:px-14 pt-[4.5rem] pb-9 max-md:pb-7">
         <Image
           src={flight}
           alt=""
@@ -25,41 +26,34 @@ const Program = () => {
           viewport={{ once: true }}
           className="font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-6xl text-center font-Poppins"
         >
-          Nos <span className="text-violet-800">Programmes </span>
+          {t.rich('section_title', {
+            highlight: (chunks) => <span className="text-violet-800">{chunks}</span>
+          })}
         </motion.h1>
       </div>
 
       <ProgramSection
         index={0}
-        title={styleVioletText("AI Kids", ["AI"])} 
-        subtitle={styleVioletText("Découverte de l’Intelligence Artificielle ( Exemple d’atelier)", ["l’Intelligence", "Artificielle"])} 
-        key_1="Objectif :"
-        key_2="Activités :"
-        objectiveText={nosProgrammesObjective[0].objective}
-        activities={nosProgrammesObjective[0].Activités}
-        
+        groupKey="1"
+        reverse={false}
+        objectiveText={t('groups.1.content.objectif_text')}
+        activities={t.raw('groups.1.content.activites_list')}
       />
 
       <ProgramSection
         index={1}
-        title={styleVioletText("STEAM Competency", ["STEAM"])}
-        subtitle={styleVioletText("Développer les compétences du futur", ["compétences","du", "futur"])}
-        key_1="Objectif :"
-        key_2="Activités :"
-        objectiveText={nosProgrammesObjective[1].objective}
-        activities={nosProgrammesObjective[1].Activités}
+        groupKey="2"
+        objectiveText={t('groups.2.content.objectif_text')}
+        activities={t.raw('groups.2.content.activites_list')}
         reverse
         bgColor="bg-white"
       />
 
       <ProgramSection
         index={2}
-        title={styleVioletText("Digital Literacy", ["Literacy"])}
-        subtitle={styleVioletText("Maîtriser les bases du numérique ( Exemple d’atelier)", ["Exemple", "d’atelier"])}
-        key_1="Objectif :"
-        key_2="Activités :"
-        objectiveText={nosProgrammesObjective[2].objective}
-        activities={nosProgrammesObjective[2].Activités}
+        groupKey="3"
+        objectiveText={t('groups.3.content.objectif_text')}
+        activities={t.raw('groups.3.content.activites_list')}
         bgColor="bg-light-gray"
       />
     </>

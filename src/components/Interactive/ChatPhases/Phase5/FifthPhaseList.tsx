@@ -21,7 +21,7 @@ const FifthPhaseList = ({ data, onSelect }: CommencerListProps) => {
         {data.map((item, index) => (
             <motion.div
                 key={index}
-                className={`flex flex-col items-center  px-4 py-2 border rounded-3xl transition-all duration-300 hover:cursor-pointer h-[125px]
+                className={`flex flex-col items-center  px-4 py-2 border rounded-3xl transition-all duration-300 hover:cursor-pointer min-h-[82px] text-start
                 ${selectedIndex === index ? "bg-[#A678E3]/30 border-[#A678E3] border-2" : "border-[#A678E3]"}
                 `}
                 onClick={() => handleClick(index, item.reply)}
@@ -29,7 +29,7 @@ const FifthPhaseList = ({ data, onSelect }: CommencerListProps) => {
             >
                 <Image className="lg:w-[50px] lg:h-[50px] max-md:w-8 max-md:h-8" src={item.image} alt={item.text} width={50} height={50} />
         
-                <p className="font-bold text-center lg:text-[18px] md:text-[15px] sm:text-[15px] xm:text-[15px] ">{item.text}</p>
+                <p className="font-bold text-center text-[18px] max-md:text-xs ">{item.text}</p>
             </motion.div>
             ))}
         </div>

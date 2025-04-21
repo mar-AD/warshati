@@ -7,8 +7,10 @@ import { objectifDuProgrammeData, programmesDeFormationData } from "@/lib/data";
 import ProgramCard from "./ProgramCards";
 import Checkbox from "/public/images/Home/digitalLab/Checkbox.png"
 import ProgramSequel from "./ProgramSequel";
+import { useTranslations } from "next-intl";
 
 const Program = () => {
+  const t = useTranslations('formationProfessionnelle.program');
     return (
       <>
         <div className=" relative bg-light-gray px-5 sm:px-14 md:px-14 lg:px-14 pt-[4.5rem] pb-9 max-md:pb-7">
@@ -20,7 +22,9 @@ const Program = () => {
             viewport={{ once: true }} 
             className=" font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-6xl text-center font-Poppins"
             > 
-                Nos Programmes <span className="text-violet-800">de Formation </span>
+                {t.rich('section_title', {
+                  highlight: (chunks) => <span className="text-violet-800">{chunks}</span>
+                })}
             </ motion.h1>
             <div className="pt-32 px-0 md:px-12 lg:px-28">
                 <motion.h1
@@ -30,13 +34,19 @@ const Program = () => {
                 viewport={{ once: true }} 
                 className=" font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-[3.35rem] font-Poppins"
                 > 
-                    <span className="text-violet-800">Objectif </span>du Programme
+                    {t.rich('sub', {
+                      highlight: (chunks) => <span className="text-violet-800">{chunks}</span>
+                    })}
                 </ motion.h1>
             </div>
             {/* section1-------------- */}
             <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start w-full px-0 md:px-12 lg:px-28 pt-10">
                 <div className="w-full lg:w-1/2">
-                <h1 className=" text-slate-600 font-semibold text-[22px] sm:text-[22px] md:text-[20px] lg:text-[26px]">Avec Exemples de <span className="text-violet-500">modules proposés</span></h1>
+                <h1 className=" text-slate-600 font-semibold text-[22px] sm:text-[22px] md:text-[20px] lg:text-[26px]">
+                  {t.rich('title_1', {
+                    highlight: (chunks) => <span className="text-violet-800">{chunks}</span>
+                  })}
+                </h1>
 
                     <motion.ul
                     variants={FadeRight(0.2)}
@@ -44,7 +54,7 @@ const Program = () => {
                     whileInView="animate"
                     viewport={{ once: true }}
                     className="space-y-9 pt-10">
-                    {programmesDeFormationData[0].map((item, i) => (
+                    {t.raw('groups.1.content').map((item:string, i:number) => (
                         <li
                         key={i}
                         className="flex gap-x-3  text-[18px] sm:text-[18px] md:text-[22px] lg:text-[28px] font-medium text-gray-800"
@@ -60,7 +70,11 @@ const Program = () => {
                     {objectifDuProgrammeData[0].map((item, i) => (
                         <ProgramCard 
                         key={i} 
-                        item={item} 
+                        item={{
+                          ...item, 
+                          text: t.raw('cards.0')[i].title,
+                          discreption: t.raw('cards.0')[i].text
+                        }} 
                         isLast={i === objectifDuProgrammeData[0].length - 1} 
                         isSecond={i === 1}
                         isBlackText={false}
@@ -77,7 +91,10 @@ const Program = () => {
                 {objectifDuProgrammeData[1].map((item, i) => (
                   <ProgramCard 
                     key={i} 
-                    item={item} 
+                    item={{
+                      ...item, 
+                      text: t.raw('cards.1')[i]
+                    }} 
                     isLast={i === objectifDuProgrammeData[1].length - 1} 
                     isSecond={i === 1}
                     isBlackText={true}
@@ -89,7 +106,9 @@ const Program = () => {
 
               <div className="w-full lg:w-1/2 order-1 lg:order-2">
                 <h1 className="text-slate-600 font-semibold text-[22px] sm:text-[22px] md:text-[20px] lg:text-[26px]">
-                  Ateliers Interactifs <span className="text-violet-500">(Exemples)</span>
+                {t.rich('title_2', {
+                    highlight: (chunks) => <span className="text-violet-800">{chunks}</span>
+                  })}
                 </h1>
 
                 <motion.ul
@@ -98,7 +117,7 @@ const Program = () => {
                 whileInView="animate"
                 viewport={{ once: true }}
                 className="space-y-9 pt-10">
-                  {programmesDeFormationData[1].map((item, i) => (
+                  {t.raw('groups.2.content').map((item:string, i:number) => (
                     <li
                       key={i}
                       className="flex gap-x-3 text-[18px] sm:text-[18px] md:text-[22px] lg:text-[28px] font-medium text-gray-800"

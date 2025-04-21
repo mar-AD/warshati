@@ -7,8 +7,10 @@ import green_cercle from "/public/images/SmartEducationPlatform/green.png";
 import violet_cercle from "/public/images/SmartEducationPlatform/violet.png";
 import green_rec from "/public/images/SmartEducationPlatform/green-rec.png";
 import violet_rec from "/public/images/SmartEducationPlatform/violet-rec.png";
+import { useTranslations } from "next-intl"
 
 const WarshatiSmartEducationPlatform = () => {
+    const t = useTranslations("smartEducationPlatform.wsep")
     return (
         <div className=" bg-light-gray px-5 sm:px-14 md:px-14 lg:px-44 pb-20 pt-20">
             <div className="flex flex-col 2xl:flex-row items-stretch justify-between 2xl:gap-x-20 gap-x-10 2xl:gap-y-0 gap-y-10 px-4">
@@ -27,10 +29,12 @@ const WarshatiSmartEducationPlatform = () => {
                                 alt=""
                                 className="absolute top-[-9px] left-[-22px] w-[2rem] sm:w-[2rem] md:w-[2rem] lg:w-[4rem]  pointer-events-none select-none"
                                 />
-                                <span className="relative z-10">W</span>
+                                <span className="relative z-10">{t("first_l")}</span>
                                 
                             </span>
-                            arshati Smart<span className="text-violet-800"> Education Platform</span>
+                            {t.rich('title', {
+                                highlight: (chunks) => <span className="text-violet-800">{chunks}</span>
+                            })}
                         </motion.h1>
 
                         <motion.div
@@ -42,10 +46,7 @@ const WarshatiSmartEducationPlatform = () => {
                         >
                             <Image src={violet_cercle} alt="" className=" absolute bottom-[65%] -right-0 sm:-right-0 md:-right-0 lg:right-[-23px] w-[1rem] sm:w-[1rem] md:w-[2rem] lg:w-[2rem] "/>
                             <p>
-                                La Warshati Smart Education Platform est une solution complète et innovante qui prépare les élèves
-                                et enseignants à un avenir numérique en constante évolution. Grâce à une intégration fluide des
-                                technologies éducatives, elle révolutionne l&apos;apprentissage et offre une expérience à la fois immersive
-                                et enrichissante.
+                                {t("text")}
                             </p>
                         </motion.div>
                     </div>

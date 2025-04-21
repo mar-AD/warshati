@@ -21,7 +21,7 @@ const CommencerList = ({ data, onSelect }: CommencerListProps) => {
             {data.map((item, index) => (
                 <motion.div
                     key={index}
-                    className={`flex items-center justify-between gap-4 p-4 border rounded-3xl transition-all duration-300 hover:cursor-pointer
+                    className={`flex items-center justify-between gap-4 p-4 border rounded-3xl transition-all duration-300 hover:cursor-pointer text-start
                         ${selectedIndex === index ? "bg-[#A678E3]/30 border-[#A678E3] border-2" : "border-[#A678E3]"}
                     `}
                     onClick={() => handleClick(index, item.reply)}

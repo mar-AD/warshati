@@ -6,8 +6,10 @@ import image_1 from "/public/images/Blog/articles/article_7.jpg"
 import shape from "/public/images/SmartEducationPlatform/SmartEducationPlatform-27.png";
 import flight from "/public/images/Home/hero/flight.png";
 import { ArrowRight } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 const TeacherProDevelopment  = () => {
+    const t = useTranslations("smartEducationPlatform.teacher")
     return (
         <div className="bg-white  pb-16 md:pb-24 lg:pb-36 pt-24 md:pt-32  lg:pt-56">
             <div className="relative  px-5 sm:px-14 md:px-14 lg:px-44">
@@ -43,7 +45,9 @@ const TeacherProDevelopment  = () => {
                             className="relative text-xl sm:text-2xl md:text-3xl lg:text-[48px] font-bold font-Poppins leading-tight lg:leading-[1.2]"
                             >
                                 
-                                Teacher Professional <span className="text-violet-800">Development</span>
+                                {t.rich('title', {
+                                    highlight: (chunks) => <span className="text-violet-800">{chunks}</span>
+                                })} 
                             </motion.h1>
 
                             <motion.div
@@ -54,8 +58,7 @@ const TeacherProDevelopment  = () => {
                                 className="relative text-base sm:text-lg md:text-xl lg:text-[24px] text-stone-500 font-Poppins mt-4 leading-tight lg:leading-[1.5]"
                             >
                                 <p>
-                                    Un programme conçu pour renforcer les compétences des enseignants en intégrant les approches
-                                    pédagogiques modernes dans l&apos;enseignement du STEAM, de l&apos;IA et de la littératie numérique.
+                                    {t('text')}
                                 </p>
                             </motion.div>
                         </div>
@@ -67,7 +70,7 @@ const TeacherProDevelopment  = () => {
                             className="mt-6 2xl:mt-10"
                         >
                             <button className="btn btn-violet bg-white/90 text-violet-800 transition-all duration-300 px-6 sm:px-8 md:px-8 lg:px-6 py-4 sm:py-5 md:py-6 lg:py-7 !rounded-full !font-normal text-base sm:text-base md:text-lg lg:text-[16px] flex items-center justify-center gap-2">
-                                Se Connecter
+                                {t('conn_btn')}
                                 <ArrowRight />
                             </button>
                         </motion.div>

@@ -1,6 +1,7 @@
 import { CommencerDataSets } from "@/lib/data";
 import ChoicesList from "../ChoicesList";
 import { useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 interface FourthSetProps {
   setScreenIndex: (index: number) => void;
@@ -9,9 +10,10 @@ interface FourthSetProps {
 }
 
 const FourthSet = ({ setScreenIndex, setLeftText, setShowLeft }: FourthSetProps) => {
+  const t = useTranslations("commencer.commencerDataSets.2");
   useEffect(() => {
     setShowLeft(true);
-    setLeftText(CommencerDataSets[2].question); 
+    setLeftText(t("question")); 
   }, [setShowLeft, setLeftText]);
 
   const handleReplySelect = (reply: string) => {
@@ -22,7 +24,13 @@ const FourthSet = ({ setScreenIndex, setLeftText, setShowLeft }: FourthSetProps)
     }, 7000);
   };
 
-  return <ChoicesList data={CommencerDataSets[2].answers} onSelect={handleReplySelect} />;
+  const translatedAnswers = CommencerDataSets[2].answers.map((answer, index) => ({
+    ...answer,
+    text: t(`answers.${index}.text`),
+    reply: t(`answers.${index}.reply`),
+  }));
+
+  return <ChoicesList data={translatedAnswers} onSelect={handleReplySelect} />;
 };
 
 export default FourthSet;

@@ -7,8 +7,10 @@ import green_cercle from "/public/images/SmartEducationPlatform/tow-green-cer.pn
 import violet_cercle from "/public/images/SmartEducationPlatform/tow-violet-cer.png";
 import { WarshaMakerKitsData } from "@/lib/data"
 import flight from "/public/images/Home/hero/flight.png";
+import { useTranslations } from "next-intl"
 
 const WarshaMakerKits = () => {
+    const t = useTranslations("smartEducationPlatform.kits")
     return (
         <div className="bg-white  pb-16 md:pb-24 lg:pb-36 pt-24 md:pt-32  lg:pt-40">
             <div className="relative  px-5 sm:px-14 md:px-14 lg:px-44">
@@ -46,7 +48,9 @@ const WarshaMakerKits = () => {
                         className="w-full 2xl:w-3/5 flex flex-col justify-center"
                     >
                         <h1 className="font-extrabold font-Poppins lg:text-5xl md:text-4xl text-2xl pt-5 md:pt-0 lg:pt-0 lg:pb-5 2xl:text-left z-10">
-                            <span className="text-violet-800">WarshaMaker</span> Kits
+                            {t.rich('title', {
+                                highlight: (chunks) => <span className="text-violet-800">{chunks}</span>
+                            })}
                         </h1>
 
                         <ul className="relative">
@@ -59,7 +63,7 @@ const WarshaMakerKits = () => {
                                     <Image className="size-8 lg:size-10" src={item.image} alt="" />
                                 </div>
                                 <div className="text-[16px] sm:text-[16px] md:text-[18px] lg:text-[22px] lg:max-w-[500px] text-slate-600 font-normal">
-                                    {item.text}
+                                    {t(`list.${i}`)}
                                 </div>
                             </li>
                         ))}

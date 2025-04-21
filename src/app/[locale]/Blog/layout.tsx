@@ -8,14 +8,19 @@
     import Image from "next/image";
     import useMediaQuery from "@/lib/UseMediaQuery";
     import { cn } from "@/lib/utils";
-    import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+    import { useLocale, useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import { FadeDown, FadeLeft, FadeRight } from "@/lib/animations";
+import { Link, usePathname } from "@/i18n/navigation";
 
     export default function BlogLayout({ children }: { children: ReactNode }) {
     const isMediumScreen = useMediaQuery("(max-width: 1000px)");
     const t = useTranslations("blog");
     const tArticles = useTranslations("blog.articles");
+    const locale = useLocale();
+    const pathname = usePathname();
 
+    // Retrieve the translated articles based on locale
     const translatedArticles = articleData.map((article) => ({
         ...article,
         title: tArticles(`${article.slug}.title`),
@@ -31,7 +36,10 @@ import { Link } from "@/i18n/navigation";
         <Hero />
         <div className="font-Poppins flex max-lg:flex-col-reverse justify-end gap-x-10 relative">
             {/* Socials */}
-            <div className="border w-fit lg:absolute lg:left-0 mx-5 px-2 py-3 rounded-lg bg-white hidden lg:flex lg:flex-col items-center justify-center">
+            <motion.div
+            variants={FadeRight(0.6)}
+            initial="initial"
+            animate="animate" className="border w-fit lg:absolute lg:left-0 mx-5 px-2 py-3 rounded-lg bg-white hidden lg:flex lg:flex-col items-center justify-center">
             {socials.map(({ Icon, link, followers }, index) => (
                 <Link
                 href={link}
@@ -42,24 +50,40 @@ import { Link } from "@/i18n/navigation";
                 <p className="text-xs font-bold">{followers}</p>
                 </Link>
             ))}
-            </div>
+            </motion.div>
 
             {/* Main Content */}
-            <div className="space-y-8 lg:w-1/2">
-            <div className="space-y-6">
-                <h1 className="text-[32px] font-bold">{t("layout.title")}</h1>
-                <p className="border-l-2 border-black px-4 leading-normal">
-                {t.rich("layout.text", {
-                    bold: (chunks) => <b>{chunks}</b>,
-                    br: () => <br />,
-                })}
-                </p>
-            </div>
-            {children}
-            </div>
+            <motion.div
+            variants={FadeDown(0.6)}
+            initial="initial"
+            animate="animate"
+            className="space-y-8 lg:w-1/2">
+                <div className="space-y-6">
+                    <h1 className="text-[32px] font-bold">{t("layout.title")}</h1>
+                    <p className="border-l-2 border-black px-4 leading-normal">
+                    {t.rich("layout.text", {
+                        bold: (chunks) => <b>{chunks}</b>,
+                        br: () => <br />,
+                    })}
+                    </p>
+                </div>
+                <motion.div
+                key={pathname}
+                variants={FadeDown(.3)}
+                initial="initial"
+                animate="animate"
+                className="">
+                    {children}
+                </motion.div>
+                
+            </motion.div>
 
             {/* Sidebar */}
-            <div className="lg:w-1/3">
+            <motion.div
+            variants={FadeLeft(0.6)}
+            initial="initial"
+            animate="animate"
+            className="lg:w-1/3">
             <div className="space-y-4">
                 <h1 className="text-base font-medium">{t("layout.sujetsPopulaires")}</h1>
                 <div className="flex flex-wrap items-start gap-3">
@@ -103,6 +127,7 @@ import { Link } from "@/i18n/navigation";
                             <p className="text-xs text-slate-400">{article.date}</p>
                             <Link
                             href={`/Blog/${article.slug}`}
+                            locale={locale}
                             className="btn !rounded-lg !text-xs !h-9 btn-violet-outline"
                             >
                             {t("rest.savoirPlus")}
@@ -115,7 +140,7 @@ import { Link } from "@/i18n/navigation";
                 <CarouselNext className="bg-violet-800 text-white rounded-lg max-lg:hidden" />
                 </Carousel>
             </div>
-            </div>
+            </motion.div>
         </div>
         </div>
     );

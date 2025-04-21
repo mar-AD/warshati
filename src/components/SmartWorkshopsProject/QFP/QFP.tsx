@@ -4,8 +4,9 @@ import { FadeUp } from "@/lib/animations"
 import { motion } from "framer-motion"
 import QFPCard from "./QFPCard"
 import LastPart from "./LastPart"
+import { useTranslations } from "next-intl"
 const QFP = () => {
-
+    const t = useTranslations("smartWorkshopsProject.faq")
     return (
         <>
         <div className=" bg-light-gray lg:px-20 py-24 px-5 font-Poppins lg:space-y-20 space-y-10 relative">
@@ -13,12 +14,19 @@ const QFP = () => {
                 variants={FadeUp(.2)}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-4xl text-2xl text-center !leading-tight">Questions fréquemment posées</motion.h1>
+                viewport={{ once: true }} className="font-bold lg:text-[82px] md:text-4xl text-2xl text-center !leading-tight">{t("title")}</motion.h1>
                 
             <div className="flex flex-col lg:flex-row gap-5">
                 <div className="flex-1 space-y-5">
                     {QFPData_3.slice(0, 5).map((faq, index) => (
-                        <QFPCard key={index} faq={faq} index={index} />
+                        <QFPCard 
+                        key={index} 
+                        faq={{
+                            ...faq,
+                            title:t(`items.${index}.title`),
+                            content:t(`items.${index}.content`)
+                        }}  
+                        index={index} />
                     ))}
                 </div>
             </div>

@@ -7,8 +7,10 @@ import image_1 from "/public/images/SmartEducationPlatform/SmartEducationPlatfor
 import LmsCards from "./LmsCards"
 import { lmsData } from "@/lib/data"
 import InnovationLabs from "./InnovationLabs"
+import { useTranslations } from "next-intl"
 
 const Lms = () => {
+    const t = useTranslations("smartEducationPlatform.lms")
     return (
         <>
         <div className="bg-light-gray px-5 sm:px-14 md:px-14 lg:px-36 pb-32 pt-16">
@@ -28,7 +30,7 @@ const Lms = () => {
                         </div>
                         <h1 className={`text-violet-800 font-bold text-center font-Poppins 
                             lg:text-5xl md:text-3xl text-lg`}>
-                            Learning Management System (LMS)
+                            {t("title")}
                         </h1>
                     </motion.div>
 
@@ -39,7 +41,7 @@ const Lms = () => {
                         viewport={{ once: true }}
                         className="text-[#262626] font-Poppins max-w-[50rem] sm:max-w-[55rem] md:max-w-[75rem] lg:max-w-[89rem] text-center lg:text-[38px] md:text-2xl text-lg font-medium !leading-relaxed"
                     >
-                        Un système de gestion permettant l&apos;administration fluide des cours, des élèves et des enseignants. Iloffre :
+                        {t("subTitle")}
                     </motion.h1>
 
                 </div>
@@ -47,7 +49,14 @@ const Lms = () => {
                 <div className="pt-14 md:pt-24 lg:pt-28 relative">
                     <div className="flex flex-wrap justify-center gap-12">
                         {lmsData.map((item, index) => (
-                        <LmsCards key={index} item={item} />
+                            <LmsCards 
+                                key={index} 
+                                item={{
+                                    ...item,
+                                    text: t(`list.${index}`)
+                                }}
+                                
+                            />
                         ))}
                     </div>
                 </div>

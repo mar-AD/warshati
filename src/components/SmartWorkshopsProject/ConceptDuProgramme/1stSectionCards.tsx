@@ -3,8 +3,10 @@ import Image from "next/image";
 import { conceptDuProgrammesData } from "@/lib/data";
 import { motion } from "framer-motion";
 import { FadeUp } from "@/lib/animations";
+import { useTranslations } from "next-intl";
 
 const FirstSectionCards = () => {
+    const t = useTranslations("smartWorkshopsProject.concepts")
     return (
         <motion.div
         variants={FadeUp(.6)}
@@ -26,8 +28,8 @@ const FirstSectionCards = () => {
                     </div>
 
                     <div>
-                    <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">{item.text}</h2>
-                    <p className="text-white/70 text-base mt-1 sm:mt-2 font-Inter">{item.discreption}</p>
+                    <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">{t(`list.${index}.title`)}</h2>
+                    <p className="text-white/70 text-base mt-1 sm:mt-2 font-Inter">{t(`list.${index}.text`)}</p>
                     </div>
                 </div>
                 ))}

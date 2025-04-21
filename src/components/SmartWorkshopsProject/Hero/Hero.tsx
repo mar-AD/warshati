@@ -10,10 +10,12 @@ import flight from "/public/images/Home/hero/flight.png";
 import hero_img_0 from "/public/images/Blog/articles/article_2.jpg"
 import hero_img_1 from "/public/images/Blog/articles/article_10.jpg"
 import HeroCard from "./HeroCards"
+import { useTranslations } from "next-intl"
 
 const Hero = () => {
     const isScreen = useMediaQuery("(max-width: 1280px) and (min-width: 1024px)")
     const isScreen_2 = useMediaQuery("(min-width: 1765px)")
+    const t = useTranslations("smartWorkshopsProject.hero")
     return (
         <div className="bg-light-gray px-5 sm:px-14 md:px-14 lg:px-36 pb-24">
             <div className="pt-56 relative">
@@ -37,7 +39,7 @@ const Hero = () => {
                         </div>
                         <h1 className={`text-violet-800 font-bold text-center font-Vazirmatn 
                             ${isScreen ? "text-[2.5rem]" : "lg:text-5xl md:text-3xl text-xl"}`}>
-                            Smart Workshops Project
+                            {t("page_title")}
                         </h1>
                     </motion.div>
 
@@ -48,8 +50,7 @@ const Hero = () => {
                         viewport={{ once: true }}
                         className="font-Poppins lg:max-w-[965px] md:max-w-[650px] max-w-[550px] text-center lg:text-[38px] md:text-2xl text-lg font-medium !leading-relaxed"
                     >
-                        Relève des défis, résous des problèmes réels et façonne le futur avec nos Smart Workshops
-                        Projects !
+                        {t("page_subTitle")}
                     </motion.h1>
 
                     <motion.div
@@ -59,7 +60,7 @@ const Hero = () => {
                         viewport={{ once: true }}
                         className="flex max-lg:flex-col md:gap-x-14 gap-y-8"
                     >
-                        <button className="btn !h-16 !rounded-lg btn-violet">Inscrivez-vous maintenant</button>
+                        <button className="btn !h-16 !rounded-lg btn-violet">{t("btn")}</button>
                     </motion.div>
                 </div>
 
@@ -74,7 +75,9 @@ const Hero = () => {
                                     viewport={{ once: true }}
                                     className="pb-12 md:pb-16 lg:pb-20 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[3.35rem] font-Poppins"
                                 >
-                                    <span className="text-violet-800">Objectif </span>du Programme
+                                    {t.rich('title', {
+                                        highlight: (chunks) => <span className="text-violet-800">{chunks}</span>
+                                    })}
                                 </motion.h1>
                                 <Image
                                     src={image_3}

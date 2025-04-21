@@ -6,10 +6,12 @@ import { FadeLeft, FadeUp } from "@/lib/animations";
 import VerticalCarousel from "./TémoignageCarousel";
 import CustomVideoPlayer from "../../VideoPlayer";
 import useMediaQuery from "@/lib/UseMediaQuery";
+import { useTranslations } from "next-intl";
 
 
 const Temoignages = () => {
     const isScreen = useMediaQuery("(min-width: 1000px)");
+    const t = useTranslations("smartWorkshopsProject.temoignage")
     const videoQualities = [
         { label: '1080p', url: '/videos/home/video_2.mp4' },
         { label: '720p', url: '/videos/home/video_2.mp4' },
@@ -25,18 +27,10 @@ const Temoignages = () => {
             viewport={{ once: true }} 
             className=" font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-6xl text-center font-Poppins"
             > 
-                Témoignages et <span className="text-violet-800">Success Stories </span>
+                {t.rich('title', {
+                    highlight: (chunks) => <span className="text-violet-800">{chunks}</span>
+                })}
             </ motion.h1>
-
-            {/* <motion.p
-            variants={FadeUp(.5)}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="text-slate-600 font-semibold font-Poppins text-center text-[18px] sm:text-[18px] md:text-[20px] lg:text-[22px]!leading-relaxed pt-3"
-            >
-                Section avec <span className="text-purple-800"> des témoignages d&rsquo;enseignants</span> ayant suivi nos formations.
-            </motion.p> */}
 
             <div className={`flex items-stretch justify-center lg:space-x-16 w-full flex-wrap sm:pt-5 md:pt-10 lg:pt-20 ${isScreen ? '' : 'flex-col-reverse'}`}>
 
@@ -63,8 +57,8 @@ const Temoignages = () => {
 
                 <div className="p-4 flex items-center justify-center sm:h-[20%] h-auto">
                     <div>
-                    <h3 className="text-xl font-semibold text-gray-900">Sara, 14 ans</h3>
-                    <p className="text-sm text-slate-600">Étudiant</p>
+                    <h3 className="text-xl font-semibold text-gray-900">{t("vid_tit")}</h3>
+                    <p className="text-sm text-slate-600">{t("vid_sub")}</p>
                     </div>
                 </div>
                 </div>

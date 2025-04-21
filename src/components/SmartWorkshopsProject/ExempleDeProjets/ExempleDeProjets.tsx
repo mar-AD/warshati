@@ -4,10 +4,12 @@ import { motion } from "framer-motion"
 import flight from "/public/images/Home/hero/flight.png";
 import Image from "next/image"
 import ExempleDeProjets1stCard from "./ExempleDeProjets1stCard";
-import { ExempleDeProjetsCardData, ExempleDeProjetsCardData_2 } from "@/lib/data";
+import { ExempleDeProjetsCardData } from "@/lib/data";
 import ExempleDeProjets2ndCard from "./ExempleDeProjets2ndCard";
+import { useTranslations } from "next-intl";
 
 const ExempleDeProjet = () => {
+    const t = useTranslations("smartWorkshopsProject.exemples")
     return (
         <div className=" relative bg-light-gray px-5 sm:px-14 md:px-14 py-20 max-md:py-10 ">
             <Image src={flight} alt="" className=" absolute top-5 -right-0 sm:-right-0 md:right-0 lg:right-0 w-[3.5rem] sm:w-[6rem] md:w-[10rem] lg:w-72 scale-x-[-1]"/>
@@ -17,7 +19,7 @@ const ExempleDeProjet = () => {
             whileInView="animate"
             viewport={{ once: true }}
             className="text-center font-extrabold font-Poppins lg:text-6xl md:text-4xl text-2xl">
-                Exemples de Projets
+                {t("section_title")}
             </motion.h1>
             <motion.p
             variants={FadeUp(.5)}
@@ -26,13 +28,20 @@ const ExempleDeProjet = () => {
             viewport={{ once: true }}
             className="text-purple-800 font-semibold font-Poppins text-center text-[18px] sm:text-[18px] md:text-[20px] lg:text-[22px] !leading-relaxed pt-3"
             >
-                Véhicules Autonomes
+                {t("sub")}
             </motion.p>
 
             <div className="flex flex-wrap justify-center gap-6 lg:gap-16 mt-10 sm:mt-12 md:mt-16 lg:mt-36">
                 {
                     ExempleDeProjetsCardData[0].map((item, index) => (
-                        <ExempleDeProjets1stCard index={index} item={item} key={index} />
+                        <ExempleDeProjets1stCard 
+                        index={index} 
+                        item={{
+                            ...item,
+                            title: t(`cards.0.${index}.title`),
+                            description: t(`cards.0.${index}.text`),
+                        }} 
+                        key={index} />
                     ))
                 }
             </div>
@@ -46,15 +55,22 @@ const ExempleDeProjet = () => {
                 viewport={{ once: true }}
                 className=" text-purple-800 font-semibold font-Poppins text-center text-[18px] sm:text-[18px] md:text-[20px] lg:text-[22px] !leading-relaxed mt-14"
                 >
-                    Maisons Intelligentes
+                    {t("sub_1")}
                 </motion.p>
             </div>
             
 
             <div className='flex flex-wrap justify-center gap-6 lg:gap-16 mt-10 sm:mt-12 md:mt-16 lg:mt-36'>
                 {
-                    ExempleDeProjetsCardData_2.map((item, index) => (
-                        <ExempleDeProjets2ndCard index={index} item={item} key={index} />
+                    ExempleDeProjetsCardData[1].map((item, index) => (
+                        <ExempleDeProjets2ndCard 
+                        index={index} 
+                        item={{
+                            ...item,
+                            title: t(`cards.1.${index}.title`),
+                            description: t(`cards.1.${index}.text`),
+                        }}  
+                        key={index} />
                     ))
                 }
             </div>
@@ -68,15 +84,22 @@ const ExempleDeProjet = () => {
                 viewport={{ once: true }}
                 className=" text-purple-800 font-semibold font-Poppins text-center text-[18px] sm:text-[18px] md:text-[20px] lg:text-[22px] !leading-relaxed mt-14"
                 >
-                    Énergies Durables
+                    {t("sub_2")}
                 </motion.p>
             </div>
             
 
             <div className='flex flex-wrap justify-center gap-6 lg:gap-16 mt-10 sm:mt-12 md:mt-16 lg:mt-36'>
                 {
-                    ExempleDeProjetsCardData[1].map((item, index) => (
-                        <ExempleDeProjets1stCard index={index} item={item} key={index} />
+                    ExempleDeProjetsCardData[2].map((item, index) => (
+                        <ExempleDeProjets1stCard 
+                        index={index} 
+                        item={{
+                            ...item,
+                            title: t(`cards.2.${index}.title`),
+                            description: t(`cards.2.${index}.text`),
+                        }}  
+                        key={index} />
                     ))
                 }
             </div>

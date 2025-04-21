@@ -3,9 +3,11 @@ import { conceptDuProgrammesData_2 } from "@/lib/data";
 import { motion } from "framer-motion";
 import { FadeUp } from "@/lib/animations";
 import useMediaQuery from "@/lib/UseMediaQuery";
+import { useTranslations } from "next-intl";
 
 const SecondSectionCards = () => {
     const isScreen = useMediaQuery("(min-width: 1026px) and (max-width: 1430px)");
+    const t = useTranslations("smartWorkshopsProject.concepts")
     return (
     <div className=" md:px-16 lg:px-28 rounded-2xl mt-16">
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -33,7 +35,7 @@ const SecondSectionCards = () => {
                     ${isScreen ? 'text-[1rem] leading-[1.5rem]' : 'text-sm md:text-xl lg:text-2xl'}
                 `}
                 >
-                    {item.text}
+                    {t(`cards.${index}`)}
                 </div>
 
             </motion.div>

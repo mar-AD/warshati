@@ -17,7 +17,7 @@ const t = useTranslations("home.formation")
             <div className="flex flex-wrap gap-4 justify-center items-center !mt-[9.25rem]">
                 {FormationData.map((item, index) => (
                     <FormationCard
-                        key={""}
+                        key={index}
                         index={index}
                         item={{
                         ...item,

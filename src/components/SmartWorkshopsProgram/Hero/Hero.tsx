@@ -8,8 +8,10 @@ import image_3 from "/public/images/SmartWorkshopsProgram/arrow-3.png"
 import flight from "/public/images/Home/hero/flight.png";
 import image_2 from "/public/images/Blog/articles/article_4.jpg";
 import { SmartWorkshopsProgramData } from "@/lib/data";
+import { useTranslations } from "next-intl"
 
 const Hero = () => {
+    const t = useTranslations("smartWorkshopsProgram.hero")
     return (
         <div className="bg-light-gray px-5 sm:px-14 md:px-14 lg:px-14 pb-14 max-md:pb-7">
             <div className="pt-56 relative">
@@ -28,7 +30,7 @@ const Hero = () => {
                         </div>
                         <h1 className={`text-violet-800 font-bold text-center font-Vazirmatn 
                             lg:text-5xl md:text-3xl text-xl`}>
-                            Smart Workshops Program
+                            {t("page_title")}
                         </h1>
                     </motion.div>
                     <motion.h1
@@ -36,14 +38,14 @@ const Hero = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }} className="font-Poppins lg:max-w-[965px] md:max-w-[650px] max-w-[550px] text-center lg:text-[38px] md:text-2xl text-lg font-medium  !leading-relaxed">
-                            Apprenez en explorant ! Participez à nos ateliers interactifs et développez vos compétence ériques.
+                            {t("page_subTitle")}
                     </motion.h1>
                     <motion.div
                         variants={FadeUp(.7)}
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }} className="flex max-lg:flex-col md:gap-x-14 gap-y-8">
-                        <button className="btn !h-16 !rounded-lg btn-violet">Inscrivez-vous maintenant</button>
+                        <button className="btn !h-16 !rounded-lg btn-violet">{t("btn")}</button>
                     </motion.div>
                     
                 </div>
@@ -67,12 +69,13 @@ const Hero = () => {
                     className="w-full md:w-[60%] flex flex-col justify-center h-full"
                     >
                         <h1 className="font-extrabold font-Poppins lg:text-6xl md:text-4xl text-2xl pb-5">
-                            <span className="text-violet-800">Objectif</span> du Programme
+                            {t.rich('title', {
+                                highlight: (chunks) => <span className="text-violet-800">{chunks}</span>
+                            })}
+                            
                         </h1>
                         <p className="font-Poppins text-[18px] sm:text-[18px] md:text-[22px] lg:text-[29px] font-normal !leading-relaxed">
-                            Le Smart Workshops Program de Warshati est conçu pour développer les compétences clés du 21ᵉ
-                            siècle à travers des ateliers interactifs et innovants. Nos programmes couvrent trois domaines
-                            essentiels :
+                            {t("subTitle")}
                         </p>
 
                         <ul className="relative">
@@ -82,8 +85,8 @@ const Hero = () => {
                                     <div className="bg-violet-800 rounded-lg min-w-14 min-h-14 p-3"><Image className=" size-8 lg:size-8" src={item.image} alt="" /></div>
                                     
                                     <div>
-                                        <div className="text-[18px] sm:text-[18px] md:text-[22px] lg:text-[29px] font-semibold">{item.title}</div>
-                                        <div className="text-[16px] sm:text-[16px] md:text-[18px] lg:text-[22px] w- auto lg:max-w-[500px] text-slate-600">{item.content}</div>
+                                        <div className="text-[18px] sm:text-[18px] md:text-[22px] lg:text-[29px] font-semibold">{t(`list.${i}.title`)}</div>
+                                        <div className="text-[16px] sm:text-[16px] md:text-[18px] lg:text-[22px] w- auto lg:max-w-[500px] text-slate-600">{t(`list.${i}.text`)}</div>
                                     </div>
                                     
                                 </li>

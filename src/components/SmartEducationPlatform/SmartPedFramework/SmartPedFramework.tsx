@@ -6,8 +6,10 @@ import { FadeUp } from "@/lib/animations"
 import image_1 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-25.png"
 import SmartPedFrameworkCard from "./SmartPedFrameworkCard"
 import TeacherProDevelopment from "./TeacherProDevelopment "
+import { useTranslations } from "next-intl"
 
 const SmartPedFramework = () => {
+    const t = useTranslations("smartEducationPlatform.smartPedagogicalFramework")
     return (
         <>
         <div className="bg-light-gray px-5 sm:px-14 md:px-14 lg:px-14 pt-16  pb-16">
@@ -24,7 +26,7 @@ const SmartPedFramework = () => {
                         </div>
                         <h1 className={`text-violet-800 font-bold text-center font-Vazirmatn 
                             lg:text-5xl md:text-3xl text-xl `}>
-                            Smart Pedagogical Framework
+                            {t("title")}
                         </h1>
                     </motion.div>
                     

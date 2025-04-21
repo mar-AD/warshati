@@ -3,15 +3,17 @@ import Image from "next/image";
 import { SmartPedFrameworkData } from "@/lib/data";
 import { motion } from "framer-motion";
 import { FadeUp } from "@/lib/animations";
+import { useTranslations } from "next-intl";
 
 const SmartPedFrameworkCard = () => {
+    const t = useTranslations("smartEducationPlatform.smartPedagogicalFramework")
     return (
         <motion.div
         variants={FadeUp(.6)}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }} 
-        className="bg-violet-900 py-10 px-6 sm:py-12 sm:px-12 md:py-14 md:px-16 lg:py-16 lg:px-20 xl:px-28 rounded-2xl mt-10 sm:mt-12 md:mt-16 lg:mt-32 z-10">
+        className="bg-violet-900 py-10 px-6 sm:py-12 sm:px-12 md:py-14 md:px-16 lg:py-16 lg:px-20 xl:px-28 rounded-2xl mt-10 sm:mt-12 md:mt-16 lg:mt-32 z-10 w-[100%]">
             <motion.div
             variants={FadeUp(.8)}
             initial="initial"
@@ -26,8 +28,8 @@ const SmartPedFrameworkCard = () => {
                     </div>
 
                     <div>
-                    <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">{item.text}</h2>
-                    <p className="text-white/70 text-base mt-1 sm:mt-2 font-Inter">{item.discreption}</p>
+                    <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">{t(`list.${index}.text`)}</h2>
+                    <p className="text-white/70 text-base mt-1 sm:mt-2 font-Inter">{t(`list.${index}.description`)}</p>
                     </div>
                 </div>
                 ))}

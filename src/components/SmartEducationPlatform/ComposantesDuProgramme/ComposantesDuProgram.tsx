@@ -8,8 +8,10 @@ import image_1 from "/public/images/SmartEducationPlatform/SmartEducationPlatfor
 import ComposantesDuProgrammeCard from "./ComposantesDuProgrammeCards"
 import { ComposantesDuProgrammeCardData } from "@/lib/data"
 import WarshatiSmartEducationPlatform from "./WarshatiSmartEducationPlatform"
+import { useTranslations } from "next-intl";
 
 const ComposantesDuProgramme = () => {
+    const t = useTranslations("smartEducationPlatform.composantesDuProgramme")
     return (
         <>
         <div className="relative px-5 sm:px-14 md:px-14 lg:px-14 pt-16  pb-16 md:pb-32 lg:pb-32">
@@ -27,14 +29,21 @@ const ComposantesDuProgramme = () => {
                         </div>
                         <h1 className={`text-violet-800 font-bold text-center font-Vazirmatn 
                             lg:text-5xl md:text-3xl text-xl`}>
-                            Composantes du Programme
+                            {t('title')}
                         </h1>
                     </motion.div>
                     
                     <div className="flex flex-wrap justify-center gap-6 lg:gap-16 mt-10 sm:mt-12 md:mt-16 lg:mt-32">
                 {
                     ComposantesDuProgrammeCardData.map((item, index) => (
-                        <ComposantesDuProgrammeCard index={index} item={item} key={index} />
+                        <ComposantesDuProgrammeCard 
+                        index={index} 
+                        item={{
+                            ...item,
+                            title:t(`list.${index}.title`),
+                            description: t(`list.${index}.text`),
+                        }}
+                        key={index} />
                     ))
                 }
             </div>

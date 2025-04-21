@@ -1,5 +1,6 @@
 import { CommencerDataSets } from "@/lib/data";
 import ChoicesList from "../ChoicesList";
+import { useTranslations } from "next-intl";
 
 interface SetOneProps {
   setScreenIndex: (index: number) => void;
@@ -7,15 +8,24 @@ interface SetOneProps {
 }
 
 const SetOne = ({ setScreenIndex, setLeftText }: SetOneProps) => {
+  const t = useTranslations("commencer.commencerDataSets.0");
+  const tt = useTranslations("commencer.commencerDataSets.1");
   const handleReplySelect = (reply: string) => {
     setLeftText(reply);
     setTimeout(() => {
-      setLeftText(CommencerDataSets[1].question);
+      setLeftText(tt("question"));
       setScreenIndex(2);
     }, 7000);
   };
-
-  return <ChoicesList data={CommencerDataSets[0].answers} onSelect={handleReplySelect} />;
+  
+  const translatedAnswers = CommencerDataSets[0].answers.map((answer, index) => ({
+    ...answer,
+    text: t(`answers.${index}.text`),
+    reply: t(`answers.${index}.reply`),
+  }));
+  
+  return <ChoicesList data={translatedAnswers} onSelect={handleReplySelect} />;
 };
 
 export default SetOne;
+

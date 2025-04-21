@@ -3,11 +3,13 @@ import { FadeRight } from '@/lib/animations';
 import { progrrmFeatures } from '@/lib/data';
 import useMediaQuery from '@/lib/UseMediaQuery';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
 
 function HeroCard() {
   const isScreen = useMediaQuery("(min-width: 1765px)")
+  const t = useTranslations("smartWorkshopsProject.hero")
     return (
       <motion.div
       variants={FadeRight(0.2)}
@@ -34,9 +36,10 @@ function HeroCard() {
                 <Image src={feature.image} alt='' className="w-11 h-9"/>
               </div>
               <div>
-                <h3 className="font-semibold text-[14px] sm:text-[16px] md:text-[16px] lg:text-[16px]">
-                  <span className="text-black">{feature.title}</span>{' '}
-                  <span className="text-gray-600">{feature.description}</span>
+                <h3 className="font-semibold text-[14px] sm:text-[16px] md:text-[16px] lg:text-[16px] text-gray-600">
+                    {t.rich(`list.${index}`, {
+                      bold: (chunks) => <span className="text-black font-bold">{chunks}</span>
+                    })}
                 </h3>
               </div>
             </div>

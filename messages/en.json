@@ -772,7 +772,815 @@
       "subTitle": "An Innovative Digital Learning Ecosystem",
       "connect_btn": "Log In",
       "inscrivez_btn": "Sign Up Now"
+    },
+    "lms": {
+      "title": "Learning Management System (LMS)",
+      "subTitle": "A management system for the smooth administration of courses, students, and teachers. It offers:",
+      "list": [
+        "Tools for creating and delivering interactive content.",
+        "Management of educational resources.",
+        "Quiz creation and learner progress evaluation.",
+        "Scheduling sessions and tracking online training.",
+        "A continuous training program for teachers."
+      ]
+    },
+    "innovationLabs": {
+      "first_litter": "W",
+      "title": "arshati <highlight><br></br>Innovation Labs</highlight>",
+      "description": "The Warshati Innovation Labs consist of several interactive labs aimed at developing learners' skills, creativity, and critical thinking.",
+      "btn": "Sign In"
+    },
+    "labs": {
+      "title_1": "AI-Kids Lab",
+      "title_2": "STEAM Creative Lab",
+      "title_3": "Digital Skills Lab",
+      "labsData": {
+        "0": [
+          "Introduction to artificial intelligence for young learners.",
+          "Interactive experiences to understand machine learning principles.",
+          "Stimulating curiosity and innovation in AI."
+        ],
+        "1": [
+          "Introduction to block-based programming.",
+          "Exploring concepts in science, technology, engineering, arts, and mathematics.",
+          "Hands-on projects promoting computational thinking."
+        ],
+        "2": [
+          "Developing essential digital skills.",
+          "Learning digital tools and best practices in cybersecurity.",
+          "Awareness of digital ethics and citizenship."
+        ]
+      }
+    },
+    "kits": {
+      "title": "<highlight>WarshaMaker</highlight> Kits",
+      "list": [
+        "Encourage project-based learning.",
+        "Offer an intuitive and visual approach to coding.",
+        "Develop problem-solving, creativity, and critical thinking skills."
+      ]
+    },
+    "smartPedagogicalFramework": {
+      "title": "Smart Pedagogical Framework",
+      "list": [
+        {
+          "text": "Comprehensive course content",
+          "description": "with pedagogical sheets and learning guides."
+        },
+        {
+          "text": "A progressive learning flow",
+          "description": "suitable for different age groups."
+        },
+        {
+          "text": "A rigorous evaluation",
+          "description": "using quizzes and projects."
+        }
+      ]
+    },
+    "teacher": {
+      "title": "Teacher Professional <highlight>Development</highlight>",
+      "text": "A program designed to enhance teachers' skills by integrating modern pedagogical approaches in teaching STEAM, AI, and digital literacy.",
+      "conn_btn": "Login"
+    },
+    "composantesDuProgramme": {
+      "title": "Program Components",
+      "list": [
+        {
+          "title": "Continuous Training",
+          "text": "Innovative programs to stay at the forefront of digital pedagogy."
+        },
+        {
+          "title": "Interactive Workshops",
+          "text": "Hands-on and collaborative sessions to experiment with new teaching approaches."
+        },
+        {
+          "title": "Coaching and Mentorship",
+          "text": "Personalized support by experts."
+        },
+        {
+          "title": "Resources and Tools",
+          "text": "Access to a library of guides, digital materials, and pedagogical tools."
+        }
+      ]
+    },
+    "wsep": {
+      "first_l": "W",
+      "title": "arshati Smart <highlight>Education Platform</highlight>",
+      "text": "The Warshati Smart Education Platform is a comprehensive and innovative solution that prepares students and teachers for a constantly evolving digital future. Through the seamless integration of educational technologies, it revolutionizes learning and offers an immersive and enriching experience."
     }
+  },
+  "smartWorkshopsProgram": {
+    "hero": {
+      "page_title": "Smart Workshops Program",
+      "page_subTitle": "Learn through exploration! Participate in our interactive workshops and develop your technical skills.",
+      "btn": "Register Now",
+      "title": "<highlight>Program</highlight> Objective",
+      "subTitle": "Warshati's Smart Workshops Program is designed to develop 21st century skills through interactive and innovative workshops. Our programs cover three essential areas:",
+      "list": [
+        {
+          "title": "AI Kids",
+          "text": "Introduction to artificial intelligence for young learners."
+        },
+        {
+          "title": "STEAM Competency",
+          "text": "Development of skills in science, technology, engineering, arts, and mathematics."
+        },
+        {
+          "title": "Digital Literacy",
+          "text": "Learning digital fundamentals and cybersecurity."
+        }
+      ]
+    },
+    "presentation": {
+      "title": "Program Overview",
+      "subTitle": "<highlight>Why</highlight> choose Warshati's <highlight>Smart Workshops?</highlight>",
+      "subSubTitle": "Target <highlight>audience</highlight>",
+      "list": [
+        {
+          "title": "Hands-on learning through",
+          "text": "practice and experimentation."
+        },
+        {
+          "title": "A structured program tailored for",
+          "text": "children and adolescents"
+        },
+        {
+          "title": "A fun and stimulating environment",
+          "text": "that fosters creativity and collaboration."
+        }
+      ],
+      "cards": [
+        "Children aged 6+",
+        "Teens and young adults (12-18 years)",
+        "Schools, educational centers, and families"
+      ]
+    },
+    "program": {
+      "section_title": "<highlight>Our</highlight> Programs",
+      "objectif": "Objective:",
+      "activites": "Activities:",
+      "groups": {
+        "1": {
+          "title": "<highlight>AI</highlight> Kids",
+          "subtitle": "Discovering <highlight>Artificial Intelligence</highlight> (Workshop example)",
+          "content": {
+            "objectif_text": "Introduce youth to AI basics and its impact on the world.",
+            "activites_list": [
+              "Creating simple AI models.",
+              "Experimenting with chatbots and facial recognition",
+              "Interactive projects to understand Machine Learning."
+            ]
+          }
+        },
+        "2": {
+          "title": "<highlight>STEAM</highlight> Competency",
+          "subtitle": "Developing <highlight>future skills</highlight>",
+          "content": {
+            "objectif_text": "Learn through play and experimentation by integrating science, technology, engineering, arts, and mathematics.",
+            "activites_list": [
+              "Scientific experiments and prototype building",
+              "Programming and robotics with Arduino and Scratch.",
+              "3D printing and interactive design."
+            ]
+          }
+        },
+        "3": {
+          "title": "Digital <highlight>Literacy</highlight>",
+          "subtitle": "Mastering digital basics <highlight>(Workshop example)</highlight>",
+          "content": {
+            "objectif_text": "Educate youth about responsible and secure use of digital tools.",
+            "activites_list": [
+              "Creating simple AI models.",
+              "Experimenting with chatbots and facial recognition",
+              "Interactive projects to understand Machine Learning."
+            ]
+          }
+        }
+      },
+      "cards": [
+        {
+          "title": "Build your own AI assistant!",
+          "text": "A workshop where children program a simple AI that recognizes objects and answers questions."
+        },
+        {
+          "title": "Build and program your own robot!",
+          "text": "A project where youth design, assemble, and code a functional robot."
+        },
+        {
+          "title": "Budding ethical hacker",
+          "text": "A workshop where participants learn cybersecurity basics and test anti-hacking protection techniques."
+        }
+      ]
+    },
+    "temoignage": {
+      "title": "Testimonials and <highlight>Success Stories</highlight>",
+      "subTitle": "Section with <highlight>testimonials from teachers</highlight> who have taken our training.",
+      "vid_tit": "Yassine, 12 years old",
+      "vid_sub": "Student",
+      "list": [
+        "Thanks to Warshati, I've integrated interactive tools that have transformed my way of teaching!",
+        "Thanks to Warshati, I've integrated interactive tools that have transformed my way of teaching!",
+        "Thanks to Warshati, I've integrated interactive tools that have transformed my way of teaching!",
+        "Thanks to Warshati, I've integrated interactive tools that have transformed my way of teaching!",
+        "Thanks to Warshati, I've integrated interactive tools that have transformed my way of teaching!"
+      ]
+    },
+    "contact": {
+      "title": "<highlight>Registration</highlight> and Contact",
+      "description": "Enter your details, and we will contact you to address your needs.",
+      "contact_information_title": "Contact Information",
+      "contact_information_description": "Write something to start a conversation!",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "age": "Age",
+      "choisi": "Selected Workshop",
+      "list": [
+        "Workshop 1",
+        "Workshop 2",
+        "Workshop 3"
+      ],
+      "join": "Register Now"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "title": "From what age can my child participate?",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, elit at luctus dictum, felis dolor sagittis justo, ac viverra ligula libero ut purus. Integer ut mauris ut dolor dictum tincidunt. Curabitur eget erat vel erat suscipit ultrices. Vivamus tincidunt, nisl id posuere luctus, sapien felis convallis lectus, nec consectetur lorem libero ut velit"
+        },
+        {
+          "title": "From what age can my child participate?",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, elit at luctus dictum, felis dolor sagittis justo, ac viverra ligula libero ut purus. Integer ut mauris ut dolor dictum tincidunt. Curabitur eget erat vel erat suscipit ultrices. Vivamus tincidunt, nisl id posuere luctus, sapien felis convallis lectus, nec consectetur lorem libero ut velit"
+        },
+        {
+          "title": "How to track participants' skill development?",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, elit at luctus dictum, felis dolor sagittis justo, ac viverra ligula libero ut purus. Integer ut mauris ut dolor dictum tincidunt. Curabitur eget erat vel erat suscipit ultrices. Vivamus tincidunt, nisl id posuere luctus, sapien felis convallis lectus, nec consectetur lorem libero ut velit"
+        }
+      ],
+      "text": "Access the trainings now!"
+    }
+  },
+  "formationProfessionnelle": {
+    "hero": {
+      "page_title": "Professional Training for Teachers",
+      "page_subTitle": "Transform your pedagogy with our <br></br>innovative training programs!",
+      "btn": "Register Now",
+      "title": "Program <highlight>Objectives</highlight>",
+      "subTitle": "Continuous teacher training is essential to adapt to new learning methods and educational technologies. Warshati offers a structured and innovative program.",
+      "list": [
+        "Integrate digital tools into their pedagogy",
+        "Improve teaching methods through interactive approaches",
+        "Develop new skills for more engaging teaching"
+      ]
+    },
+    "presentation": {
+      "title": "Training Presentation",
+      "subTitle": "<highlight>Why</highlight> pursue continuous training with <highlight>Warshati?</highlight>",
+      "subSubTitle": "Target <highlight>audience</highlight>",
+      "list": [
+        {
+          "title": "An interactive and innovative approach",
+          "text": "Modern methods and digital tools"
+        },
+        {
+          "title": "Access to an educational community",
+          "text": "Exchange and collaborate with other teachers"
+        },
+        {
+          "title": "A tailored program",
+          "text": "Adapted for primary, secondary, and university teachers"
+        }
+      ],
+      "cards": [
+        "Primary and secondary school teachers",
+        "Trainers and educators",
+        "University teachers"
+      ]
+    },
+    "program": {
+      "section_title": "Our Training <highlight>Programs</highlight>",
+      "sub": "Program <highlight>Objectives</highlight>",
+      "title_1": "With Examples of <highlight>Proposed Modules</highlight>",
+      "title_2": "Interactive <highlight>Workshops (Examples)</highlight>",
+      "title_3": "Coaching and <highlight>Mentoring (Examples)</highlight>",
+      "title_4": "Resources and <highlight>Teaching Tools (Examples)</highlight>",
+      "groups": {
+        "1": {
+          "content": [
+            "Training sessions on active and digital pedagogies",
+            "Developing skills in hybrid teaching (in-person and online)",
+            "Training on artificial intelligence and gamification in education"
+          ]
+        },
+        "2": {
+          "content": [
+            "Interactive Workshops",
+            "Collaborative sessions in small groups",
+            "Role-playing and simulations to better understand modern pedagogical approaches"
+          ]
+        },
+        "3": {
+          "content": [
+            "Personalized support by digital education experts",
+            "Individual or group coaching sessions",
+            "Pedagogical follow-up to help apply new practices in class"
+          ]
+        },
+        "4": {
+          "content": [
+            "Exclusive access to a digital library with innovative teaching tools to test in class",
+            "An online platform to share and exchange with other teachers"
+          ]
+        }
+      },
+      "cards": [
+        [
+          {
+            "title": "Using digital tools in class",
+            "text": "Integration of educational platforms and LMS (Learning Management Systems)"
+          },
+          {
+            "title": "Modern pedagogical approaches",
+            "text": "Project-based learning, flipped classroom, differentiated instruction"
+          },
+          {
+            "title": "Student assessment and tracking",
+            "text": "Using AI for tracking and personalizing learning paths"
+          }
+        ],
+        [
+          "Create an interactive lesson with Genially or Canva",
+          "Use AI to generate educational content",
+          "Develop an immersive teaching sequence in VR/AR"
+        ],
+        [
+          "In-person or online coaching",
+          "Personalized support plan over several weeks"
+        ],
+        [
+          "Practical guides and teaching sheets",
+          "Interactive course templates and digital materials",
+          "Tutorial videos and case studies"
+        ]
+      ]
+    },
+    "temoignage": {
+      "title": "Testimonials and <highlight>Success Stories</highlight>",
+      "subTitle": "Section with <highlight>testimonials from teachers</highlight> who completed our training.",
+      "vid_tit": "Ms. Sara B",
+      "vid_sub": "Mathematics Teacher",
+      "list": [
+        "Thanks to Warshati, I've integrated interactive tools that transformed my teaching methods!",
+        "Thanks to Warshati, I've integrated interactive tools that transformed my teaching methods!",
+        "Thanks to Warshati, I've integrated interactive tools that transformed my teaching methods!",
+        "Thanks to Warshati, I've integrated interactive tools that transformed my teaching methods!",
+        "Thanks to Warshati, I've integrated interactive tools that transformed my teaching methods!"
+      ]
+    },
+    "contact": {
+      "title": "<highlight>Registration</highlight> and Contact",
+      "description": "Enter your details, and we will contact you to address your needs.",
+      "contact_information_title": "Contact Information",
+      "contact_information_description": "Write something to start a conversation!",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "etablissement": "Institution",
+      "choisi": "Training Choice",
+      "list": [
+        "Training 1",
+        "Training 2",
+        "Training 3"
+      ],
+      "join": "Register Now"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "title": "What are the prerequisites to participate in the training?",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, elit at luctus dictum, felis dolor sagittis justo, ac viverra ligula libero ut purus. Integer ut mauris ut dolor dictum tincidunt. Curabitur eget erat vel erat suscipit ultrices. Vivamus tincidunt, nisl id posuere luctus, sapien felis convallis lectus, nec consectetur lorem libero ut velit"
+        },
+        {
+          "title": "Are the trainings certified?",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, elit at luctus dictum, felis dolor sagittis justo, ac viverra ligula libero ut purus. Integer ut mauris ut dolor dictum tincidunt. Curabitur eget erat vel erat suscipit ultrices. Vivamus tincidunt, nisl id posuere luctus, sapien felis convallis lectus, nec consectetur lorem libero ut velit"
+        },
+        {
+          "title": "How can I access resources after the training?",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, elit at luctus dictum, felis dolor sagittis justo, ac viverra ligula libero ut purus. Integer ut mauris ut dolor dictum tincidunt. Curabitur eget erat vel erat suscipit ultrices. Vivamus tincidunt, nisl id posuere luctus, sapien felis convallis lectus, nec consectetur lorem libero ut velit"
+        }
+      ],
+      "text": "Access the trainings now!"
+    }
+  },
+  "smartWorkshopsProject": {
+    "hero": {
+      "page_title": "Smart Workshops Project",
+      "page_subTitle": "Take on challenges, solve real-world problems, and shape the future with our Smart Workshops Projects!",
+      "btn": "Register Now",
+      "title": "Program <highlight>Objectives</highlight>",
+      "list": [
+        "<bold>Develop</bold> critical thinking and problem-solving skills.",
+        "<bold>Encourage</bold> innovation through hands-on projects.",
+        "<bold>Promote</bold> collaboration and structured learning.",
+        "<bold>Develop</bold> critical thinking and problem-solving skills."
+      ]
+    },
+    "concepts": {
+      "title": "Program Concept",
+      "subTitle": "Real-world anchored learning",
+      "subSubTitle": "Target <highlight>audience</highlight>",
+      "list": [
+        {
+          "title": "Central theme",
+          "text": "A major challenge (e.g., autonomous vehicles, smart homes, renewable energy)."
+        },
+        {
+          "title": "Educational approaches",
+          "text": "Sub-themes addressing different project aspects."
+        },
+        {
+          "title": "Progressive challenges",
+          "text": "Skill-building through missions and experiments."
+        }
+      ],
+      "cards": [
+        "Youth aged 8-18",
+        "Schools, science clubs, and educational centers",
+        "Students passionate about innovation and technology"
+      ]
+    },
+    "exemples": {
+      "section_title": "Project Examples",
+      "sub": "Autonomous Vehicles",
+      "sub_1": "Smart Homes",
+      "sub_2": "Sustainable Energy",
+      "cards": [
+        [
+          {
+            "title": "Embedded programming",
+            "text": "Design the vehicle's navigation system"
+          },
+          {
+            "title": "Computer vision",
+            "text": "Implement obstacle and traffic sign recognition."
+          },
+          {
+            "title": "Embedded systems",
+            "text": "Sensor integration for detection and decision-making"
+          }
+        ],
+        [
+          {
+            "title": "Home automation & IoT",
+            "text": "Design a connected system for lighting and temperature control"
+          },
+          {
+            "title": "Artificial Intelligence",
+            "text": "Create an intelligent voice assistant"
+          },
+          {
+            "title": "Renewable energy",
+            "text": "Simulate efficient energy management with solar panels."
+          }
+        ],
+        [
+          {
+            "title": "Green energy production",
+            "text": "Create miniature solar panels and wind turbines."
+          },
+          {
+            "title": "Energy storage and management",
+            "text": "Simulation of smart battery systems."
+          },
+          {
+            "title": "Optimization and automation",
+            "text": "Modeling an efficient energy network."
+          }
+        ]
+      ]
+    },
+    "approche": {
+      "title": "Educational Approach",
+      "subTitle": "Applied methodology",
+      "list": [
+        {
+          "title": "Thematic exploration",
+          "text": "Each project begins with an overview of the subject."
+        },
+        {
+          "title": "Collaborative work",
+          "text": "Participants progress in multidisciplinary teams."
+        },
+        {
+          "title": "Prototyping and iteration",
+          "text": "Solutions are tested and progressively improved."
+        },
+        {
+          "title": "Presentation and evaluation",
+          "text": "Each project concludes with a demonstration and skills assessment."
+        }
+      ]
+    },
+    "temoignage": {
+      "title": "Testimonials and <highlight>Success Stories</highlight>",
+      "vid_tit": "Sara, 14 years old",
+      "vid_sub": "Student",
+      "list": [
+        "Thanks to Warshati, I've integrated interactive tools that transformed my learning approach!",
+        "Thanks to Warshati, I've integrated interactive tools that transformed my learning approach!",
+        "Thanks to Warshati, I've integrated interactive tools that transformed my learning approach!",
+        "Thanks to Warshati, I've integrated interactive tools that transformed my learning approach!",
+        "Thanks to Warshati, I've integrated interactive tools that transformed my learning approach!"
+      ]
+    },
+    "contact": {
+      "title": "<highlight>Registration</highlight> and Contact",
+      "description": "Enter your details, we'll contact you to address your needs.",
+      "contact_information_title": "Contact Information",
+      "contact_information_description": "Write something to start a conversation!",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "age": "Age",
+      "choisi": "Selected Project",
+      "list": ["Project 1", "Project 2", "Project 3"],
+      "join": "Register Now"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "title": "What's the difficulty level of the projects?",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, elit at luctus dictum, felis dolor sagittis justo, ac viverra ligula libero ut purus. Integer ut mauris ut dolor dictum tincidunt. Curabitur eget erat vel erat suscipit ultrices. Vivamus tincidunt, nisl id posuere luctus, sapien felis convallis lectus, nec consectetur lorem libero ut velit"
+        },
+        {
+          "title": "What are the participation requirements?",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, elit at luctus dictum, felis dolor sagittis justo, ac viverra ligula libero ut purus. Integer ut mauris ut dolor dictum tincidunt. Curabitur eget erat vel erat suscipit ultrices. Vivamus tincidunt, nisl id posuere luctus, sapien felis convallis lectus, nec consectetur lorem libero ut velit"
+        },
+        {
+          "title": "Can projects be followed online?",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis, elit at luctus dictum, felis dolor sagittis justo, ac viverra ligula libero ut purus. Integer ut mauris ut dolor dictum tincidunt. Curabitur eget erat vel erat suscipit ultrices. Vivamus tincidunt, nisl id posuere luctus, sapien felis convallis lectus, nec consectetur lorem libero ut velit"
+        }
+      ],
+      "text": "Start a project now!"
+    }
+  },
+  "integrationScolaire": {
+    "hero": {
+      "page_title": "<highlight>Integrate</highlight> STEAM & AI",
+      "page_subTitle": "into your schools with <highlight>Warshati Labs</highlight>",
+      "reserve_btn": "Book a free demo",
+      "dexcover_btn": "Discover our Labs solutions",
+      "page_subSubTitle": "With <bold>Warshati</bold>, transform your classrooms into modern learning labs with our STEAM Labs, AI Labs, Language Labs, and more. <bold>Want to integrate our STEAM & AI Labs into your institution?</bold>",
+      "list": [
+        "<bold>Develop</bold> critical thinking and problem-solving.",
+        "<bold>Encourage</bold> innovation through hands-on projects.",
+        "<bold>Foster</bold> collaboration and structured learning.",
+        "<bold>Develop</bold> critical thinking and problem-solving."
+      ]
+    },
+    "withWarshati": {
+      "title": "With Warshati",
+      "subTitle": "We offer seamless and enriching integration that fosters creativity, innovation, and mastery of cutting-edge technologies",
+      "cards": [
+        {
+          "number": "01",
+          "title": "What is an AI Lab?",
+          "subtitle": "Learn artificial intelligence today to shape tomorrow.",
+          "content": "An AI Lab is an educational space where students explore artificial intelligence interactively. Through hands-on activities, they discover:...",
+          "button": "Learn more"
+        },
+        {
+          "number": "02",
+          "title": "Benefits of STEAM & AI Labs?",
+          "subtitle": "Prepare your students for future skills.",
+          "content": "STEAM Labs and AI Labs offer an immersive experience that:",
+          "list": [
+            "Stimulates critical thinking: Students learn to solve complex problems..."
+          ],
+          "button": "Learn more"
+        },
+        {
+          "number": "03",
+          "title": "Teacher Training for AI Labs",
+          "subtitle": "Empower your teachers to excel in teaching AI",
+          "content": "We train your teachers to optimally use Warshati Digital Labs:",
+          "list": [
+            "Introduction to concepts: Training..."
+          ],
+          "button": "Learn more"
+        },
+        {
+          "number": "04",
+          "title": "STEAM & AI Labs Content",
+          "subtitle": "Equipped labs to stimulate learning",
+          "content": "Our STEAM Labs and AI Labs include:",
+          "list": [
+            "Interactive materials: Learning models, project prototypes..."
+          ],
+          "button": "Learn more"
+        },
+        {
+          "number": "05",
+          "title": "A Methodical and Successful Integration",
+          "subtitle": "A 4-step process",
+          "list": [
+            "Initial audit: Understanding the school's needs and student levels.",
+            "Lab setup: Installation of..."
+          ],
+          "button": "Learn more"
+        },
+        {
+          "number": "06",
+          "title": "Benefits of STEAM & AI Labs?",
+          "subtitle": "Measurable benefits for students and teachers",
+          "list": [
+            "Increased interest in STEM: +40% student engagement.",
+            "Enhanced digital skills: AI, STEM..."
+          ],
+          "button": "Learn more"
+        }
+      ]
+    },
+    "testimonials": {
+      "heading": "Our Testimonials",
+      "description": "We offer placeholder text here to describe testimonials. It can be replaced with real content later.",
+      "button": "Learn More",
+      "cardButton": "Learn More",
+      "cards": [
+        "Thanks to my school's AI Lab, I created an app that detects emotions in images. This inspired me to pursue a career in data science.",
+        "Thanks to them, our school took a new digital turn.",
+        "An immersive experience for both students and teachers.",
+        "Highly satisfied, we strongly recommend."
+      ]
+    }
+  },
+  "commencer": {
+    "greeting": "Hi, I’m Wsep...",
+    "greeting_1": "Let’s build a learning path just for you",
+    "last": "Your Personalized Learning path is ready.",
+    "create": "Create a free account",
+    "try": "Try a Lesson first",
+    "commencerCards": [
+      {
+        "leftText": "Getting smarter every day!",
+        "cardText": "Warshati keeps you engaged with interactive lessons, fun challenges, and daily inspiration—designed just for you."
+      },
+      {
+        "leftText": "You're on the right track!",
+        "cardText": "With Warshati’s fun and well-structured courses, I’ve mastered concepts that once felt challenging. Now, I feel confident tackling real-world problems and technical challenges with ease!"
+      }
+    ],
+    "thirdPhaseData": {
+      "firstCard": {
+        "leftText": "You’re in the right place!",
+        "cardText": "Young minds use Warshati to sharpen their problem-solving skills and grow their knowledge."
+      },
+      "choices": [
+        {
+          "leftText": "Let’s create a personalized learning journey just for you!"
+        },
+        {
+          "text": "AI Discovery",
+          "nextCard": {
+            "leftText": "Learn 6x more effectively!",
+            "cardText": "Warshati's tailored, interactive lessons with hands-on practice accelerate learning 6x faster than videos.",
+            "finalCards": [
+              { "text": "Fundamentals" },
+              { "text": "Data Science" },
+              { "text": "Applied AI" },
+              { "text": "AI & Ethics" }
+            ]
+          }
+        },
+        {
+          "text": "STEAM Competency",
+          "nextCard": {
+            "leftText": "Learn 6x more effectively!",
+            "cardText": "Warshati's tailored, interactive lessons with hands-on practice accelerate learning 6x faster than videos.",
+            "finalCards": [
+              { "text": "Technology & Computing" },
+              { "text": "Science & Engineering" },
+              { "text": "Mathematics & Logic" },
+              { "text": "Arts & Creativity" }
+            ]
+          }
+        },
+        {
+          "text": "Digital literacy",
+          "nextCard": {
+            "leftText": "Learn 6x more effectively!",
+            "cardText": "Warshati's tailored, interactive lessons with hands-on practice accelerate learning 6x faster than videos.",
+            "finalCards": [
+              { "text": "Information & Data" },
+              { "text": "Creating Digital Content" },
+              { "text": "Staying Safe Online" },
+              { "text": "Connected & Collaborative" }
+            ]
+          }
+        }
+      ]
+    },
+    "commencerDataSets": [
+      {
+        "question": "What’s your top goal?",
+        "answers": [
+          {
+            "text": "Advancing Your Career",
+            "reply": "Get Ready to embrace the future"
+          },
+          {
+            "text": "Keeping your skills sharp",
+            "reply": "The key to a life full of excitement. Wise choice!"
+          },
+          {
+            "text": "Mastering Technology Skills",
+            "reply": "Your future self will thank you."
+          },
+          {
+            "text": "Supporting My Child’s Learning",
+            "reply": "Igniting young minds is always rewarding."
+          },
+          {
+            "text": "Empowering My Student’s Education",
+            "reply": "A sophisticated decision."
+          },
+          {
+            "text": "Exploring New Opportunities",
+            "reply": "Intriguing... A mystery awaits."
+          }
+        ]
+      },
+      {
+        "question": "What would you like to explore today?",
+        "answers": [
+          {
+            "text": "Learning new skills",
+            "reply": "Great choice! Learning never stops."
+          },
+          {
+            "text": "Following my curiosity",
+            "reply": "Curiosity leads to amazing discoveries!"
+          },
+          {
+            "text": "Becoming a problem-solving pro",
+            "reply": "Get ready to tackle challenges like a pro!"
+          },
+          {
+            "text": "Reviewing the basics",
+            "reply": "A strong foundation makes everything easier."
+          },
+          {
+            "text": "Something else",
+            "reply": "Awesome! Let’s explore together."
+          }
+        ]
+      },
+      {
+        "question": "What's your daily learning goal?",
+        "answers": [
+          {
+            "text": "10 min",
+            "reply": "That’s 365 lessons a year!"
+          },
+          {
+            "text": "15 min",
+            "reply": "That’s 547 lessons a year!"
+          },
+          {
+            "text": "20 min",
+            "reply": "That’s 730 lessons a year!"
+          },
+          {
+            "text": "30 min",
+            "reply": "That’s 1094 lessons a year!"
+          }
+        ]
+      },
+      {
+        "question": "When do you want to learn?",
+        "answers": [
+          {
+            "text": "In the morning, during breakfast or on my way to school",
+            "reply": "Your brain loves a good start. Smart move!"
+          },
+          {
+            "text": "During a quick break, like lunch or between activities",
+            "reply": "Knowledge waits for no one!"
+          },
+          {
+            "text": "At night, after dinner or while getting ready for bed",
+            "reply": "Exploring science under the stars? Sounds magical!"
+          },
+          {
+            "text": "At another time that works for me",
+            "reply": "Anytime is a great time to learn."
+          }
+        ]
+      }
+    ]
   }
 
 }

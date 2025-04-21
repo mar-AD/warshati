@@ -72,7 +72,7 @@ const Curricula = () => {
                     animate="animate"
                     className="flex flex-col items-start gap-3 mt-20 max-sm:mt-0"
                 >
-                    <div className="flex flex-col-reverse md:flex-row items-center md:items-end gap-6 w-full max-w-[61rem]">
+                    <div className="flex flex-col-reverse md:flex-row items-center md:items-end gap-6 w-full px-5 max-w-[100vw]">
 
                         <Link
                         href={"/Smart-Workshops-Program"}
