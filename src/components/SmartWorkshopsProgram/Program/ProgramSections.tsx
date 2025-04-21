@@ -3,7 +3,6 @@ import Image from "next/image";
 import Checkbox from "/public/images/Home/digitalLab/Checkbox.png";
 import ProgramCard from "./ProgramCards";
 import { nosProgrammesData } from "@/lib/data";
-import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { FadeLeft, FadeRight } from "@/lib/animations";
 import { useTranslations } from "next-intl";

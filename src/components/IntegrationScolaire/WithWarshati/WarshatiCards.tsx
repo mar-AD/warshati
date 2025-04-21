@@ -2,10 +2,11 @@
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { FadeRight } from "@/lib/animations"
+import { WarshatiCardType } from "@/lib/types"
 
 const WarshatiCards = () => {
     const t = useTranslations("integrationScolaire.withWarshati")
-    const cards = t.raw("cards") as any[]
+    const cards = t.raw("cards") as WarshatiCardType[]
 
     return (
         <div className="flex flex-wrap gap-4">

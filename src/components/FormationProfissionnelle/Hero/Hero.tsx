@@ -6,7 +6,6 @@ import {  FadeLeft, FadeRight, FadeUp } from "@/lib/animations"
 import image_1 from "/public/images/Formation/formation-1.png"
 import flight from "/public/images/Home/hero/flight.png";
 import image_2 from "/public/images/Blog/hero_bg.jpg";
-import { FormationProfessionnelleData } from "@/lib/data";
 import Checkbox from "/public/images/Home/digitalLab/Checkbox.png"
 import { useTranslations } from "next-intl"
 

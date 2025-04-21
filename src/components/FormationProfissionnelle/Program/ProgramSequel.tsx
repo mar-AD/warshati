@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { objectifDuProgrammeData, programmesDeFormationData } from "@/lib/data";
+import { objectifDuProgrammeData } from "@/lib/data";
 import ProgramCard from "./ProgramCards";
 import Checkbox from "/public/images/Home/digitalLab/Checkbox.png"
 import { motion } from "framer-motion";

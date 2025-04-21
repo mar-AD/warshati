@@ -3,7 +3,7 @@ import Image from "next/image"
 import flight from "/public/images/Home/hero/flight.png";
 import { motion } from "framer-motion";
 import { FadeLeft, FadeRight, FadeUp } from "@/lib/animations";
-import { objectifDuProgrammeData, programmesDeFormationData } from "@/lib/data";
+import { objectifDuProgrammeData } from "@/lib/data";
 import ProgramCard from "./ProgramCards";
 import Checkbox from "/public/images/Home/digitalLab/Checkbox.png"
 import ProgramSequel from "./ProgramSequel";

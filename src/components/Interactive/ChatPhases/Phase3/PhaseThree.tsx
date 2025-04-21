@@ -5,27 +5,14 @@ import { ThirdPhaseData } from "@/lib/data"
 import Card from "../Cards"
 import ThirdPhaseList from "./ThirdPhaseList"
 import SelectedTopics from "./SelectedTopics"
-import { StaticImageData } from "next/image"
 import { useTranslations } from "next-intl"
+import { ChoiceType_2, FinalCardType, MergedCard } from "@/lib/types"
 
 interface ThirdPhaseProps {
   setScreenIndex: (index: number) => void
   setLeftText: (text: string) => void
   setShowLeft: (show: boolean) => void
   setOverflowVisible: (visible: boolean) => void
-}
-
-interface MergedCard {
-  text?: string
-  leftText: string
-  cardText: string
-  icon: StaticImageData
-  image: StaticImageData
-  timeout: number
-  finalCards: {
-    text: string
-    icon: StaticImageData
-  }[]
 }
 
 const ThirdPhase = ({
@@ -38,9 +25,9 @@ const ThirdPhase = ({
   const [step, setStep] = useState(0)
   const [selectedChoice, setSelectedChoice] = useState<MergedCard | null>(null)
 
-  const mergedChoices = t.raw("choices").map((choice: any, i: number) => {
+  const mergedChoices = t.raw("choices").map((choice: ChoiceType_2, i: number) => {
     const visual = ThirdPhaseData.choices[i]
-    const finalCards = choice?.nextCard?.finalCards?.map((fc: any, j: number) => ({
+    const finalCards = choice?.nextCard?.finalCards?.map((fc: FinalCardType, j: number) => ({
       text: fc.text,
       icon: visual?.nextCard?.finalCards[j].icon
     })) || []

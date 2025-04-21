@@ -131,6 +131,12 @@ export type ChoiceType = {
   nextCard?: NextCardType;
 };
 
+export type ChoiceType_2 = {
+  text?: string;
+  leftText: string;
+  nextCard: NextCardType;
+};
+
 export type FirstCardType = {
   leftText: string;
   cardText: string;
@@ -218,3 +224,26 @@ export type Article = {
     }[];
   };
 };
+
+export interface WarshatiCardType {
+  number: string
+  title: string
+  subtitle: string
+  content?: string
+  list?: string[]
+  button: string
+}
+
+
+export interface MergedCard {
+  text?: string
+  leftText: string
+  cardText: string
+  icon: StaticImageData
+  image: StaticImageData
+  timeout: number
+  finalCards: {
+    text: string
+    icon: StaticImageData
+  }[]
+}
