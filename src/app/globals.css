@@ -137,6 +137,19 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+
+
+  .scroll-container {
+    direction: rtl;
+    scrollbar-width: bold;             
+    scrollbar-color: #3d0e85 transparent; 
+  }
+  .scroll-container > * {
+    direction: ltr;
+  }
+  
+  
 }
 
 @layer base {
@@ -147,3 +160,5 @@
     @apply bg-background text-foreground;
   }
 }
+
+

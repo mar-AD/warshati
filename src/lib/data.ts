@@ -168,6 +168,16 @@ import SmartEducationPlatform_21 from "/public/images/SmartEducationPlatform/Sma
 import SmartEducationPlatform_22 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-29.png"
 import SmartEducationPlatform_23 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-30.png"
 import SmartEducationPlatform_24 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-31.png"
+import fr from "/public/images/Dashboard/france.png"
+import ma from "/public/images/Dashboard/morocco.png"
+import usa from "/public/images/Dashboard/united-states.png"
+import sp from "/public/images/Dashboard/spain.png"
+import uiux1 from "/public/images/Dashboard/infoanddata_1.png"
+import uiux2 from "/public/images/Dashboard/infoanddata_2.png"
+import uiux3 from "/public/images/Dashboard/infoanddata_3.png"
+import uiux4 from "/public/images/Dashboard/infoanddata_4.png"
+import uiux5 from "/public/images/Dashboard/infoanddata_5.png"
+import uiux6 from "/public/images/Dashboard/infoanddata_6.png"
 import {
   Atom,
   BrainCircuit,
@@ -192,12 +202,14 @@ import {
 import {
   ageType,
   articleType,
+  CardDataType,
   CommencerCardType,
   CommencerDataSetType,
   ComposantesDuProgrammeDataType,
   // CommencerDataType,
   ContactType,
   CurriculaType,
+  DashLanguageType,
   FAQType,
   FormationType,
   IntScolaireType,
@@ -363,6 +375,13 @@ export const languages: LanguageType[] = [
   { code: "AR", name: "العربية", flag: "ma" },
   { code: "EN", name: "English", flag: "gb" },
   { code: "ES", name: "Español", flag: "es" },
+];
+
+export const dashLanguages: DashLanguageType[] = [
+  { code: "FR", flag: fr },
+  { code: "AR", flag: ma },
+  { code: "EN", flag: usa },
+  { code: "ES", flag: sp },
 ];
 
 export const CommencerCards: CommencerCardType[] = [
@@ -1863,3 +1882,113 @@ export const presontationData1_1:Presentation1Type[] = [
         color: "#dcf5ff",
       },
   ]
+
+
+
+
+
+
+
+  export const cardData: CardDataType[] = [
+    {
+      title: "Innovative Solutions",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sapien at lorem ullamcorper ultrices.",
+      image: uiux1,
+    },
+    {
+      title: "Seamless Integration",
+      description: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+      image: uiux2,
+    },
+    {
+      title: "Data-Driven Design",
+      description: "Curabitur non diam eu tortor feugiat suscipit. Etiam eget nisl felis. Donec vel velit nec magna tempus porttitor.",
+      image: uiux3,
+    },
+    {
+      title: "Enhanced Accessibility",
+      description: "Aliquam erat volutpat. Quisque tempor tincidunt velit, a efficitur massa euismod sed.",
+      image: uiux4,
+    },
+    {
+      title: "Optimized Workflows",
+      description: "Praesent vel lorem ac arcu ultrices fringilla ut nec justo. Sed viverra mattis urna, vel efficitur nisi hendrerit ut.",
+      image: uiux5,
+    },
+    {
+      title: "User Behavior Analytics",
+      description: "Nullam id feugiat libero. Phasellus eu lorem sed arcu efficitur volutpat sed nec eros.",
+      image: uiux6,
+    },
+    {
+      title: "Real-Time Collaboration",
+      description: "Suspendisse potenti. Integer eu enim sed purus fermentum accumsan sed in felis.",
+      image: uiux2,
+    },
+    {
+      title: "Scalable Infrastructure",
+      description: "Donec non massa nec magna vestibulum vulputate a at ipsum. Vivamus placerat, ex a dapibus feugiat, purus sapien convallis ante.",
+      image: uiux3,
+    },
+    {
+      title: "Customizable Templates",
+      description: "Sed sit amet sem vel est facilisis tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada.",
+      image: uiux4,
+    },
+    {
+      title: "Performance Optimization",
+      description: "Mauris ac diam nec velit tincidunt posuere. Cras vitae finibus lectus. Integer at orci at nisl blandit volutpat.",
+      image: uiux5,
+    },
+    {
+      title: "Agile Development",
+      description: "Nunc accumsan bibendum sapien, nec gravida nunc congue id. Morbi vel velit turpis.",
+      image: uiux6,
+    },
+    {
+      title: "Cloud Integration",
+      description: "Etiam tristique tellus nec sapien lacinia, a efficitur ipsum interdum. Pellentesque ac est quis lorem lacinia.",
+      image: uiux3,
+    },
+    {
+      title: "Modular Architecture",
+      description: "Fusce luctus enim id ipsum vulputate, eget congue odio porta. In finibus sodales urna.",
+      image: uiux5,
+    },
+    {
+      title: "Cross-Platform Apps",
+      description: "Sed laoreet sapien eget purus fringilla, non pharetra nulla ultrices. Integer consectetur, sem vel hendrerit lacinia.",
+      image: uiux3,
+    },
+    {
+      title: "User Experience First",
+      description: "Morbi dictum, lorem in tristique suscipit, erat justo blandit augue, sed maximus arcu ante non magna.",
+      image: uiux1,
+    },
+    {
+      title: "Interactive Prototypes",
+      description: "Praesent in cursus neque. Nulla vel faucibus nisi. Quisque vel congue nisi, nec convallis tellus.",
+      image: uiux5,
+    },
+    {
+      title: "Enterprise Security",
+      description: "Vivamus tincidunt lacus quis dui volutpat, sed posuere nulla fermentum. Nulla facilisi.",
+      image: uiux2,
+    },
+    {
+      title: "Machine Learning Insights",
+      description: "Integer sed lacus et sapien tincidunt accumsan. Proin ullamcorper lorem vitae augue viverra rutrum.",
+      image: uiux6,
+    },
+    {
+      title: "Dynamic Dashboards",
+      description: "Donec blandit tortor sed ligula fringilla, vel ultrices diam cursus. Suspendisse potenti.",
+      image: uiux1,
+    },
+    {
+      title: "Frictionless Navigation",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec velit non lorem congue eleifend.",
+      image: uiux6,
+    },
+  ];
+  

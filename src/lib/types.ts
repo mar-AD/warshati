@@ -13,6 +13,10 @@ export type LanguageType = {
   name: string;
   flag: string;
 };
+export type DashLanguageType = {
+  code: string;
+  flag: StaticImageData;
+};
 export type SocialType = {
   Icon: LucideIcon|IconType;
   link: string;
@@ -246,4 +250,11 @@ export interface MergedCard {
     text: string
     icon: StaticImageData
   }[]
+}
+
+
+export interface CardDataType {
+  title: string;
+  description: string;
+  image: StaticImageData;
 }
