@@ -29,10 +29,10 @@ const VideoModal = () => {
 
       <Modal
         isOpen={isOpen}
-        // onRequestClose={() => setIsOpen(false)}
-        // className="modal"
-        // overlayClassName="modal-overlay"
-        // contentLabel="player"
+        onRequestClose={() => setIsOpen(false)}
+        className="modal"
+        overlayClassName="modal-overlay"
+        contentLabel="Video Modal"
       >
         <div className="relative w-full h-0 pb-[56.25%]">
           <iframe
