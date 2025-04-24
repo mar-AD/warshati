@@ -1,6 +1,6 @@
 "use client"
 
-import { FadeDown, FadeOut } from "@/lib/animations"
+import { FadeOut } from "@/lib/animations"
 import { cn } from "@/lib/utils"
 import { AnimatePresence, motion } from "framer-motion"
 import { ChevronDown, Search } from "lucide-react"
