@@ -178,6 +178,17 @@ import uiux3 from "/public/images/Dashboard/infoanddata_3.png"
 import uiux4 from "/public/images/Dashboard/infoanddata_4.png"
 import uiux5 from "/public/images/Dashboard/infoanddata_5.png"
 import uiux6 from "/public/images/Dashboard/infoanddata_6.png"
+import icon1 from "/public/images/Dashboard/icon_1.png"
+import icon2 from "/public/images/Dashboard/icon_2.png"
+import icon3 from "/public/images/Dashboard/icon_3.png"
+import icon4 from "/public/images/Dashboard/icon_4.png"
+import image1 from "/public/images/Dashboard/appliedAIImage.png"
+import image2 from "/public/images/Dashboard/appliedAIImage_1.png"
+import image3 from "/public/images/Dashboard/appliedAIImage_2.png"
+import image4 from "/public/images/Dashboard/appliedAIImage_3.png"
+import soon1 from "/public/images/Dashboard/cominsoon_1.png"
+import soon2 from "/public/images/Dashboard/cominsoon_2.png"
+import soon3 from "/public/images/Dashboard/cominsoon_3.png"
 import {
   Atom,
   BrainCircuit,
@@ -215,6 +226,7 @@ import {
   IntScolaireType,
   LanguageType,
   LmsDataType,
+  NavItem,
   NavType,
   niveauxType,
   ObjectifDuProgrammeDataType,
@@ -1887,7 +1899,7 @@ export const presontationData1_1:Presentation1Type[] = [
 
 
 
-
+//for dashboard--------------------------------
 
   export const cardData: CardDataType[] = [
     {
@@ -1992,3 +2004,71 @@ export const presontationData1_1:Presentation1Type[] = [
     },
   ];
   
+
+  export const DigitalLiteracyNavItems: NavItem[] = [
+  { name: "Programs", href: "/Dashboard/TeachableAI/programs" },
+  { name: "Projects", href: "/Dashboard/TeachableAI/projects" },
+  { name: "Community", href: "/Dashboard/TeachableAI/community" },
+  { name: "Settings", href: "/Dashboard/TeachableAI/settings" },
+];
+
+export const TeachableAINavItems:NavItem[] = [
+  { icon: icon1, name: "Fundamentals", href: "/Dashboard/DigitalLiteracy/Fundamentals" },
+  { icon: icon2, name: "Applied AI", href: "/Dashboard/DigitalLiteracy/AppliedAI" },
+  { icon: icon3, name: "Data Science", href: "/Dashboard/DigitalLiteracy/DataScience" },
+  { icon: icon4, name: "AI & Ethics", href: "/Dashboard/DigitalLiteracy/AI&Ethics" },
+];
+
+
+export const teachableAICardData: CardDataType[] = [
+  {
+    title: "Finger Labeling",
+    description: "Your own dictionary objects and labels fingers in real time!",
+    image: image1
+  },
+  {
+    title: "Image Classifier",
+    description: "Adaptive and classify images by clicking categories like animals.",
+    image: image2
+  },
+  {
+    title: "Shape Classifier",
+    description: "Using the router when used into different channels images.",
+    image: image3
+  },
+
+  {
+    title: "Your first ChatBook",
+    description: "Your Smart Assistant that can answer questions, tell jokes, and learn from conversations!",
+    image: image4
+  },
+  {
+    title: "Image Classifier",
+    description: "Adaptive and classify images by clicking categories like animals.",
+    image: image1
+  },
+  {
+    title: "Shape Classifier",
+    description: "Using the router when used into different channels images.",
+    image: image2
+  }
+];
+
+
+export const comingSoonData: CardDataType[] = [
+  {
+    title: "Object detection",
+    description: "train an AI to recognize and detect different objects in their environment using a webcam or preloaded images.",
+    image: soon1,
+  },
+  {
+    title: "Rock, Paper, Scissors Game",
+    description: "build your  AI that learns to play Rock, Paper, Scissors!",
+    image: soon2,
+  },
+  {
+    title: "Story teller",
+    description: "create a text-based AI that helps generate fun and interactive stories",
+    image: soon3,
+  },
+]

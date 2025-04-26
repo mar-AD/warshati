@@ -3,11 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import { Moon, Sun, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
-import LangSwitcher from "../LangSwitcher";
-import Search from "./SearchBar";
+import LangSwitcher from "./LangSwitcher";
+
 import Sidebar from "../SideBar/SideBar";
 import useMediaQuery from "@/lib/UseMediaQuery";
 import { motion, AnimatePresence } from "framer-motion";
+import { DigitalLiteracyNavItems } from "@/lib/data";
+import { SearchComponent } from "./SearchComponent";
+
 
 const Navbar = () => {
     const [darkMode, setDarkMode] = useState(false);
@@ -49,7 +52,7 @@ const Navbar = () => {
                         <Menu size={24} />
                         </button>
                     )}
-                    <Search />
+                    <SearchComponent />
                 </div>
 
                 <div className="flex items-center gap-4">
@@ -98,6 +101,7 @@ const Navbar = () => {
                         showToggleButton={false}
                         forceShowOnMobile={true}
                         onLinkClick={() => setSidebarOpen(false)}
+                        navItems={DigitalLiteracyNavItems}
                     />
                     </motion.div>
                 )}

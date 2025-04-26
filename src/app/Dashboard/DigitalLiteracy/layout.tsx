@@ -1,7 +1,8 @@
 import Sidebar from "@/components/Dashboard/SideBar/SideBar";
 import { Geist, Geist_Mono } from "next/font/google";
-import '../globals.css';
+import '../../globals.css';
 import Navbar from "@/components/Dashboard/NavBar/NavBar";
+import { DigitalLiteracyNavItems } from "@/lib/data";
 
 interface DashboardLayoutProps {
     children: React.ReactNode
@@ -20,7 +21,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => (
     <html lang="" >
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}>
             <div className="flex lg:h-screen lg:overflow-hidden flex-col lg:flex-row">
-                <Sidebar />
+                <Sidebar navItems={DigitalLiteracyNavItems}/>
                 <div className="flex-1 flex flex-col min-h-0">
                     <Navbar />
                     {children}

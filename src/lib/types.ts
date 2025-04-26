@@ -258,3 +258,10 @@ export interface CardDataType {
   description: string;
   image: StaticImageData;
 }
+
+
+export type NavItem = {
+  name: string;
+  href: string;
+  icon?: StaticImageData;
+};
