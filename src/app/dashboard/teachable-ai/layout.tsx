@@ -31,26 +31,4 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => (
         </body>
     </html>
 );
-
-// const DashboardLayout = ({ children }: DashboardLayoutProps) => (
-//     <html lang="en">
-//       <body className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen overflow-hidden`}>
-//         <div className="flex h-screen overflow-hidden"> {/* 100% height layout shell */}
-          
-//           <Sidebar navItems={TeachableAINavItems} />
-  
-//           {/* Content area */}
-//           <div className="flex flex-col flex-1 min-w-0">
-//             <Navbar />
-  
-//             {/* 🎯 Make this scrollable only if children overflow */}
-//             <main className="flex-1 overflow-y-auto min-h-0">
-//               {children}
-//             </main>
-//           </div>
-//         </div>
-//       </body>
-//     </html>
-//   );
-
 export default DashboardLayout;

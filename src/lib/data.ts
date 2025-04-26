@@ -2006,17 +2006,17 @@ export const presontationData1_1:Presentation1Type[] = [
   
 
   export const DigitalLiteracyNavItems: NavItem[] = [
-  { name: "Programs", href: "/Dashboard/TeachableAI/programs" },
-  { name: "Projects", href: "/Dashboard/TeachableAI/projects" },
-  { name: "Community", href: "/Dashboard/TeachableAI/community" },
-  { name: "Settings", href: "/Dashboard/TeachableAI/settings" },
+  { name: "Programs", href: "/dashboard/teachable-ai/programs" },
+  { name: "Projects", href: "/dashboard/teachable-ai/projects" },
+  { name: "Community", href: "/dashboard/teachable-ai/community" },
+  { name: "Settings", href: "/dashboard/teachable-ai/settings" },
 ];
 
 export const TeachableAINavItems:NavItem[] = [
-  { icon: icon1, name: "Fundamentals", href: "/Dashboard/DigitalLiteracy/Fundamentals" },
-  { icon: icon2, name: "Applied AI", href: "/Dashboard/DigitalLiteracy/AppliedAI" },
-  { icon: icon3, name: "Data Science", href: "/Dashboard/DigitalLiteracy/DataScience" },
-  { icon: icon4, name: "AI & Ethics", href: "/Dashboard/DigitalLiteracy/AI&Ethics" },
+  { icon: icon1, name: "Fundamentals", href: "/dashboard/digital-literacy/Fundamentals" },
+  { icon: icon2, name: "Applied AI", href: "/dashboard/digital-literacy/AppliedAI" },
+  { icon: icon3, name: "Data Science", href: "/dashboard/digital-literacy/DataScience" },
+  { icon: icon4, name: "AI & Ethics", href: "/dashboard/digital-literacy/AI&Ethics" },
 ];
 
 
