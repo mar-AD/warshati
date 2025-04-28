@@ -1,12 +1,14 @@
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 interface CardProps {
     title: string ;
     description: string;
     backgroundImage: StaticImageData;
+    href: string
 }
 
-const Cards = ({ title, description, backgroundImage }: CardProps) => {
+const Cards = ({ title, description, backgroundImage, href }: CardProps) => {
     const words = title.split(" ");
     const lastWord = words.pop();
     return (
@@ -31,9 +33,9 @@ const Cards = ({ title, description, backgroundImage }: CardProps) => {
                 </h2>
                 <div className="flex flex-row md:flex-col 2xl:flex-row justify-start items-start gap-2">
                     <p className="text-[11px] line-clamp-2">{description}</p>
-                    <button className="bg-black/30 rounded-full border border-white hover:bg-black/50 text-white font-extrabold py-2 px-8 text-[10px] lg:text-[13px]">
+                    <Link href={href} className="bg-black/30 rounded-full border border-white hover:bg-black/50 text-white font-extrabold py-2 px-8 text-[10px] lg:text-[13px]">
                         Start
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

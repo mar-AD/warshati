@@ -79,7 +79,7 @@ function Programs() {
                 </div>
 
             </div>
-            <div className="flex-1 min-h-0 pl-[30px] overflow-y-auto lg:overflow-y-auto overflow-visible">
+            <div className=" pl-[30px]">
                 <Carousel />
             </div>
 

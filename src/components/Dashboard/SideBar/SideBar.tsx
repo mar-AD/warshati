@@ -38,13 +38,8 @@ const Sidebar = ({
   return (
     <aside
     className={cn(
-      "h-screen bg-light-gray text-white flex flex-col justify-between relative transition-all duration-300",
-      isScreen
-        ? isCollapsed
-          ? "w-[88px] px-2 py-1"
-          : "w-[256px] p-6"
-        : "w-[256px] p-6",
-
+      "h-screen bg-light-gray flex flex-col justify-between relative transition-all duration-300",
+      isScreen? isCollapsed? "w-[88px] px-2 py-1": "w-[256px] p-6": "w-[256px] p-6",
     )}
     >
       <div
@@ -107,7 +102,7 @@ const Sidebar = ({
           onClick={toggleSidebar}
           className={cn(
             "absolute -right-3 transform -translate-y-1/2 bg-violet-800 text-white text-center rounded-full shadow-md p-1 hover:bg-violet-500 transition-all duration-200 z-50",
-            isCollapsed ? "top-[8%]" : "top-[12%]"
+            isCollapsed ? "top-[80px]" : "top-[120px]"
           )}
         >
           {isCollapsed ? <ChevronRight size={19} /> : <ChevronLeft size={19} />}

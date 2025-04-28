@@ -252,11 +252,15 @@ export interface MergedCard {
   }[]
 }
 
-
 export interface CardDataType {
   title: string;
   description: string;
   image: StaticImageData;
+}
+
+
+export interface CardDataType0 extends CardDataType  {
+  href: string
 }
 
 

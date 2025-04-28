@@ -4,7 +4,7 @@ import '../../globals.css';
 import Navbar from "@/components/Dashboard/NavBar/NavBar";
 import { TeachableAINavItems } from "@/lib/data";
 
-interface DashboardLayoutProps {
+interface LayoutProps {
     children: React.ReactNode
 }
 
@@ -17,7 +17,7 @@ export const metadata = {
     icons: '/images/logos/favicon.ico'
 };
 
-const DashboardLayout = ({ children }: DashboardLayoutProps) => (
+const Layout = ({ children }: LayoutProps) => (
     <html lang="">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen overflow-hidden`}>
         <div className="flex overflow-hidden h-screen">
@@ -31,4 +31,4 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => (
         </body>
     </html>
 );
-export default DashboardLayout;
+export default Layout;

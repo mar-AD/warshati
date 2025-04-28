@@ -57,7 +57,7 @@ const InfoDataCarousel = () => {
         </div>
       </div>
 
-      <div className="overflow-x-hidden overflow-y-auto flex-1 scroll-container">
+      <div className="overflow-x-hidden overflow-y-auto flex-1">
         <CarouselContent className="flex flex-col gap-6 p-6 bg-gray-100">
           <CarouselItem>
             <div className="flex gap-6 sm:gap-8 md:gap-10 lg:gap-14">

@@ -4,12 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import { Moon, Sun, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import LangSwitcher from "./LangSwitcher";
-
+import { usePathname } from "next/navigation";
 import Sidebar from "../SideBar/SideBar";
 import useMediaQuery from "@/lib/UseMediaQuery";
 import { motion, AnimatePresence } from "framer-motion";
-import { DigitalLiteracyNavItems } from "@/lib/data";
+import { DigitalLiteracyNavItems, TeachableAINavItems } from "@/lib/data";
 import { SearchComponent } from "./SearchComponent";
+import { NavItem } from "@/lib/types";
 
 
 const Navbar = () => {
@@ -20,7 +21,16 @@ const Navbar = () => {
     
     const toggleDarkMode = () => setDarkMode(!darkMode);
     const toggleSidebar = () => setSidebarOpen((prev) => !prev);
-    
+
+    const pathname = usePathname()
+    let sideBarNavItems: NavItem[];
+    if(pathname.includes('/dashboard/teachable-ai')){
+        sideBarNavItems = TeachableAINavItems
+    }else if(pathname.includes('/dashboard/digital-literacy')){
+        sideBarNavItems = DigitalLiteracyNavItems
+    }else {
+        sideBarNavItems = [];
+    }
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (
@@ -101,7 +111,7 @@ const Navbar = () => {
                         showToggleButton={false}
                         forceShowOnMobile={true}
                         onLinkClick={() => setSidebarOpen(false)}
-                        navItems={DigitalLiteracyNavItems}
+                        navItems={sideBarNavItems}
                     />
                     </motion.div>
                 )}

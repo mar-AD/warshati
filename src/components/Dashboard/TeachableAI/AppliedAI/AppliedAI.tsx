@@ -100,6 +100,7 @@ function AppliedAI() {
                                 title={card.title}
                                 description={card.description}
                                 backgroundImage={card.image}
+                                href={card.href}
                             />
                             </CarouselItem>
                         ))}

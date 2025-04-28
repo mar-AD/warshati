@@ -214,6 +214,7 @@ import {
   ageType,
   articleType,
   CardDataType,
+  CardDataType0,
   CommencerCardType,
   CommencerDataSetType,
   ComposantesDuProgrammeDataType,
@@ -2020,37 +2021,43 @@ export const TeachableAINavItems:NavItem[] = [
 ];
 
 
-export const teachableAICardData: CardDataType[] = [
+export const teachableAICardData: CardDataType0[] = [
   {
     title: "Finger Labeling",
     description: "Your own dictionary objects and labels fingers in real time!",
-    image: image1
+    image: image1,
+    href: 'https://develop-ai.warshati.ma/train/hand-recognition'
   },
   {
     title: "Image Classifier",
     description: "Adaptive and classify images by clicking categories like animals.",
-    image: image2
+    image: image2,
+    href: 'https://develop-ai.warshati.ma/train/classification',
   },
   {
     title: "Shape Classifier",
     description: "Using the router when used into different channels images.",
-    image: image3
+    image: image3,
+    href: 'https://develop-ai.warshati.ma/train/shape-classification',
   },
 
   {
     title: "Your first ChatBook",
     description: "Your Smart Assistant that can answer questions, tell jokes, and learn from conversations!",
-    image: image4
+    image: image4,
+    href: 'https://develop-ai.warshati.ma/train/ai-chatbot',
   },
   {
     title: "Image Classifier",
     description: "Adaptive and classify images by clicking categories like animals.",
-    image: image1
+    image: image2,
+    href: 'https://develop-ai.warshati.ma/train/classification',
   },
   {
     title: "Shape Classifier",
     description: "Using the router when used into different channels images.",
-    image: image2
+    image: image3,
+    href: 'https://develop-ai.warshati.ma/train/shape-classification',
   }
 ];
 

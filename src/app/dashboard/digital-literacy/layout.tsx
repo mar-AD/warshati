@@ -4,7 +4,7 @@ import '../../globals.css';
 import Navbar from "@/components/Dashboard/NavBar/NavBar";
 import { DigitalLiteracyNavItems } from "@/lib/data";
 
-interface DashboardLayoutProps {
+interface LayoutProps {
     children: React.ReactNode
 }
 
@@ -17,18 +17,18 @@ export const metadata = {
     icons: '/images/logos/favicon.ico'
 };
 
-const DashboardLayout = ({ children }: DashboardLayoutProps) => (
-    <html lang="" >
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}>
-            <div className="flex lg:h-screen lg:overflow-hidden flex-col lg:flex-row">
-                <Sidebar navItems={DigitalLiteracyNavItems}/>
-                <div className="flex-1 flex flex-col min-h-0">
+const Layout = ({ children }: LayoutProps) => (
+    <html lang="">
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen overflow-hidden`}>
+            <div className="flex overflow-hidden h-screen">
+                <Sidebar navItems={DigitalLiteracyNavItems} />
+                <div className="flex-1 flex flex-col min-h-0 overflow-hidden">
                     <Navbar />
-                    {children}
+                    <main className="flex-1 overflow-auto">{children}</main>
                 </div>
             </div>
         </body>
     </html>
 );
 
-export default DashboardLayout;
+export default Layout;
