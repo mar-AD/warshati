@@ -1573,6 +1573,441 @@
         ]
       }
     ]
+  },
+
+
+
+
+
+
+
+
+
+
+  "appliedAI": {
+    "common": {
+      "open_cam": "Ouvrir la caméra",
+      "close_cam": "Fermer la caméra",
+      "vid_stream": "Flux vidéo",
+      "up_photos": "Téléverser des photos",
+      "training": "Entraînement",
+      "pls_wait": "Veuillez patienter pendant l'entraînement en cours..."
+    },
+    "process-steps": {
+      "labeling": "Étiquetage",
+      "gather": "Collecter des Données",
+      "sources": "Sources",
+      "training": "Entraînement",
+      "preview": "Aperçu"
+    },
+    "finger-section": {
+      "title": "Étiquetage des Doigts",
+      "create_dict": "Créez Votre Dictionnaire",
+      "dict_placeholder": "Nom du dictionnaire",
+      "dict_desc": "Personnalisez votre apprentissage : Étiquetez vos doigts à votre façon !",
+      "finger_placeholder": "Doigt",
+      "send": "Envoyer",
+      "sending": "Envoi en cours...",
+      "project_description": "Dans ce projet, nous allons étiqueter les doigts de la main en utilisant des modèles préconstruits fournis par Google pour détecter les repères de la main. Nous utiliserons votre dictionnaire dans la deuxième phase d'entraînement pour étiqueter les doigts selon vos besoins. Appuyez sur Entraîner pour commencer l'entraînement.",
+      "train": "Entraîner",
+      "retrain": "Réentraîner",
+      "training": "Entraînement en cours...",
+      "g_back_to_labeling": "Retour à l'étiquetage",
+      "g_train": "Aller à l'entraînement",
+      "select_dict": "Sélectionner un Dictionnaire",
+      "preview": "Aller à l'aperçu",
+      "g_back_training": "Retour à l'entraînement",
+      "prv": "Aperçu"
+    },
+    "classification": {
+      "title": "Classification",
+      "train": {
+        "accordion": [
+          {
+            "title": "Division d'Entraînement",
+            "description": "La division d'entraînement est le pourcentage de données utilisées pour l'entraînement. Le reste est utilisé pour la validation. Elle est généralement de 80 %."
+          },
+          {
+            "title": "Époques",
+            "description": "Une époque est un passage complet à travers les données d'entraînement. Le nombre d'époques est le nombre de fois que le modèle verra les données d'entraînement."
+          },
+          {
+            "title": "Taille du Lot",
+            "description": "La taille du lot est le nombre d'exemples d'entraînement dans un passage avant/arrière. Plus la taille du lot est grande, plus la mémoire requise est importante."
+          },
+          {
+            "title": "Taux d'Apprentissage",
+            "description": "Le taux d'apprentissage est un hyperparamètre qui contrôle l'ajustement du modèle pendant l'entraînement. Un taux d'apprentissage plus élevé signifie que le modèle apprendra plus vite, mais il peut ne pas converger."
+          }
+        ]
+      },
+      "validation_messages": {
+        "min_classes_error": "Vous devez avoir au moins 2 classes",
+        "max_classes_error": "Vous pouvez avoir un maximum de 10 classes",
+        "class_name_error": "Le nom de la classe doit être unique",
+        "no_session_id_error": "Aucun ID de session trouvé",
+        "image_upload_error": "Erreur lors du téléchargement des images",
+        "image_upload_success": "Images téléchargées avec succès",
+        "image_upload_error_format": "Format de fichier non pris en charge",
+        "image_upload_error_size": "La taille du fichier dépasse la limite de ",
+        "image_upload_error_resolution": "La résolution de l'image doit être d'au moins ",
+        "image_upload_error_no_images": "Aucune image valide à télécharger. Veuillez télécharger des images pour continuer",
+        "class_name_required": "Le nom de la classe est requis"
+      },
+      "class_item": {
+        "danger_zone": "Zone Dangereuse",
+        "delete_class": "Êtes-vous sûr de vouloir supprimer cette classe ?",
+        "delete_all_images": "Êtes-vous sûr de vouloir supprimer toutes les images ?",
+        "delete_all_images_permanently": "Supprimer définitivement toutes les images",
+        "delete_class_permanently": "Supprimer définitivement toute la classe",
+        "remove_all_images": "Supprimer Toutes les Images",
+        "remove_class": "Supprimer la Classe",
+        "upload": "Télécharger",
+        "webcam": "Webcam",
+        "load_more": "Charger Plus",
+        "images_uploaded": "Images Téléchargées",
+        "class_name": "Nom de la Classe",
+        "add_class": "Ajouter une Classe",
+        "image_uploading": "Téléchargement des Images..., Veuillez patienter",
+        "delete": "Supprimer",
+        "open_webcam": "Ouvrir la Webcam",
+        "close_webcam": "Fermer la Webcam"
+      }
+    },
+    "shape_classification": {
+      "title": "Classification des Formes",
+      "train": {
+        "accordion": [
+          {
+            "title": "Division d'Entraînement",
+            "description": "La division d'entraînement est le pourcentage de données utilisées pour l'entraînement. Le reste est utilisé pour la validation. Elle est généralement de 80 %."
+          },
+          {
+            "title": "Époques",
+            "description": "Une époque est un passage complet à travers les données d'entraînement. Le nombre d'époques est le nombre de fois que le modèle verra les données d'entraînement."
+          },
+          {
+            "title": "Taille du Lot",
+            "description": "La taille du lot est le nombre d'exemples d'entraînement dans un passage avant/arrière. Plus la taille du lot est grande, plus la mémoire requise est importante."
+          },
+          {
+            "title": "Taux d'Apprentissage",
+            "description": "Le taux d'apprentissage est un hyperparamètre qui contrôle l'ajustement du modèle pendant l'entraînement. Un taux d'apprentissage plus élevé signifie que le modèle apprendra plus vite, mais il peut ne pas converger."
+          }
+        ]
+      },
+      "validation_messages": {
+        "min_classes_error": "Vous devez avoir au moins 2 classes",
+        "max_classes_error": "Vous pouvez avoir un maximum de 10 classes",
+        "class_name_error": "Le nom de la classe doit être unique",
+        "no_session_id_error": "Aucun ID de session trouvé",
+        "image_upload_error": "Erreur lors du téléchargement des images",
+        "image_upload_success": "Images téléchargées avec succès",
+        "image_upload_error_format": "Format de fichier non pris en charge",
+        "image_upload_error_size": "La taille du fichier dépasse la limite de ",
+        "image_upload_error_resolution": "La résolution de l'image doit être d'au moins ",
+        "image_upload_error_no_images": "Aucune image valide à télécharger. Veuillez télécharger des images pour continuer",
+        "class_name_required": "Le nom de la classe est requis"
+      },
+      "class_item": {
+        "danger_zone": "Zone Dangereuse",
+        "delete_class": "Êtes-vous sûr de vouloir supprimer cette classe ?",
+        "delete_all_images": "Êtes-vous sûr de vouloir supprimer toutes les images ?",
+        "delete_all_images_permanently": "Supprimer définitivement toutes les images",
+        "delete_class_permanently": "Supprimer définitivement toute la classe",
+        "remove_all_images": "Supprimer Toutes les Images",
+        "remove_class": "Supprimer la Classe",
+        "upload": "Télécharger",
+        "webcam": "Webcam",
+        "load_more": "Charger Plus",
+        "images_uploaded": "Images Téléchargées",
+        "class_name": "Nom de la Classe",
+        "add_class": "Ajouter une Classe",
+        "image_uploading": "Téléchargement des Images..., Veuillez patienter",
+        "delete": "Supprimer",
+        "open_webcam": "Ouvrir la Webcam",
+        "close_webcam": "Fermer la Webcam"
+      }
+    },
+    "ai_chatbot": {
+      "title": "Chatbot IA",
+      "create_chatbot": "Créez Votre Chatbot IA",
+      "name_placeholder": "Nom du chatbot",
+      "model_label": "Modèle IA",
+      "model_placeholder": "Sélectionnez un modèle IA",
+      "api_placeholder": "Clé API du Modèle",
+      "welcome_message_placeholder": "Message de bienvenue du chatbot",
+      "send": "Envoyer",
+      "sending": "Envoi en cours...",
+      "project_description": "Dans ce projet, nous allons créer un chatbot IA en utilisant l'API d'OpenAI. L'utilisateur suivra trois étapes simples : d'abord, il entrera son nom, une clé API et un message de bienvenue ; ensuite, il activera ou désactivera les fonctionnalités du chatbot ; et enfin, il commencera et testera le chatbot dans une interface facile à utiliser.",
+      "train": "Entraîner",
+      "retrain": "Réentraîner",
+      "training": "Entraînement en cours...",
+      "g_back_to_labeling": "Retour à l'étiquetage",
+      "g_train": "Aller à l'entraînement",
+      "select_chatbot": "Sélectionner un Chatbot",
+      "preview": "Aller à l'aperçu",
+      "g_back_training": "Retour à l'entraînement",
+      "common": {
+        "back_to_training": "Retour à l'Entraînement",
+        "chat": "Chat",
+        "chat_logs": "Historique des Chats",
+        "settings": "Paramètres",
+        "model": "Modèle",
+        "unknown": "Inconnu",
+        "not_set": "Non défini"
+      },
+      "chat_tab": {
+        "ai_assistant": "Assistant IA",
+        "model_label": "Modèle",
+        "new_chat": "Nouveau Chat",
+        "type_message": "Tapez votre message...",
+        "send": "Envoyer"
+      },
+      "logs_tab": {
+        "chat_logs": "Historique des Chats",
+        "refresh": "Actualiser",
+        "filter": "Filtrer",
+        "export": "Exporter",
+        "new_conversation": "Nouvelle Conversation",
+        "select_conversation": "Sélectionnez une conversation à afficher",
+        "revise_answer": "Réviser la réponse",
+        "expected": "Attendu :",
+        "source": "Source"
+      },
+      "settings_tab": {
+        "chatbot_settings": "Paramètres du Chatbot",
+        "name": "Nom",
+        "model": "Modèle",
+        "api_endpoint": "Point de Terminaison API",
+        "source_files": "Fichiers Sources",
+        "files_uploaded": "{count} fichier(s) téléchargé(s)",
+        "no_source_files": "Aucun fichier source téléchargé",
+        "features": "Fonctionnalités",
+        "feature_save_chat": "Enregistrer l'Historique des Chats",
+        "feature_sentiment": "Analyse des Sentiments",
+        "feature_typing": "Animation de Frappe",
+        "feature_personality": "Personnalité"
+      },
+      "revise_modal": {
+        "revise_answer": "Réviser la réponse",
+        "user_message": "Message de l'utilisateur",
+        "bot_response": "Réponse du bot",
+        "expected_response": "Réponse attendue",
+        "expected_placeholder": "Entrez ce que vous attendiez comme réponse du bot...",
+        "cancel": "Annuler",
+        "update_answer": "Mettre à Jour la Réponse"
+      }
+    },
+    "step_navigation": {
+      "go_to_training": "Aller à l'Entraînement",
+      "skip_to_preview": "Passer à l'Aperçu",
+      "skip_to_training": "Passer à l'Entraînement",
+      "back": "Retour"
+    },
+    "projects": {
+      "title": {
+        "p1": "Renforcez Votre Projet avec",
+        "p2": "Vos Propres",
+        "p3": "Données"
+      },
+      "start": "Commencer",
+      "new": "Nouveau",
+      "coming_soon": "Bientôt Disponible",
+      "finger_labeling": {
+        "title": "Étiquetage des Doigts",
+        "description": "Entraînez un ordinateur à reconnaître vos propres doigts et à les étiqueter."
+      },
+      "image_classification": {
+        "title": "Classificateur d'Images",
+        "description": "Entraînez un ordinateur à classer vos propres images en catégories."
+      },
+      "object_detection": {
+        "title": "Détection d'Objets",
+        "description": "Entraînez un ordinateur à reconnaître vos propres objets."
+      },
+      "shape_classification": {
+        "title": "Classificateur de Formes",
+        "description": "Entraînez un ordinateur à classer vos propres formes en 4 catégories."
+      },
+      "ai_chatbot": {
+        "title": "Chatbot IA",
+        "description": "Entraînez un ordinateur à discuter avec vous."
+      }
+    },
+    "image_classifier_preview": {
+      "upload_photo": "Télécharger une Photo",
+      "video_stream": "Flux Vidéo"
+    },
+    "upload_image_card": {
+      "click": "Cliquez",
+      "drag": "ou faites glisser et déposez ici pour télécharger"
+    },
+    "train_form": {
+      "train_start_message": "Entraînement démarré : Cela peut prendre de quelques secondes à quelques minutes selon la taille des données. Veuillez patienter.",
+      "train_end_succ_message": "Entraînement terminé avec succès",
+      "train_end_err_message": "Échec de l'entraînement. Veuillez réessayer.",
+      "press_enter_confirm": "Appuyez sur Entrée pour confirmer",
+      "epochs": "Époques",
+      "batch_size": "Taille du Lot",
+      "learning_rate": "Taux d'Apprentissage",
+      "train_split": "Division d'Entraînement",
+      "train": "Entraîner",
+      "Select_batch_size": "Sélectionnez la taille du lot",
+      "training": "Entraînement en cours...",
+      "retrain": "Réentraîner",
+      "start_training": "Commencer l'Entraînement",
+      "export_model": "Exporter le Modèle",
+      "accuracy": "La précision de votre modèle :"
+    },
+    "train": {
+      "gather_data": "Collecter des Données",
+      "test_model": "Tester le Modèle",
+      "gather_btn": {
+        "new": {
+          "title": "Ajouter des Données au Modèle",
+          "description": "Ajoutez des données au modèle pour améliorer sa précision. Vous devez ajouter des données avec les mêmes noms de classes que le modèle."
+        },
+        "existing": {
+          "title": "Entraîner un Nouveau Modèle",
+          "description": "Entraînez un nouveau modèle avec les mêmes données ou de nouvelles données. Votre modèle actuel sera remplacé par le nouveau. Assurez-vous d'exporter votre modèle avant d'entraîner un nouveau modèle."
+        }
+      }
+    },
+    "chatbot-section": {
+      "chatbName": "Nom du chatbot :",
+      "disc": "Configurez les fonctionnalités de votre chatbot et entraînez-le à répondre aux requêtes des utilisateurs. Sélectionnez les fonctionnalités à activer et cliquez sur le bouton Entraîner pour démarrer le processus.",
+      "secDisc": "Fichiers sources détectés ! Votre chatbot sera entraîné avec les documents téléversés.",
+      "featurs": "Fonctionnalités du chatbot",
+      "history": "Enregistrer l'historique",
+      "sentiment": "Analyse des sentiments",
+      "typing": "Animation de frappe",
+      "personality": "Sélection de personnalité",
+      "selectPers": "Sélectionner une personnalité",
+      "formal": "Formel",
+      "casual": "Décontracté",
+      "funny": "Drôle",
+      "back": "Retour aux sources",
+      "retrain": "Réentraîner",
+      "train": "Entraîner",
+      "preview": "Aperçu",
+      "training": "Entraînement du chatbot",
+      "pls_wait": "Veuillez patienter pendant l'entraînement du chatbot...",
+      "processing": "Traitement des documents sources pour des réponses améliorées",
+      "uploadSource": "Téléverser des sources pour",
+      "thirdSec": "Téléversez des documents comme des PDF, fichiers texte ou autres sources que votre chatbot utilisera pour répondre aux questions. Ces fichiers seront traités et utilisés comme sources de connaissances pour votre chatbot.",
+      "sourceFiles": "Fichiers sources",
+      "uploadFiles": "Téléverser des fichiers",
+      "file": "FICHIER",
+      "size": "TAILLE",
+      "status": "STATUT",
+      "action": "ACTIONS",
+      "uploaded": "Téléversé",
+      "invalid": "Invalide",
+      "error": "Erreur",
+      "noFiles": "Aucun fichier téléversé pour l'instant",
+      "upload": "Téléverser",
+      "files": "fichiers",
+      "maxFileSize": "Taille maximale des fichiers :",
+      "mb": "Mo",
+      "suportedFileType": "Types de fichiers pris en charge :",
+      "back_btn": "Retour à la configuration",
+      "continue_btn": "Continuer vers l'entraînement",
+      "confirmDelete": "Confirmer la suppression",
+      "sure": "Êtes-vous sûr de vouloir supprimer le fichier",
+      "permamentDelete": "Ceci supprimera définitivement le fichier du serveur.",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "deleting": "Suppression en cours...",
+      "fileValidErr": "Erreurs de validation de fichier",
+      "ensure": "Veuillez vous assurer que vos fichiers respectent les exigences :",
+      "supoertedFormat": "Formats pris en charge :",
+      "ok": "OK"
+    }
+  },
+  "dashboard": {
+    "sideBar": {
+      "programs": "Programmes",
+      "projects": "Projets",
+      "community": "Communauté",
+      "settings": "Paramètres",
+      "fundamentals": "Fondamentaux",
+      "applied_ai": "IA Appliquée",
+      "data_science": "Science des Données",
+      "ai_ethics": "IA & Éthique",
+      "category": "Catégorie",
+      "search": "Rechercher",
+      "tags": {
+        "smart_workshops": "Ateliers Intelligents",
+        "steam": "STIAM",
+        "coding": "Programmation",
+        "interactive_prototypes": "Prototypes interactifs",
+        "creativity": "Créativité",
+        "iot": "IdO",
+        "ai": "Intelligence Artificielle"
+      }
+    },
+    "digital_literacy": {
+      "description": "Apprenez à naviguer, évaluer et créer dans le monde numérique <br></br> en toute confiance",
+      "title": "Littératie <bold>Numérique</bold>",
+      "get_started": "Commencer",
+      "learn_more": "En savoir plus",
+      "infoData": "Information & Données",
+      "staySafe": "Rester en sécurité en ligne",
+      "creatDegCon": "Création de contenu numérique",
+      "connectColab": "Connecté & Collaboratif",
+      "see_more": "Voir plus"
+    },
+    "applied_ai": {
+      "title": "Warshati <highlight>AI kids Lab</highlight>",
+      "description": "Une IA enseignable, Créez, Entraînez & <br></br> Jouez avec l'IA !",
+      "get_started": "Commencer",
+      "learn_more": "En savoir plus",
+      "my_ai_models": "Mes modèles d'IA",
+      "my_projects": "Mes projets",
+      "tools": "Outils",
+      "setting": "Paramètres",
+      "teachable_ai_cards": [
+        {
+          "title": "Étiquetage des doigts",
+          "description": "Votre propre dictionnaire d'objets qui étiquette les doigts en temps réel !"
+        },
+        {
+          "title": "Classificateur d'images",
+          "description": "Classifiez adaptivement des images par catégories comme les animaux."
+        },
+        {
+          "title": "Classificateur de formes",
+          "description": "Utilisation du routeur pour différentes catégories d'images."
+        },
+        {
+          "title": "Votre premier ChatBook",
+          "description": "Votre assistant intelligent qui peut répondre aux questions, raconter des blagues et apprendre des conversations !"
+        },
+        {
+          "title": "Classificateur de formes",
+          "description": "Utilisation du routeur pour différentes catégories d'images."
+        }
+      ],
+      "coming_soon": "Bientôt disponible",
+      "new": "Nouveau",
+      "start": "Commencer",
+      "coming_soon_cards": [
+        {
+          "title": "Détection d'objets",
+          "description": "Entraînez une IA à reconnaître et détecter différents objets dans son environnement en utilisant une webcam ou des images préchargées."
+        },
+        {
+          "title": "Jeu Pierre-Papier-Ciseaux",
+          "description": "Construisez votre IA qui apprend à jouer à Pierre-Papier-Ciseaux !"
+        },
+        {
+          "title": "Conteur d'histoires",
+          "description": "Créez une IA textuelle qui génère des histoires amusantes et interactives"
+        }
+      ]
+    }
+
   }
   
 }

@@ -1581,6 +1581,442 @@
         ]
       }
     ]
+  },
+
+
+
+
+  "appliedAI": {
+    "common": {
+      "open_cam": "Open Camera",
+      "close_cam": "Close Camera",
+      "vid_stream": "Video Stream",
+      "up_photos": "Upload Photos",
+      "training": "Training",
+      "pls_wait": "Please wait while training is in progress..."
+    },
+    "process-steps": {
+      "labeling": "Labeling",
+      "gather": "Gather Data",
+      "sources": "Sources",
+      "training": "Training",
+      "preview": "Preview"
+    },
+    "finger-section": {
+      "title": "Finger Labeling",
+      "create_dict": "Create Your Dictionary",
+      "dict_placeholder": "Dictionary name",
+      "dict_desc": "Customize your learning: Label your fingers your way!",
+      "finger_placeholder": "Finger",
+      "send": "Send",
+      "sending": "Sending...",
+      "project_description": "In this project, we will be labeling the fingers of the hand using prebuilt models provided by Google to detect hand landmarks. We will use your dictionary in the second phase of training to label fingers as you need. Press Train to start training.",
+      "train": "Train",
+      "retrain": "Retrain",
+      "training": "Training...",
+      "g_back_to_labeling": "Go back to labeling",
+      "g_train": "Go to training",
+      "select_dict": "Select Dictionary",
+      "preview": "Jump to preview",
+      "g_back_training": "Go back to training",
+      "prv": "preview"
+    },
+    "classification": {
+      "title": "Classification",
+      "train": {
+        "accordion": [
+          {
+            "title": "Train Split",
+            "description": "The train split is the percentage of the data that is used for training. The remaining data is used for validation. It is usually 80%."
+          },
+          {
+            "title": "Epochs",
+            "description": "An epoch is one complete pass through the training data. The number of epochs is the number of times the model will see the training data."
+          },
+          {
+            "title": "Batch Size",
+            "description": "The batch size is the number of training examples in one forward/backward pass. The higher  the batch size, the more memory is required."
+          },
+          {
+            "title": "Learning Rate",
+            "description": "The learning rate is a hyperparameter that controls how much the model is adjusted during training. A higher learning rate means the model will learn faster, but it may not converge."
+          }
+        ]
+      },
+      "validation_messages": {
+        "min_classes_error": "You must have at least 2 classes",
+        "max_classes_error": "You can have a maximum of 10 classes",
+        "class_name_error": "Class Name must be Unique",
+        "no_session_id_error": "No session ID found",
+        "image_upload_error": "Error uploading images",
+        "image_upload_success": "Images uploaded successfully",
+        "image_upload_error_format": "Unsupported file format",
+        "image_upload_error_size": "File size exceeds the limit of ",
+        "image_upload_error_resolution": "Image resolution must be at least ",
+        "image_upload_error_no_images": "No valid images to upload. Please upload images to continue",
+        "class_name_required": "Class name is required"
+      },
+      "class_item": {
+        "danger_zone": "Danger Zone",
+        "delete_class": "Are you sure you want to delete this class?",
+        "delete_all_images": "Are you sure you want to delete all images?",
+        "delete_all_images_permanently": "Permanently delete all images",
+        "delete_class_permanently": "Permanently delete the entire class",
+        "remove_all_images": "Delete All Image",
+        "remove_class": "Delete Class",
+        "upload": "Upload",
+        "webcam": "Webcam",
+        "load_more": "Load More",
+        "images_uploaded": "Images Uploaded",
+        "class_name": "Class Name",
+        "add_class": "Add Class",
+        "image_uploading": "Uploading Images..., Please wait",
+        "delete": "Delete",
+        "open_webcam": "Open Webcam",
+        "close_webcam": "Close Webcam"
+      }
+    },
+    "shape_classification": {
+      "title": "Shape Classification",
+      "train": {
+        "accordion": [
+          {
+            "title": "Train Split",
+            "description": "The train split is the percentage of the data that is used for training. The remaining data is used for validation. It is usually 80%."
+          },
+          {
+            "title": "Epochs",
+            "description": "An epoch is one complete pass through the training data. The number of epochs is the number of times the model will see the training data."
+          },
+          {
+            "title": "Batch Size",
+            "description": "The batch size is the number of training examples in one forward/backward pass. The higher  the batch size, the more memory is required."
+          },
+          {
+            "title": "Learning Rate",
+            "description": "The learning rate is a hyperparameter that controls how much the model is adjusted during training. A higher learning rate means the model will learn faster, but it may not converge."
+          }
+        ]
+      },
+      "validation_messages": {
+        "min_classes_error": "You must have at least 2 classes",
+        "max_classes_error": "You can have a maximum of 10 classes",
+        "class_name_error": "Class Name must be Unique",
+        "no_session_id_error": "No session ID found",
+        "image_upload_error": "Error uploading images",
+        "image_upload_success": "Images uploaded successfully",
+        "image_upload_error_format": "Unsupported file format",
+        "image_upload_error_size": "File size exceeds the limit of ",
+        "image_upload_error_resolution": "Image resolution must be at least ",
+        "image_upload_error_no_images": "No valid images to upload. Please upload images to continue",
+        "class_name_required": "Class name is required"
+      },
+      "class_item": {
+        "danger_zone": "Danger Zone",
+        "delete_class": "Are you sure you want to delete this class?",
+        "delete_all_images": "Are you sure you want to delete all images?",
+        "delete_all_images_permanently": "Permanently delete all images",
+        "delete_class_permanently": "Permanently delete the entire class",
+        "remove_all_images": "Delete All Image",
+        "remove_class": "Delete Class",
+        "upload": "Upload",
+        "webcam": "Webcam",
+        "load_more": "Load More",
+        "images_uploaded": "Images Uploaded",
+        "class_name": "Class Name",
+        "add_class": "Add Class",
+        "image_uploading": "Uploading Images..., Please wait",
+        "delete": "Delete",
+        "open_webcam": "Open Webcam",
+        "close_webcam": "Close Webcam"
+      }
+    },
+    "ai_chatbot": {
+      "title": "AI Chatbot",
+      "create_chatbot": "Create Your AI Chatbot",
+      "name_placeholder": "Chatbot name",
+      "model_label": "AI Model",
+      "model_placeholder": "Select an AI model",
+      "api_placeholder": "Model API Key",
+      "welcome_message_placeholder": "Chatbot welcome message",
+      "send": "Send",
+      "sending": "Sending...",
+      "project_description": "In this project, we will make an AI chatbot using OpenAI's API. The user will follow three simple steps: first, they will enter their name, an API key, and a welcome message; next, they will turn chatbot features on or off; and finally, they will start and test the chatbot in an easy-to-use interface.",
+      "train": "Train",
+      "retrain": "Retrain",
+      "training": "Training...",
+      "g_back_to_labeling": "Go back to labeling",
+      "g_train": "Go to training",
+      "select_chatbot": "Select Chatbot",
+      "preview": "Jump to preview",
+      "g_back_training": "Go back to training",
+      "common": {
+        "back_to_training": "Back to Training",
+        "chat": "Chat",
+        "chat_logs": "Chat Logs",
+        "settings": "Settings",
+        "model": "Model",
+        "unknown": "Unknown",
+        "not_set": "Not set"
+      },
+      "chat_tab": {
+        "ai_assistant": "AI Assistant",
+        "model_label": "Model",
+        "new_chat": "Start New Chat",
+        "type_message": "Type your message...",
+        "send": "Send"
+      },
+      "logs_tab": {
+        "chat_logs": "Chat logs",
+        "refresh": "Refresh",
+        "filter": "Filter",
+        "export": "Export",
+        "new_conversation": "New Conversation",
+        "select_conversation": "Select a conversation to view",
+        "revise_answer": "Revise answer",
+        "expected": "Expected:",
+        "source": "Source"
+      },
+      "settings_tab": {
+        "chatbot_settings": "Chatbot Settings",
+        "name": "Name",
+        "model": "Model",
+        "api_endpoint": "API Endpoint",
+        "source_files": "Source Files",
+        "files_uploaded": "{count} file(s) uploaded",
+        "no_source_files": "No source files uploaded",
+        "features": "Features",
+        "feature_save_chat": "Save Chat History",
+        "feature_sentiment": "Sentiment Analysis",
+        "feature_typing": "Typing Animation",
+        "feature_personality": "Personality"
+      },
+      "revise_modal": {
+        "revise_answer": "Revise answer",
+        "user_message": "User message",
+        "bot_response": "Bot response",
+        "expected_response": "Expected response",
+        "expected_placeholder": "Enter what you expected the bot to respond with...",
+        "cancel": "Cancel",
+        "update_answer": "Update Answer"
+      }
+    },
+    "step_navigation": {
+      "go_to_training": "Go to Training",
+      "skip_to_preview": "Skip to Preview",
+      "skip_to_training": "Skip to Training",
+      "back": "Back"
+    },
+    "projects": {
+      "title": {
+        "p1": "Empower Your Project with",
+        "p2": "Your Own",
+        "p3": "Data"
+      },
+      "start": "Start",
+      "new": "New",
+      "coming_soon": "Coming Soon",
+      "finger_labeling": {
+        "title": "Finger Labeling",
+        "description": "Train a computer to recognize your own finger and label them."
+      },
+      "image_classification": {
+        "title": "Image Classifier",
+        "description": "Train a computer to classify your own images into categories."
+      },
+      "object_detection": {
+        "title": "Object Detection",
+        "description": "Train a computer to recognize your own objects."
+      },
+      "shape_classification": {
+        "title": "Shape Classifier",
+        "description": "Train a computer to classify your own shapes into 4 categories."
+      },
+      "ai_chatbot": {
+        "title": "AI Chatbot",
+        "description": "Train a computer to chat with you."
+      }
+    },
+    "image_classifier_preview": {
+      "upload_photo": "Upload Photo",
+      "video_stream": "Video Stream"
+    },
+    "upload_image_card": {
+      "click": "Click",
+      "drag": "or drag and drop here to upload"
+    },
+    "train_form": {
+      "train_start_message": "Training started: It may take a few seconds to a few minutes depending on the size of the data. Please wait.",
+      "train_end_succ_message": "Training completed successfully",
+      "train_end_err_message": "Training failed. Please try again",
+      "press_enter_confirm": "Press Enter to confirm",
+      "epochs": "Epochs",
+      "batch_size": "Batch Size",
+      "learning_rate": "Learning Rate",
+      "train_split": "Train Split",
+      "train": "Train",
+      "Select_batch_size": "Select batch size",
+      "training": "Training...",
+      "retrain": "Retrain",
+      "start_training": "Start Training",
+      "export_model": "Export Model",
+      "accuracy": "Your model accuracy:"
+    },
+    "train": {
+      "gather_data": "Gather Data",
+      "test_model": "Test Model",
+      "gather_btn": {
+        "new": {
+          "title": "Append Data to model",
+          "description": " Append data to model to improve the accuracy of the model.You must append data with the same classes names as the model."
+        },
+        "existing": {
+          "title": "Train New Model",
+          "description": "Train new model with same data or new data.your current model will be replaced with the new model. make sure to export your model before training new model."
+        }
+      }
+    },
+    "chatbot-section":{
+      "chatbName": "Chatbot Name:",
+      "disc": "Configure your chatbot's features and train it to respond to user queries. Select the features you want to enable and click the Train button to start the training process.",
+      "secDisc": "Source files detected! Your chatbot will be trained with the uploaded documents.",
+      "featurs": "Chatbot Features",
+      "history": "Save Chat History",
+      "sentiment": "Sentiment Analysis",
+      "typing": "Typing Animation",
+      "personality": "Personality Selection",
+      "selectPers": "Select Personality",
+      "formal": "Formal",
+      "casual":"Casual",
+      "funny": "Funny",
+      "back": "Back to Sources",
+      "retrain": "Retrain",
+      "train": "Train",
+      "preview": "Preview",
+      "training": "Training Chatbot",
+      "pls_wait":"Please wait while your chatbot is being trained...",
+      "processing": "Processing source documents for enhanced responses",
+      "uploadSource": "Upload Sources for",
+      "thirdSec": "Upload documents like PDFs, text files, or other sources that your chatbot will use to answer questions. These files will be processed and used as knowledge sources for your chatbot.",
+      "sourceFiles": "Source Files",
+      "uploadFiles": "Upload Files",
+      "file": "FILE",
+      "size": "SIZE",
+      "status": "STATUS",
+      "action": "ACTIONS",
+      "uploaded": "Uploaded",
+      "invalid": "Invalid",
+      "error": "Error",
+      "noFiles": "No files uploaded yet",
+      "upload": "Upload",
+      "files": "files",
+      "maxFileSize":"Maximum file size:",
+      "mb": "MB",
+      "suportedFileType": "Supported file types:",
+      "back_btn": "Back to Configuration",
+      "continue_btn": "Continue to Training",
+      "confirmDelete": "Confirm Deletion",
+      "sure": "Are you sure you want to delete the file",
+      "permamentDelete": "This will permanently delete the file from the server.",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "deleting": "Deleting...",
+      "fileValidErr": "File Validation Errors",
+      "ensure": "Please ensure your files meet the requirements:",
+      "supoertedFormat": "Supported formats:",
+      "ok": "OK"
+    }
+  },
+  "dashboard": {
+    "sideBar": {
+      "programs": "Programs",
+      "projects": "Projects",
+      "community": "Community",
+      "settings": "Settings",
+      "fundamentals": "Fundamentals",
+      "applied_ai": "Applied AI",
+      "data_science": "Data Science",
+      "ai_ethics": "AI & Ethics",
+      "category": "Category",
+      "search": "Search",
+      "tags": {
+        "smart_workshops": "Smart Workshops",
+        "steam": "STEAM",
+        "coding": "Coding",
+        "interactive_prototypes": "Interactive prototypes",
+        "creativity": "Creativity",
+        "iot": "IoT",
+        "ai": "Artificial Intelligence"
+      }
+    },
+    "digital_literacy": {
+      "description": "Learn to navigate, evaluate and create in the digital world <br></br>with confidence",
+      "title": "Digital <bold>Literacy</bold>",
+      "get_started": "Get Started",
+      "learn_more": "Learn More",
+      "infoData": "Information & Data",
+      "staySafe": "Staying Safe Online",
+      "creatDegCon": "Creating Digital Content",
+      "connectColab": "Connected & Collaborative",
+      "see_more": "See More"
+    },
+    "applied_ai": {
+      "title": "Warshati <highlight>AI kids Lab</highlight>",
+      "description": "A Teachable AI, Create, Train & <br></br> Play with AI!",
+      "get_started": "Get Started",
+      "learn_more": "Learn More",
+      "my_ai_models": "My AI Models",
+      "my_projects": "My Projects",
+      "tools": "Tools",
+      "setting": "Setting",
+      "teachable_ai_cards": [
+        {
+          "title": "Finger Labeling",
+          "description": "Your own dictionary objects and labels fingers in real time!"
+        },
+        {
+          "title": "Image Classifier",
+          "description": "Adaptive and classify images by clicking categories like animals."
+        },
+        {
+          "title": "Shape Classifier",
+          "description": "Using the router when used into different channels images."
+        },
+        {
+          "title": "Your first ChatBook",
+          "description": "Your Smart Assistant that can answer questions, tell jokes, and learn from conversations!"
+        },
+        {
+          "title": "Shape Classifier",
+          "description": "Using the router when used into different channels images."
+        }
+      ],
+      "coming_soon": "Coming soon",
+      "new": "New",
+      "start": "Start",
+      "coming_soon_cards": [
+        {
+          "title": "Object detection",
+          "description": "Train an AI to recognize and detect different objects in their environment using a webcam or preloaded images."
+        },
+        {
+          "title": "Rock, Paper, Scissors Game",
+          "description": "Build your AI that learns to play Rock, Paper, Scissors!"
+        },
+        {
+          "title": "Story teller",
+          "description": "Create a text-based AI that helps generate fun and interactive stories"
+        }
+      ]
+    } 
+  },
+  "toast": {
+    "errors": {
+      "acceptType": "Your selected file type is not allowed",
+      "maxFileSize": "Selected file size exceeds maxFileSize",
+      "resolution": "Selected file does not match your desired resolution"
+    }
   }
+  
 
 }

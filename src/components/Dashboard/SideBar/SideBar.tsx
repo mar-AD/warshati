@@ -6,8 +6,11 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import logoFull from "/public/images/logos/warshati_logo.png";
 import logoSmall from "/public/images/logos/favicon.ico";
+import logoFullDark from "/public/images/logos/white_logo.png";
+import logoSmallDark from "/public/images/logos/white_small_logo.png";
 import useMediaQuery from "@/lib/UseMediaQuery";
 import { NavItem } from "@/lib/types";
 
@@ -25,9 +28,10 @@ const Sidebar = ({
   const isScreen = useMediaQuery("(min-width: 1200px)");
   const [isCollapsed, setIsCollapsed] = useState(false);
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
 
   const toggleSidebar = () => setIsCollapsed(!isCollapsed);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -37,26 +41,28 @@ const Sidebar = ({
 
   return (
     <aside
-    className={cn(
-      "h-screen bg-light-gray flex flex-col justify-between relative transition-all duration-300",
-      isScreen? isCollapsed? "w-[88px] px-2 py-1": "w-[256px] p-6": "w-[256px] p-6",
-    )}
+      className={cn(
+        "h-screen bg-light-gray flex flex-col justify-between relative transition-width duration-300 dark:bg-gray-900",
+        isScreen ? (isCollapsed ? "w-[88px] px-2 py-1" : "w-[256px] p-6") : "w-[256px] p-6"
+      )}
     >
-      <div
-        className={cn(
-          "flex flex-col items-center",
-          isCollapsed ? "gap-10" : "gap-14"
-        )}
-      >
+      <div className={cn("flex flex-col items-center", isCollapsed ? "gap-10" : "gap-14")}>
         <div className="w-full flex justify-center items-center">
-          <Image
-            className={cn(
-              "transition-all duration-300",
-              isCollapsed ? "w-[70px]" : "w-full"
-            )}
-            src={isCollapsed ? logoSmall : logoFull}
-            alt="Logo"
-          />
+          {mounted && (
+            <Image
+              className={cn("transition-all duration-300", isCollapsed ? "w-[70px]" : "w-full")}
+              src={
+                isCollapsed
+                  ? resolvedTheme === "dark"
+                    ? logoSmallDark
+                    : logoSmall
+                  : resolvedTheme === "dark"
+                    ? logoFullDark
+                    : logoFull
+              }
+              alt="Logo"
+            />
+          )}
         </div>
 
         <nav className="flex flex-col justify-center items-center gap-4 w-full">
@@ -66,8 +72,8 @@ const Sidebar = ({
               href={item.href}
               onClick={onLinkClick}
               className={cn(
-                "font-Inter font-medium w-full rounded-2xl transition-all duration-300 overflow-hidden text-violet-700",
-                "hover:bg-[radial-gradient(circle_at_center,_#ebe5f6_0%,_rgba(235,229,246,0.05)_100%)]",
+                "font-Inter font-medium w-full rounded-2xl transition-all duration-300 overflow-hidden text-violet-700 dark:text-white",
+                "hover:bg-[radial-gradient(circle_at_center,_#ebe5f6_0%,_rgba(235,229,246,0.05)_100%)] dark:hover:bg-[radial-gradient(circle_at_center,_#2d1f4d_0%,_rgba(45,31,77,0.2)_100%)]",
                 pathname.startsWith(item.href) && "bg-gray-800 font-semibold",
                 isCollapsed
                   ? "text-[10px] px-1 py-2 flex flex-col items-center justify-center text-center gap-1"
@@ -83,18 +89,12 @@ const Sidebar = ({
                   className="shrink-0"
                 />
               )}
-              <span
-                className={cn(
-                  !item.icon && "text-center w-full", 
-                  isCollapsed && "w-full"
-                )}
-              >
+              <span className={cn(!item.icon && "text-center w-full", isCollapsed && "w-full")}>
                 {item.name}
               </span>
             </Link>
           ))}
         </nav>
-
       </div>
 
       {showToggleButton && (

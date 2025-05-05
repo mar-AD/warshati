@@ -9,12 +9,15 @@ import {
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Card from "../../SectionCards"
 import { cardData } from "@/lib/data"
+import { useTranslations } from "next-intl"
 
 const InfoDataCarousel = () => {
   const visibleCardsPerRow = 3
   const totalCardsPerRow = 10
   const rowCount = 2
   const [startIndex, setStartIndex] = useState(0)
+
+  const t = useTranslations("dashboard.digital_literacy")
 
   const firstRow = cardData.slice(0, totalCardsPerRow)
   const secondRow = cardData.slice(totalCardsPerRow, totalCardsPerRow * rowCount)
@@ -40,11 +43,11 @@ const InfoDataCarousel = () => {
       opts={{ loop: false }}
     >
       <div className="flex justify-between items-center mb-6 pr-6">
-        <h2 className="text-base font-semibold">Information & Data</h2>
+        <h2 className="text-base font-semibold">{t("infoData")}</h2>
         <div className="flex gap-2">
           <button
             onClick={prev}
-            className="bg-white border shadow rounded-full p-2 hover:bg-purple-100"
+            className="bg-white dark:bg-white dark:text-black border shadow rounded-full border-violet-800 p-2 hover:bg-purple-100"
           >
             <ChevronLeft size={16} />
           </button>
@@ -58,7 +61,7 @@ const InfoDataCarousel = () => {
       </div>
 
       <div className="overflow-x-hidden overflow-y-auto flex-1">
-        <CarouselContent className="flex flex-col gap-6 p-6 bg-gray-100">
+        <CarouselContent className="flex flex-col gap-6 p-6 bg-gray-100 dark:bg-gray-600">
           <CarouselItem>
             <div className="flex gap-6 sm:gap-8 md:gap-10 lg:gap-14">
               {visibleFirstRow.map((card, i) => (

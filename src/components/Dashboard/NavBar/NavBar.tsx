@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Moon, Sun, Menu } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Menu } from "lucide-react";
 import LangSwitcher from "./LangSwitcher";
 import { usePathname } from "next/navigation";
 import Sidebar from "../SideBar/SideBar";
@@ -11,23 +10,25 @@ import { motion, AnimatePresence } from "framer-motion";
 import { DigitalLiteracyNavItems, TeachableAINavItems } from "@/lib/data";
 import { SearchComponent } from "./SearchComponent";
 import { NavItem } from "@/lib/types";
+import ThemeSwitcher from "./ThemeSwitcher";
+import { useTranslations } from "next-intl";
 
 
 const Navbar = () => {
-    const [darkMode, setDarkMode] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const sidebarRef = useRef<HTMLDivElement | null>(null);
     const isDesktop = useMediaQuery("(min-width: 1200px)");
     
-    const toggleDarkMode = () => setDarkMode(!darkMode);
+    const t = useTranslations('dashboard.sideBar');
+    
     const toggleSidebar = () => setSidebarOpen((prev) => !prev);
 
     const pathname = usePathname()
     let sideBarNavItems: NavItem[];
     if(pathname.includes('/dashboard/teachable-ai')){
-        sideBarNavItems = TeachableAINavItems
+        sideBarNavItems = TeachableAINavItems(t)
     }else if(pathname.includes('/dashboard/digital-literacy')){
-        sideBarNavItems = DigitalLiteracyNavItems
+        sideBarNavItems = DigitalLiteracyNavItems(t)
     }else {
         sideBarNavItems = [];
     }
@@ -55,7 +56,7 @@ const Navbar = () => {
 
     return (
         <>
-            <header className="w-full bg-white dark:bg-gray-900 py-6 px-[30px] flex items-center justify-between relative ">
+            <header className="w-full bg-white dark:bg-dark-blue py-6 px-[30px] flex items-center justify-between relative ">
                 <div className="flex items-center gap-4">
                     {hydrated && !isDesktop && (
                         <button onClick={toggleSidebar}>
@@ -66,34 +67,9 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                <LangSwitcher />
-                <button
-                    onClick={toggleDarkMode}
-                    className="w-[100px] h-9 bg-violet-800 rounded-full relative transition-all duration-300"
-                >
-                    <div className="absolute inset-0 flex justify-between items-center px-2 z-10">
-                    <Moon
-                        size={18}
-                        className={cn(
-                        "transition-opacity duration-300",
-                        darkMode ? "text-white" : "text-black"
-                        )}
-                    />
-                    <Sun
-                        size={18}
-                        className={cn(
-                        "transition-opacity duration-300",
-                        darkMode ? "text-black" : "text-white"
-                        )}
-                    />
-                    </div>
-                    <span
-                    className={cn(
-                        "absolute top-[4px] left-[4px] w-7 h-7 rounded-full border border-white transition-transform duration-300 z-0 bg-white",
-                        darkMode ? "translate-x-16" : "translate-x-0"
-                    )}
-                    />
-                </button>
+                    <LangSwitcher />
+
+                    <ThemeSwitcher />
                 </div>
             </header>
 

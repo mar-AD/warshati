@@ -13,7 +13,7 @@ export interface FeatureCardProps {
 
 export default function FeatureCard({ title, icon, bgColor }: FeatureCardProps) {
     return (
-        <div className={` relative p-4 rounded-2xl flex flex-col items-start gap-2`} style={{ backgroundColor: bgColor }}>
+        <div className={` relative p-4 rounded-2xl flex flex-col items-start gap-2 overflow-hidden h-full`} style={{ backgroundColor: bgColor }}>
             <Image className=" absolute top-0 right-0 w-[130px] h-[65px]" src={style_1} alt="style"/>
             <Image className=" absolute right-0 bottom-0 w-[130px] h-[65px]" src={style_2} alt="style"/>
             <Image className=" absolute right-[10%] top-0 w-[200px] h-[80px]" src={style_3} alt="style"/>

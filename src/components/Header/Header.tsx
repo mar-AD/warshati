@@ -31,7 +31,7 @@ const Header = () => {
         animate="animate"
         className="flex items-center justify-between md:px-14 px-4 py-10 font-Poppins absolute top-0 w-full z-50 bg-light-gray">
             {/* Logo Section */}
-            <Link href={"/"} className="min-w-44 w-44">
+            <Link href={"/application"} className="min-w-44 w-44">
                 <Image priority src={warshati_logo} alt="warshati_logo" />
             </Link>
             <div ref={ref} className={cn("relative w-[60%] max-lg:hidden",
