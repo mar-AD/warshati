@@ -2015,9 +2015,9 @@ export const cardData: CardDataType[] = [
   ];
   
   export const TeachableAINavItems = (t: Translator) => [
-    { icon: icon1, name: t("fundamentals"), href: "/dashboard/teachable-ai/Fundamentals" },
-    { icon: icon2, name: t("applied_ai"), href: "/dashboard/teachable-ai/AppliedAI" },
-    { icon: icon3, name: t("data_science"), href: "/dashboard/teachable-ai/DataScience" },
+    { icon: icon1, name: t("fundamentals"), href: "/dashboard/teachable-ai/fundamentals" },
+    { icon: icon2, name: t("applied_ai"), href: "/dashboard/teachable-ai/applied_ai" },
+    { icon: icon3, name: t("data_science"), href: "/dashboard/teachable-ai/data_science" },
     { icon: icon4, name: t("ai_ethics"), href: "/dashboard/teachable-ai/AI&Ethics" },
   ];
 
@@ -2027,32 +2027,32 @@ export const teachableAICardData: CardDataType0[] = [
     title: "Finger Labeling",
     description: "Your own dictionary objects and labels fingers in real time!",
     image: image1,
-    href: '/dashboard/teachable-ai/training/hand-recognition'
+    href: '/dashboard/teachable-ai/applied_ai/training/hand-recognition'
   },
   {
     title: "Image Classifier",
     description: "Adaptive and classify images by clicking categories like animals.",
     image: image2,
-    href: '/dashboard/teachable-ai/training/classification',
+    href: '/dashboard/teachable-ai/applied_ai/training/classification',
   },
   {
     title: "Shape Classifier",
     description: "Using the router when used into different channels images.",
     image: image3,
-    href: '/dashboard/teachable-ai/training/shape-classification',
+    href: '/dashboard/teachable-ai/applied_ai/training/shape-classification',
   },
 
   {
     title: "Your first ChatBook",
     description: "Your Smart Assistant that can answer questions, tell jokes, and learn from conversations!",
     image: image4,
-    href: '/dashboard/teachable-ai/training/ai-chatbot',
+    href: '/dashboard/teachable-ai/applied_ai/training/ai-chatbot',
   },
   {
     title: "Shape Classifier",
     description: "Using the router when used into different channels images.",
     image: image3,
-    href: '/dashboard/teachable-ai/training/shape-classification',
+    href: '/dashboard/teachable-ai/applied_ai/training/shape-classification',
   }
 ];
 

@@ -10,6 +10,7 @@ const useSession = () => {
   const baseurl =
     process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
 
+    console.log(baseurl)
   const createSession = async () => {
     try {
       const data = await sendPostRequest(`/session/`, {});
@@ -28,6 +29,7 @@ const useSession = () => {
   const checkSession = async (sessionId: string) => {
     try {
       const response = await fetch(`${baseurl}/api/session/${sessionId}`);
+      console.log('esrwtgeryhertjhr', response)
       if (!response.ok) {
         toast.info("Your session has expired");
         return false;

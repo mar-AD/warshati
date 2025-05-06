@@ -11,7 +11,7 @@ interface Props {
 const Card: React.FC<Props> = ({ data }) => {
   const t = useTranslations("dashboard.digital_literacy")
   return (
-    <div className="bg-white dark:bg-gray-800 shadow-xl rounded-2xl overflow-hidden p-5 transition-colors">
+    <div className="bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden p-5 transition-colors">
       <Image src={data.image} alt={data.title} className="w-full h-40 object-cover rounded-2xl" />
       <div className="mt-4 relative min-h-[120px]">
         <h3 className="text-[15px] font-semibold text-purple-700 dark:text-purple-300 mb-2">{data.title}</h3>

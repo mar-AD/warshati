@@ -42,7 +42,7 @@ const InfoDataCarousel = () => {
       className="relative w-full flex flex-col h-full flex-1 min-h-0"
       opts={{ loop: false }}
     >
-      <div className="flex justify-between items-center mb-6 pr-6">
+      <div className="flex justify-between items-center mb-6 ">
         <h2 className="text-base font-semibold">{t("infoData")}</h2>
         <div className="flex gap-2">
           <button
@@ -60,8 +60,8 @@ const InfoDataCarousel = () => {
         </div>
       </div>
 
-      <div className="overflow-x-hidden overflow-y-auto flex-1">
-        <CarouselContent className="flex flex-col gap-6 p-6 bg-gray-100 dark:bg-gray-600">
+      <div className="overflow-x-hidden overflow-y-auto flex-1 pb-6">
+        <CarouselContent className="flex flex-col gap-6 ">
           <CarouselItem>
             <div className="flex gap-6 sm:gap-8 md:gap-10 lg:gap-14">
               {visibleFirstRow.map((card, i) => (

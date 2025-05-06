@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -13,6 +12,7 @@ import logoFullDark from "/public/images/logos/white_logo.png";
 import logoSmallDark from "/public/images/logos/white_small_logo.png";
 import useMediaQuery from "@/lib/UseMediaQuery";
 import { NavItem } from "@/lib/types";
+import { Link } from "@/i18n/navigation";
 
 const Sidebar = ({
   showToggleButton = true,
@@ -29,6 +29,7 @@ const Sidebar = ({
   const [isCollapsed, setIsCollapsed] = useState(false);
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
+  const [activeLink, setActiveLink] = useState<string | null>(null);
   const { resolvedTheme } = useTheme();
 
   const toggleSidebar = () => setIsCollapsed(!isCollapsed);
@@ -36,6 +37,28 @@ const Sidebar = ({
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (!pathname || !navItems?.length) return;
+  
+    // Remove language prefix (e.g., "/en" or "/ar") for comparison
+    const normalizedPath = pathname.replace(/^\/[a-z]{2}(\/|$)/, '/');
+
+    const matchingItem = 
+      navItems.find(item => normalizedPath === item.href) ||
+      navItems.find(item => normalizedPath.startsWith(`${item.href}/`));
+  
+    if (matchingItem) {
+      setActiveLink(matchingItem.href);
+    }
+  }, [pathname, navItems]);
+
+  
+  const handleLinkClick = (href: string) => {
+    setActiveLink(href);
+    if (onLinkClick) onLinkClick();
+  };
+
 
   if (mounted && !isScreen && !forceShowOnMobile) return null;
 
@@ -70,11 +93,11 @@ const Sidebar = ({
             <Link
               key={item.name}
               href={item.href}
-              onClick={onLinkClick}
+              onClick={() => handleLinkClick(item.href)}
               className={cn(
                 "font-Inter font-medium w-full rounded-2xl transition-all duration-300 overflow-hidden text-violet-700 dark:text-white",
                 "hover:bg-[radial-gradient(circle_at_center,_#ebe5f6_0%,_rgba(235,229,246,0.05)_100%)] dark:hover:bg-[radial-gradient(circle_at_center,_#2d1f4d_0%,_rgba(45,31,77,0.2)_100%)]",
-                pathname.startsWith(item.href) && "bg-gray-800 font-semibold",
+                (activeLink === item.href) && "bg-[radial-gradient(circle_at_center,_#ebe5f6_0%,_rgba(235,229,246,0.05)_100%)] dark:bg-[radial-gradient(circle_at_center,_#2d1f4d_0%,_rgba(45,31,77,0.2)_100%)] font-semibold",
                 isCollapsed
                   ? "text-[10px] px-1 py-2 flex flex-col items-center justify-center text-center gap-1"
                   : "text-[14px] px-4 py-5 flex items-center gap-4 text-left"

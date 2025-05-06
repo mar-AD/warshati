@@ -84,7 +84,7 @@ function Programs() {
                 </div>
 
             </div>
-            <div className=" pl-[30px]">
+            <div className="p-6">
                 <Carousel />
             </div>
 
