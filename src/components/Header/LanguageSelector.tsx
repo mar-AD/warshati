@@ -62,7 +62,7 @@ const LanguageSelector = () => {
       <div className="relative">
         <div
           className={cn(
-            "absolute z-20 right-0 mt-2 bg-white border p-4 rounded-md duration-300 transition-[visibility_filter_opacity_transform]",
+            "absolute grid justify-items-center z-20 right-0 mt-2 bg-white border p-4 rounded-md duration-300 transition-[visibility_filter_opacity_transform]",
             showMenu ? "visible blur-none opacity-100 scale-100" : "invisible blur-sm opacity-0 scale-90"
           )}
         >
@@ -77,7 +77,7 @@ const LanguageSelector = () => {
                   : "hover:bg-violet-200"
               )}
             >
-              <span className={cn(`fi fi-${language.flag} rounded-md`)} />
+              {/* <span className={cn(`fi fi-${language.flag} rounded-md`)} /> */}
               <p className="text-stone-600 font-medium group-hover:text-violet-900">
                 {language.name}
               </p>
