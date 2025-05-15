@@ -46,7 +46,7 @@ const LanguageSelector = () => {
         onClick={() => setShowMenu(prev => !prev)}
         className="flex items-center gap-x-2 rounded-md cursor-pointer"
       >
-        <span className={cn(`fi fi-${selectedLanguage.flag} rounded-md`)} />
+        {/* <span className={cn(`fi fi-${selectedLanguage.flag} rounded-md`)} /> */}
         <div className="flex gap-x-1">
           <p className="text-stone-500 text-xs font-semibold">
             {selectedLanguage.code}

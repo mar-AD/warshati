@@ -1956,7 +1956,17 @@
       "staySafe": "Rester en sécurité en ligne",
       "creatDegCon": "Création de contenu numérique",
       "connectColab": "Connecté & Collaboratif",
-      "see_more": "Voir plus"
+      "see_more": "Voir plus",
+      "cards":[
+        {
+          "title": "Je cherche une Information",
+          "description": ""
+        },
+        {
+          "title": "Je manipule la DATA",
+          "description": ""
+        }
+      ]
     },
     "applied_ai": {
       "title": "Warshati <highlight>AI kids Lab</highlight>",

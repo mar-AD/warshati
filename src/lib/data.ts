@@ -1902,106 +1902,126 @@ export const presontationData1_1:Presentation1Type[] = [
 
 //for dashboard--------------------------------
 
-export const cardData: CardDataType[] = [
+export const cardData: CardDataType0[] = [
   {
-    title: "Lorem ipsum",
+    title: "Je cherche une Information",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
     image: uiux1,
+    href:"/dashboard/digital-literacy/programs/je-cherche"
   },
   {
-    title: "Lorem ipsum",
+    title: "Je manipule la DATA",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat, risus non tincidunt luctus, lorem sem varius massa, vitae tincidunt nulla sapien vel orci. Curabitur a fermentum justo.",
     image: uiux2,
+    href: "/dashboard/digital-literacy/programs/je-manipule"
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Integer nec felis eu lectus bibendum tincidunt. Fusce in nibh sit amet erat sagittis luctus.",
     image: uiux3,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non purus eget lacus fermentum gravida. Cras convallis, ligula ac dapibus posuere, justo sem faucibus nibh, nec iaculis sem sem in justo.",
     image: uiux4,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet tristique justo. In hac habitasse platea dictumst. Integer non neque et libero bibendum feugiat.",
     image: uiux5,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Sed viverra euismod neque, in fermentum metus facilisis non. Nam dignissim nisl a mauris varius, a porttitor est convallis.",
     image: uiux6,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac malesuada nisl. Sed commodo nisl nec massa gravida vehicula. Donec efficitur blandit nisi.",
     image: uiux2,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor purus sit amet metus placerat, sed iaculis elit commodo. Integer finibus ligula eget tincidunt ullamcorper.",
     image: uiux3,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis, odio sed sodales laoreet, magna arcu gravida nulla, a lobortis nulla velit ac nisi.",
     image: uiux4,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris nec erat sagittis convallis. In porta eros at tincidunt bibendum. Vestibulum vitae lectus at arcu hendrerit porta.",
     image: uiux5,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et turpis nec odio posuere rhoncus. Nullam vitae sapien at nulla pretium feugiat.",
     image: uiux6,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in est ac mauris consectetur facilisis. Vivamus ullamcorper quam ut ex fringilla, at faucibus justo cursus.",
     image: uiux3,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue tellus vitae tellus iaculis, in porta massa efficitur. Nunc pretium tellus in velit scelerisque eleifend.",
     image: uiux5,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ipsum dignissim, feugiat nisi ut, facilisis arcu. Curabitur euismod erat eu nisl ultrices, at varius erat sagittis.",
     image: uiux3,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis suscipit sem, id blandit erat laoreet nec. Nam tempor nibh ac lorem fermentum, sed euismod lectus convallis.",
     image: uiux1,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum, elit non porttitor sagittis, lacus odio dignissim erat, a convallis justo mauris vitae libero.",
     image: uiux5,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet diam nec nunc cursus iaculis. Integer eget nulla justo. Donec finibus nec arcu non feugiat.",
     image: uiux2,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim neque in eros fermentum, id sagittis purus vulputate. Nulla facilisi. Sed a velit blandit, sodales nunc sit amet, vehicula magna.",
     image: uiux6,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae urna sed eros ultricies varius. Sed sed lectus eu ligula sodales feugiat. Suspendisse ac malesuada purus.",
     image: uiux1,
+    href:''
   },
   {
     title: "Lorem ipsum",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus, mauris eget lacinia fermentum, velit neque pharetra lacus, ut laoreet eros tortor sed neque.",
     image: uiux6,
+    href:''
   },
 ];
 
@@ -2057,20 +2077,23 @@ export const teachableAICardData: CardDataType0[] = [
 ];
 
 
-export const comingSoonData: CardDataType[] = [
+export const comingSoonData: CardDataType0[] = [
   {
     title: "Object detection",
     description: "train an AI to recognize and detect different objects in their environment using a webcam or preloaded images.",
     image: soon1,
+    href:''
   },
   {
     title: "Rock, Paper, Scissors Game",
     description: "build your  AI that learns to play Rock, Paper, Scissors!",
     image: soon2,
+    href:''
   },
   {
     title: "Story teller",
     description: "create a text-based AI that helps generate fun and interactive stories",
     image: soon3,
+    href:''
   },
 ]

@@ -1,11 +1,12 @@
-import { CardDataType } from "@/lib/types";
+import { CardDataType0 } from "@/lib/types";
 import Image from "next/image";
 import React from "react";
 import { Eye } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 interface Props {
-  data: CardDataType;
+  data: CardDataType0;
 }
 
 const Card: React.FC<Props> = ({ data }) => {
@@ -16,9 +17,9 @@ const Card: React.FC<Props> = ({ data }) => {
       <div className="mt-4 relative min-h-[120px]">
         <h3 className="text-[15px] font-semibold text-purple-700 dark:text-purple-300 mb-2">{data.title}</h3>
         <p className="text-[11px] text-gray-600 dark:text-gray-300 mb-2">{data.description}</p>
-        <button className="absolute bottom-0 right-0 bg-purple-600 dark:bg-purple-500 flex gap-1 items-center text-white text-[10px] px-4 py-2 rounded-full hover:bg-purple-700 dark:hover:bg-purple-600 transition-all">
+        <Link href={data.href} className="absolute bottom-0 right-0 bg-purple-600 dark:bg-purple-500 flex gap-1 items-center text-white text-[10px] px-4 py-2 rounded-full hover:bg-purple-700 dark:hover:bg-purple-600 transition-all">
           {t("see_more")} <Eye size={16} />
-        </button>
+        </Link>
       </div>
     </div>
   );
