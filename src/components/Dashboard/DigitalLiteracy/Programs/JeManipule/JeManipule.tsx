@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -265,7 +264,6 @@ export default function JeManipule() {
           isFolder={modalFolder}
         />
       )}
-
       <FileExplorer
         files={filtered}
         onDrop={handleDrop}
