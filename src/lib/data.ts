@@ -1904,14 +1904,14 @@ export const presontationData1_1:Presentation1Type[] = [
 
 export const cardData: CardDataType0[] = [
   {
-    title: "Je cherche une Information",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    title: "I’m Searching for Information",
+    description: "This helps you learn how to search safely on the internet and how to find information on your own computer. You’ll see the difference between normal and safe searches, and you can save notes too!",
     image: uiux1,
     href:"/dashboard/digital-literacy/programs/je-cherche"
   },
   {
-    title: "Je manipule la DATA",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat, risus non tincidunt luctus, lorem sem varius massa, vitae tincidunt nulla sapien vel orci. Curabitur a fermentum justo.",
+    title: "I manipulate the DATA",
+    description: "Learn how to create folders and files, and organize your own stuff on the computer. You can manage your data just the way you want!",
     image: uiux2,
     href: "/dashboard/digital-literacy/programs/je-manipule"
   },
