@@ -17,146 +17,182 @@ interface FileItem {
   children: FileItem[];
 }
 
-function findItemByPath(files: FileItem[], path: number[]): FileItem | null {
-  let current = files;
-  let item = null;
-  
-  for (const index of path) {
-    if (index < 0 || index >= current.length) return null;
-    item = current[index];
-    if (item.isFolder) {
-      current = item.children;
-    } else {
-      current = [];
-    }
-  }
-  
-  return item;
-}
-
-function removeItemByPath(files: FileItem[], path: number[]): FileItem[] {
-  const cloned = JSON.parse(JSON.stringify(files));
-  
-  if (path.length === 1) {
-    cloned.splice(path[0], 1);
-    return cloned;
-  }
-  
-  let current = cloned;
-  for (let i = 0; i < path.length - 1; i++) {
-    current = current[path[i]].children;
-  }
-  
-  current.splice(path[path.length - 1], 1);
-  return cloned;
-}
 
 function moveFile(files: FileItem[], dragPath: number[], dropPath: number[]): FileItem[] {
-  // Don't allow dropping on itself
-  if (JSON.stringify(dragPath) === JSON.stringify(dropPath)) {
-    return files;
-  }
-  
-  // Don't allow dropping into a non-folder (unless it's a root level drop)
-  const dropItem = findItemByPath(files, dropPath);
-  if (dropPath.length > 0 && (!dropItem || !dropItem.isFolder)) {
-    return files;
-  }
-  
-  // Get the dragged item
+  if (JSON.stringify(dragPath) === JSON.stringify(dropPath)) return files;
+
+  // Find dragged item
   const draggedItem = findItemByPath(files, dragPath);
   if (!draggedItem) return files;
-  
-  // Remove from old location
-  const withoutDragged = removeItemByPath(files, dragPath);
-  
-  // Add to new location
-  const cloned = JSON.parse(JSON.stringify(withoutDragged));
-  
-  // If dropping at root level
-  if (dropPath.length === 0) {
-    return [...cloned, draggedItem];
+
+  // Remove dragged item first
+  let cloned = JSON.parse(JSON.stringify(files));
+  cloned = removeItemByPath(cloned, dragPath);
+
+  // Now we need to re-find the drop folder path in the new cloned array (indexes may have shifted)
+  const dropFolder = findItemByPath(cloned, dropPath);
+  if (!dropFolder) {
+    console.error("Drop folder not found (path may be invalid after removal)");
+    return files; // or return cloned if you want to keep removal
   }
-  
-  let current = cloned;
-  for (let i = 0; i < dropPath.length; i++) {
-    current = current[dropPath[i]].children;
+  if (!dropFolder.isFolder) {
+    console.error("Drop target is not a folder");
+    return files;
   }
-  
-  current.push(draggedItem);
+  if (!dropFolder.children) dropFolder.children = [];
+
+  // Add dragged item to drop folder's children
+  dropFolder.children.push(draggedItem);
+
   return cloned;
 }
 
-function FileExplorer({ files, onDrop, onTag, onDelete, onShare, path = [] }: any) {
+// Helper: Find item by path recursively
+function findItemByPath(items: FileItem[], path: number[]): FileItem | null {
+  let current: FileItem | null = null;
+  let list = items;
+  for (let i = 0; i < path.length; i++) {
+    current = list[path[i]];
+    if (!current) return null;
+    if (i < path.length - 1) {
+      if (!current.children) return null;
+      list = current.children;
+    }
+  }
+  return current;
+}
+
+// Helper: Remove item by path recursively
+function removeItemByPath(items: FileItem[], path: number[]): FileItem[] {
+  if (path.length === 0) return items;
+
+  const indexToRemove = path[0];
+  if (path.length === 1) {
+    return [...items.slice(0, indexToRemove), ...items.slice(indexToRemove + 1)];
+  }
+
+  const updated = [...items];
+  const child = updated[indexToRemove];
+  if (child.children) {
+    child.children = removeItemByPath(child.children, path.slice(1));
+  }
+  updated[indexToRemove] = child;
+  return updated;
+}
+
+
+
+function FileExplorer({ files, onAddFileToFolder, onDrop, onTag, onDelete, onShare, path = [] }: any) {
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+
+  const toggle = (key: string) => {
+    setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
   return (
-    <div className="space-y-4">
-      {files.map((file: any, index: number) => {
+    <div className="ml-4">
+      {files.map((file: FileItem, index: number) => {
         const currentPath = [...path, index];
+        const key = currentPath.join("-");
+        const isExpanded = expanded[key] || false;
+
         return (
           <div
-            key={index}
+            key={key}
             onDragOver={(e) => {
               e.preventDefault();
-              e.currentTarget.classList.add('bg-blue-50');
+              e.currentTarget.classList.add("bg-blue-50");
             }}
             onDragLeave={(e) => {
-              e.currentTarget.classList.remove('bg-blue-50');
+              e.currentTarget.classList.remove("bg-blue-50");
             }}
             onDrop={(e) => {
               e.preventDefault();
-              e.currentTarget.classList.remove('bg-blue-50');
+              e.currentTarget.classList.remove("bg-blue-50");
               const dragPath = JSON.parse(e.dataTransfer.getData("path"));
               onDrop(dragPath, currentPath);
             }}
             draggable
             onDragStart={(e) => {
               e.dataTransfer.setData("path", JSON.stringify(currentPath));
-              e.currentTarget.classList.add('opacity-50');
+              e.currentTarget.classList.add("opacity-50");
             }}
             onDragEnd={(e) => {
-              e.currentTarget.classList.remove('opacity-50');
+              e.currentTarget.classList.remove("opacity-50");
             }}
-            className="border rounded-xl p-4 bg-white shadow hover:bg-yellow-50 transition-all"
+            className="border rounded-xl p-4 bg-white shadow hover:bg-yellow-50 transition-all mb-2"
           >
-            <div className="flex justify-between items-center">
-              <div>
-                <h2 className="font-bold text-lg">
-                  {file.isFolder ? "📁" : "📄"} {file.name}
-                </h2>
-                <p className="text-sm text-gray-500">{file.type} | {file.date}</p>
-                <p className="text-sm">Tags: {file.tags.join(", ") || "Aucun"}</p>
-              </div>
-              <div className="flex gap-2">
-                <button 
-                  onClick={() => onTag(currentPath)} 
-                  className="bg-purple-500 text-white px-3 py-1 rounded-xl"
-                >
-                  Taguer
-                </button>
-                <button 
-                  onClick={() => onDelete(currentPath)} 
-                  className="bg-red-500 text-white px-3 py-1 rounded-xl"
-                >
-                  Supprimer
-                </button>
-                <button 
-                  onClick={() => onShare(file)} 
-                  className="bg-blue-500 text-white px-3 py-1 rounded-xl"
-                >
-                  Partager
-                </button>
-              </div>
-            </div>
-            {file.isFolder && file.children.length > 0 && (
-              <div className="ml-6 mt-2">
-                <FileExplorer
-                  files={file.children}
-                  onDrop={onDrop}
-                  onTag={onTag}
-                  onDelete={onDelete}
-                  onShare={onShare}
-                  path={currentPath}
-                />
+            {file.isFolder ? (
+              <>
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-2">
+                    <button onClick={() => toggle(key)} className="mr-2">
+                      {isExpanded ? "📂" : "📁"}
+                    </button>
+                    <span className="font-bold">{file.name}</span>
+                  </div>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => onAddFileToFolder(currentPath, prompt("Nom du fichier ?") || "")}
+                      className="bg-green-500 text-white px-3 py-1 rounded-xl text-sm"
+                    >
+                      + Nouveau fichier
+                    </button>
+                    <button
+                      onClick={() => onTag(currentPath)}
+                      className="bg-purple-500 text-white px-3 py-1 rounded-xl"
+                    >
+                      Taguer
+                    </button>
+                    <button
+                      onClick={() => onDelete(currentPath)}
+                      className="bg-red-500 text-white px-3 py-1 rounded-xl"
+                    >
+                      Supprimer
+                    </button>
+                    <button
+                      onClick={() => onShare(file)}
+                      className="bg-blue-500 text-white px-3 py-1 rounded-xl"
+                    >
+                      Partager
+                    </button>
+                  </div>
+                </div>
+                {isExpanded && file.children && file.children.length > 0 && (
+                  <FileExplorer
+                    files={file.children}
+                    onAddFileToFolder={onAddFileToFolder}
+                    onDrop={onDrop}
+                    onTag={onTag}
+                    onDelete={onDelete}
+                    onShare={onShare}
+                    path={currentPath}
+                  />
+                )}
+              </>
+            ) : (
+              <div className="flex justify-between items-center ml-6">
+                <span>📄 {file.name}</span>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => onTag(currentPath)}
+                    className="bg-purple-500 text-white px-3 py-1 rounded-xl"
+                  >
+                    Taguer
+                  </button>
+                  <button
+                    onClick={() => onDelete(currentPath)}
+                    className="bg-red-500 text-white px-3 py-1 rounded-xl"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    onClick={() => onShare(file)}
+                    className="bg-blue-500 text-white px-3 py-1 rounded-xl"
+                  >
+                    Partager
+                  </button>
+                </div>
               </div>
             )}
           </div>
@@ -165,6 +201,10 @@ function FileExplorer({ files, onDrop, onTag, onDelete, onShare, path = [] }: an
     </div>
   );
 }
+
+
+
+
 
 export default function JeManipule() {
   const [files, setFiles] = useState<FileItem[]>([]);
@@ -186,6 +226,31 @@ export default function JeManipule() {
     setFiles((prev) => [...prev, newItem]);
     setShowModal(false);
   };
+
+  // Add this function inside JeManipule (below deleteFile or wherever)
+const addFileToFolder = (path: number[], name: string) => {
+  const newFile: FileItem = {
+    name,
+    type: "txt",
+    tags: [],
+    date: new Date().toLocaleDateString(),
+    isFolder: false,
+    children: [],
+  };
+
+  setFiles((prev) => {
+    const cloned = JSON.parse(JSON.stringify(prev));
+    let current = cloned;
+
+    for (let i = 0; i < path.length - 1; i++) {
+      current = current[path[i]].children;
+    }
+
+    current[path[path.length - 1]].children.push(newFile);
+    return cloned;
+  });
+};
+
 
   const tagFile = (path: number[]) => {
     const tag = prompt("Ajouter un tag?");
@@ -265,12 +330,14 @@ export default function JeManipule() {
         />
       )}
       <FileExplorer
-        files={filtered}
-        onDrop={handleDrop}
-        onTag={tagFile}
-        onDelete={deleteFile}
-        onShare={shareFile}
-      />
+  files={filtered}
+  onDrop={handleDrop}
+  onTag={tagFile}
+  onDelete={deleteFile}
+  onShare={shareFile}
+  onAddFileToFolder={addFileToFolder}
+/>
+
     </main>
   );
 }

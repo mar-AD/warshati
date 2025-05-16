@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Input } from "../JeCherche/input";
 import { Button } from "@/components/ui/button";
 
-const fileTypes = ["document", "image", "pdf", "audio", "video", "tableur", "texte", "code", "autre"];
+const fileTypes = ["document","pdf", "texte", "code"];
 
 function FileModal({ onConfirm, onClose, isFolder }: { onConfirm: (name: string, type: string) => void; onClose: () => void; isFolder: boolean }) {
   const [name, setName] = useState("");
