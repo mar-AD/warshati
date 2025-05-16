@@ -21,7 +21,6 @@ interface FileItem {
 function moveFile(files: FileItem[], dragPath: number[], dropPath: number[]): FileItem[] {
   if (JSON.stringify(dragPath) === JSON.stringify(dropPath)) return files;
 
-  // Find dragged item
   const draggedItem = findItemByPath(files, dragPath);
   if (!draggedItem) return files;
 
