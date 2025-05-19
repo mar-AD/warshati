@@ -1,6 +1,5 @@
 import { getFingers } from "../utils";
 
-
 /**
  * Sends a POST request to the specified endpoint with the provided data.
  * @param endpoint - The endpoint to send the request to.
@@ -15,9 +14,9 @@ export const sendPostRequest = async (endpoint: string, data: any) => {
   try {
     const response = await fetch(`${baseURL}/api${endpoint}`, {
       method: "POST",
-      headers: {
+      /* headers: {
         "Content-Type": "application/json",
-      },
+      }, */
       body: JSON.stringify(data),
     });
 

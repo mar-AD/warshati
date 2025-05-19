@@ -1,13 +1,31 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { Button, Chip, Input, Link, Select, SelectItem, Slider, Tooltip } from '@nextui-org/react';
-import { toast } from 'react-toastify';
+import React, { useEffect, useState, useCallback, useRef } from "react";
+import {
+  Button,
+  Chip,
+  Input,
+  Link,
+  Select,
+  SelectItem,
+  Slider,
+  Tooltip,
+} from "@nextui-org/react";
+import { toast } from "react-toastify";
 import { HiOutlineDownload } from "react-icons/hi";
-import { useTranslations } from 'next-intl';
-import { TrainFormProps } from '../types';
-import { BATCH_SIZE, EPOCHS_SIZE, LEARNING_RATE, MAX_EPOCHS, TRAIN_SPLIT_SIZE } from '../config/constants';
-import { batch_sizes } from '../constants';
+import { useTranslations } from "next-intl";
+import { TrainFormProps } from "../types";
+import {
+  BATCH_SIZE,
+  EPOCHS_SIZE,
+  LEARNING_RATE,
+  MAX_EPOCHS,
+  TRAIN_SPLIT_SIZE,
+} from "../config/constants";
+import { batch_sizes } from "../constants";
 
-const TrainForm: React.FC<TrainFormProps> = ({ onTrainingSuccess, ...props }) => {
+const TrainForm: React.FC<TrainFormProps> = ({
+  onTrainingSuccess,
+  ...props
+}) => {
   const [socket, setSocket] = useState<WebSocket | null>(null);
   const [isTraining, setIsTraining] = useState(false);
   const [trainSplit, setTrainSplit] = useState<number>(TRAIN_SPLIT_SIZE);
@@ -44,39 +62,39 @@ const TrainForm: React.FC<TrainFormProps> = ({ onTrainingSuccess, ...props }) =>
   useEffect(() => {
     const _accuracy = localStorage.getItem("accuracy");
     if (_accuracy) {
-      setAccuracy(parseFloat(_accuracy))
+      setAccuracy(parseFloat(_accuracy));
       setIsTrainingDone(true);
     }
-  }, [accuracy, isTrainingDone])
+  }, [accuracy, isTrainingDone]);
 
   const initializeWebSocket = useCallback(() => {
-    const wsBase = process.env.NEXT_PUBLIC_WS_BASE || 'ws://localhost:8000/ws';
+    const wsBase = process.env.NEXT_PUBLIC_WS_BASE_URL || "ws://localhost:8000";
+    console.log(wsBase);
     const sessionId = localStorage.getItem("sessionId");
 
     if (!sessionId) {
-      toast.error('Session ID not found');
+      toast.error("Session ID not found");
       return null;
     }
 
     const ws = new WebSocket(`${wsBase}/shape/train/${sessionId}`);
 
     ws.onopen = () => {
-      console.log('WebSocket is open now.');
-      startTraining(ws);  // Start training once the socket is open
+      console.log("WebSocket is open now.");
+      startTraining(ws); // Start training once the socket is open
     };
 
     ws.onmessage = (event) => handleWebSocketMessage(event);
 
     ws.onclose = () => {
-      console.log('WebSocket is closed now.');
-      if (isTraining)
-        toast.error(t("train_end_err_message"));
+      console.log("WebSocket is closed now.");
+      if (isTraining) toast.error(t("train_end_err_message"));
       setIsTraining(false);
       setSocket(null);
     };
 
     ws.onerror = (error) => {
-      console.error('WebSocket error observed:', error);
+      console.error("WebSocket error observed:", error);
       closeWebSocket(ws);
     };
 
@@ -84,25 +102,28 @@ const TrainForm: React.FC<TrainFormProps> = ({ onTrainingSuccess, ...props }) =>
     return ws;
   }, []);
 
-  const handleWebSocketMessage = useCallback((event: MessageEvent) => {
-    const data = JSON.parse(event.data);
+  const handleWebSocketMessage = useCallback(
+    (event: MessageEvent) => {
+      const data = JSON.parse(event.data);
 
-    if (data.status === "success") {
-      setIsTraining(false);
-      setIsTrainingDone(true);
-      const accuracy = data.info?.accuracy;
-      setAccuracy(accuracy);
-      localStorage.setItem("isClassificationTrainingDone", "true");
-      localStorage.setItem("accuracy", accuracy.toString());
-      toast.success(t("train_end_succ_message"));
-      onTrainingSuccess();
-    } else {
-      toast.error(t("train_end_err_message"));
-      setIsTraining(false);
-    }
+      if (data.status === "success") {
+        setIsTraining(false);
+        setIsTrainingDone(true);
+        const accuracy = data.info?.accuracy;
+        setAccuracy(accuracy);
+        localStorage.setItem("isClassificationTrainingDone", "true");
+        localStorage.setItem("accuracy", accuracy.toString());
+        toast.success(t("train_end_succ_message"));
+        onTrainingSuccess();
+      } else {
+        toast.error(t("train_end_err_message"));
+        setIsTraining(false);
+      }
 
-    closeWebSocket(socket);  // Close the socket after receiving a message
-  }, [onTrainingSuccess, socket]);
+      closeWebSocket(socket); // Close the socket after receiving a message
+    },
+    [onTrainingSuccess, socket]
+  );
 
   const closeWebSocket = (ws: WebSocket | null) => {
     if (ws && ws.readyState === WebSocket.OPEN) {
@@ -150,7 +171,7 @@ const TrainForm: React.FC<TrainFormProps> = ({ onTrainingSuccess, ...props }) =>
         className="w-full"
         value={trainSplit}
         onChange={(value) => setTrainSplit(value as number)}
-        renderValue={({...props }) => (
+        renderValue={({ ...props }) => (
           <output {...props}>
             <Tooltip content={t("press_enter_confirm")} placement="left">
               <input
@@ -216,8 +237,7 @@ const TrainForm: React.FC<TrainFormProps> = ({ onTrainingSuccess, ...props }) =>
         required
       />
 
-
-      <Button color='primary' type="submit" isLoading={isTraining}>
+      <Button color="primary" type="submit" isLoading={isTraining}>
         {isTraining ? t("training") : t("start_training")}
       </Button>
 
@@ -226,31 +246,34 @@ const TrainForm: React.FC<TrainFormProps> = ({ onTrainingSuccess, ...props }) =>
           color="success"
           as={Link}
           endContent={<HiOutlineDownload />}
-          variant='ghost'
-          href={`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/shape/export/${localStorage.getItem("sessionId")}`}
+          variant="ghost"
+          href={`${
+            process.env.NEXT_PUBLIC_API_BASE_URL
+          }/api/shape/export/${localStorage.getItem("sessionId")}`}
         >
-          {
-            t("export_model")
-          }
+          {t("export_model")}
         </Button>
       )}
 
       {isTrainingDone && accuracy !== null && (
         <div>
-          {
-            t("accuracy")
-          }
+          {t("accuracy")}
           <Chip
-            color={accuracy >= 0.85 ? "success" : accuracy >= 0.7 ? "warning" : "danger"}
-            className='ml-3'
+            color={
+              accuracy >= 0.85
+                ? "success"
+                : accuracy >= 0.7
+                ? "warning"
+                : "danger"
+            }
+            className="ml-3"
             variant="dot"
           >
             {Math.round(accuracy * 100)}%
           </Chip>
         </div>
-      )
-      }
-    </form >
+      )}
+    </form>
   );
 };
 
