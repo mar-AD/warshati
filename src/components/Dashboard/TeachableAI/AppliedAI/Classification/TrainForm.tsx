@@ -69,7 +69,7 @@ const TrainForm: React.FC<TrainFormProps> = ({
 
   const initializeWebSocket = useCallback(() => {
     const wsBase =
-      process.env.NEXT_PUBLIC_WS_BASE_URL || "ws://localhost:8000/";
+      process.env.NEXT_PUBLIC_WS_BASE_URL || "ws://localhost:8000";
     const sessionId = localStorage.getItem("sessionId");
 
     if (!sessionId) {

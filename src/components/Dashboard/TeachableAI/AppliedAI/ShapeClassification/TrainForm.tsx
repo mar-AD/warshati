@@ -68,8 +68,8 @@ const TrainForm: React.FC<TrainFormProps> = ({
   }, [accuracy, isTrainingDone]);
 
   const initializeWebSocket = useCallback(() => {
-    const wsBase =
-      process.env.NEXT_PUBLIC_WS_BASE_URL || "ws://localhost:8000/";
+    const wsBase = process.env.NEXT_PUBLIC_WS_BASE_URL || "ws://localhost:8000";
+    console.log(wsBase);
     const sessionId = localStorage.getItem("sessionId");
 
     if (!sessionId) {
