@@ -377,9 +377,9 @@ export const FAQData: FAQType[] = [
 
 
 export const links: NavType[] = [
-  { label: "ri", link: "/application/R&I" },
-  { label: "blog", link: "/application/Blog" },
-  { label: "contact", link: "/application/Contact" }
+  { label: "ri", link: "/R&I" },
+  { label: "blog", link: "/Blog" },
+  { label: "contact", link: "/Contact" }
 ];
 
 

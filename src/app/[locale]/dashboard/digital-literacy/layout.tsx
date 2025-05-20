@@ -7,7 +7,7 @@ import { getMessages, getLocale } from "next-intl/server";
 import { NextUIProvider } from "@/components/Dashboard/TeachableAI/AppliedAI/providers";
 import { notFound } from "next/navigation";
 import { locales } from '@/i18n/config';
-import '../../../globals.css';
+import '../../globals.css';
 
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
