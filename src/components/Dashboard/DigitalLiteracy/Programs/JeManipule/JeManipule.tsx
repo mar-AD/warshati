@@ -9,131 +9,11 @@ import "react-datepicker/dist/react-datepicker.css";
 import FileModal from "./FileModal";
 import { MoreVertical } from "lucide-react";
 import { Dropdown } from "./DropDown";
+import { FileItem } from "@/lib/types";
+import { AddTagModal } from "./AddTagModal";
+import { findItemByIdPath, moveFileByIdPath, removeItemByIdPath } from "./Utilts";
+import { ShareModal } from "./ShareModal";
 
-interface FileItem {
-  id: string;
-  name: string;
-  type: string;
-  tags: string[];
-  date: string;
-  isFolder: boolean;
-  children: FileItem[];
-  content?: string;
-}
-
-const AddFileModal = ({ 
-  isOpen, 
-  onClose, 
-  onConfirm 
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-  onConfirm: (name: string) => void;
-}) => {
-  const [fileName, setFileName] = useState("");
-
-  return (
-    <div className={`fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 ${isOpen ? '' : 'hidden'}`}>
-      <div className="bg-white p-4 rounded-xl shadow-xl w-full max-w-md space-y-4">
-        <h2 className="text-xl font-semibold">Add New File</h2>
-        <Input 
-          placeholder="File name" 
-          value={fileName} 
-          onChange={(e) => setFileName(e.target.value)} 
-        />
-        <div className="flex justify-end gap-2">
-          <Button onClick={() => {
-            onConfirm(fileName);
-            setFileName("");
-            onClose();
-          }}>Add</Button>
-          <Button variant="outline" onClick={() => {
-            setFileName("");
-            onClose();
-          }}>Cancel</Button>
-        </div>
-      </div>
-    </div>
-  );
-};
-const AddTagModal = ({ 
-  isOpen, 
-  onClose, 
-  onConfirm 
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-  onConfirm: (tag: string) => void;
-}) => {
-  const [tag, setTag] = useState("");
-
-  return (
-    <div className={`fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 ${isOpen ? '' : 'hidden'}`}>
-      <div className="bg-white p-4 rounded-xl shadow-xl w-full max-w-md space-y-4">
-        <h2 className="text-xl font-semibold">Add Tag</h2>
-        <Input 
-          placeholder="Tag name" 
-          value={tag} 
-          onChange={(e) => setTag(e.target.value)} 
-        />
-        <div className="flex justify-end gap-2">
-          <Button onClick={() => {
-            onConfirm(tag);
-            setTag("");
-            onClose();
-          }}>Add</Button>
-          <Button variant="outline" onClick={() => {
-            setTag("");
-            onClose();
-          }}>Cancel</Button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-function findItemByIdPath(items: FileItem[], path: string[]): FileItem | null {
-  let current: FileItem | null = null;
-  let list = items;
-  for (const id of path) {
-    current = list.find(item => item.id === id) || null;
-    if (!current) return null;
-    list = current.children;
-  }
-  return current;
-}
-
-function removeItemByIdPath(items: FileItem[], path: string[]): FileItem[] {
-  if (path.length === 0) return items;
-  const cloned = structuredClone(items);
-  let parent = cloned;
-  for (let i = 0; i < path.length - 1; i++) {
-    const found = parent.find(item => item.id === path[i]);
-    if (!found) return items;
-    parent = found.children;
-  }
-  const targetId = path[path.length - 1];
-  const idx = parent.findIndex(item => item.id === targetId);
-  if (idx !== -1) parent.splice(idx, 1);
-  return cloned;
-}
-
-function moveFileByIdPath(files: FileItem[], dragPath: string[], dropPath: string[]): FileItem[] {
-  if (JSON.stringify(dragPath) === JSON.stringify(dropPath)) return files;
-  if (dropPath.length > 0 && dragPath.length > 0) {
-    const dropPathStr = JSON.stringify(dropPath);
-    const dragPathStr = JSON.stringify(dragPath.slice(0, dropPath.length));
-    if (dropPathStr === dragPathStr) return files;
-  }
-  const dragged = findItemByIdPath(files, dragPath);
-  if (!dragged) return files;
-  const cloned = removeItemByIdPath(files, dragPath);
-  if (dropPath.length === 0) return [...cloned, dragged];
-  const dropTarget = findItemByIdPath(cloned, dropPath);
-  if (!dropTarget || !dropTarget.isFolder) return [...cloned, dragged];
-  dropTarget.children.push(dragged);
-  return cloned;
-}
 
 function FileExplorer({ files, onAddFileToFolder, onDrop, onTag, onDelete, onShare, path = [], setSelectedPath, setEditingText }: any) {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
@@ -142,6 +22,9 @@ function FileExplorer({ files, onAddFileToFolder, onDrop, onTag, onDelete, onSha
   const [showTagModal, setShowTagModal] = useState(false);
   const [currentPath, setCurrentPath] = useState<string[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const currentFolder = findItemByIdPath(files, currentPath);
+  const existingNames = currentFolder?.children?.map(f => f.name) || [];
 
   const toggle = (key: string, fileId: string, e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
@@ -186,13 +69,17 @@ function FileExplorer({ files, onAddFileToFolder, onDrop, onTag, onDelete, onSha
       onDragLeave={handleDragLeave}
       onDrop={(e) => handleDrop(e, [])}
     >
-      <AddFileModal
-        isOpen={showAddFileModal}
-        onClose={() => setShowAddFileModal(false)}
-        onConfirm={(name) => {
-          onAddFileToFolder(currentPath, name);
-        }}
-      />
+      {showAddFileModal && (
+        <FileModal
+          onConfirm={(name) => {
+            onAddFileToFolder(currentPath, name);
+            setShowAddFileModal(false);
+          }}
+          onClose={() => setShowAddFileModal(false)}
+          isFolder={false}
+          existingNames={existingNames}
+        />
+      )}
 
       <AddTagModal
         isOpen={showTagModal}
@@ -317,13 +204,50 @@ function FileExplorer({ files, onAddFileToFolder, onDrop, onTag, onDelete, onSha
 
 export default function JeManipule() {
   const [files, setFiles] = useState<FileItem[]>([]);
-  const [filterType, setFilterType] = useState("");
+  const [filterName, setFilterName] = useState("");
   const [filterTag, setFilterTag] = useState("");
   const [filterDate, setFilterDate] = useState<Date | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [modalFolder, setModalFolder] = useState(false);
   const [selectedPath, setSelectedPath] = useState<string[] | null>(null);
   const [editingText, setEditingText] = useState("");
+  const [shareModalData, setShareModalData] = useState<{
+    isOpen: boolean;
+    file: FileItem | null;
+  }>({
+    isOpen: false,
+    file: null,
+  });
+
+  const rootNames = files.map(f => f.name);
+
+  const filterFiles = (fileList: FileItem[], nameFilter: string, tagFilter: string, dateFilter: Date | null): FileItem[] => {
+    return fileList.reduce<FileItem[]>((acc, file) => {
+      const matchesName = !nameFilter || file.name.toLowerCase().includes(nameFilter.toLowerCase());
+      const matchesTag = !tagFilter || file.tags.some(tag => tag.toLowerCase().includes(tagFilter.toLowerCase()));
+      const matchesDate = !dateFilter || file.date === dateFilter.toLocaleDateString();
+      
+      const matchesFilters = matchesName && matchesTag && matchesDate;
+      
+      if (file.isFolder) {
+        // If folder matches, include it with all its contents
+        if (matchesFilters) {
+          acc.push({
+            ...file,
+            children: filterFiles(file.children, '', '', null) // Show all children when folder matches
+          });
+        } else {
+          // Otherwise check children (but don't include the folder itself)
+          const filteredChildren = filterFiles(file.children, nameFilter, tagFilter, dateFilter);
+          acc.push(...filteredChildren);
+        }
+      } else if (matchesFilters) {
+        acc.push(file);
+      }
+      
+      return acc;
+    }, []);
+  };
 
   const createItem = (name: string, type: string) => {
     const newItem: FileItem = {
@@ -373,34 +297,67 @@ export default function JeManipule() {
     setFiles((prev) => removeItemByIdPath(prev, path));
   };
 
-  const shareFile = (file: FileItem) => alert(`Partagé: ${file.name}`);
+  const shareFile = (file: FileItem) => {
+    setShareModalData({
+      isOpen: true,
+      file
+    });
+  };
 
   const handleDrop = (dragPath: string[], dropPath: string[]) => {
     setFiles((prev) => moveFileByIdPath(prev, dragPath, dropPath));
   };
 
-  const filtered = files.filter((f) =>
-    (!filterType || f.type === filterType) &&
-    (!filterTag || f.tags.includes(filterTag)) &&
-    (!filterDate || f.date === filterDate.toLocaleDateString())
-  );
+  const filtered = filterFiles(files, filterName, filterTag, filterDate);
 
   return (
     <main className="p-6 max-w-4xl mx-auto space-y-6 h-full">
       <h1 className="text-3xl font-bold text-center">Je manipule la DATA</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Input placeholder="Filtrer par type..." value={filterType} onChange={(e) => setFilterType(e.target.value)} />
-        <Input placeholder="Filtrer par tag..." value={filterTag} onChange={(e) => setFilterTag(e.target.value)} />
-        <DatePicker selected={filterDate} onChange={(date) => setFilterDate(date)} placeholderText="Filtrer par date..." className="w-full px-4 py-2 rounded-xl border border-gray-300" />
+        <Input 
+          placeholder="Search by name..." 
+          value={filterName} 
+          onChange={(e) => setFilterName(e.target.value)} 
+        />
+        <Input 
+          placeholder="Search by tag..." 
+          value={filterTag} 
+          onChange={(e) => setFilterTag(e.target.value)} 
+        />
+        <DatePicker 
+          selected={filterDate} 
+          onChange={(date) => setFilterDate(date)} 
+          placeholderText="Filter by date..." 
+          className="w-full px-4 py-2 rounded-xl border border-gray-300" 
+        />
       </div>
       <div className="flex flex-col md:flex-row gap-4">
-        <Button onClick={() => { setModalFolder(false); setShowModal(true); }} className="bg-green-500 text-white w-full">Ajouter un fichier</Button>
-        <Button onClick={() => { setModalFolder(true); setShowModal(true); }} className="bg-yellow-500 text-white w-full">Ajouter un dossier</Button>
+        <Button 
+          onClick={() => { setModalFolder(false); setShowModal(true); }} 
+          className="bg-green-500 text-white w-full"
+        >
+          Add File
+        </Button>
+        <Button 
+          onClick={() => { setModalFolder(true); setShowModal(true); }} 
+          className="bg-yellow-500 text-white w-full"
+        >
+          Add Folder
+        </Button>
       </div>
-      {showModal && <FileModal onConfirm={createItem} onClose={() => setShowModal(false)} isFolder={modalFolder} />}
+      
+      {showModal && (
+        <FileModal
+          onConfirm={createItem}
+          onClose={() => setShowModal(false)}
+          isFolder={modalFolder}
+          existingNames={rootNames}
+        />
+      )}
+      
       {selectedPath && (
-        <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
-          <div className="bg-white p-4 rounded-xl shadow-xl w-full max-w-lg space-y-4">
+        <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 !mt-0">
+          <div className="bg-white p-4 rounded-xl shadow-xl w-full max-w-lg space-y-4 ">
             <h2 className="text-xl font-semibold">Edit File</h2>
             <textarea
               className="w-full border p-2 rounded"
@@ -417,12 +374,26 @@ export default function JeManipule() {
                   return cloned;
                 });
                 setSelectedPath(null);
-              }}>Save</Button>
-              <Button variant="outline" onClick={() => setSelectedPath(null)}>Cancel</Button>
+              }}>
+                Save
+              </Button>
+              <Button 
+                variant="outline" 
+                onClick={() => setSelectedPath(null)}
+              >
+                Cancel
+              </Button>
             </div>
           </div>
         </div>
       )}
+      
+      <ShareModal
+        isOpen={shareModalData.isOpen}
+        onClose={() => setShareModalData({ isOpen: false, file: null })}
+        file={shareModalData.file!}
+      />
+      
       <FileExplorer
         files={filtered}
         onDrop={handleDrop}

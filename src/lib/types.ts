@@ -269,3 +269,37 @@ export type NavItem = {
   href: string;
   icon?: StaticImageData;
 };
+
+
+
+
+export interface FileItem {
+  id: string;
+  name: string;
+  type: string;
+  tags: string[];
+  date: string;
+  isFolder: boolean;
+  children: FileItem[];
+  content?: string;
+}
+
+export interface AddTagModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onConfirm: (tag: string) => void;
+}
+
+export interface ShareModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  file: FileItem | null;
+}
+
+export interface FileModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onConfirm: (name: string, type?: string) => void;
+  isFolder: boolean;
+  existingNames: string[];
+}
