@@ -1,3 +1,4 @@
+import { nextui } from "@nextui-org/react";
 import type { Config } from "tailwindcss";
 import tailwindcss_animate from "tailwindcss-animate";
 export default {
@@ -6,6 +7,7 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
     "bg-violet-600/40",
@@ -42,6 +44,7 @@ export default {
       },
       colors: {
         "light-gray": "#F9FAFC",
+        'dark-blue': '#030712',
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -91,5 +94,5 @@ export default {
       },
     },
   },
-  plugins: [tailwindcss_animate],
+  plugins: [tailwindcss_animate, nextui()],
 } satisfies Config;

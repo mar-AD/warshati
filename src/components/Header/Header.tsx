@@ -34,10 +34,10 @@ const Header = () => {
             <Link href={"/"} className="min-w-44 w-44">
                 <Image priority src={warshati_logo} alt="warshati_logo" />
             </Link>
-            <div ref={ref} className={cn("relative w-[60%] max-lg:hidden",
+            <div ref={ref} className={cn("relative w-[70%] max-lg:hidden",
                 showMenu && "max-lg:block"
             )}>
-                <div className={cn("lg:gap-20 gap-10 flex items-center justify-between",showMenu && "max-lg:flex-col max-lg:absolute right-0 max-lg:bg-violet-300/50 backdrop-blur-md top-6 max-lg:p-6 rounded")}>
+                <div className={cn("gap-8 flex items-center justify-between",showMenu && "max-lg:flex-col max-lg:absolute right-0 max-lg:bg-violet-300/50 backdrop-blur-md top-6 max-lg:p-6 rounded")}>
 
                     {/* Navigation Bar */}
                     <Navbar showMenu={showMenu} />

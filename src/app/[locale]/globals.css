@@ -137,6 +137,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+  
 }
 
 @layer base {
@@ -147,3 +148,5 @@
     @apply bg-background text-foreground;
   }
 }
+
+

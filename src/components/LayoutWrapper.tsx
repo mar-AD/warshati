@@ -7,7 +7,7 @@ import { usePathname } from "@/i18n/navigation";
 
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
 const pathname = usePathname();
-const hideHeaderFooter = pathname.endsWith("/Commencer");
+const hideHeaderFooter = pathname.endsWith("/Commencer") || pathname.startsWith("/dashboard");
 
 return (
 <>

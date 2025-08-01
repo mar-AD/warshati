@@ -35,6 +35,8 @@ pipeline {
                     def configFileId
                     if (env.BRANCH_NAME == 'main') {
                         configFileId = 'd688a297-d14e-4d37-9c56-d3a2284b24cc'
+                    } else if (env.BRANCH_NAME == 'develop') {
+                        configFileId = '2af17b4e-5fb4-44d4-a4ed-92cc0a783fa0'
                     }
 
                     configFileProvider([configFile(fileId: configFileId, variable: 'CONFIG_FILE_PATH')]) {

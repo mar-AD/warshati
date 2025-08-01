@@ -13,6 +13,10 @@ export type LanguageType = {
   name: string;
   flag: string;
 };
+export type DashLanguageType = {
+  code: string;
+  flag: StaticImageData;
+};
 export type SocialType = {
   Icon: LucideIcon|IconType;
   link: string;
@@ -246,4 +250,56 @@ export interface MergedCard {
     text: string
     icon: StaticImageData
   }[]
+}
+
+export interface CardDataType {
+  title: string;
+  description: string;
+  image: StaticImageData;
+}
+
+
+export interface CardDataType0 extends CardDataType  {
+  href: string
+}
+
+
+export type NavItem = {
+  name: string;
+  href: string;
+  icon?: StaticImageData;
+};
+
+
+
+
+export interface FileItem {
+  id: string;
+  name: string;
+  type: string;
+  tags: string[];
+  date: string;
+  isFolder: boolean;
+  children: FileItem[];
+  content?: string;
+}
+
+export interface AddTagModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onConfirm: (tag: string) => void;
+}
+
+export interface ShareModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  file: FileItem | null;
+}
+
+export interface FileModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onConfirm: (name: string, type?: string) => void;
+  isFolder: boolean;
+  existingNames: string[];
 }

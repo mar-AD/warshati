@@ -168,6 +168,27 @@ import SmartEducationPlatform_21 from "/public/images/SmartEducationPlatform/Sma
 import SmartEducationPlatform_22 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-29.png"
 import SmartEducationPlatform_23 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-30.png"
 import SmartEducationPlatform_24 from "/public/images/SmartEducationPlatform/SmartEducationPlatform-31.png"
+import fr from "/public/images/Dashboard/france.png"
+import ma from "/public/images/Dashboard/morocco.png"
+import usa from "/public/images/Dashboard/united-states.png"
+import sp from "/public/images/Dashboard/spain.png"
+import uiux1 from "/public/images/Dashboard/search.svg"
+import uiux2 from "/public/images/Dashboard/data.jpg"
+import uiux3 from "/public/images/Dashboard/infoanddata_3.png"
+import uiux4 from "/public/images/Dashboard/infoanddata_4.png"
+import uiux5 from "/public/images/Dashboard/infoanddata_5.png"
+import uiux6 from "/public/images/Dashboard/infoanddata_6.png"
+import icon1 from "/public/images/Dashboard/icon_1.png"
+import icon2 from "/public/images/Dashboard/icon_2.png"
+import icon3 from "/public/images/Dashboard/icon_3.png"
+import icon4 from "/public/images/Dashboard/icon_4.png"
+import image1 from "/public/images/Dashboard/appliedAIImage.png"
+import image2 from "/public/images/Dashboard/appliedAIImage_1.png"
+import image3 from "/public/images/Dashboard/appliedAIImage_2.png"
+import image4 from "/public/images/Dashboard/appliedAIImage_3.png"
+import soon1 from "/public/images/Dashboard/cominsoon_1.png"
+import soon2 from "/public/images/Dashboard/cominsoon_2.png"
+import soon3 from "/public/images/Dashboard/cominsoon_3.png"
 import {
   Atom,
   BrainCircuit,
@@ -192,17 +213,21 @@ import {
 import {
   ageType,
   articleType,
+  CardDataType,
+  CardDataType0,
   CommencerCardType,
   CommencerDataSetType,
   ComposantesDuProgrammeDataType,
   // CommencerDataType,
   ContactType,
   CurriculaType,
+  DashLanguageType,
   FAQType,
   FormationType,
   IntScolaireType,
   LanguageType,
   LmsDataType,
+  // NavItem,
   NavType,
   niveauxType,
   ObjectifDuProgrammeDataType,
@@ -363,6 +388,13 @@ export const languages: LanguageType[] = [
   { code: "AR", name: "العربية", flag: "ma" },
   { code: "EN", name: "English", flag: "gb" },
   { code: "ES", name: "Español", flag: "es" },
+];
+
+export const dashLanguages: DashLanguageType[] = [
+  { code: "FR", flag: fr },
+  { code: "AR", flag: ma },
+  { code: "EN", flag: usa },
+  { code: "ES", flag: sp },
 ];
 
 export const CommencerCards: CommencerCardType[] = [
@@ -1863,3 +1895,205 @@ export const presontationData1_1:Presentation1Type[] = [
         color: "#dcf5ff",
       },
   ]
+
+
+
+
+
+//for dashboard--------------------------------
+
+export const cardData: CardDataType0[] = [
+  {
+    title: "I’m Searching for Information",
+    description: "This helps you learn how to search safely on the internet and how to find information on your own computer. You’ll see the difference between normal and safe searches, and you can save notes too!",
+    image: uiux1,
+    href:"/dashboard/digital-literacy/programs/je-cherche"
+  },
+  {
+    title: "I manipulate the DATA",
+    description: "Learn how to create folders and files, and organize your own stuff on the computer. You can manage your data just the way you want!",
+    image: uiux2,
+    href: "/dashboard/digital-literacy/programs/je-manipule"
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Integer nec felis eu lectus bibendum tincidunt. Fusce in nibh sit amet erat sagittis luctus.",
+    image: uiux3,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non purus eget lacus fermentum gravida. Cras convallis, ligula ac dapibus posuere, justo sem faucibus nibh, nec iaculis sem sem in justo.",
+    image: uiux4,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet tristique justo. In hac habitasse platea dictumst. Integer non neque et libero bibendum feugiat.",
+    image: uiux5,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Sed viverra euismod neque, in fermentum metus facilisis non. Nam dignissim nisl a mauris varius, a porttitor est convallis.",
+    image: uiux6,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac malesuada nisl. Sed commodo nisl nec massa gravida vehicula. Donec efficitur blandit nisi.",
+    image: uiux2,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor purus sit amet metus placerat, sed iaculis elit commodo. Integer finibus ligula eget tincidunt ullamcorper.",
+    image: uiux3,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis, odio sed sodales laoreet, magna arcu gravida nulla, a lobortis nulla velit ac nisi.",
+    image: uiux4,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris nec erat sagittis convallis. In porta eros at tincidunt bibendum. Vestibulum vitae lectus at arcu hendrerit porta.",
+    image: uiux5,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et turpis nec odio posuere rhoncus. Nullam vitae sapien at nulla pretium feugiat.",
+    image: uiux6,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in est ac mauris consectetur facilisis. Vivamus ullamcorper quam ut ex fringilla, at faucibus justo cursus.",
+    image: uiux3,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue tellus vitae tellus iaculis, in porta massa efficitur. Nunc pretium tellus in velit scelerisque eleifend.",
+    image: uiux5,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ipsum dignissim, feugiat nisi ut, facilisis arcu. Curabitur euismod erat eu nisl ultrices, at varius erat sagittis.",
+    image: uiux3,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis suscipit sem, id blandit erat laoreet nec. Nam tempor nibh ac lorem fermentum, sed euismod lectus convallis.",
+    image: uiux1,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum, elit non porttitor sagittis, lacus odio dignissim erat, a convallis justo mauris vitae libero.",
+    image: uiux5,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet diam nec nunc cursus iaculis. Integer eget nulla justo. Donec finibus nec arcu non feugiat.",
+    image: uiux2,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim neque in eros fermentum, id sagittis purus vulputate. Nulla facilisi. Sed a velit blandit, sodales nunc sit amet, vehicula magna.",
+    image: uiux6,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae urna sed eros ultricies varius. Sed sed lectus eu ligula sodales feugiat. Suspendisse ac malesuada purus.",
+    image: uiux1,
+    href:''
+  },
+  {
+    title: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus, mauris eget lacinia fermentum, velit neque pharetra lacus, ut laoreet eros tortor sed neque.",
+    image: uiux6,
+    href:''
+  },
+];
+
+  
+  type Translator = (key: string) => string;
+  export const DigitalLiteracyNavItems = (t: Translator) => [
+    { name: t("programs"), href: "/dashboard/digital-literacy/programs" },
+    { name: t("projects"), href: "/dashboard/digital-literacy/projects" },
+    { name: t("community"), href: "/dashboard/digital-literacy/community" },
+    { name: t("settings"), href: "/dashboard/digital-literacy/settings" },
+  ];
+  
+  export const TeachableAINavItems = (t: Translator) => [
+    { icon: icon1, name: t("fundamentals"), href: "/dashboard/teachable-ai/fundamentals" },
+    { icon: icon2, name: t("applied_ai"), href: "/dashboard/teachable-ai/applied_ai" },
+    { icon: icon3, name: t("data_science"), href: "/dashboard/teachable-ai/data_science" },
+    { icon: icon4, name: t("ai_ethics"), href: "/dashboard/teachable-ai/AI&Ethics" },
+  ];
+
+
+export const teachableAICardData: CardDataType0[] = [
+  {
+    title: "Finger Labeling",
+    description: "Your own dictionary objects and labels fingers in real time!",
+    image: image1,
+    href: '/dashboard/teachable-ai/applied_ai/training/hand-recognition'
+  },
+  {
+    title: "Image Classifier",
+    description: "Adaptive and classify images by clicking categories like animals.",
+    image: image2,
+    href: '/dashboard/teachable-ai/applied_ai/training/classification',
+  },
+  {
+    title: "Shape Classifier",
+    description: "Using the router when used into different channels images.",
+    image: image3,
+    href: '/dashboard/teachable-ai/applied_ai/training/shape-classification',
+  },
+
+  {
+    title: "Your first ChatBook",
+    description: "Your Smart Assistant that can answer questions, tell jokes, and learn from conversations!",
+    image: image4,
+    href: '/dashboard/teachable-ai/applied_ai/training/ai-chatbot',
+  },
+  {
+    title: "Shape Classifier",
+    description: "Using the router when used into different channels images.",
+    image: image3,
+    href: '/dashboard/teachable-ai/applied_ai/training/shape-classification',
+  }
+];
+
+
+export const comingSoonData: CardDataType0[] = [
+  {
+    title: "Object detection",
+    description: "train an AI to recognize and detect different objects in their environment using a webcam or preloaded images.",
+    image: soon1,
+    href:''
+  },
+  {
+    title: "Rock, Paper, Scissors Game",
+    description: "build your  AI that learns to play Rock, Paper, Scissors!",
+    image: soon2,
+    href:''
+  },
+  {
+    title: "Story teller",
+    description: "create a text-based AI that helps generate fun and interactive stories",
+    image: soon3,
+    href:''
+  },
+]
